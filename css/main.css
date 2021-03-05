@@ -2784,7 +2784,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
-  background-size: 100% 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
 }
 .content-wrap {
   opacity: 1;
@@ -2820,7 +2824,7 @@ body {
 .header-inner {
   border-radius: 20px 20px 20px 20px;
 }
-。sidebar-inner {
+.sidebar-inner {
   border-radius: 10px 10px 10px 10px;
 }
 .sidebar {
