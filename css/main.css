@@ -2791,10 +2791,10 @@ body {
   -ms-background-size: cover;
 }
 .content-wrap {
-  opacity: 1;
+  opacity: 0.95;
 }
 .main-inner {
-  opacity: 1;
+  opacity: 0.95;
 }
 .sidebar-inner {
   background: rgba(255,255,255,0.8) none repeat scroll !important;
@@ -2806,10 +2806,10 @@ body {
   background: rgba(250,255,255,0.8);
 }
 .popup {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .post-block {
-  background: rgba(255,255,255,0.95) none repeat scroll !important;
+  background: rgba(255,255,255,0.8) none repeat scroll !important;
 }
 .comments {
   background: rgba(255,255,255,0.8) none repeat scroll !important;
@@ -2823,9 +2823,6 @@ body {
 }
 .header-inner {
   border-radius: 20px 20px 20px 20px;
-}
-.sidebar-inner {
-  border-radius: 10px 10px 10px 10px;
 }
 .sidebar {
   border-radius: 10px 10px 10px 10px;
