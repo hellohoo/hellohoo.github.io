@@ -17,10 +17,10 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #f0f0f0;
-  --highlight-foreground: #444;
-  --highlight-gutter-background: #dedede;
-  --highlight-gutter-foreground: #555;
+  --highlight-background: #fff;
+  --highlight-foreground: #000;
+  --highlight-gutter-background: #e5e5e5;
+  --highlight-gutter-foreground: #191919;
 }
 html {
   line-height: 1.15; /* 1 */
@@ -361,7 +361,7 @@ td {
 }
 /*
 
-Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+ISBL Editor style light color schemec (c) Dmitriy Tarasov <dimatar@gmail.com>
 
 */
 
@@ -369,19 +369,19 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #F0F0F0;
+  background: white;
+  color: black;
 }
-
 
 /* Base color: saturation 0; */
 
-.hljs,
 .hljs-subst {
-  color: #444;
+  color: black;
 }
 
 .hljs-comment {
-  color: #888888;
+  color: #555555;
+  font-style: italic;
 }
 
 .hljs-keyword,
@@ -390,27 +390,35 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .hljs-meta-keyword,
 .hljs-doctag,
 .hljs-name {
+  color: #000000;
   font-weight: bold;
 }
 
 
 /* User color: hue: 0 */
 
+.hljs-string {
+  color: #000080;
+}
+
 .hljs-type,
-.hljs-string,
 .hljs-number,
 .hljs-selector-id,
 .hljs-selector-class,
 .hljs-quote,
 .hljs-template-tag,
 .hljs-deletion {
-  color: #880000;
+  color: #000000;
 }
 
 .hljs-title,
 .hljs-section {
-  color: #880000;
-  font-weight: bold;
+  color: #fb2c00;
+}
+
+.hljs-title>.hljs-built_in {
+  color: #008080;
+  font-weight: normal;
 }
 
 .hljs-regexp,
@@ -420,23 +428,27 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .hljs-link,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #BC6060;
+  color: #5e1700;
 }
-
 
 /* Language color: hue: 90; */
 
+.hljs-built_in,
 .hljs-literal {
-  color: #78A960;
+  color: #000080;
+  font-weight: bold;
 }
 
-.hljs-built_in,
 .hljs-bullet,
 .hljs-code,
 .hljs-addition {
   color: #397300;
 }
 
+.hljs-class  {
+  color: #6f1C00;
+  font-weight: bold;
+}
 
 /* Meta color: hue: 200 */
 
@@ -459,6 +471,26 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   font-weight: bold;
 }
 
+.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  opacity: 1;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  font-size: 0.8125em;
+  right: 4px;
+  top: 8px;
+}
 code,
 kbd,
 figure.highlight,
@@ -1736,7 +1768,7 @@ pre code {
   z-index: 1500;
 }
 .reading-progress-bar {
-  background: #37c6c0;
+  background: #ffc069;
   height: 3px;
   left: 0;
   position: fixed;
@@ -2466,6 +2498,114 @@ ul.breadcrumb li:last-child {
 .tag-cloud-10 {
   border-bottom-color: #111;
   color: #111;
+}
+.search-active {
+  overflow: hidden;
+}
+.search-pop-overlay {
+  background: rgba(0,0,0,0);
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: visibility 0.4s, background 0.4s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1400;
+}
+.search-active .search-pop-overlay {
+  background: rgba(0,0,0,0.3);
+  visibility: visible;
+}
+.search-popup {
+  background: var(--card-bg-color);
+  border-radius: 5px;
+  height: 80%;
+  margin: auto;
+  transform: scale(0);
+  transition: transform 0.4s;
+  width: 700px;
+}
+.search-active .search-popup {
+  transform: scale(1);
+}
+@media (max-width: 767px) {
+  .search-popup {
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+.search-popup .search-icon,
+.search-popup .popup-btn-close {
+  color: #999;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.search-popup .popup-btn-close {
+  cursor: pointer;
+}
+.search-popup .popup-btn-close:hover .fa {
+  color: #222;
+}
+.search-popup .search-header {
+  background: #eee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  padding: 5px;
+}
+.search-popup input.search-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+.search-popup input.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-popup .search-result-container {
+  height: calc(100% - 55px);
+  overflow: auto;
+  padding: 5px 25px;
+}
+.search-popup .search-result-container hr {
+  margin: 5px 0 10px;
+}
+.search-popup .search-result-container hr:first-child {
+  display: none;
+}
+.search-popup .search-result-list {
+  margin: 0 5px;
+  padding: 0;
+}
+.search-popup a.search-result-title {
+  font-weight: bold;
+}
+.search-popup p.search-result {
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 0;
+}
+.search-popup .search-input-container {
+  flex-grow: 1;
+  padding: 2px;
+}
+.search-popup .no-result {
+  display: flex;
+}
+.search-popup .search-result-list {
+  width: 100%;
+}
+.search-popup .search-result-icon {
+  color: #ccc;
+  margin: auto;
+}
+mark.search-keyword {
+  background: transparent;
+  border-bottom: 1px dashed #ff2a2a;
+  color: #ff2a2a;
+  font-weight: bold;
 }
 .use-motion .animated {
   animation-fill-mode: none;
