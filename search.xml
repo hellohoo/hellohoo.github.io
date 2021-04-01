@@ -275,6 +275,18 @@
       </tags>
   </entry>
   <entry>
+    <title>hellohoo</title>
+    <url>/2021/03/03/hellohoo/</url>
+    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
+]]></content>
+      <categories>
+        <category>胡说</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VR实现过程（使用VTK官方代码）</title>
     <url>/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/</url>
     <content><![CDATA[<h2 id="VR的介绍"><a href="#VR的介绍" class="headerlink" title="VR的介绍"></a>VR的介绍</h2><p>VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。</p>
@@ -403,15 +415,61 @@
       </tags>
   </entry>
   <entry>
-    <title>hellohoo</title>
-    <url>/2021/03/03/hellohoo/</url>
-    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
+    <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
+    <url>/2021/04/02/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>开始是成功的左括号。——Hoohoo</p>
+</blockquote>
+<span id="more"></span>
+
+<p>最近开始学习CV领域，因为老师想让我做医学影像的三维重建，依我理解，医学影像的三维重建就是面绘制、体绘制之类的，使用VTK、ITK工具包完成，也询问了一些学长等专业人士，得知这边并不好出成果，好出成果的就是切割、MRI之类的，我并没有很大的兴趣，而且老师希望我继续做，我只能曲线救国，先学学重建之类的知识，也就是计算机视觉这方面的，而非专一的医学影像方向。</p>
+<p>并且一定要学习的话，反正都是从0开始，就先学着吧！</p>
+<p>最近在看的一篇论文，十年前的一篇开山之作，就是SLAM中的前端技术，所以在推荐下，就开始学习高翔等著的《视觉SLAM十四讲 从理论到实践》第2版。</p>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><p>第一讲是预备知识，介绍本书的基本信息。</p>
+<blockquote>
+<p>本书代码：<a href="https://github.com/gaoxiang12/slambook2">https://github.com/gaoxiang12/slambook2</a></p>
+</blockquote>
+<p><strong>SLAM：</strong> <strong>S</strong>imultaneous <strong>L</strong>ocalization <strong>a</strong>nd <strong>M</strong>apping （<strong>同时定位与地图构建</strong>）的缩写。指搭载特定传感器的主体，在没有环境先验信息情况下，于运动过程中建立环境的模型，同时估计自己的运动。如果传感器主要是相机，则称为“视觉SLAM”。</p>
+<p>所需前备知识：</p>
+<ul>
+<li><p>高等数学、<strong>线性代数</strong>(!!!!)、概率论</p>
+</li>
+<li><p>C++语言基础</p>
+</li>
+<li><p>Linux基础</p>
+</li>
+</ul>
+<p>需要用到的主要库：Eigen、OpenCV、PCL、g2o、Ceres等。</p>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
+<li><p>==后期上图片</p>
+</li>
+<li><p>高斯分布又称为正态分布===</p>
+</li>
+<li><p>知道一些类，使用过STL。</p>
+</li>
+<li><p>刚开始使用<code>CodeBlock</code>写C语言，后来使用<code>Clion</code>，前段时间做VTK，也用过一段时间``Visual Studio`。</p>
+</li>
+<li><p>百度：</p>
+</li>
+<li><p>知道。用过MacOS、Windows、CentOS、Federa、Ubuntu。</p>
+</li>
+<li><p>Linux下的目录结构主要是由<code>/</code>延伸。</p>
+<p>一些命令：<code>ls</code>、<code>ll</code>、<code>mkdir</code>、<code>rm</code>、<code>tar</code>、<code>vim</code>、<code>pwd</code>、<code>which</code>…</p>
+</li>
+<li><p><code>apt-get install</code>，===</p>
+</li>
+<li><p>Vim！！！</p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>胡说</category>
+        <category>学习</category>
+        <category>《视觉SLAM十四讲》</category>
       </categories>
       <tags>
-        <tag>感想</tag>
+        <tag>学习</tag>
+        <tag>书籍</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
 </search>
