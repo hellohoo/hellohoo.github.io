@@ -166,18 +166,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hellohoo</title>
-    <url>/2021/03/03/hellohoo/</url>
-    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
-]]></content>
-      <categories>
-        <category>胡说</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Rodin安装教程（附java8安装教程）</title>
     <url>/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
     <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
@@ -415,6 +403,18 @@
       </tags>
   </entry>
   <entry>
+    <title>hellohoo</title>
+    <url>/2021/03/03/hellohoo/</url>
+    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
+]]></content>
+      <categories>
+        <category>胡说</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
     <url>/2021/04/02/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
@@ -442,7 +442,13 @@
 <p>需要用到的主要库：<code>Eigen</code>、<code>OpenCV</code>、<code>PCL</code>、<code>g2o</code>、<code>Ceres</code>等。</p>
 <h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
 <li><p>有线性方程 Ax = b，当我们知道 A, b，想要求解 x 时，如何求解？这对 A 和 b 需 要哪些条件？提示:从 A 的维度和秩角度来分析。</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label>后期见图片。</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label></p>
+<ul>
+<li>当R(A) = R(A,b) = n时，有唯一解。</li>
+<li>当R(A) = R(A,b) &lt; n时，有多解。</li>
+<li>当R(A) &lt; R(A,b) 时，无解。</li>
+</ul>
+<p>/# 其中R()为秩的个数，n为未知数的个数。</p>
 </li>
 <li><p>高斯分布是什么？它的一维形式是什么样子？它的高维形式是什么样子？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> 高斯分布又称为正态分布===</p>
