@@ -108,64 +108,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Mac的Rodin安装教程</title>
-    <url>/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h2><blockquote>
-<p>系统：macOS Big Sur 11.2.3 </p>
-<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
-</blockquote>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="安装JDK-8"><a href="#安装JDK-8" class="headerlink" title="安装JDK 8"></a>安装JDK 8</h3><h4 id="下载JDK-8"><a href="#下载JDK-8" class="headerlink" title="下载JDK 8"></a>下载JDK 8</h4><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><p>在Mac上直接<code>terminal</code>中输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
-
-<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
-
-<p>点击右上角文件夹图标：</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
-
-<p>点击<code>Download JDK</code>：</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
-
-<h4 id="测试JDK-8是否安装成功"><a href="#测试JDK-8是否安装成功" class="headerlink" title="测试JDK 8是否安装成功"></a>测试JDK 8是否安装成功</h4><p>输入以下命令不报错即成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装Rodin"><a href="#安装Rodin" class="headerlink" title="安装Rodin"></a>安装Rodin</h3><blockquote>
-<h4 id="macOS-caveat"><a href="#macOS-caveat" class="headerlink" title="macOS caveat"></a>macOS caveat</h4><p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
-</blockquote>
-<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
-<p>但是又继续报错：</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
-
-<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
-<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
-
-<p>发现有一段被注释掉了</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
-
-<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
-
-<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
-
-<p>修改并保存，就可以成功启动Rodin了。</p>
-<blockquote>
-<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Rodin安装教程（附java8安装教程）</title>
     <url>/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
     <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
@@ -268,10 +210,68 @@
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac的Rodin安装教程</title>
+    <url>/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h2><blockquote>
+<p>系统：macOS Big Sur 11.2.3 </p>
+<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
+</blockquote>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="安装JDK-8"><a href="#安装JDK-8" class="headerlink" title="安装JDK 8"></a>安装JDK 8</h3><h4 id="下载JDK-8"><a href="#下载JDK-8" class="headerlink" title="下载JDK 8"></a>下载JDK 8</h4><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><p>在Mac上直接<code>terminal</code>中输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
+
+<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
+
+<p>点击右上角文件夹图标：</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
+
+<p>点击<code>Download JDK</code>：</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
+
+<h4 id="测试JDK-8是否安装成功"><a href="#测试JDK-8是否安装成功" class="headerlink" title="测试JDK 8是否安装成功"></a>测试JDK 8是否安装成功</h4><p>输入以下命令不报错即成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装Rodin"><a href="#安装Rodin" class="headerlink" title="安装Rodin"></a>安装Rodin</h3><blockquote>
+<h4 id="macOS-caveat"><a href="#macOS-caveat" class="headerlink" title="macOS caveat"></a>macOS caveat</h4><p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
+</blockquote>
+<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
+<p>但是又继续报错：</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
+
+<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
+<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
+
+<p>发现有一段被注释掉了</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
+
+<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
+
+<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
+
+<p>修改并保存，就可以成功启动Rodin了。</p>
+<blockquote>
+<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -415,81 +415,8 @@
       </tags>
   </entry>
   <entry>
-    <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
-    <url>/2021/04/02/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>开始是成功的左括号。——Hoohoo</p>
-</blockquote>
-<span id="more"></span>
-
-<p>最近开始学习CV领域，因为老师想让我做医学影像的三维重建，依我理解，医学影像的三维重建就是面绘制、体绘制之类的，使用VTK、ITK工具包完成，也询问了一些学长等专业人士，得知这边并不好出成果，好出成果的就是切割、MRI之类的，我并没有很大的兴趣，而且老师希望我继续做，我只能曲线救国，先学学重建之类的知识，也就是计算机视觉这方面的，而非专一的医学影像方向。</p>
-<p>并且一定要学习的话，反正都是从0开始，就先学着吧！</p>
-<p>最近在看的一篇论文，十年前的一篇开山之作，就是SLAM中的前端技术，所以在推荐下，就开始学习高翔等著的《视觉SLAM十四讲 从理论到实践》第2版。</p>
-<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><p>第一讲是预备知识，介绍本书的基本信息。</p>
-<blockquote>
-<p>本书代码：<a href="https://github.com/gaoxiang12/slambook2">https://github.com/gaoxiang12/slambook2</a></p>
-</blockquote>
-<p><strong>SLAM：</strong> <strong>S</strong>imultaneous <strong>L</strong>ocalization <strong>a</strong>nd <strong>M</strong>apping （<strong>同时定位与地图构建</strong>）的缩写。指搭载特定传感器的主体，在没有环境先验信息情况下，于运动过程中建立环境的模型，同时估计自己的运动。如果传感器主要是相机，则称为“视觉SLAM”。</p>
-<p>所需前备知识：</p>
-<ul>
-<li><p>高等数学、<strong>线性代数</strong>(!!!!)、概率论</p>
-</li>
-<li><p>C++语言基础</p>
-</li>
-<li><p>Linux基础</p>
-</li>
-</ul>
-<p>需要用到的主要库：<code>Eigen</code>、<code>OpenCV</code>、<code>PCL</code>、<code>g2o</code>、<code>Ceres</code>等。</p>
-<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
-<li><p>有线性方程 Ax = b，当我们知道 A, b，想要求解 x 时，如何求解？这对 A 和 b 需 要哪些条件？提示:从 A 的维度和秩角度来分析。</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label></p>
-<ul>
-<li>当R(A) = R(A,b) = n时，有唯一解。</li>
-<li>当R(A) = R(A,b) &lt; n时，有多解。</li>
-<li>当R(A) &lt; R(A,b) 时，无解。</li>
-</ul>
-<p>/# 其中R()为秩的个数，n为未知数的个数。</p>
-</li>
-<li><p>高斯分布是什么？它的一维形式是什么样子？它的高维形式是什么样子？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label> 高斯分布又称为正态分布===</p>
-</li>
-<li><p>你知道 C++ 的类吗？你知道 STL 吗？你使用过它们吗？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label>知道一些类，使用过STL。</p>
-</li>
-<li><p>你以前怎样书写 C++ 程序？(你完全可以说只在 VC6.0 下写过 C++ 工程，只要你 有写 C++ 和 C 语言经验就行。)</p>
-<p><label style="color:#f5222dd"><strong>答：</strong></label>刚开始使用<code>CodeBlock</code>写C语言，后来使用<code>Clion</code>，前段时间做VTK，也用过一段时间<code>Visual Studio</code>。</p>
-</li>
-<li><p>你知道 C++11 标准吗？其中哪些新特性你之前听说过或使用过？有没有其他的标准？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label>====</p>
-</li>
-<li><p>你知道 Linux 吗？你有没有至少使用过其中之一(安卓不算)，比如 Ubuntu？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label> 知道。用过MacOS、Windows、CentOS、Federa、Ubuntu。</p>
-</li>
-<li><p>Linux 的目录结构是什么样的？你知道哪些基本命令，比如 ls, cat 等等？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label> Linux下的目录结构主要是由<code>/</code>延伸。</p>
-<p>一些命令：<code>ls</code>、<code>ll</code>、<code>mkdir</code>、<code>rm</code>、<code>tar</code>、<code>vim</code>、<code>pwd</code>、<code>which</code>…</p>
-</li>
-<li><p>如何在 Ubuntu 中安装软件(不打开软件中心的情况下)？这些软件被安装在什么地方？当我只知道模糊的软件名称(比如我想要装一个 eigen 名称的库)，我应该如何安装它？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label> <code>apt-get install</code>，===</p>
-</li>
-<li><p>*花一个小时学习一下Vim，因为你迟早会用它。你可以在终端中输入vimtutor阅 读一遍所有内容。我们不需要你非常熟练地操作它，只要在学习本书的过程中使用它 键入代码即可。不要在它的插件上浪费时间，不要想着把 vim 用成 IDE，我们只用 它做文本编辑的工作。</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label>Vim！！！</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>《视觉SLAM十四讲》</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>书籍</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《视觉SLAM十四讲 第2版》学习笔记 第2讲</title>
-    <url>/2021/04/03/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/</url>
+    <url>/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>从0到1，进步的阶梯。——Hoohoo</p>
 </blockquote>
@@ -541,7 +468,7 @@
 <p><strong>缺点</strong>：测量范围窄、噪声大、视野小、易受日光干扰、无法测量投射材质等。</p>
 <p>目前常用RGB-D相机：Kinect/Kinect V2、Xtion Pro Live、RealSense等。</p>
 <h3 id="2-2-经典视觉SLAM框架"><a href="#2-2-经典视觉SLAM框架" class="headerlink" title="2.2 经典视觉SLAM框架"></a>2.2 经典视觉SLAM框架</h3><p>如下图：</p>
-<img src="/2021/04/03/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210403235429941.png" class="" title="视觉SLAM流程图">
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210403235429941.png" class="" title="视觉SLAM流程图">
 
 <ol>
 <li>传感器信息读取：</li>
@@ -549,6 +476,79 @@
 <li>后端（非线性）优化：</li>
 <li>回环检测：</li>
 <li>建图：</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>《视觉SLAM十四讲》</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>书籍</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
+    <url>/2021/04/02/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>开始是成功的左括号。——Hoohoo</p>
+</blockquote>
+<span id="more"></span>
+
+<p>最近开始学习CV领域，因为老师想让我做医学影像的三维重建，依我理解，医学影像的三维重建就是面绘制、体绘制之类的，使用VTK、ITK工具包完成，也询问了一些学长等专业人士，得知这边并不好出成果，好出成果的就是切割、MRI之类的，我并没有很大的兴趣，而且老师希望我继续做，我只能曲线救国，先学学重建之类的知识，也就是计算机视觉这方面的，而非专一的医学影像方向。</p>
+<p>并且一定要学习的话，反正都是从0开始，就先学着吧！</p>
+<p>最近在看的一篇论文，十年前的一篇开山之作，就是SLAM中的前端技术，所以在推荐下，就开始学习高翔等著的《视觉SLAM十四讲 从理论到实践》第2版。</p>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><p>第一讲是预备知识，介绍本书的基本信息。</p>
+<blockquote>
+<p>本书代码：<a href="https://github.com/gaoxiang12/slambook2">https://github.com/gaoxiang12/slambook2</a></p>
+</blockquote>
+<p><strong>SLAM：</strong> <strong>S</strong>imultaneous <strong>L</strong>ocalization <strong>a</strong>nd <strong>M</strong>apping （<strong>同时定位与地图构建</strong>）的缩写。指搭载特定传感器的主体，在没有环境先验信息情况下，于运动过程中建立环境的模型，同时估计自己的运动。如果传感器主要是相机，则称为“视觉SLAM”。</p>
+<p>所需前备知识：</p>
+<ul>
+<li><p>高等数学、<strong>线性代数</strong>(!!!!)、概率论</p>
+</li>
+<li><p>C++语言基础</p>
+</li>
+<li><p>Linux基础</p>
+</li>
+</ul>
+<p>需要用到的主要库：<code>Eigen</code>、<code>OpenCV</code>、<code>PCL</code>、<code>g2o</code>、<code>Ceres</code>等。</p>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
+<li><p>有线性方程 Ax = b，当我们知道 A, b，想要求解 x 时，如何求解？这对 A 和 b 需 要哪些条件？提示:从 A 的维度和秩角度来分析。</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label></p>
+<ul>
+<li>当R(A) = R(A,b) = n时，有唯一解。</li>
+<li>当R(A) = R(A,b) &lt; n时，有多解。</li>
+<li>当R(A) &lt; R(A,b) 时，无解。</li>
+</ul>
+<p>// 其中R()为秩的个数，n为未知数的个数。</p>
+</li>
+<li><p>高斯分布是什么？它的一维形式是什么样子？它的高维形式是什么样子？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label> 高斯分布又称为正态分布===</p>
+</li>
+<li><p>你知道 C++ 的类吗？你知道 STL 吗？你使用过它们吗？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label>知道一些类，使用过STL。</p>
+</li>
+<li><p>你以前怎样书写 C++ 程序？(你完全可以说只在 VC6.0 下写过 C++ 工程，只要你 有写 C++ 和 C 语言经验就行。)</p>
+<p><label style="color:#f5222dd"><strong>答：</strong></label>刚开始使用<code>CodeBlock</code>写C语言，后来使用<code>Clion</code>，前段时间做VTK，也用过一段时间<code>Visual Studio</code>。</p>
+</li>
+<li><p>你知道 C++11 标准吗？其中哪些新特性你之前听说过或使用过？有没有其他的标准？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label>====</p>
+</li>
+<li><p>你知道 Linux 吗？你有没有至少使用过其中之一(安卓不算)，比如 Ubuntu？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label> 知道。用过MacOS、Windows、CentOS、Federa、Ubuntu。</p>
+</li>
+<li><p>Linux 的目录结构是什么样的？你知道哪些基本命令，比如 ls, cat 等等？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label> Linux下的目录结构主要是由<code>/</code>延伸。</p>
+<p>一些命令：<code>ls</code>、<code>ll</code>、<code>mkdir</code>、<code>rm</code>、<code>tar</code>、<code>vim</code>、<code>pwd</code>、<code>which</code>…</p>
+</li>
+<li><p>如何在 Ubuntu 中安装软件(不打开软件中心的情况下)？这些软件被安装在什么地方？当我只知道模糊的软件名称(比如我想要装一个 eigen 名称的库)，我应该如何安装它？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label> <code>apt-get install</code>，===</p>
+</li>
+<li><p>*花一个小时学习一下Vim，因为你迟早会用它。你可以在终端中输入vimtutor阅 读一遍所有内容。我们不需要你非常熟练地操作它，只要在学习本书的过程中使用它 键入代码即可。不要在它的插件上浪费时间，不要想着把 vim 用成 IDE，我们只用 它做文本编辑的工作。</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label>Vim！！！</p>
+</li>
 </ol>
 ]]></content>
       <categories>
