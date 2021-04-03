@@ -166,6 +166,18 @@
       </tags>
   </entry>
   <entry>
+    <title>hellohoo</title>
+    <url>/2021/03/03/hellohoo/</url>
+    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
+]]></content>
+      <categories>
+        <category>胡说</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Rodin安装教程（附java8安装教程）</title>
     <url>/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
     <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
@@ -403,18 +415,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hellohoo</title>
-    <url>/2021/03/03/hellohoo/</url>
-    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
-]]></content>
-      <categories>
-        <category>胡说</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
     <url>/2021/04/02/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
@@ -469,6 +469,80 @@
 <li><p>*花一个小时学习一下Vim，因为你迟早会用它。你可以在终端中输入vimtutor阅 读一遍所有内容。我们不需要你非常熟练地操作它，只要在学习本书的过程中使用它 键入代码即可。不要在它的插件上浪费时间，不要想着把 vim 用成 IDE，我们只用 它做文本编辑的工作。</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label>Vim！！！</p>
 </li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>《视觉SLAM十四讲》</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>书籍</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《视觉SLAM十四讲 第2版》学习笔记 第2讲</title>
+    <url>/2021/04/03/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>从0到1，进步的阶梯。——Hoohoo</p>
+</blockquote>
+<span id="more"></span>
+
+<p>之前买书的时候还没有到，用的就是第一版的电子书，有些内容也有改变，比如第2讲中的实验部分第1版使用的是Ubuntu14.04，而在第二版中已经使用了18.04，正好和我实验室电脑中装的一样，有些小确幸，当时没有赶时髦装20.04。</p>
+<p>本讲开启了<strong>第1部分——数学基础</strong>，也是<strong>初识SLAM</strong>，那就让我们一起迈过0，进入1的世界吧！</p>
+<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><blockquote>
+<p><strong>主要目标</strong></p>
+<ol>
+<li>理解一个视觉 SLAM 框架由哪几个模块组成，各模块的任务是什么。</li>
+<li>搭建编程环境，为开发和实验做准备。</li>
+<li>理解如何在 Linux 下编译并运行一个程序。如果它出了问题，我们又如何对它进 行调试。</li>
+<li>掌握 cmake 的基本使用方法。</li>
+</ol>
+</blockquote>
+<p>感知主要为“定位”和“建图”——可以看做感知的内外之分。</p>
+<p>即：状态（位置）、环境（地图）。</p>
+<p><strong>传感器</strong>主要分为两类：</p>
+<ol>
+<li>携带于机器人本体上</li>
+<li>安装于环境中</li>
+</ol>
+<p>视觉SLAM主要是指如何用<strong>相机</strong>解决定位和建图问题。</p>
+<h3 id="2-1-相机种类"><a href="#2-1-相机种类" class="headerlink" title="2.1 相机种类"></a>2.1 相机种类</h3><p>按照工作方式的不同，我们可以把相机分为三大类：<strong>单目（Monocular）</strong>、<strong>双目（Stereo）</strong>、<strong>深度（RGB-D）</strong>相机三大类。</p>
+<h4 id="单目相机"><a href="#单目相机" class="headerlink" title="单目相机"></a>单目相机</h4><p>只有一个摄像头进行SLAM的做法成为单目SLAM。</p>
+<p><strong>优点</strong>：传感器构成简单、成本特别低。</p>
+<p><strong>缺点</strong>：平移之后才能计算深度、无法确定真实尺度，</p>
+<p>数据：照片。</p>
+<p>照片本质上是拍摄某个场景（Scene）在相机的成像平面上留下的一个<strong>投影</strong>。<strong>它以二维的形式记录了三维的世界</strong>。所以没有<strong>深度（距离）</strong>信息。</p>
+<blockquote>
+<p>距离在SLAM中非常重要，因为人类的眼睛可以大概分辨出，但是机器无法分辨和估计。</p>
+</blockquote>
+<p>由于单目相机拍摄的图像只是三维空间的二维投影，所以必须改变相机<strong>视角</strong>才能恢复三维结构。</p>
+<p>需要拍许多张不同视角的照片进行估计。</p>
+<p>我们移动相机，才能估计它的运动（Motion），同时估计场景中物体的远近和大小，称之为<strong>结构</strong>。</p>
+<p>其中，近处的物体移动快，远处的物体移动慢，极远处（无穷远处）的物体——比如太阳月亮之类的看上去是不动的。于是相机在移动时，这些物体在图像上的运动就形成了<strong>视差（Disparity）</strong>。</p>
+<p>但是即使我们知道了物体远近，它们只是一个相对的值。</p>
+<blockquote>
+<p>想象我们在看电影时候，虽然能够知道电影场景中哪些物体比另一些大，但我们无法确定电影里那些物体的“真实尺度”:那些大楼是真实的高楼大厦，还是放在桌上的模型？而摧毁大厦的是真实怪兽， 还是穿着特摄服装的演员？直观地说，如果把相机的运动和场景大小同时放大两倍，单目所看到的像是一样的。同样的，把这个大小乘以任意倍数，我们都将看到一样的景象。</p>
+</blockquote>
+<p>单目 SLAM 估计的轨迹和地图，将与真实的轨迹、地图，相差一个因子，也就是所谓的<strong>尺度(Scale)<strong>。由于单目 SLAM 无法仅凭图像确定这个真实尺度，所以又称为</strong>尺度不确定性</strong>。</p>
+<h4 id="双目相机"><a href="#双目相机" class="headerlink" title="双目相机"></a>双目相机</h4><p>双目相机由两个单目相机组成，但是这两个相机之间的距离【基线（Baseline）】是已知的。和人的双线比较相似，通过这个基线来估计每个像素的空间距离。</p>
+<p>你可以将你的一根手指放在你的鼻子前，分别捂住左右眼，被遮住的背景是不同的。</p>
+<p><strong>优点</strong>：距离估计是比较左右眼图像获得的，不依赖其他传感设备，所以室内室外都可以应用。</p>
+<p><strong>缺</strong>点：需要<strong>大量计算</strong>才能（不太可靠地）估计每一个像素点的深度值、配置和标定均较为复杂、其深度量程和精度受双目的基线与分辨率所致、计算视差非常耗费计算资源，需要使用GPU和FPGA设备加速。</p>
+<h4 id="深度相机"><a href="#深度相机" class="headerlink" title="深度相机"></a>深度相机</h4><p>2010年后兴起，最大特点就是可以通过红外结构光和Time-of- Flight（ToF）原理，像激光传感器那样通过主动向物体发射反射光并接收返回的光（有点类似于回声啊哈哈）测距。</p>
+<p><strong>优点</strong>：它不像双目相机通过软件来计算，而是通过物理测量手段，所以计算量小。</p>
+<p><strong>缺点</strong>：测量范围窄、噪声大、视野小、易受日光干扰、无法测量投射材质等。</p>
+<p>目前常用RGB-D相机：Kinect/Kinect V2、Xtion Pro Live、RealSense等。</p>
+<h3 id="2-2-经典视觉SLAM框架"><a href="#2-2-经典视觉SLAM框架" class="headerlink" title="2.2 经典视觉SLAM框架"></a>2.2 经典视觉SLAM框架</h3><p>如下图：</p>
+<img src="/2021/04/03/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210403235429941.png" class="" title="视觉SLAM流程图">
+
+<ol>
+<li>传感器信息读取：</li>
+<li>前端视觉里程计：</li>
+<li>后端（非线性）优化：</li>
+<li>回环检测：</li>
+<li>建图：</li>
 </ol>
 ]]></content>
       <categories>
