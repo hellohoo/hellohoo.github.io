@@ -108,6 +108,64 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac的Rodin安装教程</title>
+    <url>/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h2><blockquote>
+<p>系统：macOS Big Sur 11.2.3 </p>
+<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
+</blockquote>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="安装JDK-8"><a href="#安装JDK-8" class="headerlink" title="安装JDK 8"></a>安装JDK 8</h3><h4 id="下载JDK-8"><a href="#下载JDK-8" class="headerlink" title="下载JDK 8"></a>下载JDK 8</h4><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><p>在Mac上直接<code>terminal</code>中输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
+
+<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
+
+<p>点击右上角文件夹图标：</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
+
+<p>点击<code>Download JDK</code>：</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
+
+<h4 id="测试JDK-8是否安装成功"><a href="#测试JDK-8是否安装成功" class="headerlink" title="测试JDK 8是否安装成功"></a>测试JDK 8是否安装成功</h4><p>输入以下命令不报错即成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装Rodin"><a href="#安装Rodin" class="headerlink" title="安装Rodin"></a>安装Rodin</h3><blockquote>
+<h4 id="macOS-caveat"><a href="#macOS-caveat" class="headerlink" title="macOS caveat"></a>macOS caveat</h4><p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
+</blockquote>
+<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
+<p>但是又继续报错：</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
+
+<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
+<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
+
+<p>发现有一段被注释掉了</p>
+<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
+
+<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
+
+<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
+
+<p>修改并保存，就可以成功启动Rodin了。</p>
+<blockquote>
+<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>Rodin</tag>
+        <tag>安装</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Rodin安装教程（附java8安装教程）</title>
     <url>/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
     <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
@@ -210,68 +268,10 @@
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac的Rodin安装教程</title>
-    <url>/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h2><blockquote>
-<p>系统：macOS Big Sur 11.2.3 </p>
-<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
-</blockquote>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="安装JDK-8"><a href="#安装JDK-8" class="headerlink" title="安装JDK 8"></a>安装JDK 8</h3><h4 id="下载JDK-8"><a href="#下载JDK-8" class="headerlink" title="下载JDK 8"></a>下载JDK 8</h4><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><p>在Mac上直接<code>terminal</code>中输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
-
-<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
-
-<p>点击右上角文件夹图标：</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
-
-<p>点击<code>Download JDK</code>：</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
-
-<h4 id="测试JDK-8是否安装成功"><a href="#测试JDK-8是否安装成功" class="headerlink" title="测试JDK 8是否安装成功"></a>测试JDK 8是否安装成功</h4><p>输入以下命令不报错即成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装Rodin"><a href="#安装Rodin" class="headerlink" title="安装Rodin"></a>安装Rodin</h3><blockquote>
-<h4 id="macOS-caveat"><a href="#macOS-caveat" class="headerlink" title="macOS caveat"></a>macOS caveat</h4><p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
-</blockquote>
-<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
-<p>但是又继续报错：</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
-
-<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
-<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
-
-<p>发现有一段被注释掉了</p>
-<img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
-
-<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
-
-<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
-
-<p>修改并保存，就可以成功启动Rodin了。</p>
-<blockquote>
-<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>安装</tag>
-        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -403,18 +403,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hellohoo</title>
-    <url>/2021/03/03/hellohoo/</url>
-    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
-]]></content>
-      <categories>
-        <category>胡说</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《视觉SLAM十四讲 第2版》学习笔记 第2讲</title>
     <url>/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
@@ -468,15 +456,55 @@
 <p><strong>缺点</strong>：测量范围窄、噪声大、视野小、易受日光干扰、无法测量投射材质等。</p>
 <p>目前常用RGB-D相机：Kinect/Kinect V2、Xtion Pro Live、RealSense等。</p>
 <h3 id="2-2-经典视觉SLAM框架"><a href="#2-2-经典视觉SLAM框架" class="headerlink" title="2.2 经典视觉SLAM框架"></a>2.2 经典视觉SLAM框架</h3><p>如下图：</p>
+<p>依靠这些算法，我们可以构建一个视觉SLAM系统，使之在正常的工作环境中实时定位和建图。</p>
 <img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210403235429941.png" class="" title="视觉SLAM流程图">
 
-<ol>
-<li>传感器信息读取：</li>
-<li>前端视觉里程计：</li>
-<li>后端（非线性）优化：</li>
-<li>回环检测：</li>
-<li>建图：</li>
-</ol>
+<h4 id="2-2-1-传感器信息读取"><a href="#2-2-1-传感器信息读取" class="headerlink" title="2.2.1 传感器信息读取"></a>2.2.1 传感器信息读取</h4><p>主要是为相机图像信息的读取与预处理。</p>
+<h4 id="2-2-2-前端视觉里程计（Visual-Odometry，VO）"><a href="#2-2-2-前端视觉里程计（Visual-Odometry，VO）" class="headerlink" title="2.2.2 前端视觉里程计（Visual Odometry，VO）"></a>2.2.2 前端视觉里程计（Visual Odometry，VO）</h4><p><strong>任务</strong>：估算相邻图像间相机的运动，以及局部地图的样子。VO又称前端（Front End）。</p>
+<p>在计算机视觉中，根据图像确定相机的运动十分困难。图像在计算机中只是一个数值矩阵，在视觉SLAM中，我们只能看到一个个像素，知道它们是某些空间点在相机的成像平面上投影的结果，所以，为了定量地估计相机运动，必须先<strong>了解相机与空间点的几何关系</strong>。</p>
+<p>称其为“里程计”是因为它和实际的里程计一样，只计算相邻时刻的运动，而和过去的信息没有关联。</p>
+<p>仅仅通过视觉里程计来估计轨迹，将不可避免地出现<strong>累积漂移</strong>（Accumulating Drift）。这是由于视觉里程计在最简单的情况下只估计两个图像间的运动而造成的，因为每次估计都有一定误差，而由于里程计的工作方式，会将前刻的误差传递到下一刻，经过一段时间的累积后，估计的轨迹将不再准确。</p>
+<p>如下图所示。</p>
+<blockquote>
+<p>比方说，机器人先向左转90度，再向右转了90度。由于误差，我们把第一个90度估计成了89度。那我们就会尴尬地发现，向右转之后机器人的估计位置并没有回到原点。更糟糕的是，即使之后的估计再准确，与真实值相比，都会带上这-1度的误差。</p>
+</blockquote>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210405224053208.png" class="" title="漂移误差">
+
+
+
+<p>这也就是所谓的<strong>漂移</strong>（Drift）。将会导致我们无法建立一致的地图。</p>
+<p>为了解决漂移问题，我们还需要两种技术：<strong>后端优化</strong>和<strong>回环检测</strong>。</p>
+<blockquote>
+<p><strong>后端优化</strong>更多时候称之为后端。由于主要是用的是优化方法，故称为后端优化。</p>
+</blockquote>
+<h4 id="2-2-3-后端（非线性）优化"><a href="#2-2-3-后端（非线性）优化" class="headerlink" title="2.2.3 后端（非线性）优化"></a>2.2.3 后端（非线性）优化</h4><p><strong>任务</strong>：处理SLAM过程中的<strong>噪声</strong>问题。</p>
+<p>再精确的传感器也会带有误差，除了需要解决前端问题，还要关心这个估计带有多大噪声，是如何传递的，而我们又对当前的估计有多大信心。</p>
+<p>后端优化就是如何从这些带有噪声的数据中估计整个系统的<strong>状态</strong>（包括机器人自身的轨迹，也包括地图），以及这个状态估计的不确定性有多大——即为最大后验概率估计（Maximum-a-Posteriori）。</p>
+<p><strong>在视觉SLAM中，前端和计算机视觉研究领域更为相关，比如图像的特征提取与匹配等，后端则主要是滤波和非线性优化算法</strong>。</p>
+<h4 id="2-2-4-回环检测"><a href="#2-2-4-回环检测" class="headerlink" title="2.2.4 回环检测"></a>2.2.4 回环检测</h4><p>回环检测又称为闭环检测。</p>
+<p><strong>任务</strong>：解决位置估计随时间漂移的问题。</p>
+<blockquote>
+<p>怎么解决呢？假设实际情况下，机器人经过一段时间运动后回到了原点，但是由于漂移，它的位置估计值却没有回到原点。怎么办呢?我们想，如果有某种手段，让机器人知道“回到了原点”这件事，或者把“原点”识别出来，我们再把位置估计值“拉”过去，就可以消除漂移了。这就是所谓的回环检测。</p>
+</blockquote>
+<p>回环检测和“定位”以及“建图”都有联系。地图存在的主要意义是让机器人知晓自己到过的地方，所以为了实现回环检测，我们需要让机器人具有<strong>识别到过的场景</strong>的能力。</p>
+<p>尽量采用机器人自身携带的传感器实现，例如，可以<strong>判断图像间的相似性</strong>来完成回环检测。</p>
+<p>检测到回环之后，我们会吧“A和B是同一个点”之类的信息告诉后端优化算法，让后端优化算法根据新信息进行调整消除误差。</p>
+<h4 id="2-2-5-建图"><a href="#2-2-5-建图" class="headerlink" title="2.2.5 建图"></a>2.2.5 建图</h4><p><strong>任务</strong>：构建地图。</p>
+<p>地图（见下图）是对环境的描述，但是这个描述并不是固定的，需要视SLAM的应用而定。</p>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210405230415212.png" class="" title="不同地图">
+
+<p>对于地图我们有太多的想法和需求，但是建图并没有一个固定的形式和算法。</p>
+<p>大体上讲，可以分为<strong>度量地图</strong>和<strong>拓扑地图</strong>。</p>
+<h5 id="度量地图"><a href="#度量地图" class="headerlink" title="度量地图"></a>度量地图</h5><p>度量地图强调精确地表示地图中物体的位置关系，通常用稀疏（Sparse）和稠密（Dense）对其分类。</p>
+<blockquote>
+<p>稀疏地图进行了一定程度的抽象,并不需要表达所有的物体。例如，我们选择一部分具有代表意义的东西，称之为路标(Landmark)，那么一张稀疏地图就是由路标组成的地图，而不是路标的部分就可以忽略掉。相对的，稠密地图着重于建模所有看到的东西。对于定位来说，稀疏路标地图就足够了。而用于导航时，我们往往需要稠密的地图(否则撞上两个路标之间的墙怎么办？)。</p>
+<p>稠密地图通常按照某种分辨率，由许多个小块组成。二维度量地图是许多个小格子(Grid)， 三维则是许多小方块(Voxel)。一般地，一个小块含有占据、空闲、未知三种状态，以表达该格内是否有物体。当我们查询某个空间位置时，地图能够给出该位置是否可以通过的信息。这样的地图可以用于各种导.航算法，如A*,D*等等，为机器人研究者们所重视。但是我们也看到，这种地图需要存储每一个格点的状态，耗费大量的存储空间，而且多数情况下地图的许多细节部分是无用的。另一方面，大规模度量地图有时会出现一致性问题。 很小的一点转向误差， 可能会导致两间屋子的墙出现重叠，使得地图失效。</p>
+</blockquote>
+<h5 id="拓扑地图"><a href="#拓扑地图" class="headerlink" title="拓扑地图"></a>拓扑地图</h5><p>相比于度量地图的精确性，拓扑地图更强调地图元素之间的关系。</p>
+<blockquote>
+<p>拓扑地图是一个图(Graph)， 由节点和边组成，只考虑节点间的连通性，例如A, B点是连通的，而不考虑如何从A点到达B点的过程。它放松了地图对精确位置的需要，去掉地图的细节问题,是一种更为紧凑的表达方式。然而，拓扑地图不擅长表达具有复杂结构的地图。如何对地图进行分割形成结点与边，又如何使用拓扑地图进行导航与路径规划，仍是有待研究的问题。</p>
+</blockquote>
+<h3 id="2-3-SLAM中的数学表达"><a href="#2-3-SLAM中的数学表达" class="headerlink" title="2.3 SLAM中的数学表达"></a>2.3 SLAM中的数学表达</h3><p>我们要用数学语言来描述SLAM的过程，要用到一些变量和公式。</p>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -486,6 +514,18 @@
         <tag>学习</tag>
         <tag>书籍</tag>
         <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hellohoo</title>
+    <url>/2021/03/03/hellohoo/</url>
+    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
+]]></content>
+      <categories>
+        <category>胡说</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
       </tags>
   </entry>
   <entry>
