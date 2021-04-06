@@ -19,40 +19,44 @@
 <p>平台：Windows 10</p>
 <p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
 </blockquote>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">软件</th>
-<th align="center">版本</th>
-<th align="center">地址</th>
+<th style="text-align:center">软件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">ITK</td>
-<td align="center">4.13.2</td>
-<td align="center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
+<tbody>
+<tr>
+<td style="text-align:center">ITK</td>
+<td style="text-align:center">4.13.2</td>
+<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
 </tr>
 <tr>
-<td align="center">VTK</td>
-<td align="center">8.2.0</td>
-<td align="center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
+<td style="text-align:center">VTK</td>
+<td style="text-align:center">8.2.0</td>
+<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
 </tr>
 <tr>
-<td align="center">CMake</td>
-<td align="center">3.14.0</td>
-<td align="center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
+<td style="text-align:center">CMake</td>
+<td style="text-align:center">3.14.0</td>
+<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
 </tr>
 <tr>
-<td align="center">Qt</td>
-<td align="center">5.12.0</td>
-<td align="center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
+<td style="text-align:center">Qt</td>
+<td style="text-align:center">5.12.0</td>
+<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
 </tr>
 <tr>
-<td align="center">Visual Studio</td>
-<td align="center">2017_64 bit</td>
-<td align="center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
+<td style="text-align:center">Visual Studio</td>
+<td style="text-align:center">2017_64 bit</td>
+<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><h4 id="安装VS2017"><a href="#安装VS2017" class="headerlink" title="安装VS2017"></a>安装VS2017</h4><p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
 <h4 id="安装Qt"><a href="#安装Qt" class="headerlink" title="安装Qt"></a>安装Qt</h4><p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
 <h4 id="安装CMake"><a href="#安装CMake" class="headerlink" title="安装CMake"></a>安装CMake</h4><p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
@@ -67,32 +71,22 @@
 </blockquote>
 <p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
 <img src="/2021/03/15/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
-
 <p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
 <img src="/2021/03/15/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
-
 <p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
 <img src="/2021/03/15/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
-
 <p>继续configure，直到无红色出现，点击generate。</p>
 <p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
 <img src="/2021/03/15/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
-
 <h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
 <p>初始界面：</p>
 <img src="/2021/03/15/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
-
 <p>旋转切面：</p>
 <img src="/2021/03/15/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
-
 <p>像素点的三维坐标与灰度值信息的显示：</p>
 <img src="/2021/03/15/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
-
 <p>灰度变化：</p>
 <img src="/2021/03/15/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
-
-
-
 ]]></content>
       <categories>
         <category>技术</category>
@@ -118,39 +112,29 @@
 </blockquote>
 <h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="安装JDK-8"><a href="#安装JDK-8" class="headerlink" title="安装JDK 8"></a>安装JDK 8</h3><h4 id="下载JDK-8"><a href="#下载JDK-8" class="headerlink" title="下载JDK 8"></a>下载JDK 8</h4><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><p>在Mac上直接<code>terminal</code>中输入：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
-
 <h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
 <img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
-
 <p>点击右上角文件夹图标：</p>
 <img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
-
 <p>点击<code>Download JDK</code>：</p>
 <img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
-
 <h4 id="测试JDK-8是否安装成功"><a href="#测试JDK-8是否安装成功" class="headerlink" title="测试JDK 8是否安装成功"></a>测试JDK 8是否安装成功</h4><p>输入以下命令不报错即成功</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
 <h3 id="安装Rodin"><a href="#安装Rodin" class="headerlink" title="安装Rodin"></a>安装Rodin</h3><blockquote>
 <h4 id="macOS-caveat"><a href="#macOS-caveat" class="headerlink" title="macOS caveat"></a>macOS caveat</h4><p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
 </blockquote>
 <p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
 <p>但是又继续报错：</p>
 <img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
-
 <p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
 <p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
-
 <p>发现有一段被注释掉了</p>
 <img src="/2021/03/24/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
-
 <p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
-
 <p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
-
 <p>修改并保存，就可以成功启动Rodin了。</p>
 <blockquote>
 <p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
@@ -166,120 +150,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Rodin安装教程（附java8安装教程）</title>
-    <url>/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
-    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
-<blockquote>
-<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
-</blockquote>
-<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h2><blockquote>
-<p>系统：WIndows 10</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>安装地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>JDK 8</td>
-<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
-</tr>
-<tr>
-<td>Rodin</td>
-<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
-</tr>
-</tbody></table>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="安装JDK-8"><a href="#安装JDK-8" class="headerlink" title="安装JDK 8"></a>安装JDK 8</h3><h4 id="下载JDK-8"><a href="#下载JDK-8" class="headerlink" title="下载JDK 8"></a>下载JDK 8</h4><p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
-<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
-
-<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
-
-<p>更改安装路径：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
-
-<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
-
-<p>点击下一步后就安装成功了：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
-
-<h4 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h4><p>右键<code>我的电脑</code>-<code>属性</code>：</p>
-<p>并点击<code>高级系统设置</code></p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
-
-<p>点击<code>环境变量</code>：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
-
-<p>点击<code>系统变量</code>-<code>新建</code>：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
-
-<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
-
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
-
-<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
-<p>建议使用JAVA_HOME进行新建：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
-
-<p>点击确定环境变量配置完成。</p>
-<blockquote>
-<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
-<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
-</blockquote>
-<p>打开cmd分别输入以下三条指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
-
-<p>显示如下内容则jdk 8安装成功。</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
-
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
-
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
-
-<h3 id="安装Rodin"><a href="#安装Rodin" class="headerlink" title="安装Rodin"></a>安装Rodin</h3><h4 id="下载Rodin"><a href="#下载Rodin" class="headerlink" title="下载Rodin"></a>下载Rodin</h4><p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
-
-<p>下载解压后直接打开rodin.exe`:</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
-
-<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
-
-<p>打开后出现如下界面即为安装成功：</p>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
-
-<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
-<p>在<code>Work with</code>里输入相应名称即可安装。</p>
-<blockquote>
-<p>安装插件过程较慢，可以搭梯子。</p>
-</blockquote>
-<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-        <tag>JDK</tag>
-        <tag>Event-B</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VR实现过程（使用VTK官方代码）</title>
     <url>/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/</url>
     <content><![CDATA[<h2 id="VR的介绍"><a href="#VR的介绍" class="headerlink" title="VR的介绍"></a>VR的介绍</h2><p>VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。</p>
 <span id="more"></span>
-
 <p>VR的优点：</p>
 <ul>
 <li>可以探索物体的内部结构</li>
@@ -298,30 +172,34 @@
 <p>数据集：使用的是VTK-Example中的<code>FullHead.mhd</code></p>
 <p>​              也可以使用<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> （可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a>）等mhd格式数据</p>
 </blockquote>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">软件</th>
-<th align="center">版本</th>
-<th align="center">地址</th>
+<th style="text-align:center">软件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">VTK</td>
-<td align="center">8.2.0</td>
-<td align="center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
+<tbody>
+<tr>
+<td style="text-align:center">VTK</td>
+<td style="text-align:center">8.2.0</td>
+<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
 </tr>
 <tr>
-<td align="center">CMake</td>
-<td align="center">3.14.0</td>
-<td align="center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
+<td style="text-align:center">CMake</td>
+<td style="text-align:center">3.14.0</td>
+<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
 </tr>
 <tr>
-<td align="center">Visual Studio</td>
-<td align="center">2017_64 bit</td>
-<td align="center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
+<td style="text-align:center">Visual Studio</td>
+<td style="text-align:center">2017_64 bit</td>
+<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><h4 id="安装VS2017"><a href="#安装VS2017" class="headerlink" title="安装VS2017"></a>安装VS2017</h4><p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
 <h4 id="安装CMake"><a href="#安装CMake" class="headerlink" title="安装CMake"></a>安装CMake</h4><p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
 <h4 id="安装VTK"><a href="#安装VTK" class="headerlink" title="安装VTK"></a>安装VTK</h4><p>参考博客：</p>
@@ -335,37 +213,30 @@
 <li>点击<a href="https://github.com/Kitware/vtk-examples/raw/gh-pages/Tarballs/FixedPointVolumeRayCastMapperCT.tar">here to download FixedPointVolumeRayCastMapperCT</a>后系统会自动下载，并解压：</li>
 </ol>
 <img src="/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/1.png" class="" title="下载源代码">
-
-<ol start="2">
+<ol>
 <li>该文件夹下包括<code>CMakeLists.txt</code>和<code>cxx</code>源文件和一个<code>build</code>文件夹：</li>
 </ol>
 <img src="/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/2.png" class="" title="文件夹">
-
-<ol start="3">
+<ol>
 <li>新建<code>source</code>文件夹和<code>testData</code>文件夹，并将<code>CMakeLists.txt</code>和<code>cxx</code>源文件移动到<code>source</code>文件：</li>
 </ol>
 <img src="/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/3.png" class="" title="新建文件夹">
-
-<ol start="4">
+<ol>
 <li>打开CMake，打开CMake，source code路径即为<code>VR/FixedPointVolumeRayCastMapperCT/source</code>，build路径即为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
 </ol>
 <img src="/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/4.png" class="" title="编译路径">
-
-<ol start="5">
+<ol>
 <li>点击<code>configure</code>按钮，使用本地编译器，选择<code>Visual Studio 15 2017</code>，并选择<code>x64</code>后点击<code>Finish</code>，之后会出现一片红色，将其中<code>CMAKE_INSTALL_PREFIX</code>的路径改为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
 </ol>
 <img src="/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/5.png" class="" title="选择编译器">
-
 <img src="/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/6.png" class="" title="改路径">
-
-<ol start="6">
+<ol>
 <li>继续<code>configure</code>，直到无红色出现，点击<code>generate</code>，<code>generate</code>结束后，打开vs2017，找到<code>build</code>文件夹下的<code>FixedPointVolumeRayCastMapperCT.sln</code>文件选择打开，并将<code>**FixedPointVolumeRayCastMapperCT**</code>设为启动项目，点击本地Windows调试器即可运行。</li>
 </ol>
 <h4 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h4><blockquote>
 <p>Example: FixedPointVolumeRayCastMapperCT -DICOM CTNeck -MIP 4096 1024</p>
 </blockquote>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">-DICOM &lt;directory&gt;                             <span class="comment">// 使用的数据集为 DICOM 格式</span></span><br><span class="line">-VTI &lt;filename&gt;                                <span class="comment">// 使用的数据集为 VTI 格式</span></span><br><span class="line">-MHA &lt;filename&gt;                                <span class="comment">// 使用的数据集为 MHA 格式</span></span><br><span class="line">-DependentComponents                           <span class="comment">// 指定文件具有从属组件</span></span><br><span class="line">-Clip                                          <span class="comment">// 显示用于剪切卷的多维数据集小部件</span></span><br><span class="line">-MIP &lt;window&gt; &lt;level&gt;                          <span class="comment">// 使用最大强度投影方法</span></span><br><span class="line">-CompositeRamp &lt;window&gt; &lt;level&gt;                <span class="comment">// 是非着色合成</span></span><br><span class="line">-CompositeShadeRamp &lt;window&gt; &lt;level&gt;           <span class="comment">// 使用着色合成</span></span><br><span class="line">-CT_Skin                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Bone                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Muscle                                     <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-FrameRate &lt;rate&gt;                              <span class="comment">// 控制交互式渲染速率</span></span><br><span class="line">-DataReduction &lt;factor&gt;                        <span class="comment">// 在渲染前缩减数据</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>必须使用<code>-DICOM</code>选项指定数据所在的目录，或使用<code>-VTI</code>或<code>-MHA</code>选项指定.VTI文件的路径。</li>
 <li>默认情况下，程序假定文件具有独立组件，使用<code>-DependentComponents</code>指定文件具有从属组件。</li>
@@ -379,19 +250,13 @@
 <h4 id="修改源代码"><a href="#修改源代码" class="headerlink" title="修改源代码"></a>修改源代码</h4><p>由于VTK官网是在Linux/macOS的终端运行，但已经在本机Windows 10下安装了全套的配置软件，故修改了其中一些代码，使其更直观操作。</p>
 <p>源代码如下，并配置了相关判断代码（修改后将判断代码全部注释掉，用以自己直接修改参数），用来判断在终端中输入的参数值。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;                         <span class="comment">// 可以删去，因为不需要判断，所以计数器无用</span></span><br><span class="line">  <span class="keyword">char</span>* dirname = <span class="literal">NULL</span>;                  <span class="comment">// 如果使用的数据集为Dicom格式，则可修改NULL值为数据集文件夹地址</span></span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;           <span class="comment">// opacityWindow大小</span></span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;            <span class="comment">// opacityLevel大小</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">/* blendType</span></span><br><span class="line"><span class="comment">      根据参数修改为不同的数字，为不同的效果，其中：</span></span><br><span class="line"><span class="comment">      MIP：blendType = 0</span></span><br><span class="line"><span class="comment">      -CompositeRamp：blendType = 1</span></span><br><span class="line"><span class="comment">      -CompositeShadeRamp：blendType = 2</span></span><br><span class="line"><span class="comment">      -CT_Skin：blendType = 3</span></span><br><span class="line"><span class="comment">      -CT_Bone：blendType = 4</span></span><br><span class="line"><span class="comment">      -CT_Muscle：blendType = 5</span></span><br><span class="line"><span class="comment">      -RGB_Composite：blendType = 6</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;   </span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">0</span>;                          <span class="comment">// 如果上文选择Clip选项，则clip = 1</span></span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;          <span class="comment">// 参数范围在0-1，</span></span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;               <span class="comment">// 控制交互式渲染速率，渲染前缩减数据</span></span><br><span class="line">  <span class="keyword">char</span>* fileName = <span class="number">0</span>;                    <span class="comment">// 如果为VTI格式或MHA/MHD格式，则可修改NULL值为数据文件地址</span></span><br><span class="line">  <span class="keyword">int</span> fileType = <span class="number">0</span>;                      <span class="comment">// 文件格式，可直接根据数据集文件进行输入，无需判断</span></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;     <span class="comment">// 修改不同的数字为不同的效果，下文会有展示</span></span><br></pre></td></tr></table></figure>
-
-
-
 <p>由于采用<code>Windows 10</code>系统，未使用终端，参数修改后如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">char</span> *dirname = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;</span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;</span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;</span><br><span class="line">  <span class="keyword">char</span> *fileName=<span class="string">&quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//FullHead.mhd&quot;</span>;</span><br><span class="line">  <span class="comment">// char *fileName = &quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//TestData//Case00.mhd&quot;;</span></span><br><span class="line">  <span class="keyword">int</span> fileType= MHA_FILETYPE;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">bool</span> independentComponents=<span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">char</span> *dirname = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;</span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;</span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;</span><br><span class="line">  <span class="keyword">char</span> *fileName = <span class="string">&quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//FullHead.mhd&quot;</span>;</span><br><span class="line">  <span class="comment">// char *fileName = &quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//TestData//Case00.mhd&quot;;</span></span><br><span class="line">  <span class="keyword">int</span> fileType = MHA_FILETYPE;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
 <p>并将代码中判断参数代码直接注释掉，从<code>while ( count &lt; args )</code>一直到<code>if ( !dirname &amp;&amp; !fileName)</code>结束。</p>
 <h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p>当 <code>blendType</code> = 0时：</p>
 <img src="/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/101.png" class="" title="blendType &#x3D; 0">
-
 <p>使用<code>CT_Skin</code>参数时：</p>
 <img src="/2021/03/26/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/100.png" class="" title="blendType &#x3D; 3">
-
 ]]></content>
       <categories>
         <category>技术</category>
@@ -415,13 +280,105 @@
       </tags>
   </entry>
   <entry>
+    <title>Rodin安装教程（附java8安装教程）</title>
+    <url>/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
+<blockquote>
+<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
+</blockquote>
+<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h2><blockquote>
+<p>系统：WIndows 10</p>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>安装地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JDK 8</td>
+<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
+</tr>
+<tr>
+<td>Rodin</td>
+<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="安装JDK-8"><a href="#安装JDK-8" class="headerlink" title="安装JDK 8"></a>安装JDK 8</h3><h4 id="下载JDK-8"><a href="#下载JDK-8" class="headerlink" title="下载JDK 8"></a>下载JDK 8</h4><p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
+<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
+<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
+<p>更改安装路径：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
+<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
+<p>点击下一步后就安装成功了：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
+<h4 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h4><p>右键<code>我的电脑</code>-<code>属性</code>：</p>
+<p>并点击<code>高级系统设置</code></p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
+<p>点击<code>环境变量</code>：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
+<p>点击<code>系统变量</code>-<code>新建</code>：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
+<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
+<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
+<p>建议使用JAVA_HOME进行新建：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
+<p>点击确定环境变量配置完成。</p>
+<blockquote>
+<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
+<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
+</blockquote>
+<p>打开cmd分别输入以下三条指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
+<p>显示如下内容则jdk 8安装成功。</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
+<h3 id="安装Rodin"><a href="#安装Rodin" class="headerlink" title="安装Rodin"></a>安装Rodin</h3><h4 id="下载Rodin"><a href="#下载Rodin" class="headerlink" title="下载Rodin"></a>下载Rodin</h4><p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
+<p>下载解压后直接打开rodin.exe`:</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
+<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
+<p>打开后出现如下界面即为安装成功：</p>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
+<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
+<p>在<code>Work with</code>里输入相应名称即可安装。</p>
+<blockquote>
+<p>安装插件过程较慢，可以搭梯子。</p>
+</blockquote>
+<img src="/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>Rodin</tag>
+        <tag>安装</tag>
+        <tag>JDK</tag>
+        <tag>Event-B</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
     <url>/2021/04/02/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
 <p>开始是成功的左括号。——Hoohoo</p>
 </blockquote>
 <span id="more"></span>
-
 <p>最近开始学习CV领域，因为老师想让我做医学影像的三维重建，依我理解，医学影像的三维重建就是面绘制、体绘制之类的，使用VTK、ITK工具包完成，也询问了一些学长等专业人士，得知这边并不好出成果，好出成果的就是切割、MRI之类的，我并没有很大的兴趣，而且老师希望我继续做，我只能曲线救国，先学学重建之类的知识，也就是计算机视觉这方面的，而非专一的医学影像方向。</p>
 <p>并且一定要学习的话，反正都是从0开始，就先学着吧！</p>
 <p>最近在看的一篇论文，十年前的一篇开山之作，就是SLAM中的前端技术，所以在推荐下，就开始学习高翔等著的《视觉SLAM十四讲 从理论到实践》第2版。</p>
@@ -436,13 +393,13 @@
 </li>
 <li><p>C++语言基础</p>
 </li>
-<li><p>Linux基础</p>
-</li>
+<li>Linux基础</li>
 </ul>
 <p>需要用到的主要库：<code>Eigen</code>、<code>OpenCV</code>、<code>PCL</code>、<code>g2o</code>、<code>Ceres</code>等。</p>
 <h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
 <li><p>有线性方程 Ax = b，当我们知道 A, b，想要求解 x 时，如何求解？这对 A 和 b 需 要哪些条件？提示:从 A 的维度和秩角度来分析。</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label></p>
+<label style="color:#f5222d">**答：**</label>
+
 <ul>
 <li>当R(A) = R(A,b) = n时，有唯一解。</li>
 <li>当R(A) = R(A,b) &lt; n时，有多解。</li>
@@ -450,28 +407,44 @@
 </ul>
 <p>// 其中R()为秩的个数，n为未知数的个数。</p>
 </li>
+</ol>
+<ol>
 <li><p>高斯分布是什么？它的一维形式是什么样子？它的高维形式是什么样子？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> 高斯分布又称为正态分布===</p>
 </li>
+</ol>
+<ol>
 <li><p>你知道 C++ 的类吗？你知道 STL 吗？你使用过它们吗？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label>知道一些类，使用过STL。</p>
 </li>
+</ol>
+<ol>
 <li><p>你以前怎样书写 C++ 程序？(你完全可以说只在 VC6.0 下写过 C++ 工程，只要你 有写 C++ 和 C 语言经验就行。)</p>
 <p><label style="color:#f5222dd"><strong>答：</strong></label>刚开始使用<code>CodeBlock</code>写C语言，后来使用<code>Clion</code>，前段时间做VTK，也用过一段时间<code>Visual Studio</code>。</p>
 </li>
+</ol>
+<ol>
 <li><p>你知道 C++11 标准吗？其中哪些新特性你之前听说过或使用过？有没有其他的标准？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label>====</p>
 </li>
+</ol>
+<ol>
 <li><p>你知道 Linux 吗？你有没有至少使用过其中之一(安卓不算)，比如 Ubuntu？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> 知道。用过MacOS、Windows、CentOS、Federa、Ubuntu。</p>
 </li>
+</ol>
+<ol>
 <li><p>Linux 的目录结构是什么样的？你知道哪些基本命令，比如 ls, cat 等等？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> Linux下的目录结构主要是由<code>/</code>延伸。</p>
 <p>一些命令：<code>ls</code>、<code>ll</code>、<code>mkdir</code>、<code>rm</code>、<code>tar</code>、<code>vim</code>、<code>pwd</code>、<code>which</code>…</p>
 </li>
+</ol>
+<ol>
 <li><p>如何在 Ubuntu 中安装软件(不打开软件中心的情况下)？这些软件被安装在什么地方？当我只知道模糊的软件名称(比如我想要装一个 eigen 名称的库)，我应该如何安装它？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> <code>apt-get install</code>，===</p>
 </li>
+</ol>
+<ol>
 <li><p>*花一个小时学习一下Vim，因为你迟早会用它。你可以在终端中输入vimtutor阅 读一遍所有内容。我们不需要你非常熟练地操作它，只要在学习本书的过程中使用它 键入代码即可。不要在它的插件上浪费时间，不要想着把 vim 用成 IDE，我们只用 它做文本编辑的工作。</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label>Vim！！！</p>
 </li>
@@ -494,7 +467,6 @@
 <p>从0到1，进步的阶梯。——Hoohoo</p>
 </blockquote>
 <span id="more"></span>
-
 <p>之前买书的时候还没有到，用的就是第一版的电子书，有些内容也有改变，比如第2讲中的实验部分第1版使用的是Ubuntu14.04，而在第二版中已经使用了18.04，正好和我实验室电脑中装的一样，有些小确幸，当时没有赶时髦装20.04。</p>
 <p>本讲开启了<strong>第1部分——数学基础</strong>，也是<strong>初识SLAM</strong>，那就让我们一起迈过0，进入1的世界吧！</p>
 <h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><blockquote>
@@ -531,7 +503,7 @@
 <blockquote>
 <p>想象我们在看电影时候，虽然能够知道电影场景中哪些物体比另一些大，但我们无法确定电影里那些物体的“真实尺度”:那些大楼是真实的高楼大厦，还是放在桌上的模型？而摧毁大厦的是真实怪兽， 还是穿着特摄服装的演员？直观地说，如果把相机的运动和场景大小同时放大两倍，单目所看到的像是一样的。同样的，把这个大小乘以任意倍数，我们都将看到一样的景象。</p>
 </blockquote>
-<p>单目 SLAM 估计的轨迹和地图，将与真实的轨迹、地图，相差一个因子，也就是所谓的<strong>尺度(Scale)<strong>。由于单目 SLAM 无法仅凭图像确定这个真实尺度，所以又称为</strong>尺度不确定性</strong>。</p>
+<p>单目 SLAM 估计的轨迹和地图，将与真实的轨迹、地图，相差一个因子，也就是所谓的<strong>尺度(Scale)</strong>。由于单目 SLAM 无法仅凭图像确定这个真实尺度，所以又称为<strong>尺度不确定性</strong>。</p>
 <h4 id="双目相机"><a href="#双目相机" class="headerlink" title="双目相机"></a>双目相机</h4><p>双目相机由两个单目相机组成，但是这两个相机之间的距离【基线（Baseline）】是已知的。和人的双线比较相似，通过这个基线来估计每个像素的空间距离。</p>
 <p>你可以将你的一根手指放在你的鼻子前，分别捂住左右眼，被遮住的背景是不同的。</p>
 <p><strong>优点</strong>：距离估计是比较左右眼图像获得的，不依赖其他传感设备，所以室内室外都可以应用。</p>
@@ -543,7 +515,6 @@
 <h3 id="2-2-经典视觉SLAM框架"><a href="#2-2-经典视觉SLAM框架" class="headerlink" title="2.2 经典视觉SLAM框架"></a>2.2 经典视觉SLAM框架</h3><p>如下图：</p>
 <p>依靠这些算法，我们可以构建一个视觉SLAM系统，使之在正常的工作环境中实时定位和建图。</p>
 <img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210403235429941.png" class="" title="视觉SLAM流程图">
-
 <h4 id="2-2-1-传感器信息读取"><a href="#2-2-1-传感器信息读取" class="headerlink" title="2.2.1 传感器信息读取"></a>2.2.1 传感器信息读取</h4><p>主要是为相机图像信息的读取与预处理。</p>
 <h4 id="2-2-2-前端视觉里程计（Visual-Odometry，VO）"><a href="#2-2-2-前端视觉里程计（Visual-Odometry，VO）" class="headerlink" title="2.2.2 前端视觉里程计（Visual Odometry，VO）"></a>2.2.2 前端视觉里程计（Visual Odometry，VO）</h4><p><strong>任务</strong>：估算相邻图像间相机的运动，以及局部地图的样子。VO又称前端（Front End）。</p>
 <p>在计算机视觉中，根据图像确定相机的运动十分困难。图像在计算机中只是一个数值矩阵，在视觉SLAM中，我们只能看到一个个像素，知道它们是某些空间点在相机的成像平面上投影的结果，所以，为了定量地估计相机运动，必须先<strong>了解相机与空间点的几何关系</strong>。</p>
@@ -554,9 +525,6 @@
 <p>比方说，机器人先向左转90度，再向右转了90度。由于误差，我们把第一个90度估计成了89度。那我们就会尴尬地发现，向右转之后机器人的估计位置并没有回到原点。更糟糕的是，即使之后的估计再准确，与真实值相比，都会带上这-1度的误差。</p>
 </blockquote>
 <img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210405224053208.png" class="" title="漂移误差">
-
-
-
 <p>这也就是所谓的<strong>漂移</strong>（Drift）。将会导致我们无法建立一致的地图。</p>
 <p>为了解决漂移问题，我们还需要两种技术：<strong>后端优化</strong>和<strong>回环检测</strong>。</p>
 <blockquote>
@@ -577,7 +545,6 @@
 <h4 id="2-2-5-建图"><a href="#2-2-5-建图" class="headerlink" title="2.2.5 建图"></a>2.2.5 建图</h4><p><strong>任务</strong>：构建地图。</p>
 <p>地图（见下图）是对环境的描述，但是这个描述并不是固定的，需要视SLAM的应用而定。</p>
 <img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210405230415212.png" class="" title="不同地图">
-
 <p>对于地图我们有太多的想法和需求，但是建图并没有一个固定的形式和算法。</p>
 <p>大体上讲，可以分为<strong>度量地图</strong>和<strong>拓扑地图</strong>。</p>
 <h5 id="度量地图"><a href="#度量地图" class="headerlink" title="度量地图"></a>度量地图</h5><p>度量地图强调精确地表示地图中物体的位置关系，通常用稀疏（Sparse）和稠密（Dense）对其分类。</p>
@@ -590,7 +557,7 @@
 <p>拓扑地图是一个图(Graph)， 由节点和边组成，只考虑节点间的连通性，例如A, B点是连通的，而不考虑如何从A点到达B点的过程。它放松了地图对精确位置的需要，去掉地图的细节问题,是一种更为紧凑的表达方式。然而，拓扑地图不擅长表达具有复杂结构的地图。如何对地图进行分割形成结点与边，又如何使用拓扑地图进行导航与路径规划，仍是有待研究的问题。</p>
 </blockquote>
 <h3 id="2-3-SLAM中的数学表达"><a href="#2-3-SLAM中的数学表达" class="headerlink" title="2.3 SLAM中的数学表达"></a>2.3 SLAM中的数学表达</h3><p>我们要用数学语言来描述SLAM的过程，要用到一些变量和公式。</p>
-<p>$t$ : 表示一个离散时刻</p>
+<p>$ t $​ : 表示一个离散时刻</p>
 <p>$x$ : 表示小萝卜自身的位置</p>
 <p>$y$ : 表示路标</p>
 <p>小萝卜携带着传感器在环境中运动，可以由下列两件事情描述：</p>
@@ -598,8 +565,119 @@
 <li>什么是<strong>运动</strong>？从 $k-1$ 时刻到 $k$ 时刻，小萝卜的位置是怎么变化的。</li>
 <li>什么是<strong>观测</strong>？假设小萝卜在 $k$ 时刻于 $x_k$ 处探测到了某一个路标 $y_j$ ，如何用数学语言描述这件事情。</li>
 </ol>
-<p>先来看<strong>运动</strong>。通常，机器人会携带一个测量自身运动的传感器，比如说码盘或惯性传感器。这个传感器可以测量有关运动的读数，但不一定直接是位置之差，还可能是加速度、角速度等信息。有时候我们也会给小萝卜发送指定，比如“前进1m”“旋转90度”，或者“油门踩到底”“刹车”等。然而，无论是什么传感器，我们都能使用一个通用的、抽象的数学模型:<br>$$<br>\begin{align}<br>x_k = f(x_{k-1},u_k,w_k)\tag {2.1}<br>\end{align}<br>$$</p>
-<p>其中 $u_k$ 是运动传感器的读数或者输入。</p>
+<p>先来看<strong>运动</strong>。通常，机器人会携带一个测量自身运动的传感器，比如说码盘或惯性传感器。这个传感器可以测量有关运动的读数，但不一定直接是位置之差，还可能是加速度、角速度等信息。有时候我们也会给小萝卜发送指定，比如“前进1m”“旋转90度”，或者“油门踩到底”“刹车”等。然而，无论是什么传感器，我们都能使用一个通用的、抽象的数学模型:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+x_k = f(x_{k-1},u_k,w_k)\tag {2.1}
+\end{align}</script><p>其中 $u_k$ 是运动传感器的读数或者输入，$w_k$为过程中加入的噪声。</p>
+<blockquote>
+<p>噪声的存在使得这个模型变成了随机模型。</p>
+<p>换句话说，即使我们下达“前进1m”的指令后，也不代表小萝卜真的前进了1m，如果所有的指令都是准确的，就没必要<strong>估计</strong>了。事实上，小萝卜可能这次前进了0.9m，下一次前进了1.1m，再一次可能根据轮胎打滑，干脆没前进。</p>
+<p>于是每次运动过程中的噪声是随机的，如果我们不理会这个噪声，可能与实际位置相差十万八千里。</p>
+</blockquote>
+<p>再来看<strong>观测</strong>。观测方程描述的是，当小萝卜在$x_k$位置上看到某个路标点 $y_j$ 时，产生了一个观测数据$z_{k,j}$，同样用一个抽象的函数$h$来描述这个关系：</p>
+<script type="math/tex; mode=display">
+z_{k,j}=h(y_j,x_k,v_{k,j}) \tag{2.2}</script><p>这里，$v_{k,j}$ 是这次观测里的噪声。</p>
+<p>事实上，根据小萝卜的真实运动和传感器的种类，存在着若干种参数化(Parameterization)方式。</p>
+<p>什么叫参数化呢？</p>
+<p>举例来说，假设小萝卜在平面中运动，那么，它的位姿由两个位置和一个转角来描述，即 $x_k= {[x_1, x_2, \theta]}^T_k$。其中 $x_1,x_2$ 是两个轴上的位置而 $\theta$ 是转角。同时，运动传感器能够测量到小萝卜在每两个时间间隔位置和转角的变化量 $u_k={[\bigtriangleup x_1,\bigtriangleup x_2,\bigtriangleup \theta]^T_k}$。</p>
+<p>那么，此时运动方程就可以具体化为:</p>
+<script type="math/tex; mode=display">
+\begin{gathered}
+\begin{bmatrix} x_1 \\ x_2 \\ \theta \end{bmatrix}_k=
+\begin{bmatrix} x_1 \\ x_2 \\ \theta \end{bmatrix}_{k-1}=
+\begin{bmatrix} \bigtriangleup x_1 \\ \bigtriangleup x_2 \\ \bigtriangleup \theta \end{bmatrix}_k+w_k
+\end{gathered}\tag{2.3}</script><p>这是简单的线性关系。不过，并不是所有的输入指令都是位移和角度变化，例如“油门”或者“控制杆”的输入就是速度或者加速度量，所以也存在着其他形式更加复杂的运动方程，那时我们可能需要进行动力学分析。</p>
+<p>关于观测方程，比方说小萝卜携带着一个二维激光传感器。我们知道激光传感器观测一个2D路标点时，能够测到两个量：路标点与小萝卜本体之间的距离 $r$ 和夹角 $\phi$。记路标点为 $y_j=[y_1,y_2]^T_j$，位姿为 $x_k=[x_1,x_2]^T_k$ 观测数据为 $z_{k,j}=[r_{k,j},\phi_{k,j}]^T$，那么观测方程就具体化为:</p>
+<script type="math/tex; mode=display">
+\begin{gathered}
+\begin{bmatrix} r_{k,j} \\ \phi_{k,j} \end{bmatrix}_k=
+\begin{bmatrix} \sqrt{(y_{1,j}-x_{1,k})^2-(y_{2,j}-x_{2,k})^2} \\ arctan(\dfrac{ {y_{2,j}-x_{2,k} } } { {y_{1,j}-x_{1,k} } }) \end{bmatrix}_{k-1}+v
+\end{gathered}
+\tag{2.4}</script><p>可见，针对不同的传感器，这两个方程有不同的参数化形式。如果我们保持通用性，把它们取成通用的抽象形式，那么SLAM过程可总结为两个基本方程:</p>
+<script type="math/tex; mode=display">
+\begin{gathered}
+\begin{matrix}
+\begin{cases} x_k=f(x_{k-1},u_k,w_k) ,\quad k = 1,\cdots,k
+\\ z_{k,j}=h(y_j,x_k,v_{k,j}) ,\quad (k,j) \in \mathcal{O} \end{cases}
+\end{matrix}
+\end{gathered}
+\tag{2.5}</script><p>其中 $\mathcal{O}$ 是一个集合，记录着在哪个时刻观察到了哪个路标。</p>
+<blockquote>
+<p>这两个方程描述了最基本的SLAM问题：当我们知道运动测量的读数 $u$ ,以及传感器的读数 $z$ 时，如何求解定位问题(估计 $x$ )和建图问题(估计 $y$ )？</p>
+<p>这时，我们把SLAM问题建模成了一个状态估计问题：如何通过带有噪声的测量数据，估计内部的、隐藏着的状态变量?</p>
+</blockquote>
+<p>状态估计问题的求解于两个方程的具体形式，以及噪声服从哪种分部有关。</p>
+<p>按照运动和观测方程是否为线性，噪声是否服从高斯分布进行分类，分为<strong>线性/非线性</strong>和<strong>高斯/非高斯</strong>系统。</p>
+<blockquote>
+<p>其中线性高斯系统(Linear Gaussian, LG系统)是最简单的，它的无偏的最优估计可以由卡尔曼滤波器(Kalman Filter, KF)给出。而在复杂的非线性非高斯系统(Non-Linear Non-Gaussian, NLNG系统)中，我们会使用以扩展卡尔曼滤波器( Extended Kalman Filter, EKF)和非线性优化两大类方法去求解它。直至21世纪早期，以EKF为主的滤波器方法占据了SLAM中的主导地位。我们会在工作点处把系统线性化，并以预测更新两大步骤进行求解(见第九讲)。</p>
+<p>最早的实时视觉SLAM系统即是基于EKF[2]开发的。随后，为了克服EKF的缺点(例如线性化误差和噪声高斯分布假设)，人们开始使用粒子滤波器( Particle Filter)等其他滤波器，乃至使用非线性优化的方法。时至今日，主流视觉SLAM使用以图优化( Graph Optimization)为代表的优化技术进行状态估计[13]。我们认为优化技术已经明显优于滤波器技术，只要计算资源允许，我们通常都偏向于使用优化方法。</p>
+</blockquote>
+<h3 id="2-4-实践：编程基础"><a href="#2-4-实践：编程基础" class="headerlink" title="2.4 实践：编程基础"></a>2.4 实践：编程基础</h3><blockquote>
+<p>cmake很重要，最近在做一些其他事情的时候，学到了一些皮毛，虽然不大懂，后期会去看《cmake实践》，详见前几篇blog可以看到有cmake的身影。</p>
+</blockquote>
+<h4 id="2-4-1-2-4-3"><a href="#2-4-1-2-4-3" class="headerlink" title="2.4.1 - 2.4.3"></a>2.4.1 - 2.4.3</h4><img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406095723666.png" class="" title="CmakeLists">
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406095741620.png" class="" title="build">
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406095752630.png" class="" title="success！">
+<h4 id="2-4-3-使用库"><a href="#2-4-3-使用库" class="headerlink" title="2.4.3 使用库"></a>2.4.3 使用库</h4><blockquote>
+<p>以下图片为mac远程连接Ubuntu截图。</p>
+</blockquote>
+<p>学习打包一个库文件。</p>
+<blockquote>
+<p>库文件分为<strong>静态库</strong>和<strong>共享库</strong>。</p>
+<p>静态库：以<u>.a</u>结尾</p>
+<p>共享库：以<u>.so</u>结尾</p>
+<p><strong>区别</strong>：静态库每次被调用都会生成一个副本，而共享库只有一个副本。</p>
+</blockquote>
+<ol>
+<li>编写libHelloSLAM.cpp文件。</li>
+</ol>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406101221432.png" class="" title="书写一个libHelloSLAM.cpp文件">
+<ol>
+<li><p>在CMakeLists中添加一行<code>add_library()</code>    </p>
+<blockquote>
+<p>如果想要生成共享库，则输入</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">add_library(hello_shared SHARED libHelloSLAM.cpp)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406101437021.png" class="" title="add_library">
+<ol>
+<li><code>cmake</code>生成<code>libhello.a</code></li>
+</ol>
+<p>(其中ERROR部分为错误输入，不必看)</p>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406101747826.png" class="" title="build">
+<ol>
+<li>编写头文件，让人调用。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> LIBHELLOSLAM_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIBHELLOSLAM_H_</span></span><br><span class="line"><span class="comment">//上面的宏定义是为了防止重复引用这个头文件而引起的重定义错误</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//打印一句Hello的函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printHello</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>          </span></span><br></pre></td></tr></table></figure>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406103332124.png" class="" title="header file">
+<ol>
+<li>写一个可执行程序调用这个简单的函数</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;libHelloSLAM.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用libHelloSLAM.h中的printHello()函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span> **argv)</span></span>&#123;</span><br><span class="line">        printHello();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;                                      </span><br></pre></td></tr></table></figure>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406103642410.png" class="" title="useHello.cpp">
+<ol>
+<li>在CMakeLists中添加一个可执行程序的生成命令，链接到刚才使用的库上。</li>
+</ol>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406104128670.png" class="" title="add and link">
+<p><strong>执行</strong>：</p>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406104335326.png" class="" title="执行">
+<h4 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h4><p>个人使用的是CLion。</p>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406105604575.png" class="" title="clion">
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
+<li>阅读文献 [1] 和 [14]，你能看懂文献的内容吗?</li>
+<li>*阅读 SLAM 的综述文献，例如 [9, 15, 16, 17, 18] 等。这些文献关于 SLAM 的看法与本书有何异同?</li>
+<li>g++命令有哪些参数?怎么填写参数可以更改生成的程序文件名? x 而不是直接给我发邮件问错误怎么解决。</li>
+<li>使用 build 文件夹来编译你的 cmake 工程，然后在 Kdevelop 中试试。</li>
+<li>刻意在代码中添加一些语法错误，看看编译会生成什么样的信息。你能看懂 g++ 的 错误吗?</li>
+<li>如果忘了把库链接到可执行程序上，编译会报错吗?什么样的错? </li>
+<li>*阅读《cmake实践》，了解cmake的其他语法。</li>
+<li>* 完善 hello SLAM 的小程序，把它做成一个小程序库，安装到本地硬盘中。然后， 新建一个工程，使用 find_package 找这个库并调用它。</li>
+<li>*寻找其他cmake教学材料，深入了解cmake，例如<a href="https://github.com/TheErk/CMake-tutorial。">https://github.com/TheErk/CMake-tutorial。</a></li>
+<li>寻找 Kdevelop 的官方网站，看看它还有哪些特性。你都用上了吗? </li>
+<li>如果你在上一讲学习了 vim，请试试 Kdevelop 的 vim 编辑功能。</li>
+</ol>
 ]]></content>
       <categories>
         <category>学习</category>
