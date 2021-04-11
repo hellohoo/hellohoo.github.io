@@ -13,6 +13,104 @@
       </tags>
   </entry>
   <entry>
+    <title>Rodin安装教程（附java8安装教程）</title>
+    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
+<blockquote>
+<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
+</blockquote>
+<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
+<blockquote>
+<p>系统：WIndows 10</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>安装地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JDK 8</td>
+<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
+</tr>
+<tr>
+<td>Rodin</td>
+<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
+<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
+<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
+<p>更改安装路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
+<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
+<p>点击下一步后就安装成功了：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
+<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
+<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
+<p>并点击<code>高级系统设置</code></p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
+<p>点击<code>环境变量</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
+<p>点击<code>系统变量</code>-<code>新建</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
+<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
+<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
+<p>建议使用JAVA_HOME进行新建：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
+<p>点击确定环境变量配置完成。</p>
+<blockquote>
+<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
+<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
+</blockquote>
+<p>打开cmd分别输入以下三条指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
+<p>显示如下内容则jdk 8安装成功。</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
+<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
+<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
+<p>下载解压后直接打开rodin.exe`:</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
+<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
+<p>打开后出现如下界面即为安装成功：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
+<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
+<p>在<code>Work with</code>里输入相应名称即可安装。</p>
+<blockquote>
+<p>安装插件过程较慢，可以搭梯子。</p>
+</blockquote>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+        <tag>Rodin</tag>
+        <tag>JDK</tag>
+        <tag>Event-B</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一些学习中遇到的数学知识</title>
     <url>/2021/04/09/%E4%B8%80%E4%BA%9B%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<h1 id="数学"><a class="markdownIt-Anchor" href="#数学"></a> 数学</h1>
@@ -137,193 +235,24 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <p>其中k要比n小很多，也就是一个大的矩阵A可以用三个小的矩阵 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>U</mi><mrow><mi>m</mi><mo>×</mo><mi>k</mi></mrow></msub><mo separator="true">,</mo><msub><mi mathvariant="normal">Σ</mi><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow></msub><mo separator="true">,</mo><msubsup><mi>V</mi><mrow><mi>k</mi><mo>×</mo><mi>n</mi></mrow><mi>T</mi></msubsup></mrow><annotation encoding="application/x-tex">U_{m\times k}, \Sigma_{k\times k}, V^T_{k\times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1827699999999999em;vertical-align:-0.34143899999999994em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord">Σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-2.4168920000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">×</span><span class="mord mathdefault mtight">n</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34143899999999994em;"><span></span></span></span></span></span></span></span></span></span> 来表示。如下图所示，现在我们的矩阵A只需要灰色的部分的三个小矩阵就可以近似描述了。</p>
 <img src="/2021/04/09/%E4%B8%80%E4%BA%9B%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/v2-4437f7678e8479bbc37fd965839259d2_720w.jpg" class="" title="img">
 <p>由于这个重要的性质，SVD可以用于PCA降维，来做数据压缩和去噪。也可以用于推荐算法，将用户和喜好对应的矩阵做特征分解，进而得到隐含的用户需求来做推荐。同时也可以用于NLP中的算法，比如潜在语义索引（LSI）。</p>
+<h3 id="共轭转置"><a class="markdownIt-Anchor" href="#共轭转置"></a> 共轭转置</h3>
+<blockquote>
+<p>参考：<a href="https://baike.baidu.com/item/%E5%85%B1%E8%BD%AD%E8%BD%AC%E7%BD%AE/6285404?fr=aladdin">百度百科-共轭转置</a></p>
+</blockquote>
+<p>共轭就是矩阵每个元素都取共轭（实部不变，虚部取负）。</p>
+<blockquote>
+<p>转置就是把矩阵的每个元素按左上到右下的所有元素对称调换过来。</p>
+</blockquote>
+<p>共轭转置就是先取共轭，再取转置。</p>
+<p>以复数为元素的矩阵，其共轭矩阵指对每一个元素取共轭之后得到的矩阵。</p>
+<p>共轭矩阵又称Hermite阵，每一个第i行第j列的元素都与第j行第i列的元素的共轭相等。</p>
+<img src="/2021/04/09/%E4%B8%80%E4%BA%9B%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/format,f_jpg.jpeg" class="" title="共轭转置">
 ]]></content>
       <categories>
         <category>学习</category>
       </categories>
       <tags>
         <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>卷积神经网络</title>
-    <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<blockquote>
-<p>学会变通，才能开启新的道路。——Hoohoo</p>
-</blockquote>
-<span id="more"></span>
-<p>大家好，因为最近在学SLAM14，但是由于一些原因，可能是分类过于多，我决定先把CV的前瞻课程学好——也就是深度学习这块，其实一直有了解，只是断断续续，也没有给自己一个确切的目标，毕竟现在搞视觉不带点深度学习的东西没办法搞了就。</p>
-<p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
-<p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
-<p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
-<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO4都出来了，而且这本书采用的是tf1…</p>
-<p>不过没关系，就这样开始吧。</p>
-<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
-<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
-<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac的Rodin安装教程</title>
-    <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：macOS Big Sur 11.2.3</p>
-<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
-</blockquote>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<h5 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h5>
-<p>在Mac上直接<code>terminal</code>中输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
-<h5 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h5>
-<p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
-<p>点击右上角文件夹图标：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
-<p>点击<code>Download JDK</code>：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
-<h4 id="测试jdk-8是否安装成功"><a class="markdownIt-Anchor" href="#测试jdk-8是否安装成功"></a> 测试JDK 8是否安装成功</h4>
-<p>输入以下命令不报错即成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<blockquote>
-<h4 id="macos-caveat"><a class="markdownIt-Anchor" href="#macos-caveat"></a> macOS caveat</h4>
-<p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
-</blockquote>
-<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
-<p>但是又继续报错：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
-<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
-<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
-<p>发现有一段被注释掉了</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
-<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
-<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
-<p>修改并保存，就可以成功启动Rodin了。</p>
-<blockquote>
-<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Rodin安装教程（附java8安装教程）</title>
-    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
-    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
-<blockquote>
-<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
-</blockquote>
-<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：WIndows 10</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>安装地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JDK 8</td>
-<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
-</tr>
-<tr>
-<td>Rodin</td>
-<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
-<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
-<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
-<p>更改安装路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
-<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
-<p>点击下一步后就安装成功了：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
-<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
-<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
-<p>并点击<code>高级系统设置</code></p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
-<p>点击<code>环境变量</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
-<p>点击<code>系统变量</code>-<code>新建</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
-<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
-<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
-<p>建议使用JAVA_HOME进行新建：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
-<p>点击确定环境变量配置完成。</p>
-<blockquote>
-<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
-<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
-</blockquote>
-<p>打开cmd分别输入以下三条指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
-<p>显示如下内容则jdk 8安装成功。</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
-<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
-<p>下载解压后直接打开rodin.exe`:</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
-<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
-<p>打开后出现如下界面即为安装成功：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
-<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
-<p>在<code>Work with</code>里输入相应名称即可安装。</p>
-<blockquote>
-<p>安装插件过程较慢，可以搭梯子。</p>
-</blockquote>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-        <tag>JDK</tag>
-        <tag>Event-B</tag>
       </tags>
   </entry>
   <entry>
@@ -452,6 +381,199 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       <tags>
         <tag>医学影像</tag>
         <tag>VTK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac的Rodin安装教程</title>
+    <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
+<blockquote>
+<p>系统：macOS Big Sur 11.2.3</p>
+<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
+</blockquote>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<h5 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h5>
+<p>在Mac上直接<code>terminal</code>中输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
+<h5 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h5>
+<p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
+<p>点击右上角文件夹图标：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
+<p>点击<code>Download JDK</code>：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
+<h4 id="测试jdk-8是否安装成功"><a class="markdownIt-Anchor" href="#测试jdk-8是否安装成功"></a> 测试JDK 8是否安装成功</h4>
+<p>输入以下命令不报错即成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
+<blockquote>
+<h4 id="macos-caveat"><a class="markdownIt-Anchor" href="#macos-caveat"></a> macOS caveat</h4>
+<p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
+</blockquote>
+<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
+<p>但是又继续报错：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
+<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
+<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
+<p>发现有一段被注释掉了</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
+<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
+<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
+<p>修改并保存，就可以成功启动Rodin了。</p>
+<blockquote>
+<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+        <tag>Rodin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>卷积神经网络</title>
+    <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>学会变通，才能开启新的道路。——Hoohoo</p>
+</blockquote>
+<span id="more"></span>
+<p>大家好，因为最近在学SLAM14，但是由于一些原因，可能是分类过于多，我决定先把CV的前瞻课程学好——也就是深度学习这块，其实一直有了解，只是断断续续，也没有给自己一个确切的目标，毕竟现在搞视觉不带点深度学习的东西没办法搞了就。</p>
+<p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
+<p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
+<p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
+<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO4都出来了，而且这本书采用的是tf1…</p>
+<p>不过没关系，就这样开始吧。</p>
+<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
+<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
+<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MPR实现过程</title>
+    <url>/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="mpr的介绍"><a class="markdownIt-Anchor" href="#mpr的介绍"></a> MPR的介绍</h2>
+<p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
+<p><em><span id="more"></span></em></p>
+<p>MPR 的<strong>优点</strong></p>
+<ul>
+<li>能任意产生新的断层图像，而无需重复扫描。</li>
+<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
+</ul>
+<p>MPR的<strong>缺点</strong></p>
+<ul>
+<li>难以表达复杂的空间结构。</li>
+<li>曲面重组易造成假阳性。</li>
+</ul>
+<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
+<blockquote>
+<p>平台：Windows 10</p>
+<p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ITK</td>
+<td style="text-align:center">4.13.2</td>
+<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">VTK</td>
+<td style="text-align:center">8.2.0</td>
+<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">CMake</td>
+<td style="text-align:center">3.14.0</td>
+<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Qt</td>
+<td style="text-align:center">5.12.0</td>
+<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Visual Studio</td>
+<td style="text-align:center">2017_64 bit</td>
+<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
+<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
+<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
+<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
+<h4 id="安装qt"><a class="markdownIt-Anchor" href="#安装qt"></a> 安装Qt</h4>
+<p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
+<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
+<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
+<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
+<p><a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
+<h4 id="安装itk"><a class="markdownIt-Anchor" href="#安装itk"></a> 安装ITK</h4>
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
+<p><a href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
+<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
+<blockquote>
+<p>参考博客：<a href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
+</blockquote>
+<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
+<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
+<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
+<p>继续configure，直到无红色出现，点击generate。</p>
+<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
+<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
+<p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
+<p>初始界面：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
+<p>旋转切面：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
+<p>像素点的三维坐标与灰度值信息的显示：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
+<p>灰度变化：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>VTK</category>
+        <category>ITK</category>
+      </categories>
+      <tags>
+        <tag>医学影像</tag>
+        <tag>VTK</tag>
+        <tag>MPR</tag>
+        <tag>ITK</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -848,116 +970,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <tag>学习</tag>
         <tag>书籍</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MPR实现过程</title>
-    <url>/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="mpr的介绍"><a class="markdownIt-Anchor" href="#mpr的介绍"></a> MPR的介绍</h2>
-<p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
-<p><em><span id="more"></span></em></p>
-<p>MPR 的<strong>优点</strong></p>
-<ul>
-<li>能任意产生新的断层图像，而无需重复扫描。</li>
-<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
-</ul>
-<p>MPR的<strong>缺点</strong></p>
-<ul>
-<li>难以表达复杂的空间结构。</li>
-<li>曲面重组易造成假阳性。</li>
-</ul>
-<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
-<blockquote>
-<p>平台：Windows 10</p>
-<p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ITK</td>
-<td style="text-align:center">4.13.2</td>
-<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">VTK</td>
-<td style="text-align:center">8.2.0</td>
-<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">CMake</td>
-<td style="text-align:center">3.14.0</td>
-<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Qt</td>
-<td style="text-align:center">5.12.0</td>
-<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Visual Studio</td>
-<td style="text-align:center">2017_64 bit</td>
-<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
-<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
-<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
-<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
-<h4 id="安装qt"><a class="markdownIt-Anchor" href="#安装qt"></a> 安装Qt</h4>
-<p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
-<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
-<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
-<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
-<p>参考博客：</p>
-<p><a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
-<p><a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
-<h4 id="安装itk"><a class="markdownIt-Anchor" href="#安装itk"></a> 安装ITK</h4>
-<p>参考博客：</p>
-<p><a href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
-<p><a href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
-<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
-<blockquote>
-<p>参考博客：<a href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
-</blockquote>
-<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
-<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
-<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
-<p>继续configure，直到无红色出现，点击generate。</p>
-<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
-<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
-<p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
-<p>初始界面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
-<p>旋转切面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
-<p>像素点的三维坐标与灰度值信息的显示：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
-<p>灰度变化：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>VTK</category>
-        <category>ITK</category>
-      </categories>
-      <tags>
-        <tag>医学影像</tag>
-        <tag>VTK</tag>
-        <tag>MPR</tag>
-        <tag>ITK</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
 </search>
