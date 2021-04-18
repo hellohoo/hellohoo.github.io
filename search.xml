@@ -146,21 +146,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用iTerm2教程</title>
-    <url>/2021/04/18/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>先放个效果图。</p>
-<img src="/2021/04/18/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/image-20210418200845655.png" class="" title="iterm2">
-<span id="more"></span>
-<p>胡搞。</p>
-]]></content>
-      <categories>
-        <category>胡整</category>
-      </categories>
-      <tags>
-        <tag>胡整</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>卷积神经网络</title>
     <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -200,6 +185,21 @@
       <tags>
         <tag>学习</tag>
         <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用iTerm2教程</title>
+    <url>/2021/04/18/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>先放个效果图。</p>
+<img src="/2021/04/18/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/image-20210418200845655.png" class="" title="iterm2">
+<span id="more"></span>
+<p>胡搞。</p>
+]]></content>
+      <categories>
+        <category>胡整</category>
+      </categories>
+      <tags>
+        <tag>胡整</tag>
       </tags>
   </entry>
   <entry>
@@ -672,7 +672,7 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
 </blockquote>
 <h4 id="241-243"><a class="markdownIt-Anchor" href="#241-243"></a> 2.4.1 - 2.4.3</h4>
 <img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406095723666.png" class="" title="CmakeLists">
-<img src="《视觉SLAM十四讲-第2版》学习笔记-第2讲/image-20210406095741620.png" alt="build" style="zoom:76%;" />
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406095741620.png" class="" title="build">
 <img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406095752630.png" class="" title="success！">
 <h4 id="使用库"><a class="markdownIt-Anchor" href="#使用库"></a> 使用库</h4>
 <blockquote>
@@ -688,7 +688,7 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
 <ol>
 <li>编写libHelloSLAM.cpp文件。</li>
 </ol>
-<img src="《视觉SLAM十四讲-第2版》学习笔记-第2讲/image-20210406101221432.png" alt="书写一个libHelloSLAM.cpp文件" style="zoom:50%;" />
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406101221432.png" class="" title="书写一个libHelloSLAM.cpp文件">
 <ol start="2">
 <li>
 <p>在CMakeLists中添加一行<code>add_library()</code></p>
@@ -698,31 +698,33 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
 </blockquote>
 </li>
 </ol>
-<img src="《视觉SLAM十四讲-第2版》学习笔记-第2讲/image-20210406101437021.png" alt="add_library" style="zoom: 50%;" />
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406101437021.png" class="" title="add_library">
 <ol start="3">
 <li><code>cmake</code>生成<code>libhello.a</code></li>
 </ol>
 <p>(其中ERROR部分为错误输入，不必看)</p>
-<img src="《视觉SLAM十四讲-第2版》学习笔记-第2讲/image-20210406101747826.png" alt="build" style="zoom: 60%;" />
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406101747826.png" class="" title="build">
 <ol start="4">
 <li>编写头文件，让人调用。</li>
 </ol>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> LIBHELLOSLAM_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIBHELLOSLAM_H_</span></span><br><span class="line"><span class="comment">//上面的宏定义是为了防止重复引用这个头文件而引起的重定义错误</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//打印一句Hello的函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printHello</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>          </span></span><br></pre></td></tr></table></figure>
-<img src="《视觉SLAM十四讲-第2版》学习笔记-第2讲/image-20210406103332124.png" alt="header file" style="zoom: 50%;" />
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406103332124.png" class="" title="header file">
 <ol start="5">
 <li>写一个可执行程序调用这个简单的函数</li>
 </ol>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;libHelloSLAM.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用libHelloSLAM.h中的printHello()函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span> **argv)</span></span>&#123;</span><br><span class="line">        printHello();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;                                      </span><br></pre></td></tr></table></figure>
-<img src="《视觉SLAM十四讲-第2版》学习笔记-第2讲/image-20210406103642410.png" alt="useHello.cpp" style="zoom: 50%;" />
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406103642410.png" class="" title="usehello.cpp">
 <ol start="6">
 <li>在CMakeLists中添加一个可执行程序的生成命令，链接到刚才使用的库上。</li>
+<li>
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406104128670.png" class="" title="add and link">
+</li>
 </ol>
-<img src="《视觉SLAM十四讲-第2版》学习笔记-第2讲/image-20210406104128670.png" alt="add and link" style="zoom: 50%;" />
 <p><strong>执行</strong>：</p>
 <img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406104335326.png" class="" title="执行">
 <h4 id="ide"><a class="markdownIt-Anchor" href="#ide"></a> IDE</h4>
 <p>个人使用的是<code>CLion</code>。</p>
-<img src="《视觉SLAM十四讲-第2版》学习笔记-第2讲/image-20210406105604575.png" alt="clion" style="zoom: 67%;" />
+<img src="/2021/04/03/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC2%E8%AE%B2/image-20210406105604575.png" class="" title="clion">
 <h2 id="习题"><a class="markdownIt-Anchor" href="#习题"></a> 习题</h2>
 <ol>
 <li>阅读文献 [1] 和 [14]，你能看懂文献的内容吗？</li>
@@ -796,116 +798,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <tag>学习</tag>
         <tag>书籍</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MPR实现过程</title>
-    <url>/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="mpr的介绍"><a class="markdownIt-Anchor" href="#mpr的介绍"></a> MPR的介绍</h2>
-<p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
-<p><em><span id="more"></span></em></p>
-<p>MPR 的<strong>优点</strong></p>
-<ul>
-<li>能任意产生新的断层图像，而无需重复扫描。</li>
-<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
-</ul>
-<p>MPR的<strong>缺点</strong></p>
-<ul>
-<li>难以表达复杂的空间结构。</li>
-<li>曲面重组易造成假阳性。</li>
-</ul>
-<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
-<blockquote>
-<p>平台：Windows 10</p>
-<p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ITK</td>
-<td style="text-align:center">4.13.2</td>
-<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">VTK</td>
-<td style="text-align:center">8.2.0</td>
-<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">CMake</td>
-<td style="text-align:center">3.14.0</td>
-<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Qt</td>
-<td style="text-align:center">5.12.0</td>
-<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Visual Studio</td>
-<td style="text-align:center">2017_64 bit</td>
-<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
-<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
-<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
-<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
-<h4 id="安装qt"><a class="markdownIt-Anchor" href="#安装qt"></a> 安装Qt</h4>
-<p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
-<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
-<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
-<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
-<p>参考博客：</p>
-<p><a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
-<p><a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
-<h4 id="安装itk"><a class="markdownIt-Anchor" href="#安装itk"></a> 安装ITK</h4>
-<p>参考博客：</p>
-<p><a href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
-<p><a href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
-<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
-<blockquote>
-<p>参考博客：<a href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
-</blockquote>
-<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
-<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
-<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
-<p>继续configure，直到无红色出现，点击generate。</p>
-<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
-<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
-<p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
-<p>初始界面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
-<p>旋转切面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
-<p>像素点的三维坐标与灰度值信息的显示：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
-<p>灰度变化：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>VTK</category>
-        <category>ITK</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>MPR</tag>
-        <tag>VTK</tag>
-        <tag>ITK</tag>
-        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -1032,8 +924,161 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MPR实现过程</title>
+    <url>/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="mpr的介绍"><a class="markdownIt-Anchor" href="#mpr的介绍"></a> MPR的介绍</h2>
+<p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
+<p><em><span id="more"></span></em></p>
+<p>MPR 的<strong>优点</strong></p>
+<ul>
+<li>能任意产生新的断层图像，而无需重复扫描。</li>
+<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
+</ul>
+<p>MPR的<strong>缺点</strong></p>
+<ul>
+<li>难以表达复杂的空间结构。</li>
+<li>曲面重组易造成假阳性。</li>
+</ul>
+<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
+<blockquote>
+<p>平台：Windows 10</p>
+<p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ITK</td>
+<td style="text-align:center">4.13.2</td>
+<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">VTK</td>
+<td style="text-align:center">8.2.0</td>
+<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">CMake</td>
+<td style="text-align:center">3.14.0</td>
+<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Qt</td>
+<td style="text-align:center">5.12.0</td>
+<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Visual Studio</td>
+<td style="text-align:center">2017_64 bit</td>
+<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
+<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
+<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
+<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
+<h4 id="安装qt"><a class="markdownIt-Anchor" href="#安装qt"></a> 安装Qt</h4>
+<p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
+<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
+<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
+<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
+<p><a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
+<h4 id="安装itk"><a class="markdownIt-Anchor" href="#安装itk"></a> 安装ITK</h4>
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
+<p><a href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
+<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
+<blockquote>
+<p>参考博客：<a href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
+</blockquote>
+<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
+<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
+<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
+<p>继续configure，直到无红色出现，点击generate。</p>
+<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
+<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
+<p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
+<p>初始界面：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
+<p>旋转切面：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
+<p>像素点的三维坐标与灰度值信息的显示：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
+<p>灰度变化：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>VTK</category>
+        <category>ITK</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>医学影像</tag>
+        <tag>VTK</tag>
+        <tag>MPR</tag>
+        <tag>ITK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2021 | 04</title>
+    <url>/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/</url>
+    <content><![CDATA[<h1 id="2021-04"><a class="markdownIt-Anchor" href="#2021-04"></a> 2021-04</h1>
+<blockquote>
+<p>四月，努力并接受。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>大家好，很开心能在这里和大家见面，因为每天的生活都很一致，一致的健忘，所以我决定写一下每天做了什么，每晚总结。</p>
+<h2 id="414"><a class="markdownIt-Anchor" href="#414"></a> 4.14</h2>
+<p><kbd>起床时间</kbd>：7:50</p>
+<p>今天是周三，组会来临前夕，是应该做点什么的。</p>
+<p>今早昏昏沉沉，9:30就想趴下，但是中午睡了会，很不错。</p>
+<p>上午看了医学的一些内容，看了那篇分割mesh reconstruction的论文，了解到分割，又去看了一些网络U-Net之类的。</p>
+<p>下午看了具体的分割和一些硕士论文，有一片哈工大的硕士毕业论文，正巧讲了分割和3D Reconstruction，用的是经常见到的Marching cube算法，算是个提取面的算法，她对此做了改进，我很感兴趣，因为不一定一定要死抠体绘制。</p>
+<p>而且SLAM也可以做的话，如果有比较多的公共dataset，也可以做内窥镜的SLAM。</p>
+<p>（突然忘了点啥…好了快十一点了，我要回去了，明天见！）</p>
+<p>晚上学了下<code>pandas</code>里的<code>apply</code>和<code>aggregate</code>。</p>
+<p>和<code>plt.xscale('symlog')</code>：plt的x轴如何用10的次方表示。</p>
+<h2 id="415"><a class="markdownIt-Anchor" href="#415"></a> 4.15</h2>
+<p><kbd>起床时间</kbd>：7:59</p>
+<p>今天是星期四，需要去上课和组会的一天。</p>
+<p>我个人早晨的时候做了个梦，大概是什么记不起了，只记得起床前的挣扎。</p>
+<p>今天早晨看了<a href="https://arxiv.org/abs/2102.07899">《A Deep-Learning Approach For Direct Whole-Heart Mesh Reconstruction》</a>，大意是mesh的reconstruction，用了分割网络，from Volumetric Images。</p>
+<p>下午讲组会的时候听得很认真，异常认真，因为正巧是感兴趣的，加入了深度预测来生成置信度对后面的流程产生影响，GCN也听了些。</p>
+<p>讲本周做了什么的时候，讲了大概三个方向，老师听到4D动力学让我去做这个，我去看了一些硕士论文，三维重建和流力学分析是分开的，这周好好把这两篇硕士论文看了去。</p>
+<p>晚上和一位学姐聊天，谈论三维重建医学影像的局限性和出路，以及医学影像上的分割相较于其更容易些，更像是两个分开的内容，MC的老方法需要改进就需要理论，而分割则是调参之类的。</p>
+<h2 id="416"><a class="markdownIt-Anchor" href="#416"></a> 4.16</h2>
+<p>周五早上去上课，老师把中期答辩定在了4.30。</p>
+<h2 id="417"><a class="markdownIt-Anchor" href="#417"></a> 4.17</h2>
+<p>周六。</p>
+<h2 id="418"><a class="markdownIt-Anchor" href="#418"></a> 4.18</h2>
+<p>周日。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -1289,49 +1334,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </categories>
       <tags>
         <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2021 | 04</title>
-    <url>/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/</url>
-    <content><![CDATA[<h1 id="2021-04"><a class="markdownIt-Anchor" href="#2021-04"></a> 2021-04</h1>
-<blockquote>
-<p>四月，努力并接受。</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>大家好，很开心能在这里和大家见面，因为每天的生活都很一致，一致的健忘，所以我决定写一下每天做了什么，每晚总结。</p>
-<h2 id="414"><a class="markdownIt-Anchor" href="#414"></a> 4.14</h2>
-<p><kbd>起床时间</kbd>：7:50</p>
-<p>今天是周三，组会来临前夕，是应该做点什么的。</p>
-<p>今早昏昏沉沉，9:30就想趴下，但是中午睡了会，很不错。</p>
-<p>上午看了医学的一些内容，看了那篇分割mesh reconstruction的论文，了解到分割，又去看了一些网络U-Net之类的。</p>
-<p>下午看了具体的分割和一些硕士论文，有一片哈工大的硕士毕业论文，正巧讲了分割和3D Reconstruction，用的是经常见到的Marching cube算法，算是个提取面的算法，她对此做了改进，我很感兴趣，因为不一定一定要死抠体绘制。</p>
-<p>而且SLAM也可以做的话，如果有比较多的公共dataset，也可以做内窥镜的SLAM。</p>
-<p>（突然忘了点啥…好了快十一点了，我要回去了，明天见！）</p>
-<p>晚上学了下<code>pandas</code>里的<code>apply</code>和<code>aggregate</code>。</p>
-<p>和<code>plt.xscale('symlog')</code>：plt的x轴如何用10的次方表示。</p>
-<h2 id="415"><a class="markdownIt-Anchor" href="#415"></a> 4.15</h2>
-<p><kbd>起床时间</kbd>：7:59</p>
-<p>今天是星期四，需要去上课和组会的一天。</p>
-<p>我个人早晨的时候做了个梦，大概是什么记不起了，只记得起床前的挣扎。</p>
-<p>今天早晨看了<a href="https://arxiv.org/abs/2102.07899">《A Deep-Learning Approach For Direct Whole-Heart Mesh Reconstruction》</a>，大意是mesh的reconstruction，用了分割网络，from Volumetric Images。</p>
-<p>下午讲组会的时候听得很认真，异常认真，因为正巧是感兴趣的，加入了深度预测来生成置信度对后面的流程产生影响，GCN也听了些。</p>
-<p>讲本周做了什么的时候，讲了大概三个方向，老师听到4D动力学让我去做这个，我去看了一些硕士论文，三维重建和流力学分析是分开的，这周好好把这两篇硕士论文看了去。</p>
-<p>晚上和一位学姐聊天，谈论三维重建医学影像的局限性和出路，以及医学影像上的分割相较于其更容易些，更像是两个分开的内容，MC的老方法需要改进就需要理论，而分割则是调参之类的。</p>
-<h2 id="416"><a class="markdownIt-Anchor" href="#416"></a> 4.16</h2>
-<p>周五早上去上课，老师把中期答辩定在了4.30。</p>
-<h2 id="417"><a class="markdownIt-Anchor" href="#417"></a> 4.17</h2>
-<p>周六。</p>
-<h2 id="418"><a class="markdownIt-Anchor" href="#418"></a> 4.18</h2>
-<p>周日。</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>记录</tag>
       </tags>
   </entry>
 </search>
