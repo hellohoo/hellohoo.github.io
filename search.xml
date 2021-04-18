@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hellohoo</title>
+    <url>/2021/03/03/hellohoo/</url>
+    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
+]]></content>
+      <categories>
+        <category>胡说</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux基础操作</title>
     <url>/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<blockquote>
@@ -134,18 +146,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hellohoo</title>
-    <url>/2021/03/03/hellohoo/</url>
-    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
-]]></content>
-      <categories>
-        <category>胡说</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用iTerm2教程</title>
     <url>/2021/04/18/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p>先放个效果图。</p>
@@ -201,206 +201,6 @@
       <tags>
         <tag>学习</tag>
         <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PyTorch的学习（一）：配置环境</title>
-    <url>/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<h1 id="pytorch的学习"><a class="markdownIt-Anchor" href="#pytorch的学习"></a> PyTorch的学习</h1>
-<blockquote>
-<p>工具只是工具，好好掌握一种工具。</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>本来是准备用tf的，但是书籍可能买得较早，当时也懵懂，现在2已经出来了，但是用的书还是1。</p>
-<p>也问过一些同学，某同学表示框架掌握1个就可以了，我深以为然，但是最近看论文的开源代码，大多数都采用PyTorch，也经过了一些查询后，由于Pytorch和python差不多，而且tf1的静态图和tf2的动态图把我整懵了，太麻烦了，所以，就直接开始PyTorch吧。</p>
-<p>但是我们开始学习的第一步并不是去学习语法，而是去配置环境，可以说配置环境这个东西让人听到就头疼，当时Hadoop配分布式环境时，足足以星期为单位计算。</p>
-<p>来吧，头铁也必须撞。</p>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda"></a> Anaconda</h3>
-<blockquote>
-<p>地址： <a href="https://www.anaconda.com/products/individual#Downloads">https://www.anaconda.com/products/individual#Downloads</a></p>
-</blockquote>
-<p>选择自己系统版本下载即可。</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193631211.png" class="" title="anaconda下载">
-<h3 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch"></a> PyTorch</h3>
-<blockquote>
-<p>地址： <a href="https://pytorch.org/">https://pytorch.org/</a></p>
-</blockquote>
-<p>黄色框即为指令，选择自己匹配的选项，即可复制指令直接在terminal中输入。</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413192917013.png" class="" title="pytorch指令">
-<p>我用的是Mac，所以我的配置如下：</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193108252.png" class="" title="mac指令">
-<p>下载还是有些慢的，可以换源或者挂梯子。</p>
-<h2 id="安装完成测试"><a class="markdownIt-Anchor" href="#安装完成测试"></a> 安装完成测试</h2>
-<p>在projects下新建一个<code>test.py</code>的python文件，并输入以下内容：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">print(torch.__version__)</span><br></pre></td></tr></table></figure>
-<p>在终端中输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python test.py</span><br></pre></td></tr></table></figure>
-<p>若输出版本号即安装成功。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>深度学习</tag>
-        <tag>pytorch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac的Rodin安装教程</title>
-    <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：macOS Big Sur 11.2.3</p>
-<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
-</blockquote>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<h5 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h5>
-<p>在Mac上直接<code>terminal</code>中输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
-<h5 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h5>
-<p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
-<p>点击右上角文件夹图标：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
-<p>点击<code>Download JDK</code>：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
-<h4 id="测试jdk-8是否安装成功"><a class="markdownIt-Anchor" href="#测试jdk-8是否安装成功"></a> 测试JDK 8是否安装成功</h4>
-<p>输入以下命令不报错即成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<blockquote>
-<h4 id="macos-caveat"><a class="markdownIt-Anchor" href="#macos-caveat"></a> macOS caveat</h4>
-<p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
-</blockquote>
-<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
-<p>但是又继续报错：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
-<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
-<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
-<p>发现有一段被注释掉了</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
-<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
-<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
-<p>修改并保存，就可以成功启动Rodin了。</p>
-<blockquote>
-<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Rodin安装教程（附java8安装教程）</title>
-    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
-    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
-<blockquote>
-<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
-</blockquote>
-<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：WIndows 10</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>安装地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JDK 8</td>
-<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
-</tr>
-<tr>
-<td>Rodin</td>
-<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
-<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
-<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
-<p>更改安装路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
-<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
-<p>点击下一步后就安装成功了：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
-<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
-<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
-<p>并点击<code>高级系统设置</code></p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
-<p>点击<code>环境变量</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
-<p>点击<code>系统变量</code>-<code>新建</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
-<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
-<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
-<p>建议使用JAVA_HOME进行新建：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
-<p>点击确定环境变量配置完成。</p>
-<blockquote>
-<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
-<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
-</blockquote>
-<p>打开cmd分别输入以下三条指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
-<p>显示如下内容则jdk 8安装成功。</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
-<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
-<p>下载解压后直接打开rodin.exe`:</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
-<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
-<p>打开后出现如下界面即为安装成功：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
-<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
-<p>在<code>Work with</code>里输入相应名称即可安装。</p>
-<blockquote>
-<p>安装插件过程较慢，可以搭梯子。</p>
-</blockquote>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-        <tag>JDK</tag>
-        <tag>Event-B</tag>
       </tags>
   </entry>
   <entry>
@@ -639,6 +439,63 @@
       <tags>
         <tag>VTK</tag>
         <tag>医学影像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac的Rodin安装教程</title>
+    <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
+<blockquote>
+<p>系统：macOS Big Sur 11.2.3</p>
+<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
+</blockquote>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<h5 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h5>
+<p>在Mac上直接<code>terminal</code>中输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
+<h5 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h5>
+<p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
+<p>点击右上角文件夹图标：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
+<p>点击<code>Download JDK</code>：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
+<h4 id="测试jdk-8是否安装成功"><a class="markdownIt-Anchor" href="#测试jdk-8是否安装成功"></a> 测试JDK 8是否安装成功</h4>
+<p>输入以下命令不报错即成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
+<blockquote>
+<h4 id="macos-caveat"><a class="markdownIt-Anchor" href="#macos-caveat"></a> macOS caveat</h4>
+<p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
+</blockquote>
+<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
+<p>但是又继续报错：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
+<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
+<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
+<p>发现有一段被注释掉了</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
+<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
+<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
+<p>修改并保存，就可以成功启动Rodin了。</p>
+<blockquote>
+<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -990,6 +847,104 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </tags>
   </entry>
   <entry>
+    <title>Rodin安装教程（附java8安装教程）</title>
+    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
+<blockquote>
+<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
+</blockquote>
+<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
+<blockquote>
+<p>系统：WIndows 10</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>安装地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JDK 8</td>
+<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
+</tr>
+<tr>
+<td>Rodin</td>
+<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
+<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
+<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
+<p>更改安装路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
+<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
+<p>点击下一步后就安装成功了：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
+<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
+<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
+<p>并点击<code>高级系统设置</code></p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
+<p>点击<code>环境变量</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
+<p>点击<code>系统变量</code>-<code>新建</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
+<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
+<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
+<p>建议使用JAVA_HOME进行新建：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
+<p>点击确定环境变量配置完成。</p>
+<blockquote>
+<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
+<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
+</blockquote>
+<p>打开cmd分别输入以下三条指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
+<p>显示如下内容则jdk 8安装成功。</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
+<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
+<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
+<p>下载解压后直接打开rodin.exe`:</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
+<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
+<p>打开后出现如下界面即为安装成功：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
+<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
+<p>在<code>Work with</code>里输入相应名称即可安装。</p>
+<blockquote>
+<p>安装插件过程较慢，可以搭梯子。</p>
+</blockquote>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>Rodin</tag>
+        <tag>安装</tag>
+        <tag>JDK</tag>
+        <tag>Event-B</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《视觉SLAM十四讲-第2版》学习笔记-第3讲</title>
     <url>/2021/04/06/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC3%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -1040,46 +995,48 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </tags>
   </entry>
   <entry>
-    <title>2021 | 04</title>
-    <url>/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/</url>
-    <content><![CDATA[<h1 id="2021-04"><a class="markdownIt-Anchor" href="#2021-04"></a> 2021-04</h1>
+    <title>PyTorch的学习（一）：配置环境</title>
+    <url>/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<h1 id="pytorch的学习"><a class="markdownIt-Anchor" href="#pytorch的学习"></a> PyTorch的学习</h1>
 <blockquote>
-<p>四月，努力并接受。</p>
+<p>工具只是工具，好好掌握一种工具。</p>
 </blockquote>
 <span id="more"></span>
 <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>大家好，很开心能在这里和大家见面，因为每天的生活都很一致，一致的健忘，所以我决定写一下每天做了什么，每晚总结。</p>
-<h2 id="414"><a class="markdownIt-Anchor" href="#414"></a> 4.14</h2>
-<p><kbd>起床时间</kbd>：7:50</p>
-<p>今天是周三，组会来临前夕，是应该做点什么的。</p>
-<p>今早昏昏沉沉，9:30就想趴下，但是中午睡了会，很不错。</p>
-<p>上午看了医学的一些内容，看了那篇分割mesh reconstruction的论文，了解到分割，又去看了一些网络U-Net之类的。</p>
-<p>下午看了具体的分割和一些硕士论文，有一片哈工大的硕士毕业论文，正巧讲了分割和3D Reconstruction，用的是经常见到的Marching cube算法，算是个提取面的算法，她对此做了改进，我很感兴趣，因为不一定一定要死抠体绘制。</p>
-<p>而且SLAM也可以做的话，如果有比较多的公共dataset，也可以做内窥镜的SLAM。</p>
-<p>（突然忘了点啥…好了快十一点了，我要回去了，明天见！）</p>
-<p>晚上学了下<code>pandas</code>里的<code>apply</code>和<code>aggregate</code>。</p>
-<p>和<code>plt.xscale('symlog')</code>：plt的x轴如何用10的次方表示。</p>
-<h2 id="415"><a class="markdownIt-Anchor" href="#415"></a> 4.15</h2>
-<p><kbd>起床时间</kbd>：7:59</p>
-<p>今天是星期四，需要去上课和组会的一天。</p>
-<p>我个人早晨的时候做了个梦，大概是什么记不起了，只记得起床前的挣扎。</p>
-<p>今天早晨看了<a href="https://arxiv.org/abs/2102.07899">《A Deep-Learning Approach For Direct Whole-Heart Mesh Reconstruction》</a>，大意是mesh的reconstruction，用了分割网络，from Volumetric Images。</p>
-<p>下午讲组会的时候听得很认真，异常认真，因为正巧是感兴趣的，加入了深度预测来生成置信度对后面的流程产生影响，GCN也听了些。</p>
-<p>讲本周做了什么的时候，讲了大概三个方向，老师听到4D动力学让我去做这个，我去看了一些硕士论文，三维重建和流力学分析是分开的，这周好好把这两篇硕士论文看了去。</p>
-<p>晚上和一位学姐聊天，谈论三维重建医学影像的局限性和出路，以及医学影像上的分割相较于其更容易些，更像是两个分开的内容，MC的老方法需要改进就需要理论，而分割则是调参之类的。</p>
-<h2 id="416"><a class="markdownIt-Anchor" href="#416"></a> 4.16</h2>
-<p>周五早上去上课，老师把中期答辩定在了4.30。</p>
-<h2 id="417"><a class="markdownIt-Anchor" href="#417"></a> 4.17</h2>
-<p>周六。</p>
-<h2 id="418"><a class="markdownIt-Anchor" href="#418"></a> 4.18</h2>
-<p>周日。</p>
+<p>本来是准备用tf的，但是书籍可能买得较早，当时也懵懂，现在2已经出来了，但是用的书还是1。</p>
+<p>也问过一些同学，某同学表示框架掌握1个就可以了，我深以为然，但是最近看论文的开源代码，大多数都采用PyTorch，也经过了一些查询后，由于Pytorch和python差不多，而且tf1的静态图和tf2的动态图把我整懵了，太麻烦了，所以，就直接开始PyTorch吧。</p>
+<p>但是我们开始学习的第一步并不是去学习语法，而是去配置环境，可以说配置环境这个东西让人听到就头疼，当时Hadoop配分布式环境时，足足以星期为单位计算。</p>
+<p>来吧，头铁也必须撞。</p>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda"></a> Anaconda</h3>
+<blockquote>
+<p>地址： <a href="https://www.anaconda.com/products/individual#Downloads">https://www.anaconda.com/products/individual#Downloads</a></p>
+</blockquote>
+<p>选择自己系统版本下载即可。</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193631211.png" class="" title="anaconda下载">
+<h3 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch"></a> PyTorch</h3>
+<blockquote>
+<p>地址： <a href="https://pytorch.org/">https://pytorch.org/</a></p>
+</blockquote>
+<p>黄色框即为指令，选择自己匹配的选项，即可复制指令直接在terminal中输入。</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413192917013.png" class="" title="pytorch指令">
+<p>我用的是Mac，所以我的配置如下：</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193108252.png" class="" title="mac指令">
+<p>下载还是有些慢的，可以换源或者挂梯子。</p>
+<h2 id="安装完成测试"><a class="markdownIt-Anchor" href="#安装完成测试"></a> 安装完成测试</h2>
+<p>在projects下新建一个<code>test.py</code>的python文件，并输入以下内容：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">print(torch.__version__)</span><br></pre></td></tr></table></figure>
+<p>在终端中输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python test.py</span><br></pre></td></tr></table></figure>
+<p>若输出版本号即安装成功。</p>
 ]]></content>
       <categories>
-        <category>生活</category>
+        <category>学习</category>
       </categories>
       <tags>
-        <tag>生活</tag>
-        <tag>记录</tag>
+        <tag>学习</tag>
+        <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
@@ -1335,6 +1292,60 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </categories>
       <tags>
         <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2021 | 04</title>
+    <url>/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/</url>
+    <content><![CDATA[<h1 id="2021-04"><a class="markdownIt-Anchor" href="#2021-04"></a> 2021-04</h1>
+<blockquote>
+<p>四月，努力并接受。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>大家好，很开心能在这里和大家见面，因为每天的生活都很一致，一致的健忘，所以我决定写一下每天做了什么，每晚总结。</p>
+<h2 id="414"><a class="markdownIt-Anchor" href="#414"></a> 4.14</h2>
+<p><kbd>起床时间</kbd>：7:50</p>
+<p>今天是周三，组会来临前夕，是应该做点什么的。</p>
+<p>今早昏昏沉沉，9:30就想趴下，但是中午睡了会，很不错。</p>
+<p>上午看了医学的一些内容，看了那篇分割mesh reconstruction的论文，了解到分割，又去看了一些网络U-Net之类的。</p>
+<p>下午看了具体的分割和一些硕士论文，有一片哈工大的硕士毕业论文，正巧讲了分割和3D Reconstruction，用的是经常见到的Marching cube算法，算是个提取面的算法，她对此做了改进，我很感兴趣，因为不一定一定要死抠体绘制。</p>
+<p>而且SLAM也可以做的话，如果有比较多的公共dataset，也可以做内窥镜的SLAM。</p>
+<p>（突然忘了点啥…好了快十一点了，我要回去了，明天见！）</p>
+<p>晚上学了下<code>pandas</code>里的<code>apply</code>和<code>aggregate</code>。</p>
+<p>和<code>plt.xscale('symlog')</code>：plt的x轴如何用10的次方表示。</p>
+<h2 id="415"><a class="markdownIt-Anchor" href="#415"></a> 4.15</h2>
+<p><kbd>起床时间</kbd>：7:59</p>
+<p>今天是星期四，需要去上课和组会的一天。</p>
+<p>我个人早晨的时候做了个梦，大概是什么记不起了，只记得起床前的挣扎。</p>
+<p>今天早晨看了<a href="https://arxiv.org/abs/2102.07899">《A Deep-Learning Approach For Direct Whole-Heart Mesh Reconstruction》</a>，大意是mesh的reconstruction，用了分割网络，from Volumetric Images。</p>
+<p>下午讲组会的时候听得很认真，异常认真，因为正巧是感兴趣的，加入了深度预测来生成置信度对后面的流程产生影响，GCN也听了些。</p>
+<p>讲本周做了什么的时候，讲了大概三个方向，老师听到4D动力学让我去做这个，我去看了一些硕士论文，三维重建和流力学分析是分开的，这周好好把这两篇硕士论文看了去。</p>
+<p>晚上和一位学姐聊天，谈论三维重建医学影像的局限性和出路，以及医学影像上的分割相较于其更容易些，更像是两个分开的内容，MC的老方法需要改进就需要理论，而分割则是调参之类的。</p>
+<h2 id="416"><a class="markdownIt-Anchor" href="#416"></a> 4.16</h2>
+<p>周五早上去上课，老师把中期答辩定在了4.30。</p>
+<h2 id="417"><a class="markdownIt-Anchor" href="#417"></a> 4.17</h2>
+<p>周六。</p>
+<h2 id="418"><a class="markdownIt-Anchor" href="#418"></a> 4.18</h2>
+<p>周日。</p>
+<p>下午在实验室，在选这周讲的论文，应该是讲人体的，因为传统方法的还是太少，心血管的更是少之又少，所以我先讲一些今年新出的方法吧。</p>
+<p>下午把自己的terminal给换了，换成了iterm2，虽然装得真的超级复杂，但还是整完了，太多主题了，一天一个都换不过来，目前用的是Dracula+，是吸血鬼主题喔！</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210418224359802.png" class="" title="iterm2">
+<p>终于升级了，之前一直懒得升级，一直选择Remind me later，好看的。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210418223910170.png" class="" title="Pycharm2021">
+<p>顺带着复习一下<code>scp</code></p>
+<blockquote>
+<p>参考博客： <a href="https://blog.csdn.net/ludongdong/article/details/78524653?utm_term=mac%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0linux&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-78524653&amp;spm=3001.4430">mac 本地文件与服务器Linux文件之间的相互传输</a></p>
+</blockquote>
+<p><strong>scp[本地文件的路径]  [服务器用户名]@[服务器地址]:[服务器上存放文件的路径]</strong></p>
+<p>以及更新一下<a href="http://hellohoohoo.com/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">Linux基础操作</a>中的解压/压缩。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
 </search>
