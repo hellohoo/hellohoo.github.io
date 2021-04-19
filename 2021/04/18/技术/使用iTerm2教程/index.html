@@ -25,27 +25,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Linux之美在于Ubuntu。">
+<meta name="description" content="先放个效果图。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux基础操作">
-<meta property="og:url" content="http://example.com/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="iTerm2 + oh my zsh打造属于你的终端">
+<meta property="og:url" content="http://example.com/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="Linux之美在于Ubuntu。">
+<meta property="og:description" content="先放个效果图。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110826156.png">
-<meta property="og:image" content="http://example.com/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110902716.png">
-<meta property="og:image" content="http://example.com/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416111201185.png">
-<meta property="article:published_time" content="2021-04-15T16:45:28.000Z">
-<meta property="article:modified_time" content="2021-04-18T15:04:18.998Z">
+<meta property="og:image" content="http://example.com/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/image-20210418214222011.png">
+<meta property="article:published_time" content="2021-04-18T10:49:30.000Z">
+<meta property="article:modified_time" content="2021-04-19T01:14:08.278Z">
 <meta property="article:author" content="Hoohoo">
-<meta property="article:tag" content="学习">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="技术">
+<meta property="article:tag" content="胡整">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110826156.png">
+<meta name="twitter:image" content="http://example.com/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/image-20210418214222011.png">
 
 
-<link rel="canonical" href="http://example.com/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+<link rel="canonical" href="http://example.com/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/">
 
 
 <script class="page-configurations">
@@ -57,7 +53,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Linux基础操作 | ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo</title>
+<title>iTerm2 + oh my zsh打造属于你的终端 | ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo</title>
   
 
 
@@ -186,7 +182,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -199,7 +195,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-text"> 基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd"><span class="nav-text"> pwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls"><span class="nav-text"> ls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ll"><span class="nav-text"> ll</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-text"> cd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text"> &#x2F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#~"><span class="nav-text"> ～</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E4%BB%B6"><span class="nav-text"> 创建新文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir"><span class="nav-text"> mkdir</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vi"><span class="nav-text"> vi</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vim"><span class="nav-text"> vim</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#touch"><span class="nav-text"> touch</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#su-chmod"><span class="nav-text"> su &#x2F; chmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clear"><span class="nav-text"> clear</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%96%87%E4%BB%B6"><span class="nav-text"> 运行文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hot-key"><span class="nav-text"> HOT KEY</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%96%87%E4%BB%B6%E7%9A%84%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-text"> 对文件的操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6cp"><span class="nav-text"> 复制：cp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E5%89%AA%E5%88%87mv"><span class="nav-text"> 重命名&#x2F;剪切：mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4rm"><span class="nav-text"> 删除：rm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85%E8%A7%A3%E5%8E%8B"><span class="nav-text"> 打包&#x2F;解压</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tar"><span class="nav-text"> tar</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%8C%85"><span class="nav-text"> 打包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B"><span class="nav-text"> 解压</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rar"><span class="nav-text"> rar</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%8C%85-2"><span class="nav-text"> 打包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B-2"><span class="nav-text"> 解压</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zip"><span class="nav-text"> zip</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%89%93%E5%8C%85-3"><span class="nav-text"> 打包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%A3%E5%8E%8B-3"><span class="nav-text"> 解压</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -272,7 +267,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.JPG">
@@ -285,7 +280,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Linux基础操作
+          iTerm2 + oh my zsh打造属于你的终端
         </h1>
 
         <div class="post-meta-container">
@@ -298,14 +293,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-04-16 00:45:28" itemprop="dateCreated datePublished" datetime="2021-04-16T00:45:28+08:00">2021-04-16</time>
+      <time title="创建时间：2021-04-18 18:49:30" itemprop="dateCreated datePublished" datetime="2021-04-18T18:49:30+08:00">2021-04-18</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i> 
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-18 23:04:18" itemprop="dateModified" datetime="2021-04-18T23:04:18+08:00">2021-04-18</time>
+        <time title="修改时间：2021-04-19 09:14:08" itemprop="dateModified" datetime="2021-04-19T09:14:08+08:00">2021-04-19</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -313,7 +308,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+          <a href="/categories/%E8%83%A1%E6%95%B4/" itemprop="url" rel="index"><span itemprop="name">胡整</span></a>
         </span>
     </span>
 
@@ -332,14 +327,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>10</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -350,148 +345,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <blockquote>
-<p>Linux之美在于Ubuntu。</p>
-</blockquote>
+        <p>先放个效果图。</p>
+<img src="/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/image-20210418214222011.png" class="" width="720">
 <span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>前几天翻笔记本正巧发现了之前上Linux操作系统课的笔记，正好我的朋友们需要，就发上来一起学习。</p>
-<p>而且Linux中一切皆文件，没有注册表，都可以直接用命令删除。</p>
-<h2 id="基本命令"><a class="markdownIt-Anchor" href="#基本命令"></a> 基本命令</h2>
-<blockquote>
-<p>默认全在<code>terminal</code>中完成操作。</p>
-<p>且每个命令后一定要空格</p>
-</blockquote>
-<h3 id="pwd"><a class="markdownIt-Anchor" href="#pwd"></a> <code>pwd</code></h3>
-<p>显示当前绝对路径</p>
-<h3 id="ls"><a class="markdownIt-Anchor" href="#ls"></a> <code>ls</code></h3>
-<p>list 简略列出当前目录下所有文件</p>
-<h3 id="ll"><a class="markdownIt-Anchor" href="#ll"></a> <code>ll</code></h3>
-<p>list all 详细列出当前目录下所有文件</p>
-<h3 id="cd"><a class="markdownIt-Anchor" href="#cd"></a> <code>cd</code></h3>
-<h4 id=""><a class="markdownIt-Anchor" href="#"></a> /</h4>
-<p><code>/</code>: 表示绝对路径</p>
-<h4 id="~"><a class="markdownIt-Anchor" href="#~"></a> ～</h4>
-<p><code>~</code>: root</p>
-<blockquote>
-<p><code>root</code>: 当前用户</p>
-</blockquote>
-<p>区别：</p>
-<blockquote>
-<p>cd home: 进入当前目录下名为<code>home</code>的目录内</p>
-<p>cd /home: 进入根目录下名为<code>home</code>的目录内</p>
-</blockquote>
-<h3 id="创建新文件"><a class="markdownIt-Anchor" href="#创建新文件"></a> 创建新文件</h3>
-<h4 id="mkdir"><a class="markdownIt-Anchor" href="#mkdir"></a> <code>mkdir</code></h4>
-<p>make directory: 创建一个文件夹，即目录</p>
-<h4 id="vi"><a class="markdownIt-Anchor" href="#vi"></a> <code>vi</code></h4>
-<h4 id="vim"><a class="markdownIt-Anchor" href="#vim"></a> <code>vim</code></h4>
-<blockquote>
-<p>推荐： <a target="_blank" rel="noopener" href="https://coolshell.cn/articles/5426.html">简明 VIM 练级攻略</a></p>
-</blockquote>
-<p>按下<kbd>i</kbd>即可进入编辑模式，</p>
-<p>按下<kbd>esc</kbd>后输入<kbd>:</kbd>，即可输入相应命令。</p>
-<ul>
-<li>
-<p><code>w</code>: write 保存</p>
-</li>
-<li>
-<p><code>q</code>: quit 推出</p>
-</li>
-<li>
-<p><code>!</code>: 强制退出</p>
-<blockquote>
-<p><code>wq!</code> ：强制保存退出</p>
-</blockquote>
-</li>
-</ul>
-<h4 id="touch"><a class="markdownIt-Anchor" href="#touch"></a> <code>touch</code></h4>
-<p>创建一个新的<strong>可执行文件</strong></p>
-<h3 id="su-chmod"><a class="markdownIt-Anchor" href="#su-chmod"></a> su / chmod</h3>
-<p>如果遇到<code>Permission Denied</code>权限不足的情况：</p>
-<ol>
-<li>
-<p>可以<code>su</code>(super)一下转换为高级用户。</p>
-</li>
-<li>
-<p><code>chmod + x yourFile</code>，给文件加可执行权限。</p>
-<blockquote>
-<p><code>r</code>: readable</p>
-<p><code>w</code>: writeable</p>
-<p><code>x</code>: executable</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="clear"><a class="markdownIt-Anchor" href="#clear"></a> clear</h3>
-<p>清屏操作</p>
-<h3 id="运行文件"><a class="markdownIt-Anchor" href="#运行文件"></a> 运行文件</h3>
-<p><code>./110.sh</code>: 运行当前路径为110.sh的文件</p>
-<h3 id="hot-key"><a class="markdownIt-Anchor" href="#hot-key"></a> HOT KEY</h3>
-<p><kbd>↑</kbd><kbd>↓</kbd>：可以复制之前命令</p>
-<p><kbd>tab</kbd>：可以智能补全</p>
-<h2 id="对文件的操作命令"><a class="markdownIt-Anchor" href="#对文件的操作命令"></a> 对文件的操作命令</h2>
-<h3 id="复制cp"><a class="markdownIt-Anchor" href="#复制cp"></a> 复制：cp</h3>
-<p><code>cp</code> 目标文件 路径</p>
-<img src="/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110826156.png" class="" title="cp">
-<h3 id="重命名剪切mv"><a class="markdownIt-Anchor" href="#重命名剪切mv"></a> 重命名/剪切：mv</h3>
-<p><code>mv</code> 目标文件 路径/新名称</p>
-<img src="/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110902716.png" class="" title="mv">
-<h3 id="删除rm"><a class="markdownIt-Anchor" href="#删除rm"></a> 删除：rm</h3>
-<p><code>rm</code> [-rvf] 文件/目录名</p>
-<ul>
-<li><code>r</code>: 级联删除</li>
-<li><code>v</code>: 可视化（visual）</li>
-<li><code>f</code>: 强制性 （force）</li>
-</ul>
-<img src="/2021/04/16/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416111201185.png" class="" title="rm">
-<h3 id="打包解压"><a class="markdownIt-Anchor" href="#打包解压"></a> 打包/解压</h3>
-<blockquote>
-<p>参考博客： <a target="_blank" rel="noopener" href="https://blog.csdn.net/afei__/article/details/82619843?utm_medium=distribute.pc_feed_404.none-task-blog-2~default~OPENSEARCH~default-2.nonecase&amp;dist_request_id=1331633.4866.16187573711606745&amp;depth_1-utm_source=distribute.pc_feed_404.none-task-blog-2~default~OPENSEARCH~default-2.nonecas">Linux命令之解压缩：tar、zip、rar 命令</a></p>
-</blockquote>
-<h4 id="tar"><a class="markdownIt-Anchor" href="#tar"></a> tar</h4>
-<p>主要是<code>tar.gz</code>。</p>
-<blockquote>
-<ul>
-<li><code>c</code>: <strong>创建</strong>一个压缩包（create）</li>
-<li><code>v</code>: 可视化（visual）</li>
-<li><code>f</code>: 文件（file）</li>
-<li><code>z</code>: 使用 gzip 来压缩和解压文件</li>
-<li><code>x</code>: <strong>解压</strong>文件</li>
-</ul>
-</blockquote>
-<h5 id="打包"><a class="markdownIt-Anchor" href="#打包"></a> 打包</h5>
-<p><code>tar [-zcvf]</code> 文件名 打包到达目录</p>
-<h5 id="解压"><a class="markdownIt-Anchor" href="#解压"></a> 解压</h5>
-<p><code>tar [-zxvf]</code> 文件名 解压到达目录</p>
-<blockquote>
-<p><code>rm</code>中的<code>f</code>和<code>tar</code>中的<code>f</code>区别：</p>
-<p><code>rm</code>: f（force） 可以提前</p>
-<p><code>tar</code>: f（file） 不可以提前，c、v可以互换位置，f必须最后</p>
-</blockquote>
-<h4 id="rar"><a class="markdownIt-Anchor" href="#rar"></a> rar</h4>
-<p>主要是<code>rar</code>。</p>
-<blockquote>
-<ul>
-<li><code>a</code>: 添加到压缩/打包文件</li>
-<li><code>-r</code>: 递归</li>
-<li><code>x</code>: 以绝对路径解压文件</li>
-</ul>
-</blockquote>
-<h5 id="打包-2"><a class="markdownIt-Anchor" href="#打包-2"></a> 打包</h5>
-<p><code>rar a -r</code>  打包文件名.rar 打包文件</p>
-<h5 id="解压-2"><a class="markdownIt-Anchor" href="#解压-2"></a> 解压</h5>
-<p><code>unrar x</code> 需要解压的文件 解压到达目录</p>
-<h4 id="zip"><a class="markdownIt-Anchor" href="#zip"></a> zip</h4>
-<p>主要是<code>zip</code>。</p>
-<blockquote>
-<ul>
-<li><code>-r</code>: 递归</li>
-</ul>
-</blockquote>
-<h5 id="打包-3"><a class="markdownIt-Anchor" href="#打包-3"></a> 打包</h5>
-<p><code>zip -r</code> 打包文件名.zip 需要打包的文件</p>
-<h5 id="解压-3"><a class="markdownIt-Anchor" href="#解压-3"></a> 解压</h5>
-<p><code>unzip</code> 需要解压的文件 解压到达目录</p>
+<p>胡搞。</p>
 
     </div>
 
@@ -513,22 +370,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
-              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
-              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> 技术</a>
+              <a href="/tags/%E8%83%A1%E6%95%B4/" rel="tag"><i class="fa fa-tag"></i> 胡整</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/" rel="prev" title="2021 | 04">
-                  <i class="fa fa-chevron-left"></i> 2021 | 04
+                <a href="/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" rel="prev" title="Linux基础操作">
+                  <i class="fa fa-chevron-left"></i> Linux基础操作
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/18/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/" rel="next" title="iTerm2 + oh my zsh打造属于你的终端">
-                  iTerm2 + oh my zsh打造属于你的终端 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/04/19/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%B8%A4%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%B8%AE%E4%BD%A0%E4%B8%80%E9%94%AE%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%92%8C%E4%B8%8A%E4%BC%A0/" rel="next" title="写两个脚本帮你一键实现博客本地预览和上传">
+                  写两个脚本帮你一键实现博客本地预览和上传 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
