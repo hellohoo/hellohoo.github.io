@@ -129,8 +129,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Linux</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -299,8 +299,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>技术</tag>
         <tag>Linux</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -344,8 +344,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>pytorch</tag>
         <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
@@ -595,6 +595,9 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <p>以复数为元素的矩阵，其共轭矩阵指对每一个元素取共轭之后得到的矩阵。</p>
 <p>共轭矩阵又称Hermite阵，每一个第i行第j列的元素都与第j行第i列的元素的共轭相等。</p>
 <img src="/2021/04/09/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/%E4%B8%80%E4%BA%9B%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/format,f_jpg.jpeg" class="" title="共轭转置">
+<h3 id="斜对称矩阵"><a class="markdownIt-Anchor" href="#斜对称矩阵"></a> 斜对称矩阵</h3>
+<p>设M是<a href="https://baike.baidu.com/item/%E6%96%B9%E9%98%B5/7362108">方阵</a>， 如果它的<a href="https://baike.baidu.com/item/%E8%BD%AC%E7%BD%AE/11034603">转置</a><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>M</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">M^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>加上它本身恰好是<a href="https://baike.baidu.com/item/%E9%9B%B6%E7%9F%A9%E9%98%B5/4732636">零矩阵</a>，那么就称M是斜对称矩阵。斜对称矩阵也可以称为<a href="https://baike.baidu.com/item/%E5%8F%8D%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5/9063240">反对称矩阵</a>或交错矩阵。斜对称矩阵具有性质：数域P上的斜对称矩阵的主对角元全是零；数域P上的n级斜对称矩阵A，如果n是奇数，则|A|=0，因此数域P上的奇数级斜对称矩阵一定是奇异的（即不可逆的）。</p>
+<p>即<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mo>−</mo><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A=-A^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.924661em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>。</p>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -1167,8 +1170,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
       </tags>
   </entry>
   <entry>
@@ -1429,11 +1432,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>MPR</tag>
-        <tag>VTK</tag>
-        <tag>ITK</tag>
         <tag>技术</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
+        <tag>MPR</tag>
+        <tag>ITK</tag>
       </tags>
   </entry>
   <entry>
