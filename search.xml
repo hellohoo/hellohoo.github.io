@@ -60,6 +60,71 @@
 <p>下午在弄博客的时候，觉得<code>hexo clean</code>和<code>hexo s</code>以及<code>hexo g</code>, <code>hexo d</code>等命令的输入实在是烦琐，也加上上午写脚本给我的启发，我拿起本科剩的一些shell知识，也写了两个脚本用于本地浏览和上传github。</p>
 <p>详见<a href="http://hellohoohoo.com/2021/04/19/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%B8%A4%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%B8%AE%E4%BD%A0%E4%B8%80%E9%94%AE%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%92%8C%E4%B8%8A%E4%BC%A0/">写两个脚本帮你一键实现博客本地预览和上传</a>。</p>
 <img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210419220508895.png" class="" title="419-terminal">
+<h2 id="420"><a class="markdownIt-Anchor" href="#420"></a> 4.20</h2>
+<p><kbd>起床时间</kbd>：7:31</p>
+<p>还是讲《Reconstructing 3D Human Pose by Watching Humans in the Mirror》吧。</p>
+<p>使用了SMPL和镜子几何的方式进行重构。</p>
+<ul>
+<li>
+<p>[ ] <a href="https://blog.csdn.net/weixin_39445556/article/details/84502260">一文读懂L-BFGS算法</a></p>
+</li>
+<li>
+<p>[ ] reflection operation</p>
+</li>
+<li>
+<p>[ ] 使用 SPIN 来计算初始 SMPL 参数</p>
+<p><strong>学习</strong>：</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://blog.csdn.net/hellocsz/article/details/89320459">能量函数的定义</a></p>
+<p>构建能量函数就是我们用方程的最小值来描述我们想要达到的实际效果，并且在得到最小值时我们所求得的参数就是我们想要得到的<strong>最优解</strong>。</p>
+</blockquote>
+<p><strong>小技巧：</strong></p>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/fcbaf00a7379?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">Mac神器iTerm2基本命令</a></p>
+<p><a href="https://www.jianshu.com/p/ce6ca06f3e95">Typora中的任务列表（Task List）语法</a></p>
+</blockquote>
+<p>测试<code>fluid</code>主题的待办事项，发现：</p>
+<blockquote class="blockquote-center">
+<p>你知道吗？我NexT不配！</p>
+
+</blockquote>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420194912836.png" class="" title="我不配">
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420201420222.png" class="" title="NexT不配！">
+<p>学习官方文档的<code>note</code>：</p>
+<blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note class<span class="emphasis">_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>其中，<code>class_name</code> 可以是以下列表中的一个值：</p>
+<ul>
+<li><code>default</code></li>
+<li><code>primary</code></li>
+<li><code>success</code></li>
+<li><code>info</code></li>
+<li><code>warning</code></li>
+<li><code>danger</code></li>
+</ul>
+</blockquote>
+<p>显示效果：</p>
+<div class="note warning"><p>warning</p>
+</div>
+<div class="note default"><p>default</p>
+</div>
+<div class="note primary"><p>primary</p>
+</div>
+<div class="note success"><p>success</p>
+</div>
+<div class="note info"><p>info</p>
+</div>
+<div class="note danger"><p>danger</p>
+</div>
+<p>测试微信截图和ishot截图清晰度：</p>
+<p><strong>ishot：</strong> 有阴影会比较好看一些</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202100482.png" class="" title="ishot">
+<p><strong>微信：</strong> 比较扁平，适合幻灯（自认为</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202248573.png" class="" title="wx">
+<p>多余的 72 ✖️ 72 应该是阴影边框。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202632425.png" class="" title="对比">
 ]]></content>
       <categories>
         <category>生活</category>
@@ -115,7 +180,7 @@
 <ol start="3">
 <li>使用<code>chmod</code>对<code>hgd.sh</code>添加可执行权限：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hs.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hgd.sh</span><br></pre></td></tr></table></figure>
 <ol start="3">
 <li>将<code>hgd.sh</code>改名为<code>hgd</code>，在终端下输入：</li>
 </ol>
@@ -129,8 +194,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技术</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -299,8 +364,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>Linux</tag>
         <tag>技术</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -454,8 +519,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -649,7 +714,7 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </tags>
   </entry>
   <entry>
-    <title>《视觉SLAM十四讲-第2版》学习笔记-第3讲</title>
+    <title>《视觉SLAM十四讲 第2版》学习笔记 第3讲</title>
     <url>/2021/04/06/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC3%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <blockquote>
@@ -694,8 +759,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -955,8 +1020,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -1042,8 +1107,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -1170,8 +1235,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>VTK</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -1432,11 +1497,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
+        <tag>MPR</tag>
+        <tag>VTK</tag>
+        <tag>ITK</tag>
         <tag>技术</tag>
         <tag>医学影像</tag>
-        <tag>VTK</tag>
-        <tag>MPR</tag>
-        <tag>ITK</tag>
       </tags>
   </entry>
   <entry>
