@@ -2943,6 +2943,9 @@ body {
   -moz-background-size: cover;
   -ms-background-size: cover;
 }
+.headband {
+  background: #f5ebc3;
+}
 .content-wrap {
   opacity: 0.95;
 }
@@ -2954,6 +2957,12 @@ body {
 }
 .site-brand-container {
   border-radius: 10px 10px 0px 0px;
+  background: url("/images/background3.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: scroll;
 }
 .header-inner {
   background: rgba(250,255,255,0.8);
