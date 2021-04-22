@@ -127,11 +127,33 @@
 <p><kbd>起床时间</kbd>：7:35</p>
 <p>🎧 listen</p>
 <ul>
-<li>处理标注框</li>
-<li>Geman-McClure 误差函数</li>
+<li>[x] 处理标注框</li>
+<li>[x] Geman-McClure 误差函数 （惩罚噪声大的权重）
+<ul>
 <li>协调参数</li>
-<li></li>
 </ul>
+</li>
+<li>[ ]</li>
+</ul>
+<h2 id="422"><a class="markdownIt-Anchor" href="#422"></a> 4.22</h2>
+<p><kbd>起床时间</kbd>：7:27</p>
+<p>🥛 每日早晨饮品</p>
+<ul>
+<li>[ ]</li>
+<li>[ ]</li>
+</ul>
+<p>new test with emoji:</p>
+<p>☑</p>
+<p>◻</p>
+<p>☑️</p>
+<p>◻️</p>
+<p>🔘</p>
+<p>⚪️</p>
+<p>更新啦！</p>
+<blockquote>
+<p><a href="https://sspai.com/post/66156">更新浏览器的时候又到了：Chrome/Edge 90 稳定版 9 大新功能盘点</a></p>
+</blockquote>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210422152556716.png" class="" title="chrome">
 ]]></content>
       <categories>
         <category>生活</category>
@@ -201,8 +223,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>Linux</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -370,9 +392,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>学习</tag>
         <tag>Linux</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1299,8 +1321,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -1395,8 +1417,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -1504,10 +1526,10 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>MPR</tag>
         <tag>VTK</tag>
         <tag>ITK</tag>
-        <tag>技术</tag>
         <tag>医学影像</tag>
       </tags>
   </entry>
