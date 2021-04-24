@@ -156,6 +156,21 @@
 <p>anyway。</p>
 <h2 id="424"><a class="markdownIt-Anchor" href="#424"></a> 4.24</h2>
 <p>本周唯一的休息日。</p>
+<p>test 1:</p>
+<div class="tabs" id="the-first-test"><ul class="nav-tabs"><li class="tab active"><a href="#the-first-test-1">Tab 1</a></li><li class="tab"><a href="#the-first-test-2">Tab 2</a></li><li class="tab"><a href="#the-first-test-3">Tab 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="the-first-test-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="the-first-test-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="the-first-test-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<p>test 2:</p>
+<p><i class="fa fa-spinner fa-spin"></i><br />
+<i class="fa fa-cog fa-spin"></i><br />
+<i class="fa fa-spinner fa-pulse"></i></p>
+<p>​</p>
+<p>test 3:</p>
+<mark class="label default">default</mark>
+<mark class="label primary">primary</mark>
+<mark class="label success">success</mark>
+<mark class="label info">info</mark>
+<mark class="label warning">warning</mark>
+<mark class="label danger">danger</mark>
+<p>default primary success info warning danger</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1323,8 +1338,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -1419,8 +1434,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
