@@ -65,9 +65,16 @@
 <p>还是讲《Reconstructing 3D Human Pose by Watching Humans in the Mirror》吧。</p>
 <p>使用了SMPL和镜子几何的方式进行重构。</p>
 <ul>
-<li>[ ] <a href="https://blog.csdn.net/weixin_39445556/article/details/84502260">一文读懂L-BFGS算法</a></li>
-<li>[x] reflection operation</li>
-<li>[ ] 使用 SPIN 来计算初始 SMPL 参数</li>
+<li>
+<p>[x] <a href="https://blog.csdn.net/weixin_39445556/article/details/84502260">一文读懂L-BFGS算法</a></p>
+<p>（并没有去仔细看，因为这个方法其实就是一个函数最优化问题，和SGD一样的作用）</p>
+</li>
+<li>
+<p>[x] reflection operation</p>
+</li>
+<li>
+<p>[x] 使用 SPIN 来计算初始 SMPL 参数</p>
+</li>
 </ul>
 <p>​</p>
 <p><strong>学习</strong>：</p>
@@ -127,13 +134,15 @@
 <p><kbd>起床时间</kbd>：7:35</p>
 <p>🎧 listen</p>
 <ul>
-<li>[x] 处理标注框</li>
-<li>[x] Geman-McClure 误差函数 （惩罚噪声大的权重）
+<li>
+<p>[x] 处理标注框</p>
+</li>
+<li>
+<p>[x] Geman-McClure 误差函数 （惩罚噪声大的权重）</p>
 <ul>
 <li>协调参数</li>
 </ul>
 </li>
-<li>[ ]</li>
 </ul>
 <h2 id="422"><a class="markdownIt-Anchor" href="#422"></a> 4.22</h2>
 <p><kbd>起床时间</kbd>：7:27</p>
@@ -171,6 +180,12 @@
 <mark class="label warning">warning</mark>
 <mark class="label danger">danger</mark>
 <p>default primary success info warning danger</p>
+<h2 id="425"><a class="markdownIt-Anchor" href="#425"></a> 4.25</h2>
+<p><kbd>起床时间</kbd>：7:40</p>
+<p>今天是周日，却因为调休变成了周二，所以说一切皆有可能。</p>
+<p>所以按照工作日的时间，我还和平时一样的时间到来。</p>
+<p>决定先把U-NET好好学学。</p>
+<p>事到如今，大概是体绘制和面绘制了。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1281,8 +1296,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
       </tags>
   </entry>
   <entry>
@@ -1338,8 +1353,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -1434,8 +1449,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -1543,11 +1558,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>MPR</tag>
+        <tag>医学影像</tag>
         <tag>VTK</tag>
+        <tag>MPR</tag>
         <tag>ITK</tag>
         <tag>技术</tag>
-        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
