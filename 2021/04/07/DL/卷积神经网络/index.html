@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="前言 学会变通，才能开启新的道路。——Hoohoo">
+<meta name="description" content="前言  学会变通，才能开启新的道路。——Hoohoo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="卷积神经网络">
 <meta property="og:url" content="http://example.com/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="前言 学会变通，才能开启新的道路。——Hoohoo">
+<meta property="og:description" content="前言  学会变通，才能开启新的道路。——Hoohoo">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413195841238.png">
 <meta property="og:image" content="http://example.com/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413200914937.png">
@@ -197,7 +197,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-text">学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-text">全连接网络的局限性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C"><span class="nav-text">卷积网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E5%B1%82"><span class="nav-text">卷积层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E8%BF%90%E7%AE%97"><span class="nav-text">卷积运算</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-text"> 学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-text"> 全连接网络的局限性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C"><span class="nav-text"> 卷积网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E5%B1%82"><span class="nav-text"> 卷积层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E8%BF%90%E7%AE%97"><span class="nav-text"> 卷积运算</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -348,7 +348,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
 <p>学会变通，才能开启新的道路。——Hoohoo</p>
 </blockquote>
 <span id="more"></span>
@@ -356,17 +357,22 @@
 <p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
 <p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
 <p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
-<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO5都出来了，<del>而且这本书采用的是tf1…</del> 我决定使用Pytorch，毕竟工业界用的比较多的是tf，而我们学生家家就乖乖用PyTorch吧。</p>
-<p><del>不过没关系</del>，就这样开始吧。</p>
-<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="全连接网络的局限性"><a href="#全连接网络的局限性" class="headerlink" title="全连接网络的局限性"></a>全连接网络的局限性</h3><p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
+<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO5都出来了，<s>而且这本书采用的是tf1…</s> 我决定使用Pytorch，毕竟工业界用的比较多的是tf，而我们学生家家就乖乖用PyTorch吧。</p>
+<p><s>不过没关系</s>，就这样开始吧。</p>
+<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
+<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
+<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
 <p>比如三个全连接层的网络，输入784的话，隐藏层节点为100，即为（784 * 100 * 100 * 100 *100 * 10）…</p>
 <p>太多了，可以参考下图。</p>
 <img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413195841238.png" class="" title="三层全连接网络">
 <p>而且全连接网络忽视了图像的形状，比如，我们一张有色彩的图片，一般是三通道的，但是全连接网络会将其压缩成1 chanel。所以全连接层无法利用与性状有关的信息。</p>
-<h3 id="卷积网络"><a href="#卷积网络" class="headerlink" title="卷积网络"></a>卷积网络</h3><h4 id="卷积层"><a href="#卷积层" class="headerlink" title="卷积层"></a>卷积层</h4><p>卷积层的输入输出数据称为 <strong>特征图（feature map）</strong></p>
+<h3 id="卷积网络"><a class="markdownIt-Anchor" href="#卷积网络"></a> 卷积网络</h3>
+<h4 id="卷积层"><a class="markdownIt-Anchor" href="#卷积层"></a> 卷积层</h4>
+<p>卷积层的输入输出数据称为 <strong>特征图（feature map）</strong></p>
 <p><strong>输入：</strong> 输入特征图</p>
 <p><strong>输出：</strong> 输出特征图</p>
-<h4 id="卷积运算"><a href="#卷积运算" class="headerlink" title="卷积运算"></a>卷积运算</h4><p>卷积运算相当于图像处理中的滤波运算。</p>
+<h4 id="卷积运算"><a class="markdownIt-Anchor" href="#卷积运算"></a> 卷积运算</h4>
+<p>卷积运算相当于图像处理中的滤波运算。</p>
 <img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413200914937.png" class="" title="卷积运算">
 <p>卷积运算非常好理解，除了我画得比较丑。</p>
 <p>多层卷积就多层卷积就一对一，二对二进行卷积运算，然后叠加在一起成为一个。</p>
@@ -462,13 +468,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">34k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:46</span>
+    <span title="站点阅读时长">1:52</span>
   </span>
 </div>
 <div class="busuanzi-count">
