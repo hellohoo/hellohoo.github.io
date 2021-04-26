@@ -213,7 +213,7 @@
 </ol>
 <p>还找到了<a href="https://pan.baidu.com/s/12pC-cFiKoWhycA873dXxtw">PCV的源码和配套图片</a>。</p>
 <p>[密码: 9iab]。</p>
-<p>感觉PCV源代码写得不是很好，我不是很喜欢用 ``from XXX import XXX` 的方式来写，因为东西多了就会混，不适合直接看到就理解，决定敲代码的时候自己改一下。</p>
+<p>感觉PCV源代码写得不是很好，我不是很喜欢用 <code>from XXX import XXX</code> 的方式来写，因为东西多了就会混，不适合直接看到就理解，决定敲代码的时候自己改一下。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1327,8 +1327,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>VTK</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -1384,8 +1384,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -1480,8 +1480,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -1589,11 +1589,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
-        <tag>VTK</tag>
         <tag>MPR</tag>
+        <tag>VTK</tag>
         <tag>ITK</tag>
         <tag>技术</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
