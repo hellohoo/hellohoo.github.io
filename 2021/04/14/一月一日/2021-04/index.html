@@ -42,10 +42,11 @@
 <meta property="og:image" content="http://example.com/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202248573.png">
 <meta property="og:image" content="http://example.com/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202632425.png">
 <meta property="og:image" content="http://example.com/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210422152556716.png">
-<meta property="og:image" content="http://example.com/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/2021-04/image-20210426211747662.png">
+<meta property="og:image" content="http://example.com/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211747662.png">
 <meta property="og:image" content="http://example.com/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211956414.png">
+<meta property="og:image" content="http://example.com/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_572CE964FBD7-1.jpeg">
 <meta property="article:published_time" content="2021-04-14T14:38:09.000Z">
-<meta property="article:modified_time" content="2021-04-26T14:53:47.763Z">
+<meta property="article:modified_time" content="2021-04-26T15:20:21.692Z">
 <meta property="article:author" content="Hoohoo">
 <meta property="article:tag" content="生活">
 <meta property="article:tag" content="记录">
@@ -319,7 +320,7 @@
           <i class="far fa-calendar-check"></i> 
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-26 22:53:47" itemprop="dateModified" datetime="2021-04-26T22:53:47+08:00">2021-04-26</time>
+        <time title="修改时间：2021-04-26 23:20:21" itemprop="dateModified" datetime="2021-04-26T23:20:21+08:00">2021-04-26</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -346,14 +347,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
+      <span>3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>9 分钟</span>
+      <span>10 分钟</span>
     </span>
 </div>
 
@@ -555,9 +556,26 @@
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/shimohq/chinese-programmer-wrong-pronunciation/blob/master/README.md">中国程序员容易发音错误的单词</a></p>
 </blockquote>
-<p>今天买了一个小</p>
-<img src="2021-04/image-20210426211747662.png" alt="image-20210426211747662" style="zoom:50%;" />
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211956414.png" class="" title="image-20210426211956414">
+<p>今天在学PCV的时候，发现自己的python包中没有<code>scipy</code>，自然而然打开终端开始<code>conda</code>, <code>pip</code>，但是我没有成功。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211747662.png" class="" width="720">
+<p>我猜想可能是zsh中没有bash中的环境变量，就用了网上常见的<a target="_blank" rel="noopener" href="https://blog.csdn.net/xieamy/article/details/85082482?utm_term=zsh%E6%89%BE%E4%B8%8D%E5%88%B0%E5%91%BD%E4%BB%A4&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-85082482&amp;spm=3001.4430">方法</a>。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211956414.png" class="" width="720">
+<p>但是还是找不到命令，我就使用了另一个<a target="_blank" rel="noopener" href="https://blog.csdn.net/liuhui_1211/article/details/79439137?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;dist_request_id=&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control">方法</a>，接下来的事情我是不敢想的，我都不知道是我频繁切换<code>bash</code>和<code>zsh</code>还是这个方法的原因，我的<code>.zshrc</code>文件空了，代表所有配置都没有了。</p>
+<p>好的。</p>
+<p>之后的时间就是在找初始配置文件和anaconda的路径。</p>
+<p>最后终于用两个方法解决了上述问题：</p>
+<ol>
+<li>
+<p><code>anaconda</code>删除后重装，自动在<code>.zshrc</code>中生成了配置代码。</p>
+</li>
+<li>
+<p>找<a target="_blank" rel="noopener" href="https://meetlxt.github.io/">彤子</a>要了她的配置文件。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_572CE964FBD7-1.jpeg" class="" title="help">
+</li>
+</ol>
+<p>还找到了<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/12pC-cFiKoWhycA873dXxtw">PCV的源码和配套图片</a>。</p>
+<p>[密码: 9iab]。</p>
+<p>感觉PCV源代码写得不是很好，我不是很喜欢用 ``from XXX import XXX` 的方式来写，因为东西多了就会混，不适合直接看到就理解，决定敲代码的时候自己改一下。</p>
 
     </div>
 
@@ -654,7 +672,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:52</span>
+    <span title="站点阅读时长">1:53</span>
   </span>
 </div>
 <div class="busuanzi-count">
