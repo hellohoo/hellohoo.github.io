@@ -195,9 +195,9 @@
 <p><a href="https://github.com/shimohq/chinese-programmer-wrong-pronunciation/blob/master/README.md">中国程序员容易发音错误的单词</a></p>
 </blockquote>
 <p>今天在学PCV的时候，发现自己的python包中没有<code>scipy</code>，自然而然打开终端开始<code>conda</code>, <code>pip</code>，但是我没有成功。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211747662.png" class="" width="720">
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211747662.png" class="" width="366">
 <p>我猜想可能是zsh中没有bash中的环境变量，就用了网上常见的<a href="https://blog.csdn.net/xieamy/article/details/85082482?utm_term=zsh%E6%89%BE%E4%B8%8D%E5%88%B0%E5%91%BD%E4%BB%A4&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-85082482&amp;spm=3001.4430">方法</a>。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211956414.png" class="" width="720">
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211956414.png" class="" width="666">
 <p>但是还是找不到命令，我就使用了另一个<a href="https://blog.csdn.net/liuhui_1211/article/details/79439137?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;dist_request_id=&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control">方法</a>，接下来的事情我是不敢想的，我都不知道是我频繁切换<code>bash</code>和<code>zsh</code>还是这个方法的原因，我的<code>.zshrc</code>文件空了，代表所有配置都没有了。</p>
 <p>好的。</p>
 <p>之后的时间就是在找初始配置文件和anaconda的路径。</p>
@@ -1327,8 +1327,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
       </tags>
   </entry>
   <entry>
@@ -1589,11 +1589,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>MPR</tag>
+        <tag>医学影像</tag>
         <tag>VTK</tag>
+        <tag>MPR</tag>
         <tag>ITK</tag>
         <tag>技术</tag>
-        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
