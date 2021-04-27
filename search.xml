@@ -1,97 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【PCV】学习笔记（一）</title>
-    <url>/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>进入新领域用旧钥匙打开</p>
-
-</blockquote>
-<span id="more"></span>
-<div class="note info"><p>参考<mark class="label primary">2020年8月北京第24次印刷版本</mark></p>
-<p><mark class="label warning">warning: 该书较老且代码不全不太符合规范</mark></p>
-<p><mark class="label success">其中标题数字代表页码</mark></p>
-</div>
-<p>主要还是记录自己的学习记录，因为总结出自己的学习笔记比翻书节省时间，而且可以锻炼自己的思维能力。</p>
-<hr />
-<h2 id="基本的图像操作与处理"><a class="markdownIt-Anchor" href="#基本的图像操作与处理"></a> 基本的图像操作与处理</h2>
-<h3 id="pil"><a class="markdownIt-Anchor" href="#pil"></a> PIL</h3>
-<ul>
-<li>Python Imaging Library</li>
-</ul>
-<p>其中<code>PIL</code>最重要的模块是<code>Image</code>。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>其中<code>pylab</code>和<code>pyplot</code>区别如下：</p>
-<p>参考博客 ：<a href="https://blog.csdn.net/songbaiyao/article/details/105814682?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-0&amp;spm=1001.2101.3001.4242">pylab和pyplot的区别</a></p>
-</blockquote>
-<p>原图：</p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/logo.JPG" class="" width="520">
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_im = Image.<span class="built_in">open</span>(<span class="string">&#x27;logo.JPG&#x27;</span>)</span><br><span class="line">print(pil_im)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回值是一个PIL图像对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>&lt;PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=2048x2048 at <span class="number">0x7FE791E67BB0</span>&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="转换为灰度图"><a class="markdownIt-Anchor" href="#转换为灰度图"></a> 转换为灰度图：</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_gray = pil_im.convert(<span class="string">&#x27;L&#x27;</span>)</span><br><span class="line">print(pil_gray)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>&lt;PIL.Image.Image image mode=L size=2048x2048 at <span class="number">0x7FCF4F373DF0</span>&gt;</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427110914776.png" class="" width="520">
-<h4 id="复制和粘贴图像区域"><a class="markdownIt-Anchor" href="#复制和粘贴图像区域"></a> 复制和粘贴图像区域：</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># box大小（左，上，右，下）</span></span><br><span class="line">box = (<span class="number">100</span>, <span class="number">100</span>, <span class="number">1200</span>, <span class="number">1200</span>)</span><br><span class="line">region = pil_im.crop(box)</span><br><span class="line">region = region.transpose(Image.ROTATE_90)</span><br><span class="line">pil_im.paste(region,box)</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427111941651.png" class="" width="520">
-<h3 id="matplotlib"><a class="markdownIt-Anchor" href="#matplotlib"></a> Matplotlib</h3>
-<h4 id="绘制图像-点和线"><a class="markdownIt-Anchor" href="#绘制图像-点和线"></a> 绘制图像、点和线</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 读取图像到数组中</span></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;logo.JPG&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制图像</span></span><br><span class="line">imshow(im)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一些点</span></span><br><span class="line">x = [<span class="number">100</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">400</span>]</span><br><span class="line">y = [<span class="number">200</span>, <span class="number">500</span>, <span class="number">200</span>, <span class="number">500</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用红色星状标记绘制点</span></span><br><span class="line">plot(x, y, <span class="string">&#x27;r*&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制连接前两个点的线</span></span><br><span class="line">plot(x[:<span class="number">2</span>], y[:<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加标题，显示绘制的图像</span></span><br><span class="line">title(<span class="string">&#x27;Plotting: &quot;logp.JPG&quot;&#x27;</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427112717964.png" class="" width="520">
-<h4 id="图像的轮廓和直方图"><a class="markdownIt-Anchor" href="#图像的轮廓和直方图"></a> 图像的轮廓和直方图</h4>
-<p><strong>原图：</strong></p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/cat.jpeg" class="" title="cat">
-<p><strong>轮廓图</strong>：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图像到数组中</span></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line"></span><br><span class="line">figure()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 无颜色显示</span></span><br><span class="line">gray()</span><br><span class="line"><span class="comment"># 轮廓图</span></span><br><span class="line">contour(im,origin= <span class="string">&#x27;image&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表示x轴和y轴的单位长度相同</span></span><br><span class="line">axis(<span class="string">&#x27;equal&#x27;</span>)</span><br><span class="line"><span class="comment"># 关闭所有坐标轴线、刻度标记和标签</span></span><br><span class="line">axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line"></span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427113824645.png" class="" title="contour">
-<p><strong>直方图</strong>：表征像素值分布情况</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直方图</span></span><br><span class="line">figure()</span><br><span class="line"><span class="comment"># 128理解为多少个柱子</span></span><br><span class="line">hist(im.flatten(), <span class="number">128</span>, edgecolor=<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427145332060.png" class="" title="hist">
-<h4 id="交互式标注"><a class="markdownIt-Anchor" href="#交互式标注"></a> 交互式标注</h4>
-<p>在一幅图像中标注一些点，或者标注一些训练数据。</p>
-<div class="note danger"><p>以下代码为书中代码，但并未实现，如需实现，请使用<code>cv2</code>。</p>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>))</span><br><span class="line">print(<span class="string">&quot;点仨点&quot;</span>)</span><br><span class="line">fig = figure()</span><br><span class="line"></span><br><span class="line">imshow(im)</span><br><span class="line">x = ginput(<span class="number">3</span>)</span><br><span class="line">print(<span class="string">&quot;你点了&quot;</span>,x)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
-<h3 id="numpy"><a class="markdownIt-Anchor" href="#numpy"></a> Numpy</h3>
-<h4 id="图像用数组表示"><a class="markdownIt-Anchor" href="#图像用数组表示"></a> 图像用数组表示</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>))</span><br><span class="line">print(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">im_g = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line">print(im_g.shape,im_g.dtype)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">(<span class="number">665</span>, <span class="number">1182</span>, <span class="number">3</span>) uint8</span><br><span class="line">(<span class="number">665</span>, <span class="number">1182</span>) float32</span><br></pre></td></tr></table></figure>
-<h4 id="灰度变换"><a class="markdownIt-Anchor" href="#灰度变换"></a> 灰度变换</h4>
-<p>考虑任意函数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> ，也就是一个变换函数。</p>
-<p>定义域和值域相同。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line"></span><br><span class="line">im2 = <span class="number">255</span> - im <span class="comment"># 反转</span></span><br><span class="line"></span><br><span class="line">im3 = (<span class="number">100</span> / <span class="number">255</span>) * im + <span class="number">100</span> <span class="comment"># 图像像素区间限制到[100,200]</span></span><br><span class="line"></span><br><span class="line">im4 = <span class="number">255</span> * (im / <span class="number">255</span>) ** <span class="number">2</span> <span class="comment"># 像素值平方</span></span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427160921879.png" class="" title="fx">
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分为四个小版块，2*2大小</span></span><br><span class="line"><span class="comment"># 第1张，即左上角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">221</span>)</span><br><span class="line">ax.imshow(im, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第2张，即右上角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">222</span>)</span><br><span class="line">ax.imshow(im2, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第3张，即左下角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">223</span>)</span><br><span class="line">ax.imshow(im3, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第4张，即右下角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">224</span>)</span><br><span class="line">ax.imshow(im4, plt.cm.gray)</span><br></pre></td></tr></table></figure>
-<p>其中有一个问题从今早开始就一直困扰着我，就是我的灰度图是绿色的，如下：</p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427164955804.png" class="" title="gray_green">
-<p>我怀疑我是色盲- -，但是后来取查了一下，发现<code>plt.imshow()</code>默认是三通道的，所以我们需要在<code>imshow()</code>中添加 <code>plt.cm.gray</code> 参数，才显示正确，说真的，现在都用<code>cv2</code>了…</p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427165156218.png" class="" title="correct_gray">
-<blockquote>
-<p>使用<code>fromarray</code>方法和直接<code>gray</code>的效果很不同：</p>
-<ul>
-<li>上图为将array转换为Image后</li>
-<li>下图为使用plt.cm.gray参数</li>
-</ul>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427170612523.png" class="" width="200">
-<p>像素范围在[100, 200]内，<sub>所以我个人认为可能是上图比较贴合？</sub></p>
-<p>【已解决】<strong>结论是下图最贴合</strong></p>
-<p>经过读书，发现 <code>fromarray</code>方法需要将数据类型转换回来，所以看下图，左图为将其数据类型转换回来后的图，右图为直接转换，并未按照原类型。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im5 = Image.fromarray(np.uint8(im3)) <span class="comment"># 左图将其数据类型转换回来</span></span><br><span class="line">im6 = Image.fromarray(im3)           <span class="comment"># 右图直接转换</span></span><br><span class="line">print(im5)</span><br><span class="line">print(im6)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到输出的mode是不同的</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&lt;PIL.Image.Image image mode=L size=1182x665 at <span class="number">0x7FD867392220</span>&gt;</span><br><span class="line">&lt;PIL.Image.Image image mode=F size=1182x665 at <span class="number">0x7FD867392AF0</span>&gt;</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427171603655.png" class="" width="500">
-</blockquote>
-<p>内置函数将array转换为Image：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_im = Image.fromarray(im)</span><br></pre></td></tr></table></figure>
-<p>如果你并不十分确定输入数据的类型，安全起见，应该先转换回来。 注意，NumPy 总是将数组数据类型转换成能够表示数据的“最低”数据类型。对浮点数做乘积或除法操作会使整数类型的数组变成浮点类型。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>python</tag>
-        <tag>书籍</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hellohoo</title>
     <url>/2021/03/03/hellohoo/</url>
     <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
@@ -104,483 +13,90 @@
       </tags>
   </entry>
   <entry>
-    <title>Mac的Rodin安装教程</title>
-    <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：macOS Big Sur 11.2.3</p>
-<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
-</blockquote>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<h5 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h5>
-<p>在Mac上直接<code>terminal</code>中输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
-<h5 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h5>
-<p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
-<p>点击右上角文件夹图标：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
-<p>点击<code>Download JDK</code>：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
-<h4 id="测试jdk-8是否安装成功"><a class="markdownIt-Anchor" href="#测试jdk-8是否安装成功"></a> 测试JDK 8是否安装成功</h4>
-<p>输入以下命令不报错即成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<blockquote>
-<h4 id="macos-caveat"><a class="markdownIt-Anchor" href="#macos-caveat"></a> macOS caveat</h4>
-<p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
-</blockquote>
-<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
-<p>但是又继续报错：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
-<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
-<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
-<p>发现有一段被注释掉了</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
-<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
-<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
-<p>修改并保存，就可以成功启动Rodin了。</p>
-<blockquote>
-<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Rodin安装教程（附java8安装教程）</title>
-    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
-    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
-<blockquote>
-<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
-</blockquote>
-<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：WIndows 10</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>安装地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JDK 8</td>
-<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
-</tr>
-<tr>
-<td>Rodin</td>
-<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
-<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
-<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
-<p>更改安装路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
-<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
-<p>点击下一步后就安装成功了：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
-<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
-<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
-<p>并点击<code>高级系统设置</code></p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
-<p>点击<code>环境变量</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
-<p>点击<code>系统变量</code>-<code>新建</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
-<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
-<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
-<p>建议使用JAVA_HOME进行新建：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
-<p>点击确定环境变量配置完成。</p>
-<blockquote>
-<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
-<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
-</blockquote>
-<p>打开cmd分别输入以下三条指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
-<p>显示如下内容则jdk 8安装成功。</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
-<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
-<p>下载解压后直接打开rodin.exe`:</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
-<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
-<p>打开后出现如下界面即为安装成功：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
-<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
-<p>在<code>Work with</code>里输入相应名称即可安装。</p>
-<blockquote>
-<p>安装插件过程较慢，可以搭梯子。</p>
-</blockquote>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-        <tag>JDK</tag>
-        <tag>Event-B</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
-    <url>/2021/04/02/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
+    <title>卷积神经网络</title>
+    <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <blockquote>
-<p>开始是成功的左括号。——Hoohoo</p>
+<p>学会变通，才能开启新的道路。——Hoohoo</p>
 </blockquote>
 <span id="more"></span>
-<p>最近开始学习CV领域，因为老师想让我做医学影像的三维重建，依我理解，医学影像的三维重建就是面绘制、体绘制之类的，使用VTK、ITK工具包完成，也询问了一些学长等专业人士，得知这边并不好出成果，好出成果的就是切割、MRI之类的，我并没有很大的兴趣，而且老师希望我继续做，我只能曲线救国，先学学重建之类的知识，也就是计算机视觉这方面的，而非专一的医学影像方向。</p>
-<p>并且一定要学习的话，反正都是从0开始，就先学着吧！</p>
-<p>最近在看的一篇论文，十年前的一篇开山之作，就是SLAM中的前端技术，所以在推荐下，就开始学习高翔等著的《视觉SLAM十四讲 从理论到实践》第2版。</p>
+<p>大家好，因为最近在学SLAM14，但是由于一些原因，可能是分类过于多，我决定先把CV的前瞻课程学好——也就是深度学习这块，其实一直有了解，只是断断续续，也没有给自己一个确切的目标，毕竟现在搞视觉不带点深度学习的东西没办法搞了就。</p>
+<p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
+<p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
+<p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
+<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO5都出来了，<s>而且这本书采用的是tf1…</s> 我决定使用Pytorch，毕竟工业界用的比较多的是tf，而我们学生家家就乖乖用PyTorch吧。</p>
+<p><s>不过没关系</s>，就这样开始吧。</p>
 <h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
-<p>第一讲是预备知识，介绍本书的基本信息。</p>
-<blockquote>
-<p>本书代码：<a href="https://github.com/gaoxiang12/slambook2">https://github.com/gaoxiang12/slambook2</a></p>
-</blockquote>
-<p><strong>SLAM：</strong> <strong>S</strong>imultaneous <strong>L</strong>ocalization <strong>a</strong>nd <strong>M</strong>apping （<strong>同时定位与地图构建</strong>）的缩写。指搭载特定传感器的主体，在没有环境先验信息情况下，于运动过程中建立环境的模型，同时估计自己的运动。如果传感器主要是相机，则称为“视觉SLAM”。</p>
-<p>所需前备知识：</p>
-<ul>
-<li>
-<p>高等数学、<strong>线性代数</strong>(!!!)、概率论</p>
-</li>
-<li>
-<p>C++语言基础</p>
-</li>
-<li>
-<p>Linux基础</p>
-</li>
-</ul>
-<p>需要用到的主要库：<code>Eigen</code>、<code>OpenCV</code>、<code>PCL</code>、<code>g2o</code>、<code>Ceres</code>等。</p>
-<h2 id="习题"><a class="markdownIt-Anchor" href="#习题"></a> 习题</h2>
-<ol>
-<li>
-<p>有线性方程 Ax = b，当我们知道 A, b，想要求解 x 时，如何求解？这对 A 和 b 需 要哪些条件？提示:从 A 的维度和秩角度来分析。</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label></p>
-<ul>
-<li>当R(A) = R(A,b) = n时，有唯一解。</li>
-<li>当R(A) = R(A,b) &lt; n时，有多解。</li>
-<li>当R(A) &lt; R(A,b) 时，无解。</li>
-</ul>
-<p>// 其中R()为秩的个数，n为未知数的个数。</p>
-</li>
-<li>
-<p>高斯分布是什么？它的一维形式是什么样子？它的高维形式是什么样子？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label> 高斯分布又称为正态分布===</p>
-</li>
-<li>
-<p>你知道 C++ 的类吗？你知道 STL 吗？你使用过它们吗？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label>知道一些类，使用过STL。</p>
-</li>
-<li>
-<p>你以前怎样书写 C++ 程序？(你完全可以说只在 VC6.0 下写过 C++ 工程，只要你 有写 C++ 和 C 语言经验就行。)</p>
-<p><label style="color:#f5222dd"><strong>答：</strong></label>刚开始使用<code>CodeBlock</code>写C语言，后来使用<code>Clion</code>，前段时间做VTK，也用过一段时间<code>Visual Studio</code>。</p>
-</li>
-<li>
-<p>你知道 C++11 标准吗？其中哪些新特性你之前听说过或使用过？有没有其他的标准？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label>====</p>
-</li>
-<li>
-<p>你知道 Linux 吗？你有没有至少使用过其中之一(安卓不算)，比如 Ubuntu？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label> 知道。用过MacOS、Windows、CentOS、Federa、Ubuntu。</p>
-</li>
-<li>
-<p>Linux 的目录结构是什么样的？你知道哪些基本命令，比如 ls, cat 等等？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label> Linux下的目录结构主要是由<code>/</code>延伸。</p>
-<p>一些命令：<code>ls</code>、<code>ll</code>、<code>mkdir</code>、<code>rm</code>、<code>tar</code>、<code>vim</code>、<code>pwd</code>、<code>which</code>…</p>
-</li>
-<li>
-<p>如何在 Ubuntu 中安装软件(不打开软件中心的情况下)？这些软件被安装在什么地方？当我只知道模糊的软件名称(比如我想要装一个 eigen 名称的库)，我应该如何安装它？</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label> <code>apt-get install</code>，===</p>
-</li>
-<li>
-<p>*花一个小时学习一下Vim，因为你迟早会用它。你可以在终端中输入vimtutor阅 读一遍所有内容。我们不需要你非常熟练地操作它，只要在学习本书的过程中使用它 键入代码即可。不要在它的插件上浪费时间，不要想着把 vim 用成 IDE，我们只用 它做文本编辑的工作。</p>
-<p><label style="color:#f5222d"><strong>答：</strong></label>Vim！！！</p>
-</li>
-</ol>
+<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
+<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
+<p>比如三个全连接层的网络，输入784的话，隐藏层节点为100，即为（784 * 100 * 100 * 100 *100 * 10）…</p>
+<p>太多了，可以参考下图。</p>
+<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413195841238.png" class="" title="三层全连接网络">
+<p>而且全连接网络忽视了图像的形状，比如，我们一张有色彩的图片，一般是三通道的，但是全连接网络会将其压缩成1 chanel。所以全连接层无法利用与性状有关的信息。</p>
+<h3 id="卷积网络"><a class="markdownIt-Anchor" href="#卷积网络"></a> 卷积网络</h3>
+<h4 id="卷积层"><a class="markdownIt-Anchor" href="#卷积层"></a> 卷积层</h4>
+<p>卷积层的输入输出数据称为 <strong>特征图（feature map）</strong></p>
+<p><strong>输入：</strong> 输入特征图</p>
+<p><strong>输出：</strong> 输出特征图</p>
+<h4 id="卷积运算"><a class="markdownIt-Anchor" href="#卷积运算"></a> 卷积运算</h4>
+<p>卷积运算相当于图像处理中的滤波运算。</p>
+<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413200914937.png" class="" title="卷积运算">
+<p>卷积运算非常好理解，除了我画得比较丑。</p>
+<p>多层卷积就多层卷积就一对一，二对二进行卷积运算，然后叠加在一起成为一个。</p>
+<p>如果想成为多个，就输入多个滤波器。</p>
+<p>有几个滤波器，输出几个卷积。</p>
 ]]></content>
       <categories>
         <category>学习</category>
-        <category>《视觉SLAM十四讲》</category>
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
-        <tag>笔记</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
-    <title>VR实现过程（使用VTK官方代码）</title>
-    <url>/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="vr的介绍"><a class="markdownIt-Anchor" href="#vr的介绍"></a> VR的介绍</h2>
-<p>VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。</p>
+    <title>PyTorch的学习（一）：配置环境</title>
+    <url>/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<h1 id="pytorch的学习"><a class="markdownIt-Anchor" href="#pytorch的学习"></a> PyTorch的学习</h1>
+<blockquote>
+<p>工具只是工具，好好掌握一种工具。</p>
+</blockquote>
 <span id="more"></span>
-<p>VR的优点：</p>
-<ul>
-<li>可以探索物体的内部结构</li>
-<li>可以描述非常定形的物体</li>
-<li>面绘制在这些方面比较弱</li>
-</ul>
-<p>VR的缺点：</p>
-<ul>
-<li>数据存储量大</li>
-<li>计算时间较长</li>
-</ul>
-<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>本来是准备用tf的，但是书籍可能买得较早，当时也懵懂，现在2已经出来了，但是用的书还是1。</p>
+<p>也问过一些同学，某同学表示框架掌握1个就可以了，我深以为然，但是最近看论文的开源代码，大多数都采用PyTorch，也经过了一些查询后，由于Pytorch和python差不多，而且tf1的静态图和tf2的动态图把我整懵了，太麻烦了，所以，就直接开始PyTorch吧。</p>
+<p>但是我们开始学习的第一步并不是去学习语法，而是去配置环境，可以说配置环境这个东西让人听到就头疼，当时Hadoop配分布式环境时，足足以星期为单位计算。</p>
+<p>来吧，头铁也必须撞。</p>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda"></a> Anaconda</h3>
 <blockquote>
-<p>平台：Windows 10</p>
-<p>语言：C++</p>
-<p>图像格式：MHD</p>
-<p>数据集：使用的是VTK-Example中的<code>FullHead.mhd</code></p>
-<p>​			  也可以使用<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> （可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a>）等mhd格式数据</p>
+<p>地址： <a href="https://www.anaconda.com/products/individual#Downloads">https://www.anaconda.com/products/individual#Downloads</a></p>
 </blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">VTK</td>
-<td style="text-align:center">8.2.0</td>
-<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">CMake</td>
-<td style="text-align:center">3.14.0</td>
-<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Visual Studio</td>
-<td style="text-align:center">2017_64 bit</td>
-<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
-<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
-<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
-<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
-<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
-<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
-<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
-<p>参考博客：</p>
-<p>​	<a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
-<p>​	<a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
-<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
-<h4 id="编译过程"><a class="markdownIt-Anchor" href="#编译过程"></a> 编译过程</h4>
+<p>选择自己系统版本下载即可。</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193631211.png" class="" title="anaconda下载">
+<h3 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch"></a> PyTorch</h3>
 <blockquote>
-<p>参考：<a href="https://kitware.github.io/vtk-examples/site/Cxx/VolumeRendering/FixedPointVolumeRayCastMapperCT/">vtk-examples-FixedPointVolumeRayCastMapperCT</a></p>
+<p>地址： <a href="https://pytorch.org/">https://pytorch.org/</a></p>
 </blockquote>
-<p>进入VTK官网可以看到关于VR有许多例子，而且每个例子都会有示意图，选择了第一个<code>FixedPointVolumeRayCastMapperCT</code>。</p>
-<ol>
-<li>点击<a href="https://github.com/Kitware/vtk-examples/raw/gh-pages/Tarballs/FixedPointVolumeRayCastMapperCT.tar">here to download FixedPointVolumeRayCastMapperCT</a>后系统会自动下载，并解压：</li>
-</ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/1.png" class="" title="下载源代码">
-<ol start="2">
-<li>该文件夹下包括<code>CMakeLists.txt</code>和<code>cxx</code>源文件和一个<code>build</code>文件夹：</li>
-</ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/2.png" class="" title="文件夹">
-<ol start="3">
-<li>新建<code>source</code>文件夹和<code>testData</code>文件夹，并将<code>CMakeLists.txt</code>和<code>cxx</code>源文件移动到<code>source</code>文件：</li>
-</ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/3.png" class="" title="新建文件夹">
-<ol start="4">
-<li>打开CMake，打开CMake，source code路径即为<code>VR/FixedPointVolumeRayCastMapperCT/source</code>，build路径即为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
-</ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/4.png" class="" title="编译路径">
-<ol start="5">
-<li>点击<code>configure</code>按钮，使用本地编译器，选择<code>Visual Studio 15 2017</code>，并选择<code>x64</code>后点击<code>Finish</code>，之后会出现一片红色，将其中<code>CMAKE_INSTALL_PREFIX</code>的路径改为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
-</ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/5.png" class="" title="选择编译器">
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/6.png" class="" title="改路径">
-<ol start="6">
-<li>继续<code>configure</code>，直到无红色出现，点击<code>generate</code>，<code>generate</code>结束后，打开vs2017，找到<code>build</code>文件夹下的<code>FixedPointVolumeRayCastMapperCT.sln</code>文件选择打开，并将<code>**FixedPointVolumeRayCastMapperCT**</code>设为启动项目，点击本地Windows调试器即可运行。</li>
-</ol>
-<h4 id="参数介绍"><a class="markdownIt-Anchor" href="#参数介绍"></a> 参数介绍</h4>
-<blockquote>
-<p>Example: FixedPointVolumeRayCastMapperCT -DICOM CTNeck -MIP 4096 1024</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">-DICOM &lt;directory&gt;                             <span class="comment">// 使用的数据集为 DICOM 格式</span></span><br><span class="line">-VTI &lt;filename&gt;                                <span class="comment">// 使用的数据集为 VTI 格式</span></span><br><span class="line">-MHA &lt;filename&gt;                                <span class="comment">// 使用的数据集为 MHA 格式</span></span><br><span class="line">-DependentComponents                           <span class="comment">// 指定文件具有从属组件</span></span><br><span class="line">-Clip                                          <span class="comment">// 显示用于剪切卷的多维数据集小部件</span></span><br><span class="line">-MIP &lt;window&gt; &lt;level&gt;                          <span class="comment">// 使用最大强度投影方法</span></span><br><span class="line">-CompositeRamp &lt;window&gt; &lt;level&gt;                <span class="comment">// 是非着色合成</span></span><br><span class="line">-CompositeShadeRamp &lt;window&gt; &lt;level&gt;           <span class="comment">// 使用着色合成</span></span><br><span class="line">-CT_Skin                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Bone                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Muscle                                     <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-FrameRate &lt;rate&gt;                              <span class="comment">// 控制交互式渲染速率</span></span><br><span class="line">-DataReduction &lt;factor&gt;                        <span class="comment">// 在渲染前缩减数据</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>必须使用<code>-DICOM</code>选项指定数据所在的目录，或使用<code>-VTI</code>或<code>-MHA</code>选项指定.VTI文件的路径。</li>
-<li>默认情况下，程序假定文件具有独立组件，使用<code>-DependentComponents</code>指定文件具有从属组件。</li>
-<li>使用<code>-Clip</code>选项显示用于剪切卷的多维数据集小部件。</li>
-<li>将<code>-FrameRate</code>选项与所需的帧速率（以每秒帧数为单位）一起使用，以控制交互式渲染速率。</li>
-<li>使用<code>-DataReduction</code>选项和缩减因子（大于零且小于1）在渲染前缩减数据。</li>
-<li>使用其余选项之一指定混合函数和传递函数。<code>MIP</code>选项使用最大强度投影方法，而其他选项使用合成。</li>
-<li><code>-CompositeRamp</code>选项是非着色合成，而其他合成选项使用着色。</li>
-<li>注：<code>MIP</code>、<code>CompositeRamp</code>、<code>CompositeShadeRamp</code>、<code>CT_Skin</code>、<code>CT_Bone</code>和<code>CT_Muscle</code>适用于DICOM数据。<code>MIP</code>、<code>CompositeRamp</code>和<code>RGB_Composite</code>适用于RGB数据。</li>
-</ul>
-<h4 id="修改源代码"><a class="markdownIt-Anchor" href="#修改源代码"></a> 修改源代码</h4>
-<p>由于VTK官网是在Linux/macOS的终端运行，但已经在本机Windows 10下安装了全套的配置软件，故修改了其中一些代码，使其更直观操作。</p>
-<p>源代码如下，并配置了相关判断代码（修改后将判断代码全部注释掉，用以自己直接修改参数），用来判断在终端中输入的参数值。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;                         <span class="comment">// 可以删去，因为不需要判断，所以计数器无用</span></span><br><span class="line">  <span class="keyword">char</span>* dirname = <span class="literal">NULL</span>;                  <span class="comment">// 如果使用的数据集为Dicom格式，则可修改NULL值为数据集文件夹地址</span></span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;           <span class="comment">// opacityWindow大小</span></span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;            <span class="comment">// opacityLevel大小</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">/* blendType</span></span><br><span class="line"><span class="comment">      根据参数修改为不同的数字，为不同的效果，其中：</span></span><br><span class="line"><span class="comment">      MIP：blendType = 0</span></span><br><span class="line"><span class="comment">      -CompositeRamp：blendType = 1</span></span><br><span class="line"><span class="comment">      -CompositeShadeRamp：blendType = 2</span></span><br><span class="line"><span class="comment">      -CT_Skin：blendType = 3</span></span><br><span class="line"><span class="comment">      -CT_Bone：blendType = 4</span></span><br><span class="line"><span class="comment">      -CT_Muscle：blendType = 5</span></span><br><span class="line"><span class="comment">      -RGB_Composite：blendType = 6</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;   </span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">0</span>;                          <span class="comment">// 如果上文选择Clip选项，则clip = 1</span></span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;          <span class="comment">// 参数范围在0-1，</span></span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;               <span class="comment">// 控制交互式渲染速率，渲染前缩减数据</span></span><br><span class="line">  <span class="keyword">char</span>* fileName = <span class="number">0</span>;                    <span class="comment">// 如果为VTI格式或MHA/MHD格式，则可修改NULL值为数据文件地址</span></span><br><span class="line">  <span class="keyword">int</span> fileType = <span class="number">0</span>;                      <span class="comment">// 文件格式，可直接根据数据集文件进行输入，无需判断</span></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;     <span class="comment">// 修改不同的数字为不同的效果，下文会有展示</span></span><br></pre></td></tr></table></figure>
-<p>由于采用<code>Windows 10</code>系统，未使用终端，参数修改后如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">char</span> *dirname = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;</span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;</span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;</span><br><span class="line">  <span class="keyword">char</span> *fileName = <span class="string">&quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//FullHead.mhd&quot;</span>;</span><br><span class="line">  <span class="comment">// char *fileName = &quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//TestData//Case00.mhd&quot;;</span></span><br><span class="line">  <span class="keyword">int</span> fileType = MHA_FILETYPE;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
-<p>并将代码中判断参数代码直接注释掉，从<code>while ( count &lt; args )</code>一直到<code>if ( !dirname &amp;&amp; !fileName)</code>结束。</p>
-<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
-<p>当 <code>blendType</code> = 0时：</p>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/101.png" class="" title="blendType &#x3D; 0">
-<p>使用<code>CT_Skin</code>参数时：</p>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/100.png" class="" title="blendType &#x3D; 3">
+<p>黄色框即为指令，选择自己匹配的选项，即可复制指令直接在terminal中输入。</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413192917013.png" class="" title="pytorch指令">
+<p>我用的是Mac，所以我的配置如下：</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193108252.png" class="" title="mac指令">
+<p>下载还是有些慢的，可以换源或者挂梯子。</p>
+<h2 id="安装完成测试"><a class="markdownIt-Anchor" href="#安装完成测试"></a> 安装完成测试</h2>
+<p>在projects下新建一个<code>test.py</code>的python文件，并输入以下内容：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">print(torch.__version__)</span><br></pre></td></tr></table></figure>
+<p>在终端中输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python test.py</span><br></pre></td></tr></table></figure>
+<p>若输出版本号即安装成功。</p>
 ]]></content>
       <categories>
-        <category>技术</category>
-        <category>VTK</category>
+        <category>学习</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
-        <tag>VTK</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MPR实现过程</title>
-    <url>/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="mpr的介绍"><a class="markdownIt-Anchor" href="#mpr的介绍"></a> MPR的介绍</h2>
-<p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
-<p><em><span id="more"></span></em></p>
-<p>MPR 的<strong>优点</strong></p>
-<ul>
-<li>能任意产生新的断层图像，而无需重复扫描。</li>
-<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
-</ul>
-<p>MPR的<strong>缺点</strong></p>
-<ul>
-<li>难以表达复杂的空间结构。</li>
-<li>曲面重组易造成假阳性。</li>
-</ul>
-<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
-<blockquote>
-<p>平台：Windows 10</p>
-<p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ITK</td>
-<td style="text-align:center">4.13.2</td>
-<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">VTK</td>
-<td style="text-align:center">8.2.0</td>
-<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">CMake</td>
-<td style="text-align:center">3.14.0</td>
-<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Qt</td>
-<td style="text-align:center">5.12.0</td>
-<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Visual Studio</td>
-<td style="text-align:center">2017_64 bit</td>
-<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
-<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
-<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
-<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
-<h4 id="安装qt"><a class="markdownIt-Anchor" href="#安装qt"></a> 安装Qt</h4>
-<p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
-<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
-<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
-<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
-<p>参考博客：</p>
-<p><a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
-<p><a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
-<h4 id="安装itk"><a class="markdownIt-Anchor" href="#安装itk"></a> 安装ITK</h4>
-<p>参考博客：</p>
-<p><a href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
-<p><a href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
-<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
-<blockquote>
-<p>参考博客：<a href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
-</blockquote>
-<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
-<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
-<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
-<p>继续configure，直到无红色出现，点击generate。</p>
-<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
-<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
-<p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
-<p>初始界面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
-<p>旋转切面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
-<p>像素点的三维坐标与灰度值信息的显示：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
-<p>灰度变化：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>VTK</category>
-        <category>ITK</category>
-      </categories>
-      <tags>
-        <tag>医学影像</tag>
-        <tag>VTK</tag>
-        <tag>MPR</tag>
-        <tag>ITK</tag>
-        <tag>技术</tag>
+        <tag>学习</tag>
+        <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
@@ -845,44 +361,178 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </tags>
   </entry>
   <entry>
-    <title>《视觉SLAM十四讲 第2版》学习笔记 第3讲</title>
-    <url>/2021/04/06/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC3%E8%AE%B2/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<blockquote>
-<p>每一天都是推翻重来的日子，痛苦但进步。——Hoohoo</p>
+    <title>【PCV】学习笔记（一）</title>
+    <url>/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>进入新领域用旧钥匙打开</p>
+
 </blockquote>
 <span id="more"></span>
-<p>大家好，上一讲的笔记很多时间都花在了数学公式的渲然上，我迟早要把hexo换掉，换成其他的，mathjax真的不行哦，最后一遍katex，直接成功，😓。</p>
-<p>这一张主要就是刚性变换了，对于刚性变换我最大的印象是在前几天看的论文中的第一个公式，就是四元数的一个欧式变换公式，在翻译中，被称之为刚性变换。</p>
-<p>刚性变换其实就是旋转和平移的变换。</p>
-<p>让我们一起进入代数的繁琐的变换的世界吧。</p>
-<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
+<div class="note info"><p>参考<mark class="label primary">2020年8月北京第24次印刷版本</mark></p>
+<p><mark class="label warning">warning: 该书较老且代码不全不太符合规范</mark></p>
+<p><mark class="label success">其中标题数字代表页码</mark></p>
+</div>
+<p>主要还是记录自己的学习记录，因为总结出自己的学习笔记比翻书节省时间，而且可以锻炼自己的思维能力。</p>
+<hr />
+<h2 id="基本的图像操作与处理"><a class="markdownIt-Anchor" href="#基本的图像操作与处理"></a> 基本的图像操作与处理</h2>
+<h3 id="pil"><a class="markdownIt-Anchor" href="#pil"></a> PIL</h3>
+<ul>
+<li>Python Imaging Library</li>
+</ul>
+<p>其中<code>PIL</code>最重要的模块是<code>Image</code>。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p><strong>本节目标</strong></p>
+<p>其中<code>pylab</code>和<code>pyplot</code>区别如下：</p>
+<p>参考博客 ：<a href="https://blog.csdn.net/songbaiyao/article/details/105814682?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-0&amp;spm=1001.2101.3001.4242">pylab和pyplot的区别</a></p>
+</blockquote>
+<p>原图：</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/logo.JPG" class="" width="520">
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_im = Image.<span class="built_in">open</span>(<span class="string">&#x27;logo.JPG&#x27;</span>)</span><br><span class="line">print(pil_im)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回值是一个PIL图像对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line">&lt;PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=2048x2048 at <span class="number">0x7FE791E67BB0</span>&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="转换为灰度图"><a class="markdownIt-Anchor" href="#转换为灰度图"></a> 转换为灰度图：</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_gray = pil_im.convert(<span class="string">&#x27;L&#x27;</span>)</span><br><span class="line">print(pil_gray)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>&lt;PIL.Image.Image image mode=L size=2048x2048 at <span class="number">0x7FCF4F373DF0</span>&gt;</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427110914776.png" class="" width="520">
+<h4 id="复制和粘贴图像区域"><a class="markdownIt-Anchor" href="#复制和粘贴图像区域"></a> 复制和粘贴图像区域：</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># box大小（左，上，右，下）</span></span><br><span class="line">box = (<span class="number">100</span>, <span class="number">100</span>, <span class="number">1200</span>, <span class="number">1200</span>)</span><br><span class="line">region = pil_im.crop(box)</span><br><span class="line">region = region.transpose(Image.ROTATE_90)</span><br><span class="line">pil_im.paste(region,box)</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427111941651.png" class="" width="520">
+<h3 id="matplotlib"><a class="markdownIt-Anchor" href="#matplotlib"></a> Matplotlib</h3>
+<h4 id="绘制图像-点和线"><a class="markdownIt-Anchor" href="#绘制图像-点和线"></a> 绘制图像、点和线</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 读取图像到数组中</span></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;logo.JPG&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制图像</span></span><br><span class="line">imshow(im)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一些点</span></span><br><span class="line">x = [<span class="number">100</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">400</span>]</span><br><span class="line">y = [<span class="number">200</span>, <span class="number">500</span>, <span class="number">200</span>, <span class="number">500</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用红色星状标记绘制点</span></span><br><span class="line">plot(x, y, <span class="string">&#x27;r*&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制连接前两个点的线</span></span><br><span class="line">plot(x[:<span class="number">2</span>], y[:<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加标题，显示绘制的图像</span></span><br><span class="line">title(<span class="string">&#x27;Plotting: &quot;logp.JPG&quot;&#x27;</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427112717964.png" class="" width="520">
+<h4 id="图像的轮廓和直方图"><a class="markdownIt-Anchor" href="#图像的轮廓和直方图"></a> 图像的轮廓和直方图</h4>
+<p><strong>原图：</strong></p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/cat.jpeg" class="" title="cat">
+<p><strong>轮廓图</strong>：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图像到数组中</span></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line"></span><br><span class="line">figure()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 无颜色显示</span></span><br><span class="line">gray()</span><br><span class="line"><span class="comment"># 轮廓图</span></span><br><span class="line">contour(im,origin= <span class="string">&#x27;image&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表示x轴和y轴的单位长度相同</span></span><br><span class="line">axis(<span class="string">&#x27;equal&#x27;</span>)</span><br><span class="line"><span class="comment"># 关闭所有坐标轴线、刻度标记和标签</span></span><br><span class="line">axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line"></span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427113824645.png" class="" title="contour">
+<p><strong>直方图</strong>：表征像素值分布情况</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直方图</span></span><br><span class="line">figure()</span><br><span class="line"><span class="comment"># 128理解为多少个柱子</span></span><br><span class="line">hist(im.flatten(), <span class="number">128</span>, edgecolor=<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427145332060.png" class="" title="hist">
+<h4 id="交互式标注"><a class="markdownIt-Anchor" href="#交互式标注"></a> 交互式标注</h4>
+<p>在一幅图像中标注一些点，或者标注一些训练数据。</p>
+<div class="note danger"><p>以下代码为书中代码，但并未实现，如需实现，请使用<code>cv2</code>。</p>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>))</span><br><span class="line">print(<span class="string">&quot;点仨点&quot;</span>)</span><br><span class="line">fig = figure()</span><br><span class="line"></span><br><span class="line">imshow(im)</span><br><span class="line">x = ginput(<span class="number">3</span>)</span><br><span class="line">print(<span class="string">&quot;你点了&quot;</span>,x)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<h3 id="numpy"><a class="markdownIt-Anchor" href="#numpy"></a> Numpy</h3>
+<h4 id="图像用数组表示"><a class="markdownIt-Anchor" href="#图像用数组表示"></a> 图像用数组表示</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>))</span><br><span class="line">print(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">im_g = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>), <span class="string">&#x27;f&#x27;</span>)</span><br><span class="line">print(im_g.shape, im_g.dtype)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">(<span class="number">665</span>, <span class="number">1182</span>, <span class="number">3</span>) uint8</span><br><span class="line">(<span class="number">665</span>, <span class="number">1182</span>) float32</span><br></pre></td></tr></table></figure>
+<h4 id="灰度变换"><a class="markdownIt-Anchor" href="#灰度变换"></a> 灰度变换</h4>
+<p>考虑任意函数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> ，也就是一个变换函数。</p>
+<p>定义域和值域相同。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line"></span><br><span class="line">im2 = <span class="number">255</span> - im <span class="comment"># 反转</span></span><br><span class="line"></span><br><span class="line">im3 = (<span class="number">100</span> / <span class="number">255</span>) * im + <span class="number">100</span> <span class="comment"># 图像像素区间限制到[100,200]</span></span><br><span class="line"></span><br><span class="line">im4 = <span class="number">255</span> * (im / <span class="number">255</span>) ** <span class="number">2</span> <span class="comment"># 像素值平方</span></span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427160921879.png" class="" title="fx">
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分为四个小版块，2*2大小</span></span><br><span class="line"><span class="comment"># 第1张，即左上角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">221</span>)</span><br><span class="line">ax.imshow(im, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第2张，即右上角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">222</span>)</span><br><span class="line">ax.imshow(im2, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第3张，即左下角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">223</span>)</span><br><span class="line">ax.imshow(im3, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第4张，即右下角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">224</span>)</span><br><span class="line">ax.imshow(im4, plt.cm.gray)</span><br></pre></td></tr></table></figure>
+<p>其中有一个问题从今早开始就一直困扰着我，就是我的灰度图是绿色的，如下：</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427164955804.png" class="" title="gray_green">
+<p>我怀疑我是色盲- -，但是后来取查了一下，发现<code>plt.imshow()</code>默认是三通道的，所以我们需要在<code>imshow()</code>中添加 <code>plt.cm.gray</code> 参数，才显示正确，说真的，现在都用<code>cv2</code>了…</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427165156218.png" class="" title="correct_gray">
+<blockquote>
+<p>使用<code>fromarray</code>方法和直接<code>gray</code>的效果很不同：</p>
+<ul>
+<li>上图为将<code>array</code>转换为<code>Image</code>后</li>
+<li>下图为使用<code>plt.cm.gray</code>参数</li>
+</ul>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427170612523.png" class="" width="250">
+<p>像素范围在[100, 200]内，<sub>所以我个人认为可能是上图比较贴合？</sub></p>
+<p>【已解决】<strong>结论是下图最贴合</strong></p>
+<p>经过读书，发现 <code>fromarray</code>方法需要将数据类型转换回来，所以看下图，左图为将其数据类型转换回来后的图，右图为直接转换，并未按照原类型。</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427171603655.png" class="" width="500">
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im5 = Image.fromarray(np.uint8(im3)) <span class="comment"># 左图将其数据类型转换回来</span></span><br><span class="line">im6 = Image.fromarray(im3)           <span class="comment"># 右图直接转换</span></span><br><span class="line">print(im5)</span><br><span class="line">print(im6)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到输出的mode是不同的</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&lt;PIL.Image.Image image mode=L size=1182x665 at <span class="number">0x7FD867392220</span>&gt;</span><br><span class="line">&lt;PIL.Image.Image image mode=F size=1182x665 at <span class="number">0x7FD867392AF0</span>&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>内置函数将array转换为Image：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_im = Image.fromarray(im)</span><br></pre></td></tr></table></figure>
+<p>如果你并不十分确定输入数据的类型，安全起见，应该先转换回来。 注意，NumPy 总是将数组数据类型转换成能够表示数据的“最低”数据类型。对浮点数做乘积或除法操作会使整数类型的数组变成浮点类型。</p>
+<h4 id="直方图均衡化"><a class="markdownIt-Anchor" href="#直方图均衡化"></a> 直方图均衡化</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">histeq</span>(<span class="params">im, nbr_bins=<span class="number">256</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot; 对一幅灰度图进行直方图均衡化 &quot;&quot;&quot;</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; imtools.py &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; page:11 &#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算图像的直方图</span></span><br><span class="line">    imhist, bins = np.histogram(im.flatten(), nbr_bins, density=<span class="literal">True</span>)</span><br><span class="line">    cdf = imhist.cumsum()</span><br><span class="line">    cdf = <span class="number">255</span> * cdf / cdf[-<span class="number">1</span>]  <span class="comment"># 归一化</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用累计分布函数的线性插值，计算新的像素值</span></span><br><span class="line">    im2 = np.interp(im.flatten(), bins[:-<span class="number">1</span>], cdf)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> im2.reshape(im.shape), cdf</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line">im2, cdf = imtools.histeq(im)</span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line"></span><br><span class="line">ax = fig.add_subplot(<span class="number">211</span>)</span><br><span class="line">ax.imshow(im, plt.cm.gray)</span><br><span class="line">ax = fig.add_subplot(<span class="number">212</span>)</span><br><span class="line">ax.imshow(Image.fromarray(im2))</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>如图所示，上图为原图转换为灰度图，中间图为均衡函数，右图为均衡化后的结果。</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427185521726.png" class="" title="直方图均衡化">
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427185903555.png" class="" title="示例2">
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>书籍</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
+    <url>/2021/04/02/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>开始是成功的左括号。——Hoohoo</p>
+</blockquote>
+<span id="more"></span>
+<p>最近开始学习CV领域，因为老师想让我做医学影像的三维重建，依我理解，医学影像的三维重建就是面绘制、体绘制之类的，使用VTK、ITK工具包完成，也询问了一些学长等专业人士，得知这边并不好出成果，好出成果的就是切割、MRI之类的，我并没有很大的兴趣，而且老师希望我继续做，我只能曲线救国，先学学重建之类的知识，也就是计算机视觉这方面的，而非专一的医学影像方向。</p>
+<p>并且一定要学习的话，反正都是从0开始，就先学着吧！</p>
+<p>最近在看的一篇论文，十年前的一篇开山之作，就是SLAM中的前端技术，所以在推荐下，就开始学习高翔等著的《视觉SLAM十四讲 从理论到实践》第2版。</p>
+<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
+<p>第一讲是预备知识，介绍本书的基本信息。</p>
+<blockquote>
+<p>本书代码：<a href="https://github.com/gaoxiang12/slambook2">https://github.com/gaoxiang12/slambook2</a></p>
+</blockquote>
+<p><strong>SLAM：</strong> <strong>S</strong>imultaneous <strong>L</strong>ocalization <strong>a</strong>nd <strong>M</strong>apping （<strong>同时定位与地图构建</strong>）的缩写。指搭载特定传感器的主体，在没有环境先验信息情况下，于运动过程中建立环境的模型，同时估计自己的运动。如果传感器主要是相机，则称为“视觉SLAM”。</p>
+<p>所需前备知识：</p>
+<ul>
+<li>
+<p>高等数学、<strong>线性代数</strong>(!!!)、概率论</p>
+</li>
+<li>
+<p>C++语言基础</p>
+</li>
+<li>
+<p>Linux基础</p>
+</li>
+</ul>
+<p>需要用到的主要库：<code>Eigen</code>、<code>OpenCV</code>、<code>PCL</code>、<code>g2o</code>、<code>Ceres</code>等。</p>
+<h2 id="习题"><a class="markdownIt-Anchor" href="#习题"></a> 习题</h2>
 <ol>
 <li>
-<p>理解三维空间的刚体运动描述方式：旋转矩阵、变换矩阵、四元数和欧拉角。</p>
+<p>有线性方程 Ax = b，当我们知道 A, b，想要求解 x 时，如何求解？这对 A 和 b 需 要哪些条件？提示:从 A 的维度和秩角度来分析。</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label></p>
+<ul>
+<li>当R(A) = R(A,b) = n时，有唯一解。</li>
+<li>当R(A) = R(A,b) &lt; n时，有多解。</li>
+<li>当R(A) &lt; R(A,b) 时，无解。</li>
+</ul>
+<p>// 其中R()为秩的个数，n为未知数的个数。</p>
 </li>
 <li>
-<p>掌握 Eigen 库的矩阵、几何模块使用方法。</p>
+<p>高斯分布是什么？它的一维形式是什么样子？它的高维形式是什么样子？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label> 高斯分布又称为正态分布===</p>
+</li>
+<li>
+<p>你知道 C++ 的类吗？你知道 STL 吗？你使用过它们吗？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label>知道一些类，使用过STL。</p>
+</li>
+<li>
+<p>你以前怎样书写 C++ 程序？(你完全可以说只在 VC6.0 下写过 C++ 工程，只要你 有写 C++ 和 C 语言经验就行。)</p>
+<p><label style="color:#f5222dd"><strong>答：</strong></label>刚开始使用<code>CodeBlock</code>写C语言，后来使用<code>Clion</code>，前段时间做VTK，也用过一段时间<code>Visual Studio</code>。</p>
+</li>
+<li>
+<p>你知道 C++11 标准吗？其中哪些新特性你之前听说过或使用过？有没有其他的标准？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label>====</p>
+</li>
+<li>
+<p>你知道 Linux 吗？你有没有至少使用过其中之一(安卓不算)，比如 Ubuntu？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label> 知道。用过MacOS、Windows、CentOS、Federa、Ubuntu。</p>
+</li>
+<li>
+<p>Linux 的目录结构是什么样的？你知道哪些基本命令，比如 ls, cat 等等？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label> Linux下的目录结构主要是由<code>/</code>延伸。</p>
+<p>一些命令：<code>ls</code>、<code>ll</code>、<code>mkdir</code>、<code>rm</code>、<code>tar</code>、<code>vim</code>、<code>pwd</code>、<code>which</code>…</p>
+</li>
+<li>
+<p>如何在 Ubuntu 中安装软件(不打开软件中心的情况下)？这些软件被安装在什么地方？当我只知道模糊的软件名称(比如我想要装一个 eigen 名称的库)，我应该如何安装它？</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label> <code>apt-get install</code>，===</p>
+</li>
+<li>
+<p>*花一个小时学习一下Vim，因为你迟早会用它。你可以在终端中输入vimtutor阅 读一遍所有内容。我们不需要你非常熟练地操作它，只要在学习本书的过程中使用它 键入代码即可。不要在它的插件上浪费时间，不要想着把 vim 用成 IDE，我们只用 它做文本编辑的工作。</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label>Vim！！！</p>
 </li>
 </ol>
-</blockquote>
-<p>本讲将介绍<strong>一个刚体在三维空间中的运动是如何描述的</strong>。我们当然知道这由一次旋转加一次平移组成，但是平移容易理解，旋转却不好弄了。</p>
-<p>本讲也会介绍旋转矩阵、四元数、欧拉角的意义，以及它们是如何运算和转换的。</p>
-<p>在实践部分，我们将介绍线性代数库 Eigen。</p>
-<blockquote>
-<p>Eigen：可以用来进行线性代数、矩阵、向量操作等运算的C++库，它里面包含了很多算法。</p>
-</blockquote>
-<h3 id="旋转矩阵"><a class="markdownIt-Anchor" href="#旋转矩阵"></a> 旋转矩阵</h3>
-<h4 id="点和向量-坐标系"><a class="markdownIt-Anchor" href="#点和向量-坐标系"></a> 点和向量、坐标系</h4>
-<p>我们在三维世界中，三个坐标可以确定一个空间点的位置。</p>
-<p>但是<strong>刚体</strong>不光有位置也要有自身的姿态。</p>
-<blockquote>
-<p><strong>位置</strong>：在空间的中的哪个地方</p>
-<p><strong>姿态</strong>：朝向</p>
-<p>比如：“相机正处于空间 (0, 0, 0) 点处，朝向正前方”</p>
-</blockquote>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -892,93 +542,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <tag>学习</tag>
         <tag>书籍</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PyTorch的学习（一）：配置环境</title>
-    <url>/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<h1 id="pytorch的学习"><a class="markdownIt-Anchor" href="#pytorch的学习"></a> PyTorch的学习</h1>
-<blockquote>
-<p>工具只是工具，好好掌握一种工具。</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>本来是准备用tf的，但是书籍可能买得较早，当时也懵懂，现在2已经出来了，但是用的书还是1。</p>
-<p>也问过一些同学，某同学表示框架掌握1个就可以了，我深以为然，但是最近看论文的开源代码，大多数都采用PyTorch，也经过了一些查询后，由于Pytorch和python差不多，而且tf1的静态图和tf2的动态图把我整懵了，太麻烦了，所以，就直接开始PyTorch吧。</p>
-<p>但是我们开始学习的第一步并不是去学习语法，而是去配置环境，可以说配置环境这个东西让人听到就头疼，当时Hadoop配分布式环境时，足足以星期为单位计算。</p>
-<p>来吧，头铁也必须撞。</p>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda"></a> Anaconda</h3>
-<blockquote>
-<p>地址： <a href="https://www.anaconda.com/products/individual#Downloads">https://www.anaconda.com/products/individual#Downloads</a></p>
-</blockquote>
-<p>选择自己系统版本下载即可。</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193631211.png" class="" title="anaconda下载">
-<h3 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch"></a> PyTorch</h3>
-<blockquote>
-<p>地址： <a href="https://pytorch.org/">https://pytorch.org/</a></p>
-</blockquote>
-<p>黄色框即为指令，选择自己匹配的选项，即可复制指令直接在terminal中输入。</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413192917013.png" class="" title="pytorch指令">
-<p>我用的是Mac，所以我的配置如下：</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193108252.png" class="" title="mac指令">
-<p>下载还是有些慢的，可以换源或者挂梯子。</p>
-<h2 id="安装完成测试"><a class="markdownIt-Anchor" href="#安装完成测试"></a> 安装完成测试</h2>
-<p>在projects下新建一个<code>test.py</code>的python文件，并输入以下内容：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">print(torch.__version__)</span><br></pre></td></tr></table></figure>
-<p>在终端中输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python test.py</span><br></pre></td></tr></table></figure>
-<p>若输出版本号即安装成功。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>pytorch</tag>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>卷积神经网络</title>
-    <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<blockquote>
-<p>学会变通，才能开启新的道路。——Hoohoo</p>
-</blockquote>
-<span id="more"></span>
-<p>大家好，因为最近在学SLAM14，但是由于一些原因，可能是分类过于多，我决定先把CV的前瞻课程学好——也就是深度学习这块，其实一直有了解，只是断断续续，也没有给自己一个确切的目标，毕竟现在搞视觉不带点深度学习的东西没办法搞了就。</p>
-<p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
-<p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
-<p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
-<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO5都出来了，<s>而且这本书采用的是tf1…</s> 我决定使用Pytorch，毕竟工业界用的比较多的是tf，而我们学生家家就乖乖用PyTorch吧。</p>
-<p><s>不过没关系</s>，就这样开始吧。</p>
-<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
-<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
-<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
-<p>比如三个全连接层的网络，输入784的话，隐藏层节点为100，即为（784 * 100 * 100 * 100 *100 * 10）…</p>
-<p>太多了，可以参考下图。</p>
-<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413195841238.png" class="" title="三层全连接网络">
-<p>而且全连接网络忽视了图像的形状，比如，我们一张有色彩的图片，一般是三通道的，但是全连接网络会将其压缩成1 chanel。所以全连接层无法利用与性状有关的信息。</p>
-<h3 id="卷积网络"><a class="markdownIt-Anchor" href="#卷积网络"></a> 卷积网络</h3>
-<h4 id="卷积层"><a class="markdownIt-Anchor" href="#卷积层"></a> 卷积层</h4>
-<p>卷积层的输入输出数据称为 <strong>特征图（feature map）</strong></p>
-<p><strong>输入：</strong> 输入特征图</p>
-<p><strong>输出：</strong> 输出特征图</p>
-<h4 id="卷积运算"><a class="markdownIt-Anchor" href="#卷积运算"></a> 卷积运算</h4>
-<p>卷积运算相当于图像处理中的滤波运算。</p>
-<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413200914937.png" class="" title="卷积运算">
-<p>卷积运算非常好理解，除了我画得比较丑。</p>
-<p>多层卷积就多层卷积就一对一，二对二进行卷积运算，然后叠加在一起成为一个。</p>
-<p>如果想成为多个，就输入多个滤波器。</p>
-<p>有几个滤波器，输出几个卷积。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1087,7 +650,57 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
+        <tag>笔记</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《视觉SLAM十四讲 第2版》学习笔记 第3讲</title>
+    <url>/2021/04/06/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC3%E8%AE%B2/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>每一天都是推翻重来的日子，痛苦但进步。——Hoohoo</p>
+</blockquote>
+<span id="more"></span>
+<p>大家好，上一讲的笔记很多时间都花在了数学公式的渲然上，我迟早要把hexo换掉，换成其他的，mathjax真的不行哦，最后一遍katex，直接成功，😓。</p>
+<p>这一张主要就是刚性变换了，对于刚性变换我最大的印象是在前几天看的论文中的第一个公式，就是四元数的一个欧式变换公式，在翻译中，被称之为刚性变换。</p>
+<p>刚性变换其实就是旋转和平移的变换。</p>
+<p>让我们一起进入代数的繁琐的变换的世界吧。</p>
+<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
+<blockquote>
+<p><strong>本节目标</strong></p>
+<ol>
+<li>
+<p>理解三维空间的刚体运动描述方式：旋转矩阵、变换矩阵、四元数和欧拉角。</p>
+</li>
+<li>
+<p>掌握 Eigen 库的矩阵、几何模块使用方法。</p>
+</li>
+</ol>
+</blockquote>
+<p>本讲将介绍<strong>一个刚体在三维空间中的运动是如何描述的</strong>。我们当然知道这由一次旋转加一次平移组成，但是平移容易理解，旋转却不好弄了。</p>
+<p>本讲也会介绍旋转矩阵、四元数、欧拉角的意义，以及它们是如何运算和转换的。</p>
+<p>在实践部分，我们将介绍线性代数库 Eigen。</p>
+<blockquote>
+<p>Eigen：可以用来进行线性代数、矩阵、向量操作等运算的C++库，它里面包含了很多算法。</p>
+</blockquote>
+<h3 id="旋转矩阵"><a class="markdownIt-Anchor" href="#旋转矩阵"></a> 旋转矩阵</h3>
+<h4 id="点和向量-坐标系"><a class="markdownIt-Anchor" href="#点和向量-坐标系"></a> 点和向量、坐标系</h4>
+<p>我们在三维世界中，三个坐标可以确定一个空间点的位置。</p>
+<p>但是<strong>刚体</strong>不光有位置也要有自身的姿态。</p>
+<blockquote>
+<p><strong>位置</strong>：在空间的中的哪个地方</p>
+<p><strong>姿态</strong>：朝向</p>
+<p>比如：“相机正处于空间 (0, 0, 0) 点处，朝向正前方”</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>《视觉SLAM十四讲》</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>书籍</tag>
         <tag>笔记</tag>
       </tags>
   </entry>
@@ -1240,240 +853,396 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </tags>
   </entry>
   <entry>
-    <title>iTerm2 + oh my zsh打造属于你的终端</title>
-    <url>/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>先放个效果图。</p>
-<img src="/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/image-20210418214222011.png" class="" width="720">
-<span id="more"></span>
-<p>胡搞。</p>
-]]></content>
-      <categories>
-        <category>胡整</category>
-      </categories>
-      <tags>
-        <tag>胡整</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux基础操作</title>
-    <url>/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<blockquote>
-<p>Linux之美在于Ubuntu。</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>前几天翻笔记本正巧发现了之前上Linux操作系统课的笔记，正好我的朋友们需要，就发上来一起学习。</p>
-<p>而且Linux中一切皆文件，没有注册表，都可以直接用命令删除。</p>
-<h2 id="基本命令"><a class="markdownIt-Anchor" href="#基本命令"></a> 基本命令</h2>
+    <title>Mac的Rodin安装教程</title>
+    <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
 <blockquote>
-<p>默认全在<code>terminal</code>中完成操作。</p>
-<p>且每个命令后一定要空格</p>
+<p>系统：macOS Big Sur 11.2.3</p>
+<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
 </blockquote>
-<h3 id="pwd"><a class="markdownIt-Anchor" href="#pwd"></a> <code>pwd</code></h3>
-<p>显示当前绝对路径</p>
-<h3 id="ls"><a class="markdownIt-Anchor" href="#ls"></a> <code>ls</code></h3>
-<p>list 简略列出当前目录下所有文件</p>
-<h3 id="ll"><a class="markdownIt-Anchor" href="#ll"></a> <code>ll</code></h3>
-<p>list all 详细列出当前目录下所有文件</p>
-<h3 id="cd"><a class="markdownIt-Anchor" href="#cd"></a> <code>cd</code></h3>
-<h4 id=""><a class="markdownIt-Anchor" href="#"></a> /</h4>
-<p><code>/</code>: 表示绝对路径</p>
-<h4 id="~"><a class="markdownIt-Anchor" href="#~"></a> ～</h4>
-<p><code>~</code>: root</p>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<h5 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h5>
+<p>在Mac上直接<code>terminal</code>中输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
+<h5 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h5>
+<p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
+<p>点击右上角文件夹图标：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
+<p>点击<code>Download JDK</code>：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
+<h4 id="测试jdk-8是否安装成功"><a class="markdownIt-Anchor" href="#测试jdk-8是否安装成功"></a> 测试JDK 8是否安装成功</h4>
+<p>输入以下命令不报错即成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
 <blockquote>
-<p><code>root</code>: 当前用户</p>
+<h4 id="macos-caveat"><a class="markdownIt-Anchor" href="#macos-caveat"></a> macOS caveat</h4>
+<p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
 </blockquote>
-<p>区别：</p>
+<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
+<p>但是又继续报错：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
+<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
+<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
+<p>发现有一段被注释掉了</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
+<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
+<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
+<p>修改并保存，就可以成功启动Rodin了。</p>
 <blockquote>
-<p>cd home: 进入当前目录下名为<code>home</code>的目录内</p>
-<p>cd /home: 进入根目录下名为<code>home</code>的目录内</p>
+<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
 </blockquote>
-<h3 id="创建新文件"><a class="markdownIt-Anchor" href="#创建新文件"></a> 创建新文件</h3>
-<h4 id="mkdir"><a class="markdownIt-Anchor" href="#mkdir"></a> <code>mkdir</code></h4>
-<p>make directory: 创建一个文件夹，即目录</p>
-<h4 id="vi"><a class="markdownIt-Anchor" href="#vi"></a> <code>vi</code></h4>
-<h4 id="vim"><a class="markdownIt-Anchor" href="#vim"></a> <code>vim</code></h4>
-<blockquote>
-<p>推荐： <a href="https://coolshell.cn/articles/5426.html">简明 VIM 练级攻略</a></p>
-</blockquote>
-<p>按下<kbd>i</kbd>即可进入编辑模式，</p>
-<p>按下<kbd>esc</kbd>后输入<kbd>:</kbd>，即可输入相应命令。</p>
-<ul>
-<li>
-<p><code>w</code>: write 保存</p>
-</li>
-<li>
-<p><code>q</code>: quit 推出</p>
-</li>
-<li>
-<p><code>!</code>: 强制退出</p>
-<blockquote>
-<p><code>wq!</code> ：强制保存退出</p>
-</blockquote>
-</li>
-</ul>
-<h4 id="touch"><a class="markdownIt-Anchor" href="#touch"></a> <code>touch</code></h4>
-<p>创建一个新的<strong>可执行文件</strong></p>
-<h3 id="su-chmod"><a class="markdownIt-Anchor" href="#su-chmod"></a> su / chmod</h3>
-<p>如果遇到<code>Permission Denied</code>权限不足的情况：</p>
-<ol>
-<li>
-<p>可以<code>su</code>(super)一下转换为高级用户。</p>
-</li>
-<li>
-<p><code>chmod + x yourFile</code>，给文件加可执行权限。</p>
-</li>
-<li>
-<p><code>chmod</code> 也可以使用数字，参考https://blog.csdn.net/u014316462/article/details/52241685。</p>
-<blockquote>
-<p><code>r</code>: readable</p>
-<p><code>w</code>: writeable</p>
-<p><code>x</code>: executable</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="clear"><a class="markdownIt-Anchor" href="#clear"></a> clear</h3>
-<p>清屏操作</p>
-<h3 id="运行文件"><a class="markdownIt-Anchor" href="#运行文件"></a> 运行文件</h3>
-<p><code>./110.sh</code>: 运行当前路径为110.sh的文件</p>
-<h3 id="hot-key"><a class="markdownIt-Anchor" href="#hot-key"></a> HOT KEY</h3>
-<p><kbd>↑</kbd><kbd>↓</kbd>：可以复制之前命令</p>
-<p><kbd>tab</kbd>：可以智能补全</p>
-<h2 id="对文件的操作命令"><a class="markdownIt-Anchor" href="#对文件的操作命令"></a> 对文件的操作命令</h2>
-<h3 id="复制cp"><a class="markdownIt-Anchor" href="#复制cp"></a> 复制：cp</h3>
-<p><code>cp</code> 目标文件 路径</p>
-<img src="/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110826156.png" class="" title="cp">
-<h3 id="重命名剪切mv"><a class="markdownIt-Anchor" href="#重命名剪切mv"></a> 重命名/剪切：mv</h3>
-<p><code>mv</code> 目标文件 路径/新名称</p>
-<img src="/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110902716.png" class="" title="mv">
-<h3 id="删除rm"><a class="markdownIt-Anchor" href="#删除rm"></a> 删除：rm</h3>
-<p><code>rm</code> [-rvf] 文件/目录名</p>
-<ul>
-<li><code>r</code>: 级联删除</li>
-<li><code>v</code>: 可视化（visual）</li>
-<li><code>f</code>: 强制性 （force）</li>
-</ul>
-<img src="/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416111201185.png" class="" title="rm">
-<h3 id="打包解压"><a class="markdownIt-Anchor" href="#打包解压"></a> 打包/解压</h3>
-<blockquote>
-<p>参考博客： <a href="https://blog.csdn.net/afei__/article/details/82619843?utm_medium=distribute.pc_feed_404.none-task-blog-2~default~OPENSEARCH~default-2.nonecase&amp;dist_request_id=1331633.4866.16187573711606745&amp;depth_1-utm_source=distribute.pc_feed_404.none-task-blog-2~default~OPENSEARCH~default-2.nonecas">Linux命令之解压缩：tar、zip、rar 命令</a></p>
-</blockquote>
-<h4 id="tar"><a class="markdownIt-Anchor" href="#tar"></a> tar</h4>
-<p>主要是<code>tar.gz</code>。</p>
-<blockquote>
-<ul>
-<li><code>c</code>: <strong>创建</strong>一个压缩包（create）</li>
-<li><code>v</code>: 可视化（visual）</li>
-<li><code>f</code>: 文件（file）</li>
-<li><code>z</code>: 使用 gzip 来压缩和解压文件</li>
-<li><code>x</code>: <strong>解压</strong>文件</li>
-</ul>
-</blockquote>
-<h5 id="打包"><a class="markdownIt-Anchor" href="#打包"></a> 打包</h5>
-<p><code>tar [-zcvf]</code> 文件名 打包到达目录</p>
-<h5 id="解压"><a class="markdownIt-Anchor" href="#解压"></a> 解压</h5>
-<p><code>tar [-zxvf]</code> 文件名 解压到达目录</p>
-<blockquote>
-<p><code>rm</code>中的<code>f</code>和<code>tar</code>中的<code>f</code>区别：</p>
-<p><code>rm</code>: f（force） 可以提前</p>
-<p><code>tar</code>: f（file） 不可以提前，c、v可以互换位置，f必须最后</p>
-</blockquote>
-<h4 id="rar"><a class="markdownIt-Anchor" href="#rar"></a> rar</h4>
-<p>主要是<code>rar</code>。</p>
-<blockquote>
-<ul>
-<li><code>a</code>: 添加到压缩/打包文件</li>
-<li><code>-r</code>: 递归</li>
-<li><code>x</code>: 以绝对路径解压文件</li>
-</ul>
-</blockquote>
-<h5 id="打包-2"><a class="markdownIt-Anchor" href="#打包-2"></a> 打包</h5>
-<p><code>rar a -r</code>  打包文件名.rar 打包文件</p>
-<h5 id="解压-2"><a class="markdownIt-Anchor" href="#解压-2"></a> 解压</h5>
-<p><code>unrar x</code> 需要解压的文件 解压到达目录</p>
-<h4 id="zip"><a class="markdownIt-Anchor" href="#zip"></a> zip</h4>
-<p>主要是<code>zip</code>。</p>
-<blockquote>
-<ul>
-<li><code>-r</code>: 递归</li>
-</ul>
-</blockquote>
-<h5 id="打包-3"><a class="markdownIt-Anchor" href="#打包-3"></a> 打包</h5>
-<p><code>zip -r</code> 打包文件名.zip 需要打包的文件</p>
-<h5 id="解压-3"><a class="markdownIt-Anchor" href="#解压-3"></a> 解压</h5>
-<p><code>unzip</code> 需要解压的文件 解压到达目录</p>
 ]]></content>
       <categories>
         <category>技术</category>
+        <category>安装</category>
       </categories>
       <tags>
-        <tag>学习</tag>
-        <tag>技术</tag>
-        <tag>Linux</tag>
+        <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
-    <title>写两个脚本帮你一键实现博客本地预览和上传</title>
-    <url>/2021/04/19/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%B8%A4%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%B8%AE%E4%BD%A0%E4%B8%80%E9%94%AE%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%92%8C%E4%B8%8A%E4%BC%A0/</url>
-    <content><![CDATA[<blockquote>
-<p>脚本脚本，用手写。</p>
+    <title>MPR实现过程</title>
+    <url>/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="mpr的介绍"><a class="markdownIt-Anchor" href="#mpr的介绍"></a> MPR的介绍</h2>
+<p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
+<p><em><span id="more"></span></em></p>
+<p>MPR 的<strong>优点</strong></p>
+<ul>
+<li>能任意产生新的断层图像，而无需重复扫描。</li>
+<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
+</ul>
+<p>MPR的<strong>缺点</strong></p>
+<ul>
+<li>难以表达复杂的空间结构。</li>
+<li>曲面重组易造成假阳性。</li>
+</ul>
+<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
+<blockquote>
+<p>平台：Windows 10</p>
+<p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
 </blockquote>
-<span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>是看到少数派动手写脚本的一篇文章受了启发，而且mac系统本来和Linux都差不多的，博客本地预览和上传永远都是固定的命令，却要烦琐的等待，所以懒惰的人就要写点什么让自己心安理得的更加懒惰。</p>
-<p>开始吧。</p>
-<h2 id="想法"><a class="markdownIt-Anchor" href="#想法"></a> 想法</h2>
-<p>我的hexo博客地址是<code>/Users/hoohoo/Clutter/Blog</code>，所以每次都需要先进入，再输入命令，而且有些时候网速不行，就习惯性等待先clean后再继续。</p>
-<p>都是一些固定的操作，所以脚本也很简单。</p>
-<h2 id="本地预览脚本"><a class="markdownIt-Anchor" href="#本地预览脚本"></a> 本地预览脚本</h2>
-<ol>
-<li>随便在哪个目录下创建本地预览脚本<code>hs.sh</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim hs.sh</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>输入以下内容：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;clean完啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行本地预览命令</span></span><br><span class="line">y=`hexo s`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;http://localhost:4000/&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>使用<code>chmod</code>对<code>hs.sh</code>添加可执行权限：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hs.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>将<code>hs.sh</code>改名为<code>hs</code>，在终端下输入：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hs.sh hs</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hs /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
-<h2 id="上传脚本"><a class="markdownIt-Anchor" href="#上传脚本"></a> 上传脚本</h2>
-<ol>
-<li>随便在哪个目录下创建本地预览脚本<code>hgd.sh</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim hdg.sh</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>输入以下内容：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你clean好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行generate命令</span></span><br><span class="line">y=`hexo g`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你generate好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行deploy命令</span></span><br><span class="line">z=`hexo d`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$z</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$d</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你可以去你的hellohoohoo.com上看啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>使用<code>chmod</code>对<code>hgd.sh</code>添加可执行权限：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hgd.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>将<code>hgd.sh</code>改名为<code>hgd</code>，在终端下输入：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hgd.sh hgd</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hgd /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ITK</td>
+<td style="text-align:center">4.13.2</td>
+<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">VTK</td>
+<td style="text-align:center">8.2.0</td>
+<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">CMake</td>
+<td style="text-align:center">3.14.0</td>
+<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Qt</td>
+<td style="text-align:center">5.12.0</td>
+<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Visual Studio</td>
+<td style="text-align:center">2017_64 bit</td>
+<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
+<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
+<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
+<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
+<h4 id="安装qt"><a class="markdownIt-Anchor" href="#安装qt"></a> 安装Qt</h4>
+<p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
+<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
+<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
+<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
+<p><a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
+<h4 id="安装itk"><a class="markdownIt-Anchor" href="#安装itk"></a> 安装ITK</h4>
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
+<p><a href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
+<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
+<blockquote>
+<p>参考博客：<a href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
+</blockquote>
+<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
+<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
+<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
+<p>继续configure，直到无红色出现，点击generate。</p>
+<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
+<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
+<p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
+<p>初始界面：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
+<p>旋转切面：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
+<p>像素点的三维坐标与灰度值信息的显示：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
+<p>灰度变化：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
 ]]></content>
       <categories>
         <category>技术</category>
+        <category>VTK</category>
+        <category>ITK</category>
       </categories>
       <tags>
+        <tag>MPR</tag>
+        <tag>VTK</tag>
+        <tag>ITK</tag>
         <tag>技术</tag>
-        <tag>Linux</tag>
+        <tag>医学影像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rodin安装教程（附java8安装教程）</title>
+    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
+<blockquote>
+<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
+</blockquote>
+<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
+<blockquote>
+<p>系统：WIndows 10</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>安装地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JDK 8</td>
+<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
+</tr>
+<tr>
+<td>Rodin</td>
+<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
+<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
+<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
+<p>更改安装路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
+<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
+<p>点击下一步后就安装成功了：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
+<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
+<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
+<p>并点击<code>高级系统设置</code></p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
+<p>点击<code>环境变量</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
+<p>点击<code>系统变量</code>-<code>新建</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
+<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
+<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
+<p>建议使用JAVA_HOME进行新建：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
+<p>点击确定环境变量配置完成。</p>
+<blockquote>
+<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
+<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
+</blockquote>
+<p>打开cmd分别输入以下三条指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
+<p>显示如下内容则jdk 8安装成功。</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
+<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
+<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
+<p>下载解压后直接打开rodin.exe`:</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
+<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
+<p>打开后出现如下界面即为安装成功：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
+<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
+<p>在<code>Work with</code>里输入相应名称即可安装。</p>
+<blockquote>
+<p>安装插件过程较慢，可以搭梯子。</p>
+</blockquote>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>Rodin</tag>
+        <tag>安装</tag>
+        <tag>JDK</tag>
+        <tag>Event-B</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VR实现过程（使用VTK官方代码）</title>
+    <url>/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="vr的介绍"><a class="markdownIt-Anchor" href="#vr的介绍"></a> VR的介绍</h2>
+<p>VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。</p>
+<span id="more"></span>
+<p>VR的优点：</p>
+<ul>
+<li>可以探索物体的内部结构</li>
+<li>可以描述非常定形的物体</li>
+<li>面绘制在这些方面比较弱</li>
+</ul>
+<p>VR的缺点：</p>
+<ul>
+<li>数据存储量大</li>
+<li>计算时间较长</li>
+</ul>
+<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
+<blockquote>
+<p>平台：Windows 10</p>
+<p>语言：C++</p>
+<p>图像格式：MHD</p>
+<p>数据集：使用的是VTK-Example中的<code>FullHead.mhd</code></p>
+<p>​			  也可以使用<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> （可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a>）等mhd格式数据</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">VTK</td>
+<td style="text-align:center">8.2.0</td>
+<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">CMake</td>
+<td style="text-align:center">3.14.0</td>
+<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Visual Studio</td>
+<td style="text-align:center">2017_64 bit</td>
+<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
+<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
+<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
+<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
+<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
+<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
+<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
+<p>参考博客：</p>
+<p>​	<a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
+<p>​	<a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
+<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
+<h4 id="编译过程"><a class="markdownIt-Anchor" href="#编译过程"></a> 编译过程</h4>
+<blockquote>
+<p>参考：<a href="https://kitware.github.io/vtk-examples/site/Cxx/VolumeRendering/FixedPointVolumeRayCastMapperCT/">vtk-examples-FixedPointVolumeRayCastMapperCT</a></p>
+</blockquote>
+<p>进入VTK官网可以看到关于VR有许多例子，而且每个例子都会有示意图，选择了第一个<code>FixedPointVolumeRayCastMapperCT</code>。</p>
+<ol>
+<li>点击<a href="https://github.com/Kitware/vtk-examples/raw/gh-pages/Tarballs/FixedPointVolumeRayCastMapperCT.tar">here to download FixedPointVolumeRayCastMapperCT</a>后系统会自动下载，并解压：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/1.png" class="" title="下载源代码">
+<ol start="2">
+<li>该文件夹下包括<code>CMakeLists.txt</code>和<code>cxx</code>源文件和一个<code>build</code>文件夹：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/2.png" class="" title="文件夹">
+<ol start="3">
+<li>新建<code>source</code>文件夹和<code>testData</code>文件夹，并将<code>CMakeLists.txt</code>和<code>cxx</code>源文件移动到<code>source</code>文件：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/3.png" class="" title="新建文件夹">
+<ol start="4">
+<li>打开CMake，打开CMake，source code路径即为<code>VR/FixedPointVolumeRayCastMapperCT/source</code>，build路径即为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/4.png" class="" title="编译路径">
+<ol start="5">
+<li>点击<code>configure</code>按钮，使用本地编译器，选择<code>Visual Studio 15 2017</code>，并选择<code>x64</code>后点击<code>Finish</code>，之后会出现一片红色，将其中<code>CMAKE_INSTALL_PREFIX</code>的路径改为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/5.png" class="" title="选择编译器">
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/6.png" class="" title="改路径">
+<ol start="6">
+<li>继续<code>configure</code>，直到无红色出现，点击<code>generate</code>，<code>generate</code>结束后，打开vs2017，找到<code>build</code>文件夹下的<code>FixedPointVolumeRayCastMapperCT.sln</code>文件选择打开，并将<code>**FixedPointVolumeRayCastMapperCT**</code>设为启动项目，点击本地Windows调试器即可运行。</li>
+</ol>
+<h4 id="参数介绍"><a class="markdownIt-Anchor" href="#参数介绍"></a> 参数介绍</h4>
+<blockquote>
+<p>Example: FixedPointVolumeRayCastMapperCT -DICOM CTNeck -MIP 4096 1024</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">-DICOM &lt;directory&gt;                             <span class="comment">// 使用的数据集为 DICOM 格式</span></span><br><span class="line">-VTI &lt;filename&gt;                                <span class="comment">// 使用的数据集为 VTI 格式</span></span><br><span class="line">-MHA &lt;filename&gt;                                <span class="comment">// 使用的数据集为 MHA 格式</span></span><br><span class="line">-DependentComponents                           <span class="comment">// 指定文件具有从属组件</span></span><br><span class="line">-Clip                                          <span class="comment">// 显示用于剪切卷的多维数据集小部件</span></span><br><span class="line">-MIP &lt;window&gt; &lt;level&gt;                          <span class="comment">// 使用最大强度投影方法</span></span><br><span class="line">-CompositeRamp &lt;window&gt; &lt;level&gt;                <span class="comment">// 是非着色合成</span></span><br><span class="line">-CompositeShadeRamp &lt;window&gt; &lt;level&gt;           <span class="comment">// 使用着色合成</span></span><br><span class="line">-CT_Skin                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Bone                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Muscle                                     <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-FrameRate &lt;rate&gt;                              <span class="comment">// 控制交互式渲染速率</span></span><br><span class="line">-DataReduction &lt;factor&gt;                        <span class="comment">// 在渲染前缩减数据</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>必须使用<code>-DICOM</code>选项指定数据所在的目录，或使用<code>-VTI</code>或<code>-MHA</code>选项指定.VTI文件的路径。</li>
+<li>默认情况下，程序假定文件具有独立组件，使用<code>-DependentComponents</code>指定文件具有从属组件。</li>
+<li>使用<code>-Clip</code>选项显示用于剪切卷的多维数据集小部件。</li>
+<li>将<code>-FrameRate</code>选项与所需的帧速率（以每秒帧数为单位）一起使用，以控制交互式渲染速率。</li>
+<li>使用<code>-DataReduction</code>选项和缩减因子（大于零且小于1）在渲染前缩减数据。</li>
+<li>使用其余选项之一指定混合函数和传递函数。<code>MIP</code>选项使用最大强度投影方法，而其他选项使用合成。</li>
+<li><code>-CompositeRamp</code>选项是非着色合成，而其他合成选项使用着色。</li>
+<li>注：<code>MIP</code>、<code>CompositeRamp</code>、<code>CompositeShadeRamp</code>、<code>CT_Skin</code>、<code>CT_Bone</code>和<code>CT_Muscle</code>适用于DICOM数据。<code>MIP</code>、<code>CompositeRamp</code>和<code>RGB_Composite</code>适用于RGB数据。</li>
+</ul>
+<h4 id="修改源代码"><a class="markdownIt-Anchor" href="#修改源代码"></a> 修改源代码</h4>
+<p>由于VTK官网是在Linux/macOS的终端运行，但已经在本机Windows 10下安装了全套的配置软件，故修改了其中一些代码，使其更直观操作。</p>
+<p>源代码如下，并配置了相关判断代码（修改后将判断代码全部注释掉，用以自己直接修改参数），用来判断在终端中输入的参数值。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;                         <span class="comment">// 可以删去，因为不需要判断，所以计数器无用</span></span><br><span class="line">  <span class="keyword">char</span>* dirname = <span class="literal">NULL</span>;                  <span class="comment">// 如果使用的数据集为Dicom格式，则可修改NULL值为数据集文件夹地址</span></span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;           <span class="comment">// opacityWindow大小</span></span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;            <span class="comment">// opacityLevel大小</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">/* blendType</span></span><br><span class="line"><span class="comment">      根据参数修改为不同的数字，为不同的效果，其中：</span></span><br><span class="line"><span class="comment">      MIP：blendType = 0</span></span><br><span class="line"><span class="comment">      -CompositeRamp：blendType = 1</span></span><br><span class="line"><span class="comment">      -CompositeShadeRamp：blendType = 2</span></span><br><span class="line"><span class="comment">      -CT_Skin：blendType = 3</span></span><br><span class="line"><span class="comment">      -CT_Bone：blendType = 4</span></span><br><span class="line"><span class="comment">      -CT_Muscle：blendType = 5</span></span><br><span class="line"><span class="comment">      -RGB_Composite：blendType = 6</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;   </span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">0</span>;                          <span class="comment">// 如果上文选择Clip选项，则clip = 1</span></span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;          <span class="comment">// 参数范围在0-1，</span></span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;               <span class="comment">// 控制交互式渲染速率，渲染前缩减数据</span></span><br><span class="line">  <span class="keyword">char</span>* fileName = <span class="number">0</span>;                    <span class="comment">// 如果为VTI格式或MHA/MHD格式，则可修改NULL值为数据文件地址</span></span><br><span class="line">  <span class="keyword">int</span> fileType = <span class="number">0</span>;                      <span class="comment">// 文件格式，可直接根据数据集文件进行输入，无需判断</span></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;     <span class="comment">// 修改不同的数字为不同的效果，下文会有展示</span></span><br></pre></td></tr></table></figure>
+<p>由于采用<code>Windows 10</code>系统，未使用终端，参数修改后如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">char</span> *dirname = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;</span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;</span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;</span><br><span class="line">  <span class="keyword">char</span> *fileName = <span class="string">&quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//FullHead.mhd&quot;</span>;</span><br><span class="line">  <span class="comment">// char *fileName = &quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//TestData//Case00.mhd&quot;;</span></span><br><span class="line">  <span class="keyword">int</span> fileType = MHA_FILETYPE;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p>并将代码中判断参数代码直接注释掉，从<code>while ( count &lt; args )</code>一直到<code>if ( !dirname &amp;&amp; !fileName)</code>结束。</p>
+<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
+<p>当 <code>blendType</code> = 0时：</p>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/101.png" class="" title="blendType &#x3D; 0">
+<p>使用<code>CT_Skin</code>参数时：</p>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/100.png" class="" title="blendType &#x3D; 3">
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>VTK</category>
+      </categories>
+      <tags>
+        <tag>VTK</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -1706,13 +1475,255 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
 <img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_2916.jpg" class="" width="520">
 <p>下午体验到了，太爽了对于我这种解锁困难的人。</p>
 <p>今日podcast：</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_2922.JPEG" class="" width="520">]]></content>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_2922.JPEG" class="" width="520">
+<p>T T :</p>
+<p>- 我们做个约定吧？</p>
+<p>- 不</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_EE55E9D9B0AF-1.jpeg" class="" title="nononononoo">
+]]></content>
       <categories>
         <category>生活</category>
       </categories>
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux基础操作</title>
+    <url>/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<blockquote>
+<p>Linux之美在于Ubuntu。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>前几天翻笔记本正巧发现了之前上Linux操作系统课的笔记，正好我的朋友们需要，就发上来一起学习。</p>
+<p>而且Linux中一切皆文件，没有注册表，都可以直接用命令删除。</p>
+<h2 id="基本命令"><a class="markdownIt-Anchor" href="#基本命令"></a> 基本命令</h2>
+<blockquote>
+<p>默认全在<code>terminal</code>中完成操作。</p>
+<p>且每个命令后一定要空格</p>
+</blockquote>
+<h3 id="pwd"><a class="markdownIt-Anchor" href="#pwd"></a> <code>pwd</code></h3>
+<p>显示当前绝对路径</p>
+<h3 id="ls"><a class="markdownIt-Anchor" href="#ls"></a> <code>ls</code></h3>
+<p>list 简略列出当前目录下所有文件</p>
+<h3 id="ll"><a class="markdownIt-Anchor" href="#ll"></a> <code>ll</code></h3>
+<p>list all 详细列出当前目录下所有文件</p>
+<h3 id="cd"><a class="markdownIt-Anchor" href="#cd"></a> <code>cd</code></h3>
+<h4 id=""><a class="markdownIt-Anchor" href="#"></a> /</h4>
+<p><code>/</code>: 表示绝对路径</p>
+<h4 id="~"><a class="markdownIt-Anchor" href="#~"></a> ～</h4>
+<p><code>~</code>: root</p>
+<blockquote>
+<p><code>root</code>: 当前用户</p>
+</blockquote>
+<p>区别：</p>
+<blockquote>
+<p>cd home: 进入当前目录下名为<code>home</code>的目录内</p>
+<p>cd /home: 进入根目录下名为<code>home</code>的目录内</p>
+</blockquote>
+<h3 id="创建新文件"><a class="markdownIt-Anchor" href="#创建新文件"></a> 创建新文件</h3>
+<h4 id="mkdir"><a class="markdownIt-Anchor" href="#mkdir"></a> <code>mkdir</code></h4>
+<p>make directory: 创建一个文件夹，即目录</p>
+<h4 id="vi"><a class="markdownIt-Anchor" href="#vi"></a> <code>vi</code></h4>
+<h4 id="vim"><a class="markdownIt-Anchor" href="#vim"></a> <code>vim</code></h4>
+<blockquote>
+<p>推荐： <a href="https://coolshell.cn/articles/5426.html">简明 VIM 练级攻略</a></p>
+</blockquote>
+<p>按下<kbd>i</kbd>即可进入编辑模式，</p>
+<p>按下<kbd>esc</kbd>后输入<kbd>:</kbd>，即可输入相应命令。</p>
+<ul>
+<li>
+<p><code>w</code>: write 保存</p>
+</li>
+<li>
+<p><code>q</code>: quit 推出</p>
+</li>
+<li>
+<p><code>!</code>: 强制退出</p>
+<blockquote>
+<p><code>wq!</code> ：强制保存退出</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="touch"><a class="markdownIt-Anchor" href="#touch"></a> <code>touch</code></h4>
+<p>创建一个新的<strong>可执行文件</strong></p>
+<h3 id="su-chmod"><a class="markdownIt-Anchor" href="#su-chmod"></a> su / chmod</h3>
+<p>如果遇到<code>Permission Denied</code>权限不足的情况：</p>
+<ol>
+<li>
+<p>可以<code>su</code>(super)一下转换为高级用户。</p>
+</li>
+<li>
+<p><code>chmod + x yourFile</code>，给文件加可执行权限。</p>
+</li>
+<li>
+<p><code>chmod</code> 也可以使用数字，参考https://blog.csdn.net/u014316462/article/details/52241685。</p>
+<blockquote>
+<p><code>r</code>: readable</p>
+<p><code>w</code>: writeable</p>
+<p><code>x</code>: executable</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="clear"><a class="markdownIt-Anchor" href="#clear"></a> clear</h3>
+<p>清屏操作</p>
+<h3 id="运行文件"><a class="markdownIt-Anchor" href="#运行文件"></a> 运行文件</h3>
+<p><code>./110.sh</code>: 运行当前路径为110.sh的文件</p>
+<h3 id="hot-key"><a class="markdownIt-Anchor" href="#hot-key"></a> HOT KEY</h3>
+<p><kbd>↑</kbd><kbd>↓</kbd>：可以复制之前命令</p>
+<p><kbd>tab</kbd>：可以智能补全</p>
+<h2 id="对文件的操作命令"><a class="markdownIt-Anchor" href="#对文件的操作命令"></a> 对文件的操作命令</h2>
+<h3 id="复制cp"><a class="markdownIt-Anchor" href="#复制cp"></a> 复制：cp</h3>
+<p><code>cp</code> 目标文件 路径</p>
+<img src="/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110826156.png" class="" title="cp">
+<h3 id="重命名剪切mv"><a class="markdownIt-Anchor" href="#重命名剪切mv"></a> 重命名/剪切：mv</h3>
+<p><code>mv</code> 目标文件 路径/新名称</p>
+<img src="/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416110902716.png" class="" title="mv">
+<h3 id="删除rm"><a class="markdownIt-Anchor" href="#删除rm"></a> 删除：rm</h3>
+<p><code>rm</code> [-rvf] 文件/目录名</p>
+<ul>
+<li><code>r</code>: 级联删除</li>
+<li><code>v</code>: 可视化（visual）</li>
+<li><code>f</code>: 强制性 （force）</li>
+</ul>
+<img src="/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20210416111201185.png" class="" title="rm">
+<h3 id="打包解压"><a class="markdownIt-Anchor" href="#打包解压"></a> 打包/解压</h3>
+<blockquote>
+<p>参考博客： <a href="https://blog.csdn.net/afei__/article/details/82619843?utm_medium=distribute.pc_feed_404.none-task-blog-2~default~OPENSEARCH~default-2.nonecase&amp;dist_request_id=1331633.4866.16187573711606745&amp;depth_1-utm_source=distribute.pc_feed_404.none-task-blog-2~default~OPENSEARCH~default-2.nonecas">Linux命令之解压缩：tar、zip、rar 命令</a></p>
+</blockquote>
+<h4 id="tar"><a class="markdownIt-Anchor" href="#tar"></a> tar</h4>
+<p>主要是<code>tar.gz</code>。</p>
+<blockquote>
+<ul>
+<li><code>c</code>: <strong>创建</strong>一个压缩包（create）</li>
+<li><code>v</code>: 可视化（visual）</li>
+<li><code>f</code>: 文件（file）</li>
+<li><code>z</code>: 使用 gzip 来压缩和解压文件</li>
+<li><code>x</code>: <strong>解压</strong>文件</li>
+</ul>
+</blockquote>
+<h5 id="打包"><a class="markdownIt-Anchor" href="#打包"></a> 打包</h5>
+<p><code>tar [-zcvf]</code> 文件名 打包到达目录</p>
+<h5 id="解压"><a class="markdownIt-Anchor" href="#解压"></a> 解压</h5>
+<p><code>tar [-zxvf]</code> 文件名 解压到达目录</p>
+<blockquote>
+<p><code>rm</code>中的<code>f</code>和<code>tar</code>中的<code>f</code>区别：</p>
+<p><code>rm</code>: f（force） 可以提前</p>
+<p><code>tar</code>: f（file） 不可以提前，c、v可以互换位置，f必须最后</p>
+</blockquote>
+<h4 id="rar"><a class="markdownIt-Anchor" href="#rar"></a> rar</h4>
+<p>主要是<code>rar</code>。</p>
+<blockquote>
+<ul>
+<li><code>a</code>: 添加到压缩/打包文件</li>
+<li><code>-r</code>: 递归</li>
+<li><code>x</code>: 以绝对路径解压文件</li>
+</ul>
+</blockquote>
+<h5 id="打包-2"><a class="markdownIt-Anchor" href="#打包-2"></a> 打包</h5>
+<p><code>rar a -r</code>  打包文件名.rar 打包文件</p>
+<h5 id="解压-2"><a class="markdownIt-Anchor" href="#解压-2"></a> 解压</h5>
+<p><code>unrar x</code> 需要解压的文件 解压到达目录</p>
+<h4 id="zip"><a class="markdownIt-Anchor" href="#zip"></a> zip</h4>
+<p>主要是<code>zip</code>。</p>
+<blockquote>
+<ul>
+<li><code>-r</code>: 递归</li>
+</ul>
+</blockquote>
+<h5 id="打包-3"><a class="markdownIt-Anchor" href="#打包-3"></a> 打包</h5>
+<p><code>zip -r</code> 打包文件名.zip 需要打包的文件</p>
+<h5 id="解压-3"><a class="markdownIt-Anchor" href="#解压-3"></a> 解压</h5>
+<p><code>unzip</code> 需要解压的文件 解压到达目录</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>技术</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iTerm2 + oh my zsh打造属于你的终端</title>
+    <url>/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>先放个效果图。</p>
+<img src="/2021/04/18/%E6%8A%80%E6%9C%AF/%E4%BD%BF%E7%94%A8iTerm2%E6%95%99%E7%A8%8B/image-20210418214222011.png" class="" width="720">
+<span id="more"></span>
+<p>胡搞。</p>
+]]></content>
+      <categories>
+        <category>胡整</category>
+      </categories>
+      <tags>
+        <tag>胡整</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>写两个脚本帮你一键实现博客本地预览和上传</title>
+    <url>/2021/04/19/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%B8%A4%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%B8%AE%E4%BD%A0%E4%B8%80%E9%94%AE%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%92%8C%E4%B8%8A%E4%BC%A0/</url>
+    <content><![CDATA[<blockquote>
+<p>脚本脚本，用手写。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>是看到少数派动手写脚本的一篇文章受了启发，而且mac系统本来和Linux都差不多的，博客本地预览和上传永远都是固定的命令，却要烦琐的等待，所以懒惰的人就要写点什么让自己心安理得的更加懒惰。</p>
+<p>开始吧。</p>
+<h2 id="想法"><a class="markdownIt-Anchor" href="#想法"></a> 想法</h2>
+<p>我的hexo博客地址是<code>/Users/hoohoo/Clutter/Blog</code>，所以每次都需要先进入，再输入命令，而且有些时候网速不行，就习惯性等待先clean后再继续。</p>
+<p>都是一些固定的操作，所以脚本也很简单。</p>
+<h2 id="本地预览脚本"><a class="markdownIt-Anchor" href="#本地预览脚本"></a> 本地预览脚本</h2>
+<ol>
+<li>随便在哪个目录下创建本地预览脚本<code>hs.sh</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim hs.sh</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>输入以下内容：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;clean完啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行本地预览命令</span></span><br><span class="line">y=`hexo s`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;http://localhost:4000/&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使用<code>chmod</code>对<code>hs.sh</code>添加可执行权限：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hs.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>将<code>hs.sh</code>改名为<code>hs</code>，在终端下输入：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hs.sh hs</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hs /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
+<h2 id="上传脚本"><a class="markdownIt-Anchor" href="#上传脚本"></a> 上传脚本</h2>
+<ol>
+<li>随便在哪个目录下创建本地预览脚本<code>hgd.sh</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim hdg.sh</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>输入以下内容：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你clean好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行generate命令</span></span><br><span class="line">y=`hexo g`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你generate好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行deploy命令</span></span><br><span class="line">z=`hexo d`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$z</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$d</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你可以去你的hellohoohoo.com上看啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使用<code>chmod</code>对<code>hgd.sh</code>添加可执行权限：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hgd.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>将<code>hgd.sh</code>改名为<code>hgd</code>，在终端下输入：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hgd.sh hgd</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hgd /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
 </search>
