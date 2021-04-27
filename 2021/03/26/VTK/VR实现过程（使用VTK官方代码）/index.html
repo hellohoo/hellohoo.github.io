@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="VR的介绍 VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。">
+<meta name="description" content="VR的介绍VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VR实现过程（使用VTK官方代码）">
 <meta property="og:url" content="http://example.com/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="VR的介绍 VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。">
+<meta property="og:description" content="VR的介绍VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/1.png">
 <meta property="og:image" content="http://example.com/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/2.png">
@@ -43,8 +43,8 @@
 <meta property="article:published_time" content="2021-03-26T03:04:02.000Z">
 <meta property="article:modified_time" content="2021-04-06T07:30:31.274Z">
 <meta property="article:author" content="Hoohoo">
-<meta property="article:tag" content="VTK">
 <meta property="article:tag" content="医学影像">
+<meta property="article:tag" content="VTK">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/1.png">
 
@@ -203,7 +203,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vr%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-text"> VR的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B7%A5%E5%85%B7%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-text"> 实验工具及配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4"><span class="nav-text"> 实验步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-text"> 配置环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85vs2017"><span class="nav-text"> 安装VS2017</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85cmake"><span class="nav-text"> 安装CMake</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85vtk"><span class="nav-text"> 安装VTK</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4-2"><span class="nav-text"> 实验步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B"><span class="nav-text"> 编译过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E4%BB%8B%E7%BB%8D"><span class="nav-text"> 参数介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="nav-text"> 修改源代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C"><span class="nav-text"> 实验效果</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VR%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-text">VR的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B7%A5%E5%85%B7%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-text">实验工具及配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4"><span class="nav-text">实验步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-text">配置环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85VS2017"><span class="nav-text">安装VS2017</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85CMake"><span class="nav-text">安装CMake</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85VTK"><span class="nav-text">安装VTK</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4-1"><span class="nav-text">实验步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B"><span class="nav-text">编译过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E4%BB%8B%E7%BB%8D"><span class="nav-text">参数介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="nav-text">修改源代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C"><span class="nav-text">实验效果</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -218,7 +218,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -358,8 +358,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="vr的介绍"><a class="markdownIt-Anchor" href="#vr的介绍"></a> VR的介绍</h2>
-<p>VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。</p>
+        <h2 id="VR的介绍"><a href="#VR的介绍" class="headerlink" title="VR的介绍"></a>VR的介绍</h2><p>VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。</p>
 <span id="more"></span>
 <p>VR的优点：</p>
 <ul>
@@ -372,14 +371,14 @@
 <li>数据存储量大</li>
 <li>计算时间较长</li>
 </ul>
-<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
-<blockquote>
+<h2 id="实验工具及配置"><a href="#实验工具及配置" class="headerlink" title="实验工具及配置"></a>实验工具及配置</h2><blockquote>
 <p>平台：Windows 10</p>
 <p>语言：C++</p>
 <p>图像格式：MHD</p>
 <p>数据集：使用的是VTK-Example中的<code>FullHead.mhd</code></p>
-<p>​			  也可以使用<a target="_blank" rel="noopener" href="https://promise12.grand-challenge.org/Home/">Promise12</a> （可以参考 <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a>）等mhd格式数据</p>
+<p>​              也可以使用<a target="_blank" rel="noopener" href="https://promise12.grand-challenge.org/Home/">Promise12</a> （可以参考 <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a>）等mhd格式数据</p>
 </blockquote>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -406,19 +405,13 @@
 </tr>
 </tbody>
 </table>
-<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
-<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
-<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
-<p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
-<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
-<p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
-<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
-<p>参考博客：</p>
-<p>​	<a target="_blank" rel="noopener" href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
-<p>​	<a target="_blank" rel="noopener" href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
-<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
-<h4 id="编译过程"><a class="markdownIt-Anchor" href="#编译过程"></a> 编译过程</h4>
-<blockquote>
+</div>
+<h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><h4 id="安装VS2017"><a href="#安装VS2017" class="headerlink" title="安装VS2017"></a>安装VS2017</h4><p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
+<h4 id="安装CMake"><a href="#安装CMake" class="headerlink" title="安装CMake"></a>安装CMake</h4><p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
+<h4 id="安装VTK"><a href="#安装VTK" class="headerlink" title="安装VTK"></a>安装VTK</h4><p>参考博客：</p>
+<p>​    <a target="_blank" rel="noopener" href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
+<p>​    <a target="_blank" rel="noopener" href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
+<h3 id="实验步骤-1"><a href="#实验步骤-1" class="headerlink" title="实验步骤"></a>实验步骤</h3><h4 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h4><blockquote>
 <p>参考：<a target="_blank" rel="noopener" href="https://kitware.github.io/vtk-examples/site/Cxx/VolumeRendering/FixedPointVolumeRayCastMapperCT/">vtk-examples-FixedPointVolumeRayCastMapperCT</a></p>
 </blockquote>
 <p>进入VTK官网可以看到关于VR有许多例子，而且每个例子都会有示意图，选择了第一个<code>FixedPointVolumeRayCastMapperCT</code>。</p>
@@ -426,28 +419,27 @@
 <li>点击<a target="_blank" rel="noopener" href="https://github.com/Kitware/vtk-examples/raw/gh-pages/Tarballs/FixedPointVolumeRayCastMapperCT.tar">here to download FixedPointVolumeRayCastMapperCT</a>后系统会自动下载，并解压：</li>
 </ol>
 <img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/1.png" class="" title="下载源代码">
-<ol start="2">
+<ol>
 <li>该文件夹下包括<code>CMakeLists.txt</code>和<code>cxx</code>源文件和一个<code>build</code>文件夹：</li>
 </ol>
 <img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/2.png" class="" title="文件夹">
-<ol start="3">
+<ol>
 <li>新建<code>source</code>文件夹和<code>testData</code>文件夹，并将<code>CMakeLists.txt</code>和<code>cxx</code>源文件移动到<code>source</code>文件：</li>
 </ol>
 <img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/3.png" class="" title="新建文件夹">
-<ol start="4">
+<ol>
 <li>打开CMake，打开CMake，source code路径即为<code>VR/FixedPointVolumeRayCastMapperCT/source</code>，build路径即为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
 </ol>
 <img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/4.png" class="" title="编译路径">
-<ol start="5">
+<ol>
 <li>点击<code>configure</code>按钮，使用本地编译器，选择<code>Visual Studio 15 2017</code>，并选择<code>x64</code>后点击<code>Finish</code>，之后会出现一片红色，将其中<code>CMAKE_INSTALL_PREFIX</code>的路径改为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
 </ol>
 <img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/5.png" class="" title="选择编译器">
 <img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/6.png" class="" title="改路径">
-<ol start="6">
+<ol>
 <li>继续<code>configure</code>，直到无红色出现，点击<code>generate</code>，<code>generate</code>结束后，打开vs2017，找到<code>build</code>文件夹下的<code>FixedPointVolumeRayCastMapperCT.sln</code>文件选择打开，并将<code>**FixedPointVolumeRayCastMapperCT**</code>设为启动项目，点击本地Windows调试器即可运行。</li>
 </ol>
-<h4 id="参数介绍"><a class="markdownIt-Anchor" href="#参数介绍"></a> 参数介绍</h4>
-<blockquote>
+<h4 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h4><blockquote>
 <p>Example: FixedPointVolumeRayCastMapperCT -DICOM CTNeck -MIP 4096 1024</p>
 </blockquote>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-DICOM &lt;directory&gt;                             <span class="comment">// 使用的数据集为 DICOM 格式</span></span><br><span class="line">-VTI &lt;filename&gt;                                <span class="comment">// 使用的数据集为 VTI 格式</span></span><br><span class="line">-MHA &lt;filename&gt;                                <span class="comment">// 使用的数据集为 MHA 格式</span></span><br><span class="line">-DependentComponents                           <span class="comment">// 指定文件具有从属组件</span></span><br><span class="line">-Clip                                          <span class="comment">// 显示用于剪切卷的多维数据集小部件</span></span><br><span class="line">-MIP &lt;window&gt; &lt;level&gt;                          <span class="comment">// 使用最大强度投影方法</span></span><br><span class="line">-CompositeRamp &lt;window&gt; &lt;level&gt;                <span class="comment">// 是非着色合成</span></span><br><span class="line">-CompositeShadeRamp &lt;window&gt; &lt;level&gt;           <span class="comment">// 使用着色合成</span></span><br><span class="line">-CT_Skin                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Bone                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Muscle                                     <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-FrameRate &lt;rate&gt;                              <span class="comment">// 控制交互式渲染速率</span></span><br><span class="line">-DataReduction &lt;factor&gt;                        <span class="comment">// 在渲染前缩减数据</span></span><br></pre></td></tr></table></figure>
@@ -461,15 +453,13 @@
 <li><code>-CompositeRamp</code>选项是非着色合成，而其他合成选项使用着色。</li>
 <li>注：<code>MIP</code>、<code>CompositeRamp</code>、<code>CompositeShadeRamp</code>、<code>CT_Skin</code>、<code>CT_Bone</code>和<code>CT_Muscle</code>适用于DICOM数据。<code>MIP</code>、<code>CompositeRamp</code>和<code>RGB_Composite</code>适用于RGB数据。</li>
 </ul>
-<h4 id="修改源代码"><a class="markdownIt-Anchor" href="#修改源代码"></a> 修改源代码</h4>
-<p>由于VTK官网是在Linux/macOS的终端运行，但已经在本机Windows 10下安装了全套的配置软件，故修改了其中一些代码，使其更直观操作。</p>
+<h4 id="修改源代码"><a href="#修改源代码" class="headerlink" title="修改源代码"></a>修改源代码</h4><p>由于VTK官网是在Linux/macOS的终端运行，但已经在本机Windows 10下安装了全套的配置软件，故修改了其中一些代码，使其更直观操作。</p>
 <p>源代码如下，并配置了相关判断代码（修改后将判断代码全部注释掉，用以自己直接修改参数），用来判断在终端中输入的参数值。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;                         <span class="comment">// 可以删去，因为不需要判断，所以计数器无用</span></span><br><span class="line">  <span class="keyword">char</span>* dirname = <span class="literal">NULL</span>;                  <span class="comment">// 如果使用的数据集为Dicom格式，则可修改NULL值为数据集文件夹地址</span></span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;           <span class="comment">// opacityWindow大小</span></span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;            <span class="comment">// opacityLevel大小</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">/* blendType</span></span><br><span class="line"><span class="comment">      根据参数修改为不同的数字，为不同的效果，其中：</span></span><br><span class="line"><span class="comment">      MIP：blendType = 0</span></span><br><span class="line"><span class="comment">      -CompositeRamp：blendType = 1</span></span><br><span class="line"><span class="comment">      -CompositeShadeRamp：blendType = 2</span></span><br><span class="line"><span class="comment">      -CT_Skin：blendType = 3</span></span><br><span class="line"><span class="comment">      -CT_Bone：blendType = 4</span></span><br><span class="line"><span class="comment">      -CT_Muscle：blendType = 5</span></span><br><span class="line"><span class="comment">      -RGB_Composite：blendType = 6</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;   </span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">0</span>;                          <span class="comment">// 如果上文选择Clip选项，则clip = 1</span></span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;          <span class="comment">// 参数范围在0-1，</span></span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;               <span class="comment">// 控制交互式渲染速率，渲染前缩减数据</span></span><br><span class="line">  <span class="keyword">char</span>* fileName = <span class="number">0</span>;                    <span class="comment">// 如果为VTI格式或MHA/MHD格式，则可修改NULL值为数据文件地址</span></span><br><span class="line">  <span class="keyword">int</span> fileType = <span class="number">0</span>;                      <span class="comment">// 文件格式，可直接根据数据集文件进行输入，无需判断</span></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;     <span class="comment">// 修改不同的数字为不同的效果，下文会有展示</span></span><br></pre></td></tr></table></figure>
 <p>由于采用<code>Windows 10</code>系统，未使用终端，参数修改后如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">char</span> *dirname = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;</span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;</span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;</span><br><span class="line">  <span class="keyword">char</span> *fileName = <span class="string">&quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//FullHead.mhd&quot;</span>;</span><br><span class="line">  <span class="comment">// char *fileName = &quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//TestData//Case00.mhd&quot;;</span></span><br><span class="line">  <span class="keyword">int</span> fileType = MHA_FILETYPE;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
 <p>并将代码中判断参数代码直接注释掉，从<code>while ( count &lt; args )</code>一直到<code>if ( !dirname &amp;&amp; !fileName)</code>结束。</p>
-<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
-<p>当 <code>blendType</code> = 0时：</p>
+<h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p>当 <code>blendType</code> = 0时：</p>
 <img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/101.png" class="" title="blendType &#x3D; 0">
 <p>使用<code>CT_Skin</code>参数时：</p>
 <img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/100.png" class="" title="blendType &#x3D; 3">
@@ -494,8 +484,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/VTK/" rel="tag"><i class="fa fa-tag"></i> VTK</a>
               <a href="/tags/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F/" rel="tag"><i class="fa fa-tag"></i> 医学影像</a>
+              <a href="/tags/VTK/" rel="tag"><i class="fa fa-tag"></i> VTK</a>
           </div>
 
         
@@ -563,13 +553,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">34k</span>
+    <span title="站点总字数">33k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:53</span>
+    <span title="站点阅读时长">1:50</span>
   </span>
 </div>
 <div class="busuanzi-count">
