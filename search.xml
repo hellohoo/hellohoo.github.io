@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2021 | 05</title>
+    <url>/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/</url>
+    <content><![CDATA[<h1 id="2021-05"><a class="markdownIt-Anchor" href="#2021-05"></a> 2021-05</h1>
+<blockquote>
+<p>五月，看看天，听听歌，出发。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>大家好，这次是完整的一个月份哦，给大家点首五月天的《温柔》和S.H.E.的《五月天》。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=386538&auto=0&height=66"></iframe>
+<img src="/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/image-20210501094414031.png" class="" title="image-20210501094414031">
+<h2 id="51"><a class="markdownIt-Anchor" href="#51"></a> 5.1</h2>
+<p>今天是劳动节。</p>
+<blockquote>
+<p>根据《全国年节及纪念日放假办法》，1999年9月18日第一次修订第二条规定，五一劳动节是全体公民放假的节日，放假3天，加上调休两个周末的假期，形成7天的“<a href="https://zh.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%91%A8_(%E4%B8%AD%E5%9B%BD)">黄金周</a>”（5月1日至5月7日）。2007年12月14日《国务院关于修改〈全国年节及纪念日放假办法〉的决定》第二次修订则将五一劳动节改为放假1天，加上周末调休共放假3天，自2008年1月1日起施行[<a href="https://zh.wikipedia.org/wiki/%E5%8A%B3%E5%8A%A8%E8%8A%82#cite_note-1">1]</a> 。新劳动节3天假期，仍被部分人称为“小黄金周”。</p>
+</blockquote>
+<p>今年的五一放假了5天，这个五天裹上了黄金粉，一闪一闪的，让不会算数的小孩子开心极了，因为当我们掰起手指或者脚趾——这就是看您了，怎么方便怎么来，减去调休的两天，我的大拇指和食指已经合起，继续减去周末两天，小拇指和无名指也相继落下，最后硬生生剩下一个中指立着，不知意味着什么。</p>
+<p>但这有什么关系呢，会算数的成年人用剩下的中指买了票。</p>
+<img src="/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/image-20210501095421934.png" class="" title="3x">
+<p>我大概是会算数的成年人的中指短小的自卑者，一张票也抢不到的我默默放下了手，改用道具了，我不是古老的死板的老人，我直面自己的不行，并欣然接受外部给我的帮助，</p>
+<p>个大网站的抢票软件磨得我手指疼，我开始轰炸，人的脸面也不要了，我这种朋友圈匮乏者也开始了，“谢谢您，帮我点下”以开头，“谢谢”为结尾，幸好不是拼多多，人们也对出行的渴望有所善意，给我点了许多。</p>
+<p>我更是自信，我一人萎没关系，我有人助力，这才是令我重新抬头的秘诀。</p>
+<p>但我心里的气势并没有响多久，随着时间的流逝，我只敢在夜晚的被窝里偷偷伸出自己萎缩的指头，转着圈看，鄙视自己又甩出去似的斥责他人，但前提是我躲在被窝里。</p>
+<p>抢票软件没有抢到票的我，中指彻底萎了下去，我开始大骂“你们的壮阳产品有个屌用！”</p>
+<p>前几日看到一则新闻，大概是</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2021 | 04</title>
     <url>/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/</url>
     <content><![CDATA[<h1 id="2021-04"><a class="markdownIt-Anchor" href="#2021-04"></a> 2021-04</h1>
@@ -172,12 +207,10 @@
 <div class="tabs" id="the-first-test"><ul class="nav-tabs"><li class="tab active"><a href="#the-first-test-1">Tab 1</a></li><li class="tab"><a href="#the-first-test-2">Tab 2</a></li><li class="tab"><a href="#the-first-test-3">Tab 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="the-first-test-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="the-first-test-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="the-first-test-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
 <p>test 2:</p>
 <p>使用fa：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-spinner fa-spin&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-cog fa-spin&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-spinner fa-pulse&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<span>
-<p><i class="fa fa-spinner fa-spin"></i><br />
-<i class="fa fa-cog fa-spin"></i><br />
-<i class="fa fa-spinner fa-pulse"></i></p>
-</span>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-spinner fa-spin&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-cog fa-spin&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-spinner fa-pulse&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><i class="fa fa-spinner fa-spin"> </i><br />
+<i class="fa fa-cog fa-spin"> </i><br />
+<i class="fa fa-spinner fa-pulse"> </i></p>
 <p>test 3:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% label default@content %&#125;</span><br></pre></td></tr></table></figure>
 <p><code>default</code>可以换为primary、success、info、warning、danger。</p>
@@ -241,6 +274,7 @@
 <p>其实今天做了一些东西的，下午看计划书，晚上做英语。</p>
 <h2 id="429"><a class="markdownIt-Anchor" href="#429"></a> 4.29</h2>
 <p><kbd>起床时间</kbd>：7:36</p>
+<p>这周的周四是痛苦的，痛苦夹杂着共情，共情又反过来伤害我。</p>
 <h2 id="430"><a class="markdownIt-Anchor" href="#430"></a> 4.30</h2>
 <p>我要远航啦！</p>
 ]]></content>
@@ -345,8 +379,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>python</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -627,8 +661,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>深度学习</tag>
         <tag>pytorch</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -737,8 +771,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1510,8 +1544,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -1606,8 +1640,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
