@@ -33,6 +33,13 @@
 <p>今天吃了早餐。</p>
 <h2 id="55"><a class="markdownIt-Anchor" href="#55"></a> 5.5</h2>
 <p>今日是劳累的一天。</p>
+<hr />
+<h2 id="56"><a class="markdownIt-Anchor" href="#56"></a> 5.6</h2>
+<p>好了，从今天开始要好好学习了，因为长假的过去也代表着新的时期来临。</p>
+<p><kbd>起床时间</kbd>：4:00</p>
+<p>当然这个起床时间只是偶然的，抢不到票的我的妥协而已，所以人也经常安慰自己，这种安慰也带着对自己下限的摆弄，而这种摆弄也不过是一直下坠罢。</p>
+<p>但我的重点不在这里。</p>
+<p>我拖着困乏的身体</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -668,8 +675,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>深度学习</tag>
         <tag>pytorch</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1494,8 +1501,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
       </tags>
   </entry>
   <entry>
@@ -1756,11 +1763,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>MPR</tag>
+        <tag>医学影像</tag>
         <tag>VTK</tag>
+        <tag>MPR</tag>
         <tag>ITK</tag>
         <tag>技术</tag>
-        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
