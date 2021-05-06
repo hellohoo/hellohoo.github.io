@@ -39,7 +39,11 @@
 <p><kbd>起床时间</kbd>：4:00</p>
 <p>当然这个起床时间只是偶然的，抢不到票的我的妥协而已，所以人也经常安慰自己，这种安慰也带着对自己下限的摆弄，而这种摆弄也不过是一直下坠罢。</p>
 <p>但我的重点不在这里。</p>
-<p>我拖着困乏的身体</p>
+<p>我拖着困乏的身体来上课，开会，上课。</p>
+<p>几乎要睡着。</p>
+<p>但是中午一小时的短暂睡眠拯救了我，这种拯救就不是不足一提的小事了，而是石破天惊的大事了。</p>
+<p>今日找到了两个数据集，其中一个是MICCAI的challenge数据集，需要签署保密协议才能下载，另一个可以下载，但太慢了，学姐就用IDM给我下载了，呜呜，MAC上有什么好用的下载软件吗。</p>
+<p>改完了word格式，强烈认为自己改了份pdf转word的东西，眼睛都看疲劳了，好了，我要早些休息，明日献血。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -393,8 +397,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>书籍</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -675,8 +679,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>pytorch</tag>
         <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
@@ -785,8 +789,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1501,8 +1505,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>VTK</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -1558,8 +1562,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -1654,8 +1658,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -1763,11 +1767,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
-        <tag>VTK</tag>
         <tag>MPR</tag>
+        <tag>VTK</tag>
         <tag>ITK</tag>
         <tag>技术</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
