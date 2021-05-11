@@ -329,7 +329,7 @@
     <title>Slidev安装及bug解决</title>
     <url>/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>使用markdown写PPT。</p>
+<p>使用 markdown 写 Slide 。</p>
 <span id="more"></span>
 <blockquote>
 <p>参考： <a href="https://sli.dev/">Slidev</a></p>
@@ -466,8 +466,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>python</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -858,8 +858,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1631,8 +1631,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -1727,8 +1727,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
