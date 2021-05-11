@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hellohoo</title>
-    <url>/2021/03/03/hellohoo/</url>
-    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
-]]></content>
-      <categories>
-        <category>胡说</category>
-      </categories>
-      <tags>
-        <tag>感想</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mac的Rodin安装教程</title>
     <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
@@ -70,48 +58,674 @@
       </tags>
   </entry>
   <entry>
-    <title>PyTorch的学习（一）：配置环境</title>
-    <url>/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<h1 id="pytorch的学习"><a class="markdownIt-Anchor" href="#pytorch的学习"></a> PyTorch的学习</h1>
+    <title>hellohoo</title>
+    <url>/2021/03/03/hellohoo/</url>
+    <content><![CDATA[<p>这是我的博客的第一篇，是向大家问好，希望以后可以在这个blog上记录我的学习以及一些我突如奇其来的灵感，有些东西是循序递进的，所以一起加油吧。</p>
+]]></content>
+      <categories>
+        <category>胡说</category>
+      </categories>
+      <tags>
+        <tag>感想</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rodin安装教程（附java8安装教程）</title>
+    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
 <blockquote>
-<p>工具只是工具，好好掌握一种工具。</p>
+<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
+</blockquote>
+<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
+<blockquote>
+<p>系统：WIndows 10</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>安装地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JDK 8</td>
+<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
+</tr>
+<tr>
+<td>Rodin</td>
+<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
+<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
+<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
+<p>更改安装路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
+<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
+<p>点击下一步后就安装成功了：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
+<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
+<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
+<p>并点击<code>高级系统设置</code></p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
+<p>点击<code>环境变量</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
+<p>点击<code>系统变量</code>-<code>新建</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
+<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
+<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
+<p>建议使用JAVA_HOME进行新建：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
+<p>点击确定环境变量配置完成。</p>
+<blockquote>
+<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
+<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
+</blockquote>
+<p>打开cmd分别输入以下三条指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
+<p>显示如下内容则jdk 8安装成功。</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
+<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
+<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
+<p>下载解压后直接打开rodin.exe`:</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
+<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
+<p>打开后出现如下界面即为安装成功：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
+<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
+<p>在<code>Work with</code>里输入相应名称即可安装。</p>
+<blockquote>
+<p>安装插件过程较慢，可以搭梯子。</p>
+</blockquote>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>Rodin</tag>
+        <tag>安装</tag>
+        <tag>JDK</tag>
+        <tag>Event-B</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MPR实现过程</title>
+    <url>/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="mpr的介绍"><a class="markdownIt-Anchor" href="#mpr的介绍"></a> MPR的介绍</h2>
+<p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
+<p><em><span id="more"></span></em></p>
+<p>MPR 的<strong>优点</strong></p>
+<ul>
+<li>能任意产生新的断层图像，而无需重复扫描。</li>
+<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
+</ul>
+<p>MPR的<strong>缺点</strong></p>
+<ul>
+<li>难以表达复杂的空间结构。</li>
+<li>曲面重组易造成假阳性。</li>
+</ul>
+<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
+<blockquote>
+<p>平台：Windows 10</p>
+<p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ITK</td>
+<td style="text-align:center">4.13.2</td>
+<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">VTK</td>
+<td style="text-align:center">8.2.0</td>
+<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">CMake</td>
+<td style="text-align:center">3.14.0</td>
+<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Qt</td>
+<td style="text-align:center">5.12.0</td>
+<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Visual Studio</td>
+<td style="text-align:center">2017_64 bit</td>
+<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
+<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
+<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
+<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
+<h4 id="安装qt"><a class="markdownIt-Anchor" href="#安装qt"></a> 安装Qt</h4>
+<p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
+<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
+<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
+<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
+<p><a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
+<h4 id="安装itk"><a class="markdownIt-Anchor" href="#安装itk"></a> 安装ITK</h4>
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
+<p><a href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
+<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
+<blockquote>
+<p>参考博客：<a href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
+</blockquote>
+<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
+<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
+<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
+<p>继续configure，直到无红色出现，点击generate。</p>
+<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
+<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
+<p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
+<p>初始界面：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
+<p>旋转切面：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
+<p>像素点的三维坐标与灰度值信息的显示：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
+<p>灰度变化：</p>
+<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>VTK</category>
+        <category>ITK</category>
+      </categories>
+      <tags>
+        <tag>MPR</tag>
+        <tag>VTK</tag>
+        <tag>ITK</tag>
+        <tag>技术</tag>
+        <tag>医学影像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VR实现过程（使用VTK官方代码）</title>
+    <url>/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="vr的介绍"><a class="markdownIt-Anchor" href="#vr的介绍"></a> VR的介绍</h2>
+<p>VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。</p>
+<span id="more"></span>
+<p>VR的优点：</p>
+<ul>
+<li>可以探索物体的内部结构</li>
+<li>可以描述非常定形的物体</li>
+<li>面绘制在这些方面比较弱</li>
+</ul>
+<p>VR的缺点：</p>
+<ul>
+<li>数据存储量大</li>
+<li>计算时间较长</li>
+</ul>
+<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
+<blockquote>
+<p>平台：Windows 10</p>
+<p>语言：C++</p>
+<p>图像格式：MHD</p>
+<p>数据集：使用的是VTK-Example中的<code>FullHead.mhd</code></p>
+<p>​			  也可以使用<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> （可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a>）等mhd格式数据</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">VTK</td>
+<td style="text-align:center">8.2.0</td>
+<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">CMake</td>
+<td style="text-align:center">3.14.0</td>
+<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Visual Studio</td>
+<td style="text-align:center">2017_64 bit</td>
+<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
+<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
+<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
+<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
+<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
+<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
+<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
+<p>参考博客：</p>
+<p>​	<a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
+<p>​	<a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
+<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
+<h4 id="编译过程"><a class="markdownIt-Anchor" href="#编译过程"></a> 编译过程</h4>
+<blockquote>
+<p>参考：<a href="https://kitware.github.io/vtk-examples/site/Cxx/VolumeRendering/FixedPointVolumeRayCastMapperCT/">vtk-examples-FixedPointVolumeRayCastMapperCT</a></p>
+</blockquote>
+<p>进入VTK官网可以看到关于VR有许多例子，而且每个例子都会有示意图，选择了第一个<code>FixedPointVolumeRayCastMapperCT</code>。</p>
+<ol>
+<li>点击<a href="https://github.com/Kitware/vtk-examples/raw/gh-pages/Tarballs/FixedPointVolumeRayCastMapperCT.tar">here to download FixedPointVolumeRayCastMapperCT</a>后系统会自动下载，并解压：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/1.png" class="" title="下载源代码">
+<ol start="2">
+<li>该文件夹下包括<code>CMakeLists.txt</code>和<code>cxx</code>源文件和一个<code>build</code>文件夹：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/2.png" class="" title="文件夹">
+<ol start="3">
+<li>新建<code>source</code>文件夹和<code>testData</code>文件夹，并将<code>CMakeLists.txt</code>和<code>cxx</code>源文件移动到<code>source</code>文件：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/3.png" class="" title="新建文件夹">
+<ol start="4">
+<li>打开CMake，打开CMake，source code路径即为<code>VR/FixedPointVolumeRayCastMapperCT/source</code>，build路径即为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/4.png" class="" title="编译路径">
+<ol start="5">
+<li>点击<code>configure</code>按钮，使用本地编译器，选择<code>Visual Studio 15 2017</code>，并选择<code>x64</code>后点击<code>Finish</code>，之后会出现一片红色，将其中<code>CMAKE_INSTALL_PREFIX</code>的路径改为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
+</ol>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/5.png" class="" title="选择编译器">
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/6.png" class="" title="改路径">
+<ol start="6">
+<li>继续<code>configure</code>，直到无红色出现，点击<code>generate</code>，<code>generate</code>结束后，打开vs2017，找到<code>build</code>文件夹下的<code>FixedPointVolumeRayCastMapperCT.sln</code>文件选择打开，并将<code>**FixedPointVolumeRayCastMapperCT**</code>设为启动项目，点击本地Windows调试器即可运行。</li>
+</ol>
+<h4 id="参数介绍"><a class="markdownIt-Anchor" href="#参数介绍"></a> 参数介绍</h4>
+<blockquote>
+<p>Example: FixedPointVolumeRayCastMapperCT -DICOM CTNeck -MIP 4096 1024</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">-DICOM &lt;directory&gt;                             <span class="comment">// 使用的数据集为 DICOM 格式</span></span><br><span class="line">-VTI &lt;filename&gt;                                <span class="comment">// 使用的数据集为 VTI 格式</span></span><br><span class="line">-MHA &lt;filename&gt;                                <span class="comment">// 使用的数据集为 MHA 格式</span></span><br><span class="line">-DependentComponents                           <span class="comment">// 指定文件具有从属组件</span></span><br><span class="line">-Clip                                          <span class="comment">// 显示用于剪切卷的多维数据集小部件</span></span><br><span class="line">-MIP &lt;window&gt; &lt;level&gt;                          <span class="comment">// 使用最大强度投影方法</span></span><br><span class="line">-CompositeRamp &lt;window&gt; &lt;level&gt;                <span class="comment">// 是非着色合成</span></span><br><span class="line">-CompositeShadeRamp &lt;window&gt; &lt;level&gt;           <span class="comment">// 使用着色合成</span></span><br><span class="line">-CT_Skin                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Bone                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Muscle                                     <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-FrameRate &lt;rate&gt;                              <span class="comment">// 控制交互式渲染速率</span></span><br><span class="line">-DataReduction &lt;factor&gt;                        <span class="comment">// 在渲染前缩减数据</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>必须使用<code>-DICOM</code>选项指定数据所在的目录，或使用<code>-VTI</code>或<code>-MHA</code>选项指定.VTI文件的路径。</li>
+<li>默认情况下，程序假定文件具有独立组件，使用<code>-DependentComponents</code>指定文件具有从属组件。</li>
+<li>使用<code>-Clip</code>选项显示用于剪切卷的多维数据集小部件。</li>
+<li>将<code>-FrameRate</code>选项与所需的帧速率（以每秒帧数为单位）一起使用，以控制交互式渲染速率。</li>
+<li>使用<code>-DataReduction</code>选项和缩减因子（大于零且小于1）在渲染前缩减数据。</li>
+<li>使用其余选项之一指定混合函数和传递函数。<code>MIP</code>选项使用最大强度投影方法，而其他选项使用合成。</li>
+<li><code>-CompositeRamp</code>选项是非着色合成，而其他合成选项使用着色。</li>
+<li>注：<code>MIP</code>、<code>CompositeRamp</code>、<code>CompositeShadeRamp</code>、<code>CT_Skin</code>、<code>CT_Bone</code>和<code>CT_Muscle</code>适用于DICOM数据。<code>MIP</code>、<code>CompositeRamp</code>和<code>RGB_Composite</code>适用于RGB数据。</li>
+</ul>
+<h4 id="修改源代码"><a class="markdownIt-Anchor" href="#修改源代码"></a> 修改源代码</h4>
+<p>由于VTK官网是在Linux/macOS的终端运行，但已经在本机Windows 10下安装了全套的配置软件，故修改了其中一些代码，使其更直观操作。</p>
+<p>源代码如下，并配置了相关判断代码（修改后将判断代码全部注释掉，用以自己直接修改参数），用来判断在终端中输入的参数值。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;                         <span class="comment">// 可以删去，因为不需要判断，所以计数器无用</span></span><br><span class="line">  <span class="keyword">char</span>* dirname = <span class="literal">NULL</span>;                  <span class="comment">// 如果使用的数据集为Dicom格式，则可修改NULL值为数据集文件夹地址</span></span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;           <span class="comment">// opacityWindow大小</span></span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;            <span class="comment">// opacityLevel大小</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">/* blendType</span></span><br><span class="line"><span class="comment">      根据参数修改为不同的数字，为不同的效果，其中：</span></span><br><span class="line"><span class="comment">      MIP：blendType = 0</span></span><br><span class="line"><span class="comment">      -CompositeRamp：blendType = 1</span></span><br><span class="line"><span class="comment">      -CompositeShadeRamp：blendType = 2</span></span><br><span class="line"><span class="comment">      -CT_Skin：blendType = 3</span></span><br><span class="line"><span class="comment">      -CT_Bone：blendType = 4</span></span><br><span class="line"><span class="comment">      -CT_Muscle：blendType = 5</span></span><br><span class="line"><span class="comment">      -RGB_Composite：blendType = 6</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;   </span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">0</span>;                          <span class="comment">// 如果上文选择Clip选项，则clip = 1</span></span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;          <span class="comment">// 参数范围在0-1，</span></span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;               <span class="comment">// 控制交互式渲染速率，渲染前缩减数据</span></span><br><span class="line">  <span class="keyword">char</span>* fileName = <span class="number">0</span>;                    <span class="comment">// 如果为VTI格式或MHA/MHD格式，则可修改NULL值为数据文件地址</span></span><br><span class="line">  <span class="keyword">int</span> fileType = <span class="number">0</span>;                      <span class="comment">// 文件格式，可直接根据数据集文件进行输入，无需判断</span></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;     <span class="comment">// 修改不同的数字为不同的效果，下文会有展示</span></span><br></pre></td></tr></table></figure>
+<p>由于采用<code>Windows 10</code>系统，未使用终端，参数修改后如下：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">char</span> *dirname = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;</span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;</span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;</span><br><span class="line">  <span class="keyword">char</span> *fileName = <span class="string">&quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//FullHead.mhd&quot;</span>;</span><br><span class="line">  <span class="comment">// char *fileName = &quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//TestData//Case00.mhd&quot;;</span></span><br><span class="line">  <span class="keyword">int</span> fileType = MHA_FILETYPE;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p>并将代码中判断参数代码直接注释掉，从<code>while ( count &lt; args )</code>一直到<code>if ( !dirname &amp;&amp; !fileName)</code>结束。</p>
+<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
+<p>当 <code>blendType</code> = 0时：</p>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/101.png" class="" title="blendType &#x3D; 0">
+<p>使用<code>CT_Skin</code>参数时：</p>
+<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/100.png" class="" title="blendType &#x3D; 3">
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>VTK</category>
+      </categories>
+      <tags>
+        <tag>VTK</tag>
+        <tag>医学影像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2021 | 04</title>
+    <url>/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/</url>
+    <content><![CDATA[<h1 id="2021-04"><a class="markdownIt-Anchor" href="#2021-04"></a> 2021-04</h1>
+<blockquote>
+<p>四月，努力并接受。</p>
 </blockquote>
 <span id="more"></span>
 <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>本来是准备用tf的，但是书籍可能买得较早，当时也懵懂，现在2已经出来了，但是用的书还是1。</p>
-<p>也问过一些同学，某同学表示框架掌握1个就可以了，我深以为然，但是最近看论文的开源代码，大多数都采用PyTorch，也经过了一些查询后，由于Pytorch和python差不多，而且tf1的静态图和tf2的动态图把我整懵了，太麻烦了，所以，就直接开始PyTorch吧。</p>
-<p>但是我们开始学习的第一步并不是去学习语法，而是去配置环境，可以说配置环境这个东西让人听到就头疼，当时Hadoop配分布式环境时，足足以星期为单位计算。</p>
-<p>来吧，头铁也必须撞。</p>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda"></a> Anaconda</h3>
+<p>大家好，很开心能在这里和大家见面，因为每天的生活都很一致，一致的健忘，所以我决定写一下每天做了什么，每晚总结。</p>
+<h2 id="414"><a class="markdownIt-Anchor" href="#414"></a> 4.14</h2>
+<p><kbd>起床时间</kbd>：7:50</p>
+<p>今天是周三，组会来临前夕，是应该做点什么的。</p>
+<p>今早昏昏沉沉，9:30就想趴下，但是中午睡了会，很不错。</p>
+<p>上午看了医学的一些内容，看了那篇分割mesh reconstruction的论文，了解到分割，又去看了一些网络U-Net之类的。</p>
+<p>下午看了具体的分割和一些硕士论文，有一片哈工大的硕士毕业论文，正巧讲了分割和3D Reconstruction，用的是经常见到的Marching cube算法，算是个提取面的算法，她对此做了改进，我很感兴趣，因为不一定要死抠体绘制。</p>
+<p>而且SLAM也可以做的话，如果有比较多的公共dataset，也可以做内窥镜的SLAM。</p>
+<p>（突然忘了点啥…好了快十一点了，我要回去了，明天见！）</p>
+<p>晚上学了下<code>pandas</code>里的<code>apply</code>和<code>aggregate</code>。</p>
+<p>和<code>plt.xscale('symlog')</code>：plt的x轴如何用10的次方表示。</p>
+<h2 id="415"><a class="markdownIt-Anchor" href="#415"></a> 4.15</h2>
+<p><kbd>起床时间</kbd>：7:59</p>
+<p>今天是星期四，需要去上课和组会的一天。</p>
+<p>我个人早晨的时候做了个梦，大概是什么记不起了，只记得起床前的挣扎。</p>
+<p>今天早晨看了<a href="https://arxiv.org/abs/2102.07899">《A Deep-Learning Approach For Direct Whole-Heart Mesh Reconstruction》</a>，大意是mesh的reconstruction，用了分割网络，from Volumetric Images。</p>
+<p>下午讲组会的时候听得很认真，异常认真，因为正巧是感兴趣的，加入了深度预测来生成置信度对后面的流程产生影响，GCN也听了些。</p>
+<p>讲本周做了什么的时候，讲了大概三个方向，老师听到4D动力学让我去做这个，我去看了一些硕士论文，三维重建和流力学分析是分开的，这周好好把这两篇硕士论文看了去。</p>
+<p>晚上和一位学姐聊天，谈论三维重建医学影像的局限性和出路，以及医学影像上的分割相较于其更容易些，更像是两个分开的内容，MC的老方法需要改进就需要理论，而分割则是调参之类的。</p>
+<h2 id="416"><a class="markdownIt-Anchor" href="#416"></a> 4.16</h2>
+<p>周五早上去上课，老师把中期答辩定在了4.30。</p>
+<h2 id="417"><a class="markdownIt-Anchor" href="#417"></a> 4.17</h2>
+<p>周六。</p>
+<h2 id="418"><a class="markdownIt-Anchor" href="#418"></a> 4.18</h2>
+<p>周日。</p>
+<p>下午在实验室，在选这周讲的论文，应该是讲人体的，因为传统方法的还是太少，心血管的更是少之又少，所以我先讲一些今年新出的方法吧。</p>
+<p>下午把自己的terminal给换了，换成了iterm2，虽然装的过程超级复杂，但还是整完了，老多主题了，一天一个都换不过来，目前用的是Dracula+，是吸血鬼主题喔！</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210418224359802.png" class="" title="iterm2">
+<p>终于升级了，之前一直懒得升级，一直选择Remind me later，好看的。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210418223910170.png" class="" title="Pycharm2021">
+<p>顺带着复习一下<code>scp</code></p>
 <blockquote>
-<p>地址： <a href="https://www.anaconda.com/products/individual#Downloads">https://www.anaconda.com/products/individual#Downloads</a></p>
+<p>参考博客： <a href="https://blog.csdn.net/ludongdong/article/details/78524653?utm_term=mac%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0linux&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-78524653&amp;spm=3001.4430">mac 本地文件与服务器Linux文件之间的相互传输</a></p>
+<p><strong>scp[本地文件的路径]  [服务器用户名]@[服务器地址]:[服务器上存放文件的路径]</strong></p>
 </blockquote>
-<p>选择自己系统版本下载即可。</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193631211.png" class="" title="anaconda下载">
-<h3 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch"></a> PyTorch</h3>
+<p>以及更新一下<a href="http://hellohoohoo.com/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C//">Linux基础操作</a>中的解压/压缩。</p>
+<h2 id="419"><a class="markdownIt-Anchor" href="#419"></a> 4.19</h2>
+<p><kbd>起床时间</kbd>：7:37</p>
+<p>我在想要不讲DoubleFusion？</p>
+<p><strong>Dynamic Fusion + BodyFusion</strong></p>
+<p>早上看到少数派的这篇文章就试了试：</p>
 <blockquote>
-<p>地址： <a href="https://pytorch.org/">https://pytorch.org/</a></p>
+<p><a href="https://sspai.com/post/65842">从零开始，编写一个 HomeBrew 缓存清理脚本</a></p>
 </blockquote>
-<p>黄色框即为指令，选择自己匹配的选项，即可复制指令直接在terminal中输入。</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413192917013.png" class="" title="pytorch指令">
-<p>我用的是Mac，所以我的配置如下：</p>
-<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193108252.png" class="" title="mac指令">
-<p>下载还是有些慢的，可以换源或者挂梯子。</p>
-<h2 id="安装完成测试"><a class="markdownIt-Anchor" href="#安装完成测试"></a> 安装完成测试</h2>
-<p>在projects下新建一个<code>test.py</code>的python文件，并输入以下内容：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">print(torch.__version__)</span><br></pre></td></tr></table></figure>
-<p>在终端中输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python test.py</span><br></pre></td></tr></table></figure>
-<p>若输出版本号即安装成功。</p>
+<p>但是其中<code>brew install trash-cli</code>时显示:</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210419113400650.png" class="" width="600">
+<p>点开<a href="https://ghcr.io/v2/homebrew/core/gdbm/manifests/1.18.1_1">报错网址</a>后发现是<code>404 page not found</code>，去官网查看可以用<code>pip install</code>命令，但是觉得配置当前用户有些麻烦，就发现了可以用<code>trash</code>包，和<code>trash-cli</code>一样的功能。</p>
+<p>所以直接<code>brew install trash</code>就可以啦。</p>
+<p>下午在弄博客的时候，觉得<code>hexo clean</code>和<code>hexo s</code>以及<code>hexo g</code>, <code>hexo d</code>等命令的输入实在是烦琐，也加上上午写脚本给我的启发，我拿起本科剩的一些shell知识，也写了两个脚本用于本地浏览和上传github。</p>
+<p>详见<a href="http://hellohoohoo.com/2021/04/19/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%B8%A4%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%B8%AE%E4%BD%A0%E4%B8%80%E9%94%AE%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%92%8C%E4%B8%8A%E4%BC%A0/">写两个脚本帮你一键实现博客本地预览和上传</a>。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210419220508895.png" class="" title="419-terminal">
+<h2 id="420"><a class="markdownIt-Anchor" href="#420"></a> 4.20</h2>
+<p><kbd>起床时间</kbd>：7:31</p>
+<p>还是讲《Reconstructing 3D Human Pose by Watching Humans in the Mirror》吧。</p>
+<p>使用了SMPL和镜子几何的方式进行重构。</p>
+<ul>
+<li>
+<p>[x] <a href="https://blog.csdn.net/weixin_39445556/article/details/84502260">一文读懂L-BFGS算法</a></p>
+<p>（并没有去仔细看，因为这个方法其实就是一个函数最优化问题，和SGD一样的作用）</p>
+</li>
+<li>
+<p>[x] reflection operation</p>
+</li>
+<li>
+<p>[x] 使用 SPIN 来计算初始 SMPL 参数</p>
+</li>
+</ul>
+<p>​</p>
+<p><strong>学习</strong>：</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/hellocsz/article/details/89320459">能量函数的定义</a></p>
+<p>构建能量函数就是我们用方程的最小值来描述我们想要达到的实际效果，并且在得到最小值时我们所求得的参数就是我们想要得到的<strong>最优解</strong>。</p>
+</blockquote>
+<p>​</p>
+<p><strong>小技巧：</strong></p>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/fcbaf00a7379?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">Mac神器iTerm2基本命令</a></p>
+<p><a href="https://www.jianshu.com/p/ce6ca06f3e95">Typora中的任务列表（Task List）语法</a></p>
+</blockquote>
+<p>​</p>
+<p>测试<code>fluid</code>主题的待办事项，发现：</p>
+<blockquote class="blockquote-center">
+<p>你知道吗？我NexT不配！</p>
+
+</blockquote>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420194912836.png" class="" title="我不配">
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420201420222.png" class="" title="NexT不配！">
+<p>学习官方文档的<code>note</code>：</p>
+<blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note class<span class="emphasis">_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>其中，<code>class_name</code> 可以是以下列表中的一个值：</p>
+<ul>
+<li><code>default</code></li>
+<li><code>primary</code></li>
+<li><code>success</code></li>
+<li><code>info</code></li>
+<li><code>warning</code></li>
+<li><code>danger</code></li>
+</ul>
+</blockquote>
+<p>显示效果：</p>
+<div class="note warning"><p>warning</p>
+</div>
+<div class="note default"><p>default</p>
+</div>
+<div class="note primary"><p>primary</p>
+</div>
+<div class="note success"><p>success</p>
+</div>
+<div class="note info"><p>info</p>
+</div>
+<div class="note danger"><p>danger</p>
+</div>
+<p>测试微信截图和ishot截图清晰度：</p>
+<p><strong>ishot：</strong> 有阴影会比较好看一些</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202100482.png" class="" title="ishot">
+<p><strong>微信：</strong> 比较扁平，适合幻灯（自认为</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202248573.png" class="" title="wx">
+<p>​</p>
+<p>多余的 72 ✖️ 72 应该是阴影边框。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202632425.png" class="" title="对比">
+<h2 id="421"><a class="markdownIt-Anchor" href="#421"></a> 4.21</h2>
+<p><kbd>起床时间</kbd>：7:35</p>
+<p>🎧 listen</p>
+<ul>
+<li>
+<p>[x] 处理标注框</p>
+</li>
+<li>
+<p>[x] Geman-McClure 误差函数 （惩罚噪声大的权重）</p>
+<ul>
+<li>协调参数</li>
+</ul>
+</li>
+</ul>
+<h2 id="422"><a class="markdownIt-Anchor" href="#422"></a> 4.22</h2>
+<p><kbd>起床时间</kbd>：7:27</p>
+<p>🥛 每日早晨饮品</p>
+<p>☑️ 组会讲完论文</p>
+<p>new test with emoji:</p>
+<p>☑</p>
+<p>◻</p>
+<p>☑️</p>
+<p>◻️</p>
+<p>🔘</p>
+<p>⚪️</p>
+<p>更新啦！</p>
+<blockquote>
+<p><a href="https://sspai.com/post/66156">更新浏览器的时候又到了：Chrome/Edge 90 稳定版 9 大新功能盘点</a></p>
+</blockquote>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210422152556716.png" class="" title="chrome">
+<h2 id="423"><a class="markdownIt-Anchor" href="#423"></a> 4.23</h2>
+<p>今天是周五。我们可以称呼周五为礼拜五，星期五。</p>
+<p>anyway。</p>
+<h2 id="424"><a class="markdownIt-Anchor" href="#424"></a> 4.24</h2>
+<p>本周唯一的休息日。</p>
+<p>test 1:</p>
+<p><strong><code>tag</code>：</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs the First test %&#125;</span><br><span class="line">&lt;!-- tab Tab 1 --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab Tab 2 --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab Tab 3 --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果如下所示：</strong></p>
+<div class="tabs" id="the-first-test"><ul class="nav-tabs"><li class="tab active"><a href="#the-first-test-1">Tab 1</a></li><li class="tab"><a href="#the-first-test-2">Tab 2</a></li><li class="tab"><a href="#the-first-test-3">Tab 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="the-first-test-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="the-first-test-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="the-first-test-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<p>test 2:</p>
+<p>使用fa：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-spinner fa-spin&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-cog fa-spin&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-spinner fa-pulse&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><i class="fa fa-spinner fa-spin"> </i><br />
+<i class="fa fa-cog fa-spin"> </i><br />
+<i class="fa fa-spinner fa-pulse"> </i></p>
+<p>test 3:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% label default@content %&#125;</span><br></pre></td></tr></table></figure>
+<p><code>default</code>可以换为primary、success、info、warning、danger。</p>
+<p><code>content</code>为显示内容。</p>
+<p>效果如下所示：</p>
+<mark class="label default">default</mark>
+<mark class="label primary">primary</mark>
+<mark class="label success">success</mark>
+<mark class="label info">info</mark>
+<mark class="label warning">warning</mark>
+<mark class="label danger">danger</mark>
+<p>default primary success info warning danger</p>
+<h2 id="425"><a class="markdownIt-Anchor" href="#425"></a> 4.25</h2>
+<p><kbd>起床时间</kbd>：7:40</p>
+<p>今天是周日，却因为调休变成了周二，所以说一切皆有可能。</p>
+<p>所以按照工作日的时间，我还和平时一样的时间到来。</p>
+<p>决定先把U-NET好好学学。</p>
+<p>事到如今，大概是体绘制和面绘制了。</p>
+<blockquote>
+<p>参考博客： <a href="https://blog.csdn.net/u014316462/article/details/52241685">linux系统644、755、777权限详解</a></p>
+</blockquote>
+<h2 id="426"><a class="markdownIt-Anchor" href="#426"></a> 4.26</h2>
+<p><kbd>起床时间</kbd>：7:53</p>
+<blockquote>
+<p><a href="https://github.com/shimohq/chinese-programmer-wrong-pronunciation/blob/master/README.md">中国程序员容易发音错误的单词</a></p>
+</blockquote>
+<p>今天在学PCV的时候，发现自己的python包中没有<code>scipy</code>，自然而然打开终端开始<code>conda</code>, <code>pip</code>，但是我没有成功。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211747662.png" class="" width="366">
+<p>我猜想可能是zsh中没有bash中的环境变量，就用了网上常见的<a href="https://blog.csdn.net/xieamy/article/details/85082482?utm_term=zsh%E6%89%BE%E4%B8%8D%E5%88%B0%E5%91%BD%E4%BB%A4&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-85082482&amp;spm=3001.4430">方法</a>。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211956414.png" class="" width="666">
+<p>但是还是找不到命令，我就使用了另一个<a href="https://blog.csdn.net/liuhui_1211/article/details/79439137?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;dist_request_id=&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control"><strong>方法</strong></a>，接下来的事情我是不敢想的，我都不知道是我频繁切换<code>bash</code>和<code>zsh</code>还是这个方法的原因，我的<code>.zshrc</code>文件空了，所有配置都没有了。</p>
+<p>好的。</p>
+<p>之后的时间就是在找初始配置文件和anaconda的路径。</p>
+<p>折腾来折腾去，最后终于用两个方法解决了上述问题：</p>
+<ol>
+<li>
+<p><code>anaconda</code>删除后重装，自动在<code>.zshrc</code>中生成了配置代码。</p>
+</li>
+<li>
+<p>找<a href="https://meetlxt.github.io/">彤子</a>要了她的配置文件。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_572CE964FBD7-1.jpeg" class="" title="help">
+</li>
+</ol>
+<p>还找到了<a href="https://pan.baidu.com/s/12pC-cFiKoWhycA873dXxtw">PCV的源码和配套图片</a>。</p>
+<p>[密码: 9iab]。</p>
+<p>感觉PCV源代码写得不是很好，我不是很喜欢用 <code>from XXX import XXX</code> 的方式来写，因为东西多了就会混，不能一目了然，决定敲代码的时候自己改一下。</p>
+<h2 id="427"><a class="markdownIt-Anchor" href="#427"></a> 4.27</h2>
+<p><kbd>起床时间</kbd>：7:30</p>
+<p>今天正式推送了<code>iOS14.5</code>。</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_2916.jpg" class="" width="520">
+<p>下午体验到了，太爽了对于我这种解锁困难的人。</p>
+<p>今日podcast：</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_2922.JPEG" class="" width="520">
+<p>T T :</p>
+<p>- 我们做个约定吧？</p>
+<p>- 不</p>
+<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_EE55E9D9B0AF-1.jpeg" class="" title="nononononoo">
+<h2 id="428"><a class="markdownIt-Anchor" href="#428"></a> 4.28</h2>
+<p><kbd>起床时间</kbd>：7:40</p>
+<p>大家好，今日萎靡不振，快要晕倒，希望大家爱护自己的身体。</p>
+<p>其实今天做了一些东西的，下午看计划书，晚上做英语。</p>
+<h2 id="429"><a class="markdownIt-Anchor" href="#429"></a> 4.29</h2>
+<p><kbd>起床时间</kbd>：7:36</p>
+<p>这周的周四是痛苦的，痛苦夹杂着共情，共情又反过来伤害我。</p>
+<h2 id="430"><a class="markdownIt-Anchor" href="#430"></a> 4.30</h2>
+<p>我要远航啦！</p>
 ]]></content>
       <categories>
-        <category>学习</category>
+        <category>生活</category>
       </categories>
       <tags>
-        <tag>学习</tag>
-        <tag>pytorch</tag>
-        <tag>深度学习</tag>
+        <tag>生活</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2021 | 05</title>
+    <url>/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/</url>
+    <content><![CDATA[<h1 id="2021-05"><a class="markdownIt-Anchor" href="#2021-05"></a> 2021-05</h1>
+<blockquote>
+<p>五月，看看天，听听歌，出发。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>大家好，这次是完整的一个月份哦，给大家点首五月天的《温柔》和S.H.E.的《五月天》。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=386538&auto=0&height=66"></iframe>
+<img src="/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/image-20210501094414031.png" class="" title="image-20210501094414031">
+<h2 id="51"><a class="markdownIt-Anchor" href="#51"></a> 5.1</h2>
+<p>今天是劳动节。</p>
+<blockquote>
+<p>根据《全国年节及纪念日放假办法》，1999年9月18日第一次修订第二条规定，五一劳动节是全体公民放假的节日，放假3天，加上调休两个周末的假期，形成7天的“<a href="https://zh.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%91%A8_(%E4%B8%AD%E5%9B%BD)">黄金周</a>”（5月1日至5月7日）。2007年12月14日《国务院关于修改〈全国年节及纪念日放假办法〉的决定》第二次修订则将五一劳动节改为放假1天，加上周末调休共放假3天，自2008年1月1日起施行[<a href="https://zh.wikipedia.org/wiki/%E5%8A%B3%E5%8A%A8%E8%8A%82#cite_note-1">1]</a> 。新劳动节3天假期，仍被部分人称为“小黄金周”。</p>
+</blockquote>
+<p>今年的五一放假了5天，这个五天裹上了黄金粉，一闪一闪的，让不会算数的小孩子开心极了，因为当我们掰起手指或者脚趾——这就是看您了，怎么方便怎么来，减去调休的两天，我的大拇指和食指已经合起，继续减去周末两天，小拇指和无名指也相继落下，最后硬生生剩下一个中指立着，不知意味着什么。</p>
+<p>但这有什么关系呢，会算数的成年人用剩下的中指买了票。</p>
+<img src="/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/image-20210501095421934.png" class="" title="3x">
+<p>我大概是会算数的成年人的中指短小的自卑者，在开票时候没抢到票的我默默放下了手，我中指的朝气开始奄奄了，但我的内心并未被击败，我不是古老死板的老人，我直面自己的不行，并欣然接受外部给我的帮助。</p>
+<p>各大网站的抢票软件磨得我手指疼，我开始轰炸，人的脸面也不要了，我这种朋友圈匮乏者也开始了，“谢谢您，帮我点下”以开头，“谢谢”为结尾，幸好不是拼多多，疫情后，人们对出行的渴望有巨大的善意，给我点了许多。</p>
+<p>我更是自信，我一人萎没关系，我有人助力，这才是令我重新抬头的秘诀。</p>
+<p>我心里的气势并没有响多久，随着时间的流逝，我只敢在夜晚的被窝里偷偷伸出自己萎缩的指头，转着圈看，鄙视自己又甩出去似的斥责他人，挺着胸脯在胸腔里呐喊“宝刀不老宝刀不老，重振威风重振威风”。</p>
+<p>但抢票软件没有抢到票的我，中指彻底萎了下去，我开始大骂“你们的壮阳产品有个屌用！”</p>
+<h2 id="52"><a class="markdownIt-Anchor" href="#52"></a> 5.2</h2>
+<p>今天是睡眠充足的一天。</p>
+<h2 id="53"><a class="markdownIt-Anchor" href="#53"></a> 5.3</h2>
+<p>大家好，今天是奔波的一天，虽然并没有早起，但是还是睡得晚了。</p>
+<h2 id="54"><a class="markdownIt-Anchor" href="#54"></a> 5.4</h2>
+<p>今天吃了早餐。</p>
+<h2 id="55"><a class="markdownIt-Anchor" href="#55"></a> 5.5</h2>
+<p>今日是劳累的一天。</p>
+<hr />
+<h2 id="56"><a class="markdownIt-Anchor" href="#56"></a> 5.6</h2>
+<p>好了，从今天开始要好好学习了，因为长假的过去也代表着新的时期来临。</p>
+<p><kbd>起床时间</kbd>：4:00</p>
+<p>当然这个起床时间只是偶然的，抢不到票的我的妥协而已，所以人也经常安慰自己，这种安慰也带着对自己下限的摆弄，而这种摆弄也不过是一直下坠罢。</p>
+<p>但我的重点不在这里。</p>
+<p>我拖着困乏的身体来上课，开会，上课。</p>
+<p>几乎要睡着。</p>
+<p>但是中午一小时的短暂睡眠拯救了我，这种拯救就不是不足一提的小事了，而是石破天惊的大事了。</p>
+<p>今日找到了两个数据集，其中一个是MICCAI的challenge数据集，需要签署保密协议才能下载，另一个可以下载，但太慢了，学姐就用IDM给我下载了，呜呜，MAC上有什么好用的下载软件吗。</p>
+<p>改完了word格式，强烈认为自己改了份pdf转word的东西，眼睛都看疲劳了，好了，我要早些休息，明日献血。</p>
+<h2 id="57"><a class="markdownIt-Anchor" href="#57"></a> 5.7</h2>
+<p>今天是周五。</p>
+<p>似乎没干什么，但也干了些什么。</p>
+<p>去献血是生活上的事情，其余的似乎也不是要紧的，天气也是个原因。</p>
+<h2 id="58"><a class="markdownIt-Anchor" href="#58"></a> 5.8</h2>
+<p><kbd>起床时间</kbd>：7:30</p>
+<p>今早在看UNet，群里有个佬放了他的教程，看着不错，就是可能要用Win在本地先跑下。</p>
+<p><strong>在MAC上使用AirDrop卡死如何解决。</strong></p>
+<blockquote>
+<p>参考： <a href="https://discussionschinese.apple.com/thread/252508330">问： AirDrop经常出现卡死状态</a></p>
+</blockquote>
+<h2 id="59"><a class="markdownIt-Anchor" href="#59"></a> 5.9</h2>
+<p>周日，调休的意义，就是把人的时间观念变傻。</p>
+<h2 id="510"><a class="markdownIt-Anchor" href="#510"></a> 5.10</h2>
+<p><kbd>起床时间</kbd>：8:32</p>
+<h2 id="511"><a class="markdownIt-Anchor" href="#511"></a> 5.11</h2>
+<p><kbd>起床时间</kbd>：7:31</p>
+<p>大家好，K2我觉得还是不习惯，看来hhkb yyds！</p>
+<p>而且没有anne pro2 可以自己调节光的功能。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -463,533 +1077,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </tags>
   </entry>
   <entry>
-    <title>Rodin安装教程（附java8安装教程）</title>
-    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
-    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
-<blockquote>
-<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
-</blockquote>
-<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：WIndows 10</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>安装地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JDK 8</td>
-<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
-</tr>
-<tr>
-<td>Rodin</td>
-<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
-<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
-<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
-<p>更改安装路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
-<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
-<p>点击下一步后就安装成功了：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
-<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
-<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
-<p>并点击<code>高级系统设置</code></p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
-<p>点击<code>环境变量</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
-<p>点击<code>系统变量</code>-<code>新建</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
-<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
-<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
-<p>建议使用JAVA_HOME进行新建：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
-<p>点击确定环境变量配置完成。</p>
-<blockquote>
-<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
-<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
-</blockquote>
-<p>打开cmd分别输入以下三条指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
-<p>显示如下内容则jdk 8安装成功。</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
-<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
-<p>下载解压后直接打开rodin.exe`:</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
-<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
-<p>打开后出现如下界面即为安装成功：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
-<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
-<p>在<code>Work with</code>里输入相应名称即可安装。</p>
-<blockquote>
-<p>安装插件过程较慢，可以搭梯子。</p>
-</blockquote>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>Rodin</tag>
-        <tag>安装</tag>
-        <tag>JDK</tag>
-        <tag>Event-B</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MPR实现过程</title>
-    <url>/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="mpr的介绍"><a class="markdownIt-Anchor" href="#mpr的介绍"></a> MPR的介绍</h2>
-<p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
-<p><em><span id="more"></span></em></p>
-<p>MPR 的<strong>优点</strong></p>
-<ul>
-<li>能任意产生新的断层图像，而无需重复扫描。</li>
-<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
-</ul>
-<p>MPR的<strong>缺点</strong></p>
-<ul>
-<li>难以表达复杂的空间结构。</li>
-<li>曲面重组易造成假阳性。</li>
-</ul>
-<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
-<blockquote>
-<p>平台：Windows 10</p>
-<p>数据集：<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ITK</td>
-<td style="text-align:center">4.13.2</td>
-<td style="text-align:center"><a href="https://itk.org/download/">https://itk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">VTK</td>
-<td style="text-align:center">8.2.0</td>
-<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">CMake</td>
-<td style="text-align:center">3.14.0</td>
-<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Qt</td>
-<td style="text-align:center">5.12.0</td>
-<td style="text-align:center"><a href="https://www.qt.io/download">https://www.qt.io/download</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Visual Studio</td>
-<td style="text-align:center">2017_64 bit</td>
-<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
-<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
-<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
-<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
-<h4 id="安装qt"><a class="markdownIt-Anchor" href="#安装qt"></a> 安装Qt</h4>
-<p>参考博客：<a href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
-<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
-<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
-<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
-<p>参考博客：</p>
-<p><a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
-<p><a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
-<h4 id="安装itk"><a class="markdownIt-Anchor" href="#安装itk"></a> 安装ITK</h4>
-<p>参考博客：</p>
-<p><a href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
-<p><a href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
-<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
-<blockquote>
-<p>参考博客：<a href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
-</blockquote>
-<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
-<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
-<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
-<p>继续configure，直到无红色出现，点击generate。</p>
-<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
-<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
-<p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
-<p>初始界面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
-<p>旋转切面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
-<p>像素点的三维坐标与灰度值信息的显示：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
-<p>灰度变化：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>VTK</category>
-        <category>ITK</category>
-      </categories>
-      <tags>
-        <tag>MPR</tag>
-        <tag>VTK</tag>
-        <tag>ITK</tag>
-        <tag>技术</tag>
-        <tag>医学影像</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2021 | 04</title>
-    <url>/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/</url>
-    <content><![CDATA[<h1 id="2021-04"><a class="markdownIt-Anchor" href="#2021-04"></a> 2021-04</h1>
-<blockquote>
-<p>四月，努力并接受。</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>大家好，很开心能在这里和大家见面，因为每天的生活都很一致，一致的健忘，所以我决定写一下每天做了什么，每晚总结。</p>
-<h2 id="414"><a class="markdownIt-Anchor" href="#414"></a> 4.14</h2>
-<p><kbd>起床时间</kbd>：7:50</p>
-<p>今天是周三，组会来临前夕，是应该做点什么的。</p>
-<p>今早昏昏沉沉，9:30就想趴下，但是中午睡了会，很不错。</p>
-<p>上午看了医学的一些内容，看了那篇分割mesh reconstruction的论文，了解到分割，又去看了一些网络U-Net之类的。</p>
-<p>下午看了具体的分割和一些硕士论文，有一片哈工大的硕士毕业论文，正巧讲了分割和3D Reconstruction，用的是经常见到的Marching cube算法，算是个提取面的算法，她对此做了改进，我很感兴趣，因为不一定要死抠体绘制。</p>
-<p>而且SLAM也可以做的话，如果有比较多的公共dataset，也可以做内窥镜的SLAM。</p>
-<p>（突然忘了点啥…好了快十一点了，我要回去了，明天见！）</p>
-<p>晚上学了下<code>pandas</code>里的<code>apply</code>和<code>aggregate</code>。</p>
-<p>和<code>plt.xscale('symlog')</code>：plt的x轴如何用10的次方表示。</p>
-<h2 id="415"><a class="markdownIt-Anchor" href="#415"></a> 4.15</h2>
-<p><kbd>起床时间</kbd>：7:59</p>
-<p>今天是星期四，需要去上课和组会的一天。</p>
-<p>我个人早晨的时候做了个梦，大概是什么记不起了，只记得起床前的挣扎。</p>
-<p>今天早晨看了<a href="https://arxiv.org/abs/2102.07899">《A Deep-Learning Approach For Direct Whole-Heart Mesh Reconstruction》</a>，大意是mesh的reconstruction，用了分割网络，from Volumetric Images。</p>
-<p>下午讲组会的时候听得很认真，异常认真，因为正巧是感兴趣的，加入了深度预测来生成置信度对后面的流程产生影响，GCN也听了些。</p>
-<p>讲本周做了什么的时候，讲了大概三个方向，老师听到4D动力学让我去做这个，我去看了一些硕士论文，三维重建和流力学分析是分开的，这周好好把这两篇硕士论文看了去。</p>
-<p>晚上和一位学姐聊天，谈论三维重建医学影像的局限性和出路，以及医学影像上的分割相较于其更容易些，更像是两个分开的内容，MC的老方法需要改进就需要理论，而分割则是调参之类的。</p>
-<h2 id="416"><a class="markdownIt-Anchor" href="#416"></a> 4.16</h2>
-<p>周五早上去上课，老师把中期答辩定在了4.30。</p>
-<h2 id="417"><a class="markdownIt-Anchor" href="#417"></a> 4.17</h2>
-<p>周六。</p>
-<h2 id="418"><a class="markdownIt-Anchor" href="#418"></a> 4.18</h2>
-<p>周日。</p>
-<p>下午在实验室，在选这周讲的论文，应该是讲人体的，因为传统方法的还是太少，心血管的更是少之又少，所以我先讲一些今年新出的方法吧。</p>
-<p>下午把自己的terminal给换了，换成了iterm2，虽然装的过程超级复杂，但还是整完了，老多主题了，一天一个都换不过来，目前用的是Dracula+，是吸血鬼主题喔！</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210418224359802.png" class="" title="iterm2">
-<p>终于升级了，之前一直懒得升级，一直选择Remind me later，好看的。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210418223910170.png" class="" title="Pycharm2021">
-<p>顺带着复习一下<code>scp</code></p>
-<blockquote>
-<p>参考博客： <a href="https://blog.csdn.net/ludongdong/article/details/78524653?utm_term=mac%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0linux&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-78524653&amp;spm=3001.4430">mac 本地文件与服务器Linux文件之间的相互传输</a></p>
-<p><strong>scp[本地文件的路径]  [服务器用户名]@[服务器地址]:[服务器上存放文件的路径]</strong></p>
-</blockquote>
-<p>以及更新一下<a href="http://hellohoohoo.com/2021/04/16/%E6%8A%80%E6%9C%AF/Linux%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C//">Linux基础操作</a>中的解压/压缩。</p>
-<h2 id="419"><a class="markdownIt-Anchor" href="#419"></a> 4.19</h2>
-<p><kbd>起床时间</kbd>：7:37</p>
-<p>我在想要不讲DoubleFusion？</p>
-<p><strong>Dynamic Fusion + BodyFusion</strong></p>
-<p>早上看到少数派的这篇文章就试了试：</p>
-<blockquote>
-<p><a href="https://sspai.com/post/65842">从零开始，编写一个 HomeBrew 缓存清理脚本</a></p>
-</blockquote>
-<p>但是其中<code>brew install trash-cli</code>时显示:</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210419113400650.png" class="" width="600">
-<p>点开<a href="https://ghcr.io/v2/homebrew/core/gdbm/manifests/1.18.1_1">报错网址</a>后发现是<code>404 page not found</code>，去官网查看可以用<code>pip install</code>命令，但是觉得配置当前用户有些麻烦，就发现了可以用<code>trash</code>包，和<code>trash-cli</code>一样的功能。</p>
-<p>所以直接<code>brew install trash</code>就可以啦。</p>
-<p>下午在弄博客的时候，觉得<code>hexo clean</code>和<code>hexo s</code>以及<code>hexo g</code>, <code>hexo d</code>等命令的输入实在是烦琐，也加上上午写脚本给我的启发，我拿起本科剩的一些shell知识，也写了两个脚本用于本地浏览和上传github。</p>
-<p>详见<a href="http://hellohoohoo.com/2021/04/19/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%B8%A4%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%B8%AE%E4%BD%A0%E4%B8%80%E9%94%AE%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%92%8C%E4%B8%8A%E4%BC%A0/">写两个脚本帮你一键实现博客本地预览和上传</a>。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210419220508895.png" class="" title="419-terminal">
-<h2 id="420"><a class="markdownIt-Anchor" href="#420"></a> 4.20</h2>
-<p><kbd>起床时间</kbd>：7:31</p>
-<p>还是讲《Reconstructing 3D Human Pose by Watching Humans in the Mirror》吧。</p>
-<p>使用了SMPL和镜子几何的方式进行重构。</p>
-<ul>
-<li>
-<p>[x] <a href="https://blog.csdn.net/weixin_39445556/article/details/84502260">一文读懂L-BFGS算法</a></p>
-<p>（并没有去仔细看，因为这个方法其实就是一个函数最优化问题，和SGD一样的作用）</p>
-</li>
-<li>
-<p>[x] reflection operation</p>
-</li>
-<li>
-<p>[x] 使用 SPIN 来计算初始 SMPL 参数</p>
-</li>
-</ul>
-<p>​</p>
-<p><strong>学习</strong>：</p>
-<blockquote>
-<p><a href="https://blog.csdn.net/hellocsz/article/details/89320459">能量函数的定义</a></p>
-<p>构建能量函数就是我们用方程的最小值来描述我们想要达到的实际效果，并且在得到最小值时我们所求得的参数就是我们想要得到的<strong>最优解</strong>。</p>
-</blockquote>
-<p>​</p>
-<p><strong>小技巧：</strong></p>
-<blockquote>
-<p><a href="https://www.jianshu.com/p/fcbaf00a7379?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">Mac神器iTerm2基本命令</a></p>
-<p><a href="https://www.jianshu.com/p/ce6ca06f3e95">Typora中的任务列表（Task List）语法</a></p>
-</blockquote>
-<p>​</p>
-<p>测试<code>fluid</code>主题的待办事项，发现：</p>
-<blockquote class="blockquote-center">
-<p>你知道吗？我NexT不配！</p>
-
-</blockquote>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420194912836.png" class="" title="我不配">
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420201420222.png" class="" title="NexT不配！">
-<p>学习官方文档的<code>note</code>：</p>
-<blockquote>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note class<span class="emphasis">_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</span></span><br></pre></td></tr></table></figure>
-<p>其中，<code>class_name</code> 可以是以下列表中的一个值：</p>
-<ul>
-<li><code>default</code></li>
-<li><code>primary</code></li>
-<li><code>success</code></li>
-<li><code>info</code></li>
-<li><code>warning</code></li>
-<li><code>danger</code></li>
-</ul>
-</blockquote>
-<p>显示效果：</p>
-<div class="note warning"><p>warning</p>
-</div>
-<div class="note default"><p>default</p>
-</div>
-<div class="note primary"><p>primary</p>
-</div>
-<div class="note success"><p>success</p>
-</div>
-<div class="note info"><p>info</p>
-</div>
-<div class="note danger"><p>danger</p>
-</div>
-<p>测试微信截图和ishot截图清晰度：</p>
-<p><strong>ishot：</strong> 有阴影会比较好看一些</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202100482.png" class="" title="ishot">
-<p><strong>微信：</strong> 比较扁平，适合幻灯（自认为</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202248573.png" class="" title="wx">
-<p>​</p>
-<p>多余的 72 ✖️ 72 应该是阴影边框。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210420202632425.png" class="" title="对比">
-<h2 id="421"><a class="markdownIt-Anchor" href="#421"></a> 4.21</h2>
-<p><kbd>起床时间</kbd>：7:35</p>
-<p>🎧 listen</p>
-<ul>
-<li>
-<p>[x] 处理标注框</p>
-</li>
-<li>
-<p>[x] Geman-McClure 误差函数 （惩罚噪声大的权重）</p>
-<ul>
-<li>协调参数</li>
-</ul>
-</li>
-</ul>
-<h2 id="422"><a class="markdownIt-Anchor" href="#422"></a> 4.22</h2>
-<p><kbd>起床时间</kbd>：7:27</p>
-<p>🥛 每日早晨饮品</p>
-<p>☑️ 组会讲完论文</p>
-<p>new test with emoji:</p>
-<p>☑</p>
-<p>◻</p>
-<p>☑️</p>
-<p>◻️</p>
-<p>🔘</p>
-<p>⚪️</p>
-<p>更新啦！</p>
-<blockquote>
-<p><a href="https://sspai.com/post/66156">更新浏览器的时候又到了：Chrome/Edge 90 稳定版 9 大新功能盘点</a></p>
-</blockquote>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210422152556716.png" class="" title="chrome">
-<h2 id="423"><a class="markdownIt-Anchor" href="#423"></a> 4.23</h2>
-<p>今天是周五。我们可以称呼周五为礼拜五，星期五。</p>
-<p>anyway。</p>
-<h2 id="424"><a class="markdownIt-Anchor" href="#424"></a> 4.24</h2>
-<p>本周唯一的休息日。</p>
-<p>test 1:</p>
-<p><strong><code>tag</code>：</strong></p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs the First test %&#125;</span><br><span class="line">&lt;!-- tab Tab 1 --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab Tab 2 --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab Tab 3 --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>效果如下所示：</strong></p>
-<div class="tabs" id="the-first-test"><ul class="nav-tabs"><li class="tab active"><a href="#the-first-test-1">Tab 1</a></li><li class="tab"><a href="#the-first-test-2">Tab 2</a></li><li class="tab"><a href="#the-first-test-3">Tab 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="the-first-test-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="the-first-test-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="the-first-test-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
-<p>test 2:</p>
-<p>使用fa：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-spinner fa-spin&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-cog fa-spin&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-spinner fa-pulse&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><i class="fa fa-spinner fa-spin"> </i><br />
-<i class="fa fa-cog fa-spin"> </i><br />
-<i class="fa fa-spinner fa-pulse"> </i></p>
-<p>test 3:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% label default@content %&#125;</span><br></pre></td></tr></table></figure>
-<p><code>default</code>可以换为primary、success、info、warning、danger。</p>
-<p><code>content</code>为显示内容。</p>
-<p>效果如下所示：</p>
-<mark class="label default">default</mark>
-<mark class="label primary">primary</mark>
-<mark class="label success">success</mark>
-<mark class="label info">info</mark>
-<mark class="label warning">warning</mark>
-<mark class="label danger">danger</mark>
-<p>default primary success info warning danger</p>
-<h2 id="425"><a class="markdownIt-Anchor" href="#425"></a> 4.25</h2>
-<p><kbd>起床时间</kbd>：7:40</p>
-<p>今天是周日，却因为调休变成了周二，所以说一切皆有可能。</p>
-<p>所以按照工作日的时间，我还和平时一样的时间到来。</p>
-<p>决定先把U-NET好好学学。</p>
-<p>事到如今，大概是体绘制和面绘制了。</p>
-<blockquote>
-<p>参考博客： <a href="https://blog.csdn.net/u014316462/article/details/52241685">linux系统644、755、777权限详解</a></p>
-</blockquote>
-<h2 id="426"><a class="markdownIt-Anchor" href="#426"></a> 4.26</h2>
-<p><kbd>起床时间</kbd>：7:53</p>
-<blockquote>
-<p><a href="https://github.com/shimohq/chinese-programmer-wrong-pronunciation/blob/master/README.md">中国程序员容易发音错误的单词</a></p>
-</blockquote>
-<p>今天在学PCV的时候，发现自己的python包中没有<code>scipy</code>，自然而然打开终端开始<code>conda</code>, <code>pip</code>，但是我没有成功。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211747662.png" class="" width="366">
-<p>我猜想可能是zsh中没有bash中的环境变量，就用了网上常见的<a href="https://blog.csdn.net/xieamy/article/details/85082482?utm_term=zsh%E6%89%BE%E4%B8%8D%E5%88%B0%E5%91%BD%E4%BB%A4&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-85082482&amp;spm=3001.4430">方法</a>。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/image-20210426211956414.png" class="" width="666">
-<p>但是还是找不到命令，我就使用了另一个<a href="https://blog.csdn.net/liuhui_1211/article/details/79439137?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;dist_request_id=&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control"><strong>方法</strong></a>，接下来的事情我是不敢想的，我都不知道是我频繁切换<code>bash</code>和<code>zsh</code>还是这个方法的原因，我的<code>.zshrc</code>文件空了，所有配置都没有了。</p>
-<p>好的。</p>
-<p>之后的时间就是在找初始配置文件和anaconda的路径。</p>
-<p>折腾来折腾去，最后终于用两个方法解决了上述问题：</p>
-<ol>
-<li>
-<p><code>anaconda</code>删除后重装，自动在<code>.zshrc</code>中生成了配置代码。</p>
-</li>
-<li>
-<p>找<a href="https://meetlxt.github.io/">彤子</a>要了她的配置文件。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_572CE964FBD7-1.jpeg" class="" title="help">
-</li>
-</ol>
-<p>还找到了<a href="https://pan.baidu.com/s/12pC-cFiKoWhycA873dXxtw">PCV的源码和配套图片</a>。</p>
-<p>[密码: 9iab]。</p>
-<p>感觉PCV源代码写得不是很好，我不是很喜欢用 <code>from XXX import XXX</code> 的方式来写，因为东西多了就会混，不能一目了然，决定敲代码的时候自己改一下。</p>
-<h2 id="427"><a class="markdownIt-Anchor" href="#427"></a> 4.27</h2>
-<p><kbd>起床时间</kbd>：7:30</p>
-<p>今天正式推送了<code>iOS14.5</code>。</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_2916.jpg" class="" width="520">
-<p>下午体验到了，太爽了对于我这种解锁困难的人。</p>
-<p>今日podcast：</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_2922.JPEG" class="" width="520">
-<p>T T :</p>
-<p>- 我们做个约定吧？</p>
-<p>- 不</p>
-<img src="/2021/04/14/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-04/IMG_EE55E9D9B0AF-1.jpeg" class="" title="nononononoo">
-<h2 id="428"><a class="markdownIt-Anchor" href="#428"></a> 4.28</h2>
-<p><kbd>起床时间</kbd>：7:40</p>
-<p>大家好，今日萎靡不振，快要晕倒，希望大家爱护自己的身体。</p>
-<p>其实今天做了一些东西的，下午看计划书，晚上做英语。</p>
-<h2 id="429"><a class="markdownIt-Anchor" href="#429"></a> 4.29</h2>
-<p><kbd>起床时间</kbd>：7:36</p>
-<p>这周的周四是痛苦的，痛苦夹杂着共情，共情又反过来伤害我。</p>
-<h2 id="430"><a class="markdownIt-Anchor" href="#430"></a> 4.30</h2>
-<p>我要远航啦！</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2021 | 05</title>
-    <url>/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/</url>
-    <content><![CDATA[<h1 id="2021-05"><a class="markdownIt-Anchor" href="#2021-05"></a> 2021-05</h1>
-<blockquote>
-<p>五月，看看天，听听歌，出发。</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>大家好，这次是完整的一个月份哦，给大家点首五月天的《温柔》和S.H.E.的《五月天》。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=386538&auto=0&height=66"></iframe>
-<img src="/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/image-20210501094414031.png" class="" title="image-20210501094414031">
-<h2 id="51"><a class="markdownIt-Anchor" href="#51"></a> 5.1</h2>
-<p>今天是劳动节。</p>
-<blockquote>
-<p>根据《全国年节及纪念日放假办法》，1999年9月18日第一次修订第二条规定，五一劳动节是全体公民放假的节日，放假3天，加上调休两个周末的假期，形成7天的“<a href="https://zh.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%91%A8_(%E4%B8%AD%E5%9B%BD)">黄金周</a>”（5月1日至5月7日）。2007年12月14日《国务院关于修改〈全国年节及纪念日放假办法〉的决定》第二次修订则将五一劳动节改为放假1天，加上周末调休共放假3天，自2008年1月1日起施行[<a href="https://zh.wikipedia.org/wiki/%E5%8A%B3%E5%8A%A8%E8%8A%82#cite_note-1">1]</a> 。新劳动节3天假期，仍被部分人称为“小黄金周”。</p>
-</blockquote>
-<p>今年的五一放假了5天，这个五天裹上了黄金粉，一闪一闪的，让不会算数的小孩子开心极了，因为当我们掰起手指或者脚趾——这就是看您了，怎么方便怎么来，减去调休的两天，我的大拇指和食指已经合起，继续减去周末两天，小拇指和无名指也相继落下，最后硬生生剩下一个中指立着，不知意味着什么。</p>
-<p>但这有什么关系呢，会算数的成年人用剩下的中指买了票。</p>
-<img src="/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/image-20210501095421934.png" class="" title="3x">
-<p>我大概是会算数的成年人的中指短小的自卑者，在开票时候没抢到票的我默默放下了手，我中指的朝气开始奄奄了，但我的内心并未被击败，我不是古老死板的老人，我直面自己的不行，并欣然接受外部给我的帮助。</p>
-<p>各大网站的抢票软件磨得我手指疼，我开始轰炸，人的脸面也不要了，我这种朋友圈匮乏者也开始了，“谢谢您，帮我点下”以开头，“谢谢”为结尾，幸好不是拼多多，疫情后，人们对出行的渴望有巨大的善意，给我点了许多。</p>
-<p>我更是自信，我一人萎没关系，我有人助力，这才是令我重新抬头的秘诀。</p>
-<p>我心里的气势并没有响多久，随着时间的流逝，我只敢在夜晚的被窝里偷偷伸出自己萎缩的指头，转着圈看，鄙视自己又甩出去似的斥责他人，挺着胸脯在胸腔里呐喊“宝刀不老宝刀不老，重振威风重振威风”。</p>
-<p>但抢票软件没有抢到票的我，中指彻底萎了下去，我开始大骂“你们的壮阳产品有个屌用！”</p>
-<h2 id="52"><a class="markdownIt-Anchor" href="#52"></a> 5.2</h2>
-<p>今天是睡眠充足的一天。</p>
-<h2 id="53"><a class="markdownIt-Anchor" href="#53"></a> 5.3</h2>
-<p>大家好，今天是奔波的一天，虽然并没有早起，但是还是睡得晚了。</p>
-<h2 id="54"><a class="markdownIt-Anchor" href="#54"></a> 5.4</h2>
-<p>今天吃了早餐。</p>
-<h2 id="55"><a class="markdownIt-Anchor" href="#55"></a> 5.5</h2>
-<p>今日是劳累的一天。</p>
-<hr />
-<h2 id="56"><a class="markdownIt-Anchor" href="#56"></a> 5.6</h2>
-<p>好了，从今天开始要好好学习了，因为长假的过去也代表着新的时期来临。</p>
-<p><kbd>起床时间</kbd>：4:00</p>
-<p>当然这个起床时间只是偶然的，抢不到票的我的妥协而已，所以人也经常安慰自己，这种安慰也带着对自己下限的摆弄，而这种摆弄也不过是一直下坠罢。</p>
-<p>但我的重点不在这里。</p>
-<p>我拖着困乏的身体来上课，开会，上课。</p>
-<p>几乎要睡着。</p>
-<p>但是中午一小时的短暂睡眠拯救了我，这种拯救就不是不足一提的小事了，而是石破天惊的大事了。</p>
-<p>今日找到了两个数据集，其中一个是MICCAI的challenge数据集，需要签署保密协议才能下载，另一个可以下载，但太慢了，学姐就用IDM给我下载了，呜呜，MAC上有什么好用的下载软件吗。</p>
-<p>改完了word格式，强烈认为自己改了份pdf转word的东西，眼睛都看疲劳了，好了，我要早些休息，明日献血。</p>
-<h2 id="57"><a class="markdownIt-Anchor" href="#57"></a> 5.7</h2>
-<p>今天是周五。</p>
-<p>似乎没干什么，但也干了些什么。</p>
-<p>去献血是生活上的事情，其余的似乎也不是要紧的，天气也是个原因。</p>
-<h2 id="58"><a class="markdownIt-Anchor" href="#58"></a> 5.8</h2>
-<p><kbd>起床时间</kbd>：7:30</p>
-<p>今早在看UNet，群里有个佬放了他的教程，看着不错，就是可能要用Win在本地先跑下。</p>
-<p><strong>在MAC上使用AirDrop卡死如何解决。</strong></p>
-<blockquote>
-<p>参考： <a href="https://discussionschinese.apple.com/thread/252508330">问： AirDrop经常出现卡死状态</a></p>
-</blockquote>
-<h2 id="59"><a class="markdownIt-Anchor" href="#59"></a> 5.9</h2>
-<p>周日，调休的意义，就是把人的时间观念变傻。</p>
-<h2 id="510"><a class="markdownIt-Anchor" href="#510"></a> 5.10</h2>
-<p><kbd>起床时间</kbd>：8:32</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>记录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《视觉SLAM十四讲 第2版》学习笔记 第3讲</title>
     <url>/2021/04/06/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC3%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -1055,241 +1142,206 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </tags>
   </entry>
   <entry>
-    <title>VR实现过程（使用VTK官方代码）</title>
-    <url>/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="vr的介绍"><a class="markdownIt-Anchor" href="#vr的介绍"></a> VR的介绍</h2>
-<p>VR（Volume Rendering）也称为体绘制，是一种直接由三维数据场产生屏幕上二维图像的技术。</p>
+    <title>写两个脚本帮你一键实现博客本地预览和上传</title>
+    <url>/2021/04/19/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%B8%A4%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%B8%AE%E4%BD%A0%E4%B8%80%E9%94%AE%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%92%8C%E4%B8%8A%E4%BC%A0/</url>
+    <content><![CDATA[<blockquote>
+<p>脚本脚本，用手写。</p>
+</blockquote>
 <span id="more"></span>
-<p>VR的优点：</p>
-<ul>
-<li>可以探索物体的内部结构</li>
-<li>可以描述非常定形的物体</li>
-<li>面绘制在这些方面比较弱</li>
-</ul>
-<p>VR的缺点：</p>
-<ul>
-<li>数据存储量大</li>
-<li>计算时间较长</li>
-</ul>
-<h2 id="实验工具及配置"><a class="markdownIt-Anchor" href="#实验工具及配置"></a> 实验工具及配置</h2>
-<blockquote>
-<p>平台：Windows 10</p>
-<p>语言：C++</p>
-<p>图像格式：MHD</p>
-<p>数据集：使用的是VTK-Example中的<code>FullHead.mhd</code></p>
-<p>​			  也可以使用<a href="https://promise12.grand-challenge.org/Home/">Promise12</a> （可以参考 <a href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a>）等mhd格式数据</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">VTK</td>
-<td style="text-align:center">8.2.0</td>
-<td style="text-align:center"><a href="https://vtk.org/download/">https://vtk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">CMake</td>
-<td style="text-align:center">3.14.0</td>
-<td style="text-align:center"><a href="https://cmake.org/download/">https://cmake.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Visual Studio</td>
-<td style="text-align:center">2017_64 bit</td>
-<td style="text-align:center"><a href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="实验步骤"><a class="markdownIt-Anchor" href="#实验步骤"></a> 实验步骤</h2>
-<h3 id="配置环境"><a class="markdownIt-Anchor" href="#配置环境"></a> 配置环境</h3>
-<h4 id="安装vs2017"><a class="markdownIt-Anchor" href="#安装vs2017"></a> 安装VS2017</h4>
-<p>参考博客：<a href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
-<h4 id="安装cmake"><a class="markdownIt-Anchor" href="#安装cmake"></a> 安装CMake</h4>
-<p>参考博客：<a href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
-<h4 id="安装vtk"><a class="markdownIt-Anchor" href="#安装vtk"></a> 安装VTK</h4>
-<p>参考博客：</p>
-<p>​	<a href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
-<p>​	<a href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
-<h3 id="实验步骤-2"><a class="markdownIt-Anchor" href="#实验步骤-2"></a> 实验步骤</h3>
-<h4 id="编译过程"><a class="markdownIt-Anchor" href="#编译过程"></a> 编译过程</h4>
-<blockquote>
-<p>参考：<a href="https://kitware.github.io/vtk-examples/site/Cxx/VolumeRendering/FixedPointVolumeRayCastMapperCT/">vtk-examples-FixedPointVolumeRayCastMapperCT</a></p>
-</blockquote>
-<p>进入VTK官网可以看到关于VR有许多例子，而且每个例子都会有示意图，选择了第一个<code>FixedPointVolumeRayCastMapperCT</code>。</p>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>是看到少数派动手写脚本的一篇文章受了启发，而且mac系统本来和Linux都差不多的，博客本地预览和上传永远都是固定的命令，却要烦琐的等待，所以懒惰的人就要写点什么让自己心安理得的更加懒惰。</p>
+<p>开始吧。</p>
+<h2 id="想法"><a class="markdownIt-Anchor" href="#想法"></a> 想法</h2>
+<p>我的hexo博客地址是<code>/Users/hoohoo/Clutter/Blog</code>，所以每次都需要先进入，再输入命令，而且有些时候网速不行，就习惯性等待先clean后再继续。</p>
+<p>都是一些固定的操作，所以脚本也很简单。</p>
+<h2 id="本地预览脚本"><a class="markdownIt-Anchor" href="#本地预览脚本"></a> 本地预览脚本</h2>
 <ol>
-<li>点击<a href="https://github.com/Kitware/vtk-examples/raw/gh-pages/Tarballs/FixedPointVolumeRayCastMapperCT.tar">here to download FixedPointVolumeRayCastMapperCT</a>后系统会自动下载，并解压：</li>
+<li>随便在哪个目录下创建本地预览脚本<code>hs.sh</code></li>
 </ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/1.png" class="" title="下载源代码">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim hs.sh</span><br></pre></td></tr></table></figure>
 <ol start="2">
-<li>该文件夹下包括<code>CMakeLists.txt</code>和<code>cxx</code>源文件和一个<code>build</code>文件夹：</li>
+<li>输入以下内容：</li>
 </ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/2.png" class="" title="文件夹">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;clean完啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行本地预览命令</span></span><br><span class="line">y=`hexo s`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;http://localhost:4000/&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <ol start="3">
-<li>新建<code>source</code>文件夹和<code>testData</code>文件夹，并将<code>CMakeLists.txt</code>和<code>cxx</code>源文件移动到<code>source</code>文件：</li>
+<li>使用<code>chmod</code>对<code>hs.sh</code>添加可执行权限：</li>
 </ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/3.png" class="" title="新建文件夹">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hs.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>将<code>hs.sh</code>改名为<code>hs</code>，在终端下输入：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hs.sh hs</span><br></pre></td></tr></table></figure>
 <ol start="4">
-<li>打开CMake，打开CMake，source code路径即为<code>VR/FixedPointVolumeRayCastMapperCT/source</code>，build路径即为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
+<li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
 </ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/4.png" class="" title="编译路径">
-<ol start="5">
-<li>点击<code>configure</code>按钮，使用本地编译器，选择<code>Visual Studio 15 2017</code>，并选择<code>x64</code>后点击<code>Finish</code>，之后会出现一片红色，将其中<code>CMAKE_INSTALL_PREFIX</code>的路径改为<code>VR/FixedPointVolumeRayCastMapperCT/build</code>：</li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hs /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
+<h2 id="上传脚本"><a class="markdownIt-Anchor" href="#上传脚本"></a> 上传脚本</h2>
+<ol>
+<li>随便在哪个目录下创建本地预览脚本<code>hgd.sh</code></li>
 </ol>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/5.png" class="" title="选择编译器">
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/6.png" class="" title="改路径">
-<ol start="6">
-<li>继续<code>configure</code>，直到无红色出现，点击<code>generate</code>，<code>generate</code>结束后，打开vs2017，找到<code>build</code>文件夹下的<code>FixedPointVolumeRayCastMapperCT.sln</code>文件选择打开，并将<code>**FixedPointVolumeRayCastMapperCT**</code>设为启动项目，点击本地Windows调试器即可运行。</li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim hdg.sh</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>输入以下内容：</li>
 </ol>
-<h4 id="参数介绍"><a class="markdownIt-Anchor" href="#参数介绍"></a> 参数介绍</h4>
-<blockquote>
-<p>Example: FixedPointVolumeRayCastMapperCT -DICOM CTNeck -MIP 4096 1024</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">-DICOM &lt;directory&gt;                             <span class="comment">// 使用的数据集为 DICOM 格式</span></span><br><span class="line">-VTI &lt;filename&gt;                                <span class="comment">// 使用的数据集为 VTI 格式</span></span><br><span class="line">-MHA &lt;filename&gt;                                <span class="comment">// 使用的数据集为 MHA 格式</span></span><br><span class="line">-DependentComponents                           <span class="comment">// 指定文件具有从属组件</span></span><br><span class="line">-Clip                                          <span class="comment">// 显示用于剪切卷的多维数据集小部件</span></span><br><span class="line">-MIP &lt;window&gt; &lt;level&gt;                          <span class="comment">// 使用最大强度投影方法</span></span><br><span class="line">-CompositeRamp &lt;window&gt; &lt;level&gt;                <span class="comment">// 是非着色合成</span></span><br><span class="line">-CompositeShadeRamp &lt;window&gt; &lt;level&gt;           <span class="comment">// 使用着色合成</span></span><br><span class="line">-CT_Skin                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Bone                                       <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-CT_Muscle                                     <span class="comment">// 适用于 DICOM 数据</span></span><br><span class="line">-FrameRate &lt;rate&gt;                              <span class="comment">// 控制交互式渲染速率</span></span><br><span class="line">-DataReduction &lt;factor&gt;                        <span class="comment">// 在渲染前缩减数据</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>必须使用<code>-DICOM</code>选项指定数据所在的目录，或使用<code>-VTI</code>或<code>-MHA</code>选项指定.VTI文件的路径。</li>
-<li>默认情况下，程序假定文件具有独立组件，使用<code>-DependentComponents</code>指定文件具有从属组件。</li>
-<li>使用<code>-Clip</code>选项显示用于剪切卷的多维数据集小部件。</li>
-<li>将<code>-FrameRate</code>选项与所需的帧速率（以每秒帧数为单位）一起使用，以控制交互式渲染速率。</li>
-<li>使用<code>-DataReduction</code>选项和缩减因子（大于零且小于1）在渲染前缩减数据。</li>
-<li>使用其余选项之一指定混合函数和传递函数。<code>MIP</code>选项使用最大强度投影方法，而其他选项使用合成。</li>
-<li><code>-CompositeRamp</code>选项是非着色合成，而其他合成选项使用着色。</li>
-<li>注：<code>MIP</code>、<code>CompositeRamp</code>、<code>CompositeShadeRamp</code>、<code>CT_Skin</code>、<code>CT_Bone</code>和<code>CT_Muscle</code>适用于DICOM数据。<code>MIP</code>、<code>CompositeRamp</code>和<code>RGB_Composite</code>适用于RGB数据。</li>
-</ul>
-<h4 id="修改源代码"><a class="markdownIt-Anchor" href="#修改源代码"></a> 修改源代码</h4>
-<p>由于VTK官网是在Linux/macOS的终端运行，但已经在本机Windows 10下安装了全套的配置软件，故修改了其中一些代码，使其更直观操作。</p>
-<p>源代码如下，并配置了相关判断代码（修改后将判断代码全部注释掉，用以自己直接修改参数），用来判断在终端中输入的参数值。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;                         <span class="comment">// 可以删去，因为不需要判断，所以计数器无用</span></span><br><span class="line">  <span class="keyword">char</span>* dirname = <span class="literal">NULL</span>;                  <span class="comment">// 如果使用的数据集为Dicom格式，则可修改NULL值为数据集文件夹地址</span></span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;           <span class="comment">// opacityWindow大小</span></span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;            <span class="comment">// opacityLevel大小</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">/* blendType</span></span><br><span class="line"><span class="comment">      根据参数修改为不同的数字，为不同的效果，其中：</span></span><br><span class="line"><span class="comment">      MIP：blendType = 0</span></span><br><span class="line"><span class="comment">      -CompositeRamp：blendType = 1</span></span><br><span class="line"><span class="comment">      -CompositeShadeRamp：blendType = 2</span></span><br><span class="line"><span class="comment">      -CT_Skin：blendType = 3</span></span><br><span class="line"><span class="comment">      -CT_Bone：blendType = 4</span></span><br><span class="line"><span class="comment">      -CT_Muscle：blendType = 5</span></span><br><span class="line"><span class="comment">      -RGB_Composite：blendType = 6</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;   </span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">0</span>;                          <span class="comment">// 如果上文选择Clip选项，则clip = 1</span></span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;          <span class="comment">// 参数范围在0-1，</span></span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;               <span class="comment">// 控制交互式渲染速率，渲染前缩减数据</span></span><br><span class="line">  <span class="keyword">char</span>* fileName = <span class="number">0</span>;                    <span class="comment">// 如果为VTI格式或MHA/MHD格式，则可修改NULL值为数据文件地址</span></span><br><span class="line">  <span class="keyword">int</span> fileType = <span class="number">0</span>;                      <span class="comment">// 文件格式，可直接根据数据集文件进行输入，无需判断</span></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;     <span class="comment">// 修改不同的数字为不同的效果，下文会有展示</span></span><br></pre></td></tr></table></figure>
-<p>由于采用<code>Windows 10</code>系统，未使用终端，参数修改后如下：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the parameters</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">char</span> *dirname = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityWindow = <span class="number">4096</span>;</span><br><span class="line">  <span class="keyword">double</span> opacityLevel = <span class="number">2048</span>;</span><br><span class="line">  <span class="keyword">int</span> blendType = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> clip = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">double</span> reductionFactor = <span class="number">1.0</span>;</span><br><span class="line">  <span class="keyword">double</span> frameRate = <span class="number">10.0</span>;</span><br><span class="line">  <span class="keyword">char</span> *fileName = <span class="string">&quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//FullHead.mhd&quot;</span>;</span><br><span class="line">  <span class="comment">// char *fileName = &quot;F://MPR//VR1//FixedPointVolumeRayCastMapperCT//TestData//Case00.mhd&quot;;</span></span><br><span class="line">  <span class="keyword">int</span> fileType = MHA_FILETYPE;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">bool</span> independentComponents = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
-<p>并将代码中判断参数代码直接注释掉，从<code>while ( count &lt; args )</code>一直到<code>if ( !dirname &amp;&amp; !fileName)</code>结束。</p>
-<h3 id="实验效果"><a class="markdownIt-Anchor" href="#实验效果"></a> 实验效果</h3>
-<p>当 <code>blendType</code> = 0时：</p>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/101.png" class="" title="blendType &#x3D; 0">
-<p>使用<code>CT_Skin</code>参数时：</p>
-<img src="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/100.png" class="" title="blendType &#x3D; 3">
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你clean好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行generate命令</span></span><br><span class="line">y=`hexo g`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你generate好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行deploy命令</span></span><br><span class="line">z=`hexo d`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$z</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$d</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你可以去你的hellohoohoo.com上看啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使用<code>chmod</code>对<code>hgd.sh</code>添加可执行权限：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hgd.sh</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>将<code>hgd.sh</code>改名为<code>hgd</code>，在终端下输入：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hgd.sh hgd</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hgd /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>技术</category>
-        <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
-        <tag>医学影像</tag>
+        <tag>技术</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
-    <title>Numpy的一些用法</title>
-    <url>/2021/04/12/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/Numpy%E7%9A%84%E4%B8%80%E4%BA%9B%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="numpy"><a class="markdownIt-Anchor" href="#numpy"></a> numpy</h1>
-<blockquote>
-<p><s>import numpy as npy</s></p>
-<p>import numpy as np</p>
+    <title>【PCV】学习笔记（一）</title>
+    <url>/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>用旧钥匙打开新领域的门</p>
+
 </blockquote>
 <span id="more"></span>
-<h2 id="reshape-中的-1"><a class="markdownIt-Anchor" href="#reshape-中的-1"></a> reshape() 中的-1</h2>
-<blockquote>
-<p>参考博客：<a href="https://blog.csdn.net/shyjhyp11/article/details/110949460?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242">https://blog.csdn.net/shyjhyp11/article/details/110949460?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242</a></p>
-</blockquote>
-<p>新数组的shape属性应该要与原来数组的一致，即新数组元素数量与原数组元素数量要相等。一个参数为-1时，那么reshape函数会根据另一个参数的维度计算出数组的另外一个shape属性值。</p>
-<h2 id="dot"><a class="markdownIt-Anchor" href="#dot"></a> dot()</h2>
-<blockquote>
-<p>参考博客：<a href="https://www.cnblogs.com/Shawnyi/p/10370815.html">https://www.cnblogs.com/Shawnyi/p/10370815.html</a></p>
-</blockquote>
-<p>如果为一维矩阵，则返回内积，如（2，3）和（4，5）则返回23</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">y = np.array([<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line">print(np.dot(x,y))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">23</span></span><br></pre></td></tr></table></figure>
-<p>如果为多维矩阵，则返回矩阵相乘后的矩阵</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">              [<span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">              [<span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">              [<span class="number">4</span>, <span class="number">5</span>]])</span><br><span class="line">y = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], </span><br><span class="line">              [<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]])</span><br><span class="line">   </span><br><span class="line">print(np.dot(x,y))</span><br><span class="line">    </span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[ <span class="number">9</span>  <span class="number">8</span>  <span class="number">7</span>  <span class="number">6</span>]</span><br><span class="line"> [<span class="number">14</span> <span class="number">13</span> <span class="number">12</span> <span class="number">11</span>]</span><br><span class="line"> [<span class="number">19</span> <span class="number">18</span> <span class="number">17</span> <span class="number">16</span>]</span><br><span class="line"> [<span class="number">24</span> <span class="number">23</span> <span class="number">22</span> <span class="number">21</span>]]</span><br></pre></td></tr></table></figure>
-<h2 id="shape"><a class="markdownIt-Anchor" href="#shape"></a> shape</h2>
-<blockquote>
-<p>参考博客：<a href="https://www.pythonheidong.com/blog/article/148310/df0823653bdb440c1ce3/">https://www.pythonheidong.com/blog/article/148310/df0823653bdb440c1ce3/</a></p>
-</blockquote>
-<p>img.shape[0]：图像的垂直尺寸（高度）</p>
-<p>img.shape[1]：图像的水平尺寸（宽度）</p>
-<p>img.shape[2]：图像的通道数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">2</span>, <span class="number">3</span>], [<span class="number">1</span>, <span class="number">3</span>]])</span><br><span class="line">print(x.shape[<span class="number">0</span>])</span><br><span class="line">print(x.shape[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-<h2 id="array的相加"><a class="markdownIt-Anchor" href="#array的相加"></a> + array的相加</h2>
-<p>由于广播作用</p>
-<p>例如：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>],</span><br><span class="line">              [<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">              [<span class="number">3</span>,<span class="number">4</span>],</span><br><span class="line">              [<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line"></span><br><span class="line">y = np.array([<span class="number">2</span>,<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">print(x+y)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[<span class="number">3</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">5</span> <span class="number">5</span>]</span><br><span class="line"> [<span class="number">6</span> <span class="number">6</span>]]</span><br></pre></td></tr></table></figure>
-<p>如(N,M)和(,M)相加后，即列数相等，从第一行到最后一行逐行与后面的array相加</p>
-<h2 id="flatten"><a class="markdownIt-Anchor" href="#flatten"></a> flatten()</h2>
-<p>将数组转换为一维数组</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">              [<span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">              [<span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">              [<span class="number">4</span>, <span class="number">5</span>]])</span><br><span class="line">z = x.flatten()</span><br><span class="line">print(z)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">3</span> <span class="number">3</span> <span class="number">4</span> <span class="number">4</span> <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-<h2 id="eye"><a class="markdownIt-Anchor" href="#eye"></a> eye()</h2>
-<blockquote>
-<p>Return a 2-D array with ones on the diagonal and zeros elsewhere.</p>
-</blockquote>
-<p>函数eye()的作用是返回一个对角线diagonal上全是1，而其他位置全为0的一个二维数组（2D-array）。</p>
-<p><strong>numpy.eye(N, M=None, k=0, dtype=&lt;class ‘float’&gt;, order=‘C’)</strong></p>
-<p>Parameters:<br />
-<strong>N</strong> : int，Number of rows in the output.</p>
-<p><strong>M</strong> : int, optional，Number of columns in the output. If None, defaults to N.</p>
-<p><strong>k</strong> : int, optional ——<strong>K为对角元素的索引</strong>。</p>
-<blockquote>
-<p>Index of the diagonal: 0 (the default) refers to the main diagonal, a positive value refers to an upper diagonal, and a negative value to a lower diagonal.</p>
-</blockquote>
-<p>默认的索引为0对应的是the main diagonal, index为正值对应一个upper diagonal, index为复制对应的是lower diagonal.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(np.eye(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[<span class="number">1.</span> <span class="number">0.</span>]</span><br><span class="line"> [<span class="number">0.</span> <span class="number">1.</span>]]</span><br></pre></td></tr></table></figure>
-<h2 id="randommultivariate_normal"><a class="markdownIt-Anchor" href="#randommultivariate_normal"></a> random.multivariate_normal()</h2>
-<p>用于根据实际情况生成一个多元正态分布矩阵。</p>
-<p>**def multivariate_normal(mean, cov, size=None, check_valid=None, tol=None) **</p>
-<p>其中mean和cov为必要的传参而size，check_valid以及tol为可选参数。</p>
-<p><strong>mean</strong>：mean是多维分布的均值维度为1；</p>
-<p><strong>cov</strong>：协方差矩阵（<a href="https://blog.csdn.net/zch1990s/article/details/80001991">协方差基本概念</a>）。注意：协方差矩阵必须是对称的且需为半正定矩阵；</p>
-<p><strong>size</strong>：指定生成的正态分布矩阵的维度（例：若size=(1, 1, 2)，则输出的矩阵的shape即形状为 1X1X2XN（N为mean的长度））。</p>
-<p><strong>check_valid</strong>：这个参数用于决定当cov即协方差矩阵不是半正定矩阵时程序的处理方式，它一共有三个值：warn，raise以及ignore。当使用warn作为传入的参数时，如果cov不是半正定的程序会输出警告但仍旧会得到结果；当使用raise作为传入的参数时，如果cov不是半正定的程序会报错且不会计算出结果；当使用ignore时忽略这个问题即无论cov是否为半正定的都会计算出结果。3种情况的console打印结果如下：</p>
-<h2 id="vstack-hstack"><a class="markdownIt-Anchor" href="#vstack-hstack"></a> vstack() &amp; hstack()</h2>
-<p>拼接数组的方法：</p>
-<p><strong>np.vstack()</strong>:在竖直方向上堆叠</p>
-<p><strong>np.hstack()</strong>:在水平方向上平铺</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">arr1=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">arr2=np.array([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])</span><br><span class="line"><span class="built_in">print</span> np.vstack((arr1,arr2))</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span> np.hstack((arr1,arr2))</span><br><span class="line"> </span><br><span class="line">a1=np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]])</span><br><span class="line">a2=np.array([[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>],[<span class="number">11</span>,<span class="number">12</span>]])</span><br><span class="line"><span class="built_in">print</span> a1</span><br><span class="line"><span class="built_in">print</span> a2</span><br><span class="line"><span class="built_in">print</span> np.hstack((a1,a2)</span><br><span class="line">                </span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]</span><br><span class="line">[[<span class="number">1</span> <span class="number">2</span>]</span><br><span class="line"> [<span class="number">3</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line">[[ <span class="number">7</span>  <span class="number">8</span>]</span><br><span class="line"> [ <span class="number">9</span> <span class="number">10</span>]</span><br><span class="line"> [<span class="number">11</span> <span class="number">12</span>]]</span><br><span class="line">[[ <span class="number">1</span>  <span class="number">2</span>  <span class="number">7</span>  <span class="number">8</span>]</span><br><span class="line"> [ <span class="number">3</span>  <span class="number">4</span>  <span class="number">9</span> <span class="number">10</span>]</span><br><span class="line"> [ <span class="number">5</span>  <span class="number">6</span> <span class="number">11</span> <span class="number">12</span>]]              </span><br></pre></td></tr></table></figure>
-<h2 id="enumerate"><a class="markdownIt-Anchor" href="#enumerate"></a> enumerate()</h2>
-<p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p>
-<p><strong>enumerate(sequence, [start=0])</strong></p>
-<p>start: 默认从0开始</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> c, d <span class="keyword">in</span> <span class="built_in">enumerate</span>([<span class="number">3.0</span>]):</span><br><span class="line">    print(c, d)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">0</span> <span class="number">3.0</span></span><br></pre></td></tr></table></figure>
-<h2 id="argmax"><a class="markdownIt-Anchor" href="#argmax"></a> argmax()</h2>
-<blockquote>
-<p><a href="https://www.cnblogs.com/touch-skyer/p/8509217.html">argmax用法</a></p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">2</span>],</span><br><span class="line">              [<span class="number">9</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">8</span>],</span><br><span class="line">              [<span class="number">3</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>]])</span><br><span class="line">print(np.argmax(a, axis=<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">2</span>],</span><br><span class="line">              [<span class="number">9</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">8</span>],</span><br><span class="line">              [<span class="number">3</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>]])</span><br><span class="line">print(np.argmax(a, axis=<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
-<h2 id="randomrand"><a class="markdownIt-Anchor" href="#randomrand"></a> random.rand()</h2>
-<p>numpy.random.rand(d0,d1,…,dn)</p>
-<p>通过本函数可以返回一个或一组服从“0~1”<strong>均匀分布</strong>的随机样本值。随机样本取值范围是[0,1)，不包括1。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 无参数时，返回一个样本</span></span><br><span class="line">x = np.random.randn()</span><br><span class="line">print(x)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">0.24745677216860873</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数为1时，返回array</span></span><br><span class="line">x = np.random.randn(<span class="number">1</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">0.66546358</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数&gt;1时，返回指定维度一组样本</span></span><br><span class="line">x = np.random.rand(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">print(x)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[<span class="number">0.4608127</span>  <span class="number">0.99431673</span> <span class="number">0.9204902</span> ]</span><br><span class="line"> [<span class="number">0.78585376</span> <span class="number">0.68346213</span> <span class="number">0.07962104</span>]]</span><br></pre></td></tr></table></figure>
-<h2 id="randomrandn"><a class="markdownIt-Anchor" href="#randomrandn"></a> random.randn()</h2>
-<p>numpy.random.randn(d0,d1,…,dn)</p>
+<div class="note info"><p>参考<mark class="label primary">2020年8月北京第24次印刷版本</mark></p>
+<p><mark class="label warning">warning: 该书较老且代码不全不太符合规范</mark></p>
+<p><mark class="label success">其中标题数字代表页码</mark></p>
+</div>
+<p>主要还是记录自己的学习记录，因为总结出自己的学习笔记比翻书节省时间，而且可以锻炼自己的思维能力。</p>
+<hr />
+<h2 id="基本的图像操作与处理"><a class="markdownIt-Anchor" href="#基本的图像操作与处理"></a> 基本的图像操作与处理</h2>
+<h3 id="pil"><a class="markdownIt-Anchor" href="#pil"></a> PIL</h3>
 <ul>
-<li>randn函数返回一个或一组样本，具有<strong>标准正态分布</strong>。</li>
-<li>dn表格每个维度</li>
-<li>返回值为指定维度的array</li>
+<li>Python Imaging Library</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 无参数时，返回一个样本</span></span><br><span class="line">x = np.random.randn()</span><br><span class="line">print(x)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">0.3372003142381499</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数为1时，返回array</span></span><br><span class="line">x = np.random.randn(<span class="number">1</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[-<span class="number">0.81388974</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数&gt;1时，返回指定维度一组样本</span></span><br><span class="line">x = np.random.randn(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[-<span class="number">0.73107015</span> -<span class="number">0.75779713</span> -<span class="number">0.13421781</span>]</span><br><span class="line"> [-<span class="number">0.90713738</span> -<span class="number">0.26851973</span> -<span class="number">1.48609181</span>]]</span><br></pre></td></tr></table></figure>
-<h2 id=""><a class="markdownIt-Anchor" href="#"></a> *</h2>
+<p>其中<code>PIL</code>最重要的模块是<code>Image</code>。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>参考： <a href="http://voidcn.com/article/p-grchamdd-bwa.html">voidcn.com/article/p-grchamdd-bwa.html</a></p>
+<p>其中<code>pylab</code>和<code>pyplot</code>区别如下：</p>
+<p>参考博客 ：<a href="https://blog.csdn.net/songbaiyao/article/details/105814682?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-0&amp;spm=1001.2101.3001.4242">pylab和pyplot的区别</a></p>
 </blockquote>
-<p>这不是NumPy特有的语法;它是Python语法.所谓的* -operator是Python语法,它在参数列表中对序列进行解包(参见 [Unpacking Argument Lists](javascript:void())).</p>
-<p>您的示例中的用法是将形状元组解压缩为单独的参数.这是必需的,因为numpy.random.randn将任意数量的整数作为参数,而不是整数元组.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>]])</span><br><span class="line">print(x.shape)</span><br><span class="line">print(*x.shape)</span><br><span class="line">print(*x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"><span class="number">2</span> <span class="number">2</span></span><br><span class="line">[<span class="number">1</span> <span class="number">2</span>] [<span class="number">2</span> <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-<h2 id="uniform"><a class="markdownIt-Anchor" href="#uniform"></a> uniform()</h2>
-<p>random.uniform(x, y)</p>
-<p>将随机生成一个实数，它在 [x,y] 范围内。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.random.uniform(<span class="number">2</span>,<span class="number">10</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">7.550599514372211</span></span><br></pre></td></tr></table></figure>
+<p>原图：</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/logo.JPG" class="" width="520">
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_im = Image.<span class="built_in">open</span>(<span class="string">&#x27;logo.JPG&#x27;</span>)</span><br><span class="line">print(pil_im)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回值是一个PIL图像对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line">&lt;PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=2048x2048 at <span class="number">0x7FE791E67BB0</span>&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="转换为灰度图"><a class="markdownIt-Anchor" href="#转换为灰度图"></a> 转换为灰度图：</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_gray = pil_im.convert(<span class="string">&#x27;L&#x27;</span>)</span><br><span class="line">print(pil_gray)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>&lt;PIL.Image.Image image mode=L size=2048x2048 at <span class="number">0x7FCF4F373DF0</span>&gt;</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427110914776.png" class="" width="520">
+<h4 id="复制和粘贴图像区域"><a class="markdownIt-Anchor" href="#复制和粘贴图像区域"></a> 复制和粘贴图像区域：</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># box大小（左，上，右，下）</span></span><br><span class="line">box = (<span class="number">100</span>, <span class="number">100</span>, <span class="number">1200</span>, <span class="number">1200</span>)</span><br><span class="line">region = pil_im.crop(box)</span><br><span class="line">region = region.transpose(Image.ROTATE_90)</span><br><span class="line">pil_im.paste(region,box)</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427111941651.png" class="" width="520">
+<h3 id="matplotlib"><a class="markdownIt-Anchor" href="#matplotlib"></a> Matplotlib</h3>
+<h4 id="绘制图像-点和线"><a class="markdownIt-Anchor" href="#绘制图像-点和线"></a> 绘制图像、点和线</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 读取图像到数组中</span></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;logo.JPG&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制图像</span></span><br><span class="line">imshow(im)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一些点</span></span><br><span class="line">x = [<span class="number">100</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">400</span>]</span><br><span class="line">y = [<span class="number">200</span>, <span class="number">500</span>, <span class="number">200</span>, <span class="number">500</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用红色星状标记绘制点</span></span><br><span class="line">plot(x, y, <span class="string">&#x27;r*&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制连接前两个点的线</span></span><br><span class="line">plot(x[:<span class="number">2</span>], y[:<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加标题，显示绘制的图像</span></span><br><span class="line">title(<span class="string">&#x27;Plotting: &quot;logp.JPG&quot;&#x27;</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427112717964.png" class="" width="520">
+<h4 id="图像的轮廓和直方图"><a class="markdownIt-Anchor" href="#图像的轮廓和直方图"></a> 图像的轮廓和直方图</h4>
+<p><strong>原图：</strong></p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/cat.jpeg" class="" title="cat">
+<p><strong>轮廓图</strong>：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图像到数组中</span></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line"></span><br><span class="line">figure()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 无颜色显示</span></span><br><span class="line">gray()</span><br><span class="line"><span class="comment"># 轮廓图</span></span><br><span class="line">contour(im,origin= <span class="string">&#x27;image&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表示x轴和y轴的单位长度相同</span></span><br><span class="line">axis(<span class="string">&#x27;equal&#x27;</span>)</span><br><span class="line"><span class="comment"># 关闭所有坐标轴线、刻度标记和标签</span></span><br><span class="line">axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line"></span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427113824645.png" class="" title="contour">
+<p><strong>直方图</strong>：表征像素值分布情况</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直方图</span></span><br><span class="line">figure()</span><br><span class="line"><span class="comment"># 128理解为多少个柱子</span></span><br><span class="line">hist(im.flatten(), <span class="number">128</span>, edgecolor=<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427145332060.png" class="" title="hist">
+<h4 id="交互式标注"><a class="markdownIt-Anchor" href="#交互式标注"></a> 交互式标注</h4>
+<p>在一幅图像中标注一些点，或者标注一些训练数据。</p>
+<div class="note danger"><p>以下代码为书中代码，但并未实现，如需实现，请使用<code>cv2</code>。</p>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>))</span><br><span class="line">print(<span class="string">&quot;点仨点&quot;</span>)</span><br><span class="line">fig = figure()</span><br><span class="line"></span><br><span class="line">imshow(im)</span><br><span class="line">x = ginput(<span class="number">3</span>)</span><br><span class="line">print(<span class="string">&quot;你点了&quot;</span>,x)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<h3 id="numpy"><a class="markdownIt-Anchor" href="#numpy"></a> Numpy</h3>
+<h4 id="图像用数组表示"><a class="markdownIt-Anchor" href="#图像用数组表示"></a> 图像用数组表示</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>))</span><br><span class="line">print(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">im_g = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>), <span class="string">&#x27;f&#x27;</span>)</span><br><span class="line">print(im_g.shape, im_g.dtype)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">(<span class="number">665</span>, <span class="number">1182</span>, <span class="number">3</span>) uint8</span><br><span class="line">(<span class="number">665</span>, <span class="number">1182</span>) float32</span><br></pre></td></tr></table></figure>
+<h4 id="灰度变换"><a class="markdownIt-Anchor" href="#灰度变换"></a> 灰度变换</h4>
+<p>考虑任意函数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> ，也就是一个变换函数。</p>
+<p>定义域和值域相同。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line"></span><br><span class="line">im2 = <span class="number">255</span> - im <span class="comment"># 反转</span></span><br><span class="line"></span><br><span class="line">im3 = (<span class="number">100</span> / <span class="number">255</span>) * im + <span class="number">100</span> <span class="comment"># 图像像素区间限制到[100,200]</span></span><br><span class="line"></span><br><span class="line">im4 = <span class="number">255</span> * (im / <span class="number">255</span>) ** <span class="number">2</span> <span class="comment"># 像素值平方</span></span><br></pre></td></tr></table></figure>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427160921879.png" class="" title="fx">
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分为四个小版块，2*2大小</span></span><br><span class="line"><span class="comment"># 第1张，即左上角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">221</span>)</span><br><span class="line">ax.imshow(im, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第2张，即右上角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">222</span>)</span><br><span class="line">ax.imshow(im2, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第3张，即左下角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">223</span>)</span><br><span class="line">ax.imshow(im3, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第4张，即右下角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">224</span>)</span><br><span class="line">ax.imshow(im4, plt.cm.gray)</span><br></pre></td></tr></table></figure>
+<p>其中有一个问题从今早开始就一直困扰着我，就是我的灰度图是绿色的，如下：</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427164955804.png" class="" title="gray_green">
+<p>我怀疑我是色盲- -，但是后来取查了一下，发现<code>plt.imshow()</code>默认是三通道的，所以我们需要在<code>imshow()</code>中添加 <code>plt.cm.gray</code> 参数，才显示正确，说真的，现在都用<code>cv2</code>了…</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427165156218.png" class="" title="correct_gray">
+<blockquote>
+<p>使用<code>fromarray</code>方法和直接<code>gray</code>的效果很不同：</p>
+<ul>
+<li>上图为将<code>array</code>转换为<code>Image</code>后</li>
+<li>下图为使用<code>plt.cm.gray</code>参数</li>
+</ul>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427170612523.png" class="" width="250">
+<p>像素范围在[100, 200]内，<sub>所以我个人认为可能是上图比较贴合？</sub></p>
+<p>【已解决】<strong>结论是下图最贴合</strong></p>
+<p>经过读书，发现 <code>fromarray</code>方法需要将数据类型转换回来，所以看下图，左图为将其数据类型转换回来后的图，右图为直接转换，并未按照原类型。</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427171603655.png" class="" width="500">
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im5 = Image.fromarray(np.uint8(im3)) <span class="comment"># 左图将其数据类型转换回来</span></span><br><span class="line">im6 = Image.fromarray(im3)           <span class="comment"># 右图直接转换</span></span><br><span class="line">print(im5)</span><br><span class="line">print(im6)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到输出的mode是不同的</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&lt;PIL.Image.Image image mode=L size=1182x665 at <span class="number">0x7FD867392220</span>&gt;</span><br><span class="line">&lt;PIL.Image.Image image mode=F size=1182x665 at <span class="number">0x7FD867392AF0</span>&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>内置函数将array转换为Image：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_im = Image.fromarray(im)</span><br></pre></td></tr></table></figure>
+<p>如果你并不十分确定输入数据的类型，安全起见，应该先转换回来。 注意，NumPy 总是将数组数据类型转换成能够表示数据的“最低”数据类型。对浮点数做乘积或除法操作会使整数类型的数组变成浮点类型。</p>
+<h4 id="直方图均衡化"><a class="markdownIt-Anchor" href="#直方图均衡化"></a> 直方图均衡化</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">histeq</span>(<span class="params">im, nbr_bins=<span class="number">256</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot; 对一幅灰度图进行直方图均衡化 &quot;&quot;&quot;</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; imtools.py &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; page:11 &#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算图像的直方图</span></span><br><span class="line">    imhist, bins = np.histogram(im.flatten(), nbr_bins, density=<span class="literal">True</span>)</span><br><span class="line">    cdf = imhist.cumsum()</span><br><span class="line">    cdf = <span class="number">255</span> * cdf / cdf[-<span class="number">1</span>]  <span class="comment"># 归一化</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用累计分布函数的线性插值，计算新的像素值</span></span><br><span class="line">    im2 = np.interp(im.flatten(), bins[:-<span class="number">1</span>], cdf)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> im2.reshape(im.shape), cdf</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line">im2, cdf = imtools.histeq(im)</span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line"></span><br><span class="line">ax = fig.add_subplot(<span class="number">211</span>)</span><br><span class="line">ax.imshow(im, plt.cm.gray)</span><br><span class="line">ax = fig.add_subplot(<span class="number">212</span>)</span><br><span class="line">ax.imshow(Image.fromarray(im2))</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>如图所示，上图为原图转换为灰度图，中间图为均衡函数，右图为均衡化后的结果。</p>
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427185521726.png" class="" title="直方图均衡化">
+<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427185903555.png" class="" title="示例2">
 ]]></content>
       <categories>
         <category>学习</category>
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
+        <tag>书籍</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>卷积神经网络</title>
+    <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>学会变通，才能开启新的道路。——Hoohoo</p>
+</blockquote>
+<span id="more"></span>
+<p>大家好，因为最近在学SLAM14，但是由于一些原因，可能是分类过于多，我决定先把CV的前瞻课程学好——也就是深度学习这块，其实一直有了解，只是断断续续，也没有给自己一个确切的目标，毕竟现在搞视觉不带点深度学习的东西没办法搞了就。</p>
+<p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
+<p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
+<p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
+<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO5都出来了，<s>而且这本书采用的是tf1…</s> 我决定使用Pytorch，毕竟工业界用的比较多的是tf，而我们学生家家就乖乖用PyTorch吧。</p>
+<p><s>不过没关系</s>，就这样开始吧。</p>
+<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
+<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
+<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
+<p>比如三个全连接层的网络，输入784的话，隐藏层节点为100，即为（784 * 100 * 100 * 100 *100 * 10）…</p>
+<p>太多了，可以参考下图。</p>
+<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413195841238.png" class="" title="三层全连接网络">
+<p>而且全连接网络忽视了图像的形状，比如，我们一张有色彩的图片，一般是三通道的，但是全连接网络会将其压缩成1 chanel。所以全连接层无法利用与性状有关的信息。</p>
+<h3 id="卷积网络"><a class="markdownIt-Anchor" href="#卷积网络"></a> 卷积网络</h3>
+<h4 id="卷积层"><a class="markdownIt-Anchor" href="#卷积层"></a> 卷积层</h4>
+<p>卷积层的输入输出数据称为 <strong>特征图（feature map）</strong></p>
+<p><strong>输入：</strong> 输入特征图</p>
+<p><strong>输出：</strong> 输出特征图</p>
+<h4 id="卷积运算"><a class="markdownIt-Anchor" href="#卷积运算"></a> 卷积运算</h4>
+<p>卷积运算相当于图像处理中的滤波运算。</p>
+<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413200914937.png" class="" title="卷积运算">
+<p>卷积运算非常好理解，除了我画得比较丑。</p>
+<p>多层卷积就多层卷积就一对一，二对二进行卷积运算，然后叠加在一起成为一个。</p>
+<p>如果想成为多个，就输入多个滤波器。</p>
+<p>有几个滤波器，输出几个卷积。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1445,73 +1497,54 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>技术</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>技术</tag>
+        <tag>学习</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
-    <title>写两个脚本帮你一键实现博客本地预览和上传</title>
-    <url>/2021/04/19/%E6%8A%80%E6%9C%AF/%E5%86%99%E4%B8%A4%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%B8%AE%E4%BD%A0%E4%B8%80%E9%94%AE%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E5%92%8C%E4%B8%8A%E4%BC%A0/</url>
-    <content><![CDATA[<blockquote>
-<p>脚本脚本，用手写。</p>
+    <title>PyTorch的学习（一）：配置环境</title>
+    <url>/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<h1 id="pytorch的学习"><a class="markdownIt-Anchor" href="#pytorch的学习"></a> PyTorch的学习</h1>
+<blockquote>
+<p>工具只是工具，好好掌握一种工具。</p>
 </blockquote>
 <span id="more"></span>
 <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>是看到少数派动手写脚本的一篇文章受了启发，而且mac系统本来和Linux都差不多的，博客本地预览和上传永远都是固定的命令，却要烦琐的等待，所以懒惰的人就要写点什么让自己心安理得的更加懒惰。</p>
-<p>开始吧。</p>
-<h2 id="想法"><a class="markdownIt-Anchor" href="#想法"></a> 想法</h2>
-<p>我的hexo博客地址是<code>/Users/hoohoo/Clutter/Blog</code>，所以每次都需要先进入，再输入命令，而且有些时候网速不行，就习惯性等待先clean后再继续。</p>
-<p>都是一些固定的操作，所以脚本也很简单。</p>
-<h2 id="本地预览脚本"><a class="markdownIt-Anchor" href="#本地预览脚本"></a> 本地预览脚本</h2>
-<ol>
-<li>随便在哪个目录下创建本地预览脚本<code>hs.sh</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim hs.sh</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>输入以下内容：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;clean完啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行本地预览命令</span></span><br><span class="line">y=`hexo s`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;http://localhost:4000/&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>使用<code>chmod</code>对<code>hs.sh</code>添加可执行权限：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hs.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>将<code>hs.sh</code>改名为<code>hs</code>，在终端下输入：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hs.sh hs</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hs /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
-<h2 id="上传脚本"><a class="markdownIt-Anchor" href="#上传脚本"></a> 上传脚本</h2>
-<ol>
-<li>随便在哪个目录下创建本地预览脚本<code>hgd.sh</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim hdg.sh</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>输入以下内容：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你clean好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行generate命令</span></span><br><span class="line">y=`hexo g`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你generate好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行deploy命令</span></span><br><span class="line">z=`hexo d`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$z</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$d</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你可以去你的hellohoohoo.com上看啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>使用<code>chmod</code>对<code>hgd.sh</code>添加可执行权限：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 hgd.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>将<code>hgd.sh</code>改名为<code>hgd</code>，在终端下输入：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hgd.sh hgd</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv hgd /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
+<p>本来是准备用tf的，但是书籍可能买得较早，当时也懵懂，现在2已经出来了，但是用的书还是1。</p>
+<p>也问过一些同学，某同学表示框架掌握1个就可以了，我深以为然，但是最近看论文的开源代码，大多数都采用PyTorch，也经过了一些查询后，由于Pytorch和python差不多，而且tf1的静态图和tf2的动态图把我整懵了，太麻烦了，所以，就直接开始PyTorch吧。</p>
+<p>但是我们开始学习的第一步并不是去学习语法，而是去配置环境，可以说配置环境这个东西让人听到就头疼，当时Hadoop配分布式环境时，足足以星期为单位计算。</p>
+<p>来吧，头铁也必须撞。</p>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda"></a> Anaconda</h3>
+<blockquote>
+<p>地址： <a href="https://www.anaconda.com/products/individual#Downloads">https://www.anaconda.com/products/individual#Downloads</a></p>
+</blockquote>
+<p>选择自己系统版本下载即可。</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193631211.png" class="" title="anaconda下载">
+<h3 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch"></a> PyTorch</h3>
+<blockquote>
+<p>地址： <a href="https://pytorch.org/">https://pytorch.org/</a></p>
+</blockquote>
+<p>黄色框即为指令，选择自己匹配的选项，即可复制指令直接在terminal中输入。</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413192917013.png" class="" title="pytorch指令">
+<p>我用的是Mac，所以我的配置如下：</p>
+<img src="/2021/04/13/PyTorch%E5%AD%A6%E4%B9%A0/PyTorch%E7%9A%84%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/image-20210413193108252.png" class="" title="mac指令">
+<p>下载还是有些慢的，可以换源或者挂梯子。</p>
+<h2 id="安装完成测试"><a class="markdownIt-Anchor" href="#安装完成测试"></a> 安装完成测试</h2>
+<p>在projects下新建一个<code>test.py</code>的python文件，并输入以下内容：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">print(torch.__version__)</span><br></pre></td></tr></table></figure>
+<p>在终端中输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python test.py</span><br></pre></td></tr></table></figure>
+<p>若输出版本号即安装成功。</p>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>学习</category>
       </categories>
       <tags>
-        <tag>技术</tag>
-        <tag>Linux</tag>
+        <tag>学习</tag>
+        <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
@@ -1663,142 +1696,113 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </tags>
   </entry>
   <entry>
-    <title>【PCV】学习笔记（一）</title>
-    <url>/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<blockquote class="blockquote-center">
-<p>用旧钥匙打开新领域的门</p>
-
+    <title>Numpy的一些用法</title>
+    <url>/2021/04/12/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/Numpy%E7%9A%84%E4%B8%80%E4%BA%9B%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="numpy"><a class="markdownIt-Anchor" href="#numpy"></a> numpy</h1>
+<blockquote>
+<p><s>import numpy as npy</s></p>
+<p>import numpy as np</p>
 </blockquote>
 <span id="more"></span>
-<div class="note info"><p>参考<mark class="label primary">2020年8月北京第24次印刷版本</mark></p>
-<p><mark class="label warning">warning: 该书较老且代码不全不太符合规范</mark></p>
-<p><mark class="label success">其中标题数字代表页码</mark></p>
-</div>
-<p>主要还是记录自己的学习记录，因为总结出自己的学习笔记比翻书节省时间，而且可以锻炼自己的思维能力。</p>
-<hr />
-<h2 id="基本的图像操作与处理"><a class="markdownIt-Anchor" href="#基本的图像操作与处理"></a> 基本的图像操作与处理</h2>
-<h3 id="pil"><a class="markdownIt-Anchor" href="#pil"></a> PIL</h3>
-<ul>
-<li>Python Imaging Library</li>
-</ul>
-<p>其中<code>PIL</code>最重要的模块是<code>Image</code>。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
+<h2 id="reshape-中的-1"><a class="markdownIt-Anchor" href="#reshape-中的-1"></a> reshape() 中的-1</h2>
 <blockquote>
-<p>其中<code>pylab</code>和<code>pyplot</code>区别如下：</p>
-<p>参考博客 ：<a href="https://blog.csdn.net/songbaiyao/article/details/105814682?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-0&amp;spm=1001.2101.3001.4242">pylab和pyplot的区别</a></p>
+<p>参考博客：<a href="https://blog.csdn.net/shyjhyp11/article/details/110949460?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242">https://blog.csdn.net/shyjhyp11/article/details/110949460?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242</a></p>
 </blockquote>
-<p>原图：</p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/logo.JPG" class="" width="520">
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_im = Image.<span class="built_in">open</span>(<span class="string">&#x27;logo.JPG&#x27;</span>)</span><br><span class="line">print(pil_im)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回值是一个PIL图像对象</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line">&lt;PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=2048x2048 at <span class="number">0x7FE791E67BB0</span>&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="转换为灰度图"><a class="markdownIt-Anchor" href="#转换为灰度图"></a> 转换为灰度图：</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_gray = pil_im.convert(<span class="string">&#x27;L&#x27;</span>)</span><br><span class="line">print(pil_gray)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>&lt;PIL.Image.Image image mode=L size=2048x2048 at <span class="number">0x7FCF4F373DF0</span>&gt;</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427110914776.png" class="" width="520">
-<h4 id="复制和粘贴图像区域"><a class="markdownIt-Anchor" href="#复制和粘贴图像区域"></a> 复制和粘贴图像区域：</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># box大小（左，上，右，下）</span></span><br><span class="line">box = (<span class="number">100</span>, <span class="number">100</span>, <span class="number">1200</span>, <span class="number">1200</span>)</span><br><span class="line">region = pil_im.crop(box)</span><br><span class="line">region = region.transpose(Image.ROTATE_90)</span><br><span class="line">pil_im.paste(region,box)</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427111941651.png" class="" width="520">
-<h3 id="matplotlib"><a class="markdownIt-Anchor" href="#matplotlib"></a> Matplotlib</h3>
-<h4 id="绘制图像-点和线"><a class="markdownIt-Anchor" href="#绘制图像-点和线"></a> 绘制图像、点和线</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 读取图像到数组中</span></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;logo.JPG&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制图像</span></span><br><span class="line">imshow(im)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一些点</span></span><br><span class="line">x = [<span class="number">100</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">400</span>]</span><br><span class="line">y = [<span class="number">200</span>, <span class="number">500</span>, <span class="number">200</span>, <span class="number">500</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用红色星状标记绘制点</span></span><br><span class="line">plot(x, y, <span class="string">&#x27;r*&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制连接前两个点的线</span></span><br><span class="line">plot(x[:<span class="number">2</span>], y[:<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加标题，显示绘制的图像</span></span><br><span class="line">title(<span class="string">&#x27;Plotting: &quot;logp.JPG&quot;&#x27;</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427112717964.png" class="" width="520">
-<h4 id="图像的轮廓和直方图"><a class="markdownIt-Anchor" href="#图像的轮廓和直方图"></a> 图像的轮廓和直方图</h4>
-<p><strong>原图：</strong></p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/cat.jpeg" class="" title="cat">
-<p><strong>轮廓图</strong>：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图像到数组中</span></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line"></span><br><span class="line">figure()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 无颜色显示</span></span><br><span class="line">gray()</span><br><span class="line"><span class="comment"># 轮廓图</span></span><br><span class="line">contour(im,origin= <span class="string">&#x27;image&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表示x轴和y轴的单位长度相同</span></span><br><span class="line">axis(<span class="string">&#x27;equal&#x27;</span>)</span><br><span class="line"><span class="comment"># 关闭所有坐标轴线、刻度标记和标签</span></span><br><span class="line">axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line"></span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427113824645.png" class="" title="contour">
-<p><strong>直方图</strong>：表征像素值分布情况</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直方图</span></span><br><span class="line">figure()</span><br><span class="line"><span class="comment"># 128理解为多少个柱子</span></span><br><span class="line">hist(im.flatten(), <span class="number">128</span>, edgecolor=<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427145332060.png" class="" title="hist">
-<h4 id="交互式标注"><a class="markdownIt-Anchor" href="#交互式标注"></a> 交互式标注</h4>
-<p>在一幅图像中标注一些点，或者标注一些训练数据。</p>
-<div class="note danger"><p>以下代码为书中代码，但并未实现，如需实现，请使用<code>cv2</code>。</p>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">im = array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>))</span><br><span class="line">print(<span class="string">&quot;点仨点&quot;</span>)</span><br><span class="line">fig = figure()</span><br><span class="line"></span><br><span class="line">imshow(im)</span><br><span class="line">x = ginput(<span class="number">3</span>)</span><br><span class="line">print(<span class="string">&quot;你点了&quot;</span>,x)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
-<h3 id="numpy"><a class="markdownIt-Anchor" href="#numpy"></a> Numpy</h3>
-<h4 id="图像用数组表示"><a class="markdownIt-Anchor" href="#图像用数组表示"></a> 图像用数组表示</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>))</span><br><span class="line">print(im.shape,im.dtype)</span><br><span class="line"></span><br><span class="line">im_g = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>), <span class="string">&#x27;f&#x27;</span>)</span><br><span class="line">print(im_g.shape, im_g.dtype)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">(<span class="number">665</span>, <span class="number">1182</span>, <span class="number">3</span>) uint8</span><br><span class="line">(<span class="number">665</span>, <span class="number">1182</span>) float32</span><br></pre></td></tr></table></figure>
-<h4 id="灰度变换"><a class="markdownIt-Anchor" href="#灰度变换"></a> 灰度变换</h4>
-<p>考虑任意函数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> ，也就是一个变换函数。</p>
-<p>定义域和值域相同。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line"></span><br><span class="line">im2 = <span class="number">255</span> - im <span class="comment"># 反转</span></span><br><span class="line"></span><br><span class="line">im3 = (<span class="number">100</span> / <span class="number">255</span>) * im + <span class="number">100</span> <span class="comment"># 图像像素区间限制到[100,200]</span></span><br><span class="line"></span><br><span class="line">im4 = <span class="number">255</span> * (im / <span class="number">255</span>) ** <span class="number">2</span> <span class="comment"># 像素值平方</span></span><br></pre></td></tr></table></figure>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427160921879.png" class="" title="fx">
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分为四个小版块，2*2大小</span></span><br><span class="line"><span class="comment"># 第1张，即左上角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">221</span>)</span><br><span class="line">ax.imshow(im, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第2张，即右上角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">222</span>)</span><br><span class="line">ax.imshow(im2, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第3张，即左下角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">223</span>)</span><br><span class="line">ax.imshow(im3, plt.cm.gray)</span><br><span class="line"><span class="comment"># 第4张，即右下角</span></span><br><span class="line">ax = fig.add_subplot(<span class="number">224</span>)</span><br><span class="line">ax.imshow(im4, plt.cm.gray)</span><br></pre></td></tr></table></figure>
-<p>其中有一个问题从今早开始就一直困扰着我，就是我的灰度图是绿色的，如下：</p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427164955804.png" class="" title="gray_green">
-<p>我怀疑我是色盲- -，但是后来取查了一下，发现<code>plt.imshow()</code>默认是三通道的，所以我们需要在<code>imshow()</code>中添加 <code>plt.cm.gray</code> 参数，才显示正确，说真的，现在都用<code>cv2</code>了…</p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427165156218.png" class="" title="correct_gray">
+<p>新数组的shape属性应该要与原来数组的一致，即新数组元素数量与原数组元素数量要相等。一个参数为-1时，那么reshape函数会根据另一个参数的维度计算出数组的另外一个shape属性值。</p>
+<h2 id="dot"><a class="markdownIt-Anchor" href="#dot"></a> dot()</h2>
 <blockquote>
-<p>使用<code>fromarray</code>方法和直接<code>gray</code>的效果很不同：</p>
-<ul>
-<li>上图为将<code>array</code>转换为<code>Image</code>后</li>
-<li>下图为使用<code>plt.cm.gray</code>参数</li>
-</ul>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427170612523.png" class="" width="250">
-<p>像素范围在[100, 200]内，<sub>所以我个人认为可能是上图比较贴合？</sub></p>
-<p>【已解决】<strong>结论是下图最贴合</strong></p>
-<p>经过读书，发现 <code>fromarray</code>方法需要将数据类型转换回来，所以看下图，左图为将其数据类型转换回来后的图，右图为直接转换，并未按照原类型。</p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427171603655.png" class="" width="500">
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im5 = Image.fromarray(np.uint8(im3)) <span class="comment"># 左图将其数据类型转换回来</span></span><br><span class="line">im6 = Image.fromarray(im3)           <span class="comment"># 右图直接转换</span></span><br><span class="line">print(im5)</span><br><span class="line">print(im6)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以看到输出的mode是不同的</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&lt;PIL.Image.Image image mode=L size=1182x665 at <span class="number">0x7FD867392220</span>&gt;</span><br><span class="line">&lt;PIL.Image.Image image mode=F size=1182x665 at <span class="number">0x7FD867392AF0</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>参考博客：<a href="https://www.cnblogs.com/Shawnyi/p/10370815.html">https://www.cnblogs.com/Shawnyi/p/10370815.html</a></p>
 </blockquote>
-<p>内置函数将array转换为Image：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pil_im = Image.fromarray(im)</span><br></pre></td></tr></table></figure>
-<p>如果你并不十分确定输入数据的类型，安全起见，应该先转换回来。 注意，NumPy 总是将数组数据类型转换成能够表示数据的“最低”数据类型。对浮点数做乘积或除法操作会使整数类型的数组变成浮点类型。</p>
-<h4 id="直方图均衡化"><a class="markdownIt-Anchor" href="#直方图均衡化"></a> 直方图均衡化</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">histeq</span>(<span class="params">im, nbr_bins=<span class="number">256</span></span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot; 对一幅灰度图进行直方图均衡化 &quot;&quot;&quot;</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; imtools.py &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27; page:11 &#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算图像的直方图</span></span><br><span class="line">    imhist, bins = np.histogram(im.flatten(), nbr_bins, density=<span class="literal">True</span>)</span><br><span class="line">    cdf = imhist.cumsum()</span><br><span class="line">    cdf = <span class="number">255</span> * cdf / cdf[-<span class="number">1</span>]  <span class="comment"># 归一化</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用累计分布函数的线性插值，计算新的像素值</span></span><br><span class="line">    im2 = np.interp(im.flatten(), bins[:-<span class="number">1</span>], cdf)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> im2.reshape(im.shape), cdf</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">im = np.array(Image.<span class="built_in">open</span>(<span class="string">&#x27;cat.jpeg&#x27;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line">im2, cdf = imtools.histeq(im)</span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line"></span><br><span class="line">ax = fig.add_subplot(<span class="number">211</span>)</span><br><span class="line">ax.imshow(im, plt.cm.gray)</span><br><span class="line">ax = fig.add_subplot(<span class="number">212</span>)</span><br><span class="line">ax.imshow(Image.fromarray(im2))</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>如图所示，上图为原图转换为灰度图，中间图为均衡函数，右图为均衡化后的结果。</p>
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427185521726.png" class="" title="直方图均衡化">
-<img src="/2021/04/27/PCV/%E3%80%90PCV%E3%80%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/image-20210427185903555.png" class="" title="示例2">
+<p>如果为一维矩阵，则返回内积，如（2，3）和（4，5）则返回23</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">y = np.array([<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line">print(np.dot(x,y))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">23</span></span><br></pre></td></tr></table></figure>
+<p>如果为多维矩阵，则返回矩阵相乘后的矩阵</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">              [<span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">              [<span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">              [<span class="number">4</span>, <span class="number">5</span>]])</span><br><span class="line">y = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], </span><br><span class="line">              [<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]])</span><br><span class="line">   </span><br><span class="line">print(np.dot(x,y))</span><br><span class="line">    </span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[ <span class="number">9</span>  <span class="number">8</span>  <span class="number">7</span>  <span class="number">6</span>]</span><br><span class="line"> [<span class="number">14</span> <span class="number">13</span> <span class="number">12</span> <span class="number">11</span>]</span><br><span class="line"> [<span class="number">19</span> <span class="number">18</span> <span class="number">17</span> <span class="number">16</span>]</span><br><span class="line"> [<span class="number">24</span> <span class="number">23</span> <span class="number">22</span> <span class="number">21</span>]]</span><br></pre></td></tr></table></figure>
+<h2 id="shape"><a class="markdownIt-Anchor" href="#shape"></a> shape</h2>
+<blockquote>
+<p>参考博客：<a href="https://www.pythonheidong.com/blog/article/148310/df0823653bdb440c1ce3/">https://www.pythonheidong.com/blog/article/148310/df0823653bdb440c1ce3/</a></p>
+</blockquote>
+<p>img.shape[0]：图像的垂直尺寸（高度）</p>
+<p>img.shape[1]：图像的水平尺寸（宽度）</p>
+<p>img.shape[2]：图像的通道数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">2</span>, <span class="number">3</span>], [<span class="number">1</span>, <span class="number">3</span>]])</span><br><span class="line">print(x.shape[<span class="number">0</span>])</span><br><span class="line">print(x.shape[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h2 id="array的相加"><a class="markdownIt-Anchor" href="#array的相加"></a> + array的相加</h2>
+<p>由于广播作用</p>
+<p>例如：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>],</span><br><span class="line">              [<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">              [<span class="number">3</span>,<span class="number">4</span>],</span><br><span class="line">              [<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line"></span><br><span class="line">y = np.array([<span class="number">2</span>,<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">print(x+y)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[<span class="number">3</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">5</span> <span class="number">5</span>]</span><br><span class="line"> [<span class="number">6</span> <span class="number">6</span>]]</span><br></pre></td></tr></table></figure>
+<p>如(N,M)和(,M)相加后，即列数相等，从第一行到最后一行逐行与后面的array相加</p>
+<h2 id="flatten"><a class="markdownIt-Anchor" href="#flatten"></a> flatten()</h2>
+<p>将数组转换为一维数组</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">              [<span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">              [<span class="number">3</span>, <span class="number">4</span>],</span><br><span class="line">              [<span class="number">4</span>, <span class="number">5</span>]])</span><br><span class="line">z = x.flatten()</span><br><span class="line">print(z)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">3</span> <span class="number">3</span> <span class="number">4</span> <span class="number">4</span> <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="eye"><a class="markdownIt-Anchor" href="#eye"></a> eye()</h2>
+<blockquote>
+<p>Return a 2-D array with ones on the diagonal and zeros elsewhere.</p>
+</blockquote>
+<p>函数eye()的作用是返回一个对角线diagonal上全是1，而其他位置全为0的一个二维数组（2D-array）。</p>
+<p><strong>numpy.eye(N, M=None, k=0, dtype=&lt;class ‘float’&gt;, order=‘C’)</strong></p>
+<p>Parameters:<br />
+<strong>N</strong> : int，Number of rows in the output.</p>
+<p><strong>M</strong> : int, optional，Number of columns in the output. If None, defaults to N.</p>
+<p><strong>k</strong> : int, optional ——<strong>K为对角元素的索引</strong>。</p>
+<blockquote>
+<p>Index of the diagonal: 0 (the default) refers to the main diagonal, a positive value refers to an upper diagonal, and a negative value to a lower diagonal.</p>
+</blockquote>
+<p>默认的索引为0对应的是the main diagonal, index为正值对应一个upper diagonal, index为复制对应的是lower diagonal.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(np.eye(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[<span class="number">1.</span> <span class="number">0.</span>]</span><br><span class="line"> [<span class="number">0.</span> <span class="number">1.</span>]]</span><br></pre></td></tr></table></figure>
+<h2 id="randommultivariate_normal"><a class="markdownIt-Anchor" href="#randommultivariate_normal"></a> random.multivariate_normal()</h2>
+<p>用于根据实际情况生成一个多元正态分布矩阵。</p>
+<p>**def multivariate_normal(mean, cov, size=None, check_valid=None, tol=None) **</p>
+<p>其中mean和cov为必要的传参而size，check_valid以及tol为可选参数。</p>
+<p><strong>mean</strong>：mean是多维分布的均值维度为1；</p>
+<p><strong>cov</strong>：协方差矩阵（<a href="https://blog.csdn.net/zch1990s/article/details/80001991">协方差基本概念</a>）。注意：协方差矩阵必须是对称的且需为半正定矩阵；</p>
+<p><strong>size</strong>：指定生成的正态分布矩阵的维度（例：若size=(1, 1, 2)，则输出的矩阵的shape即形状为 1X1X2XN（N为mean的长度））。</p>
+<p><strong>check_valid</strong>：这个参数用于决定当cov即协方差矩阵不是半正定矩阵时程序的处理方式，它一共有三个值：warn，raise以及ignore。当使用warn作为传入的参数时，如果cov不是半正定的程序会输出警告但仍旧会得到结果；当使用raise作为传入的参数时，如果cov不是半正定的程序会报错且不会计算出结果；当使用ignore时忽略这个问题即无论cov是否为半正定的都会计算出结果。3种情况的console打印结果如下：</p>
+<h2 id="vstack-hstack"><a class="markdownIt-Anchor" href="#vstack-hstack"></a> vstack() &amp; hstack()</h2>
+<p>拼接数组的方法：</p>
+<p><strong>np.vstack()</strong>:在竖直方向上堆叠</p>
+<p><strong>np.hstack()</strong>:在水平方向上平铺</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">arr1=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">arr2=np.array([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])</span><br><span class="line"><span class="built_in">print</span> np.vstack((arr1,arr2))</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span> np.hstack((arr1,arr2))</span><br><span class="line"> </span><br><span class="line">a1=np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]])</span><br><span class="line">a2=np.array([[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>],[<span class="number">11</span>,<span class="number">12</span>]])</span><br><span class="line"><span class="built_in">print</span> a1</span><br><span class="line"><span class="built_in">print</span> a2</span><br><span class="line"><span class="built_in">print</span> np.hstack((a1,a2)</span><br><span class="line">                </span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]</span><br><span class="line">[[<span class="number">1</span> <span class="number">2</span>]</span><br><span class="line"> [<span class="number">3</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line">[[ <span class="number">7</span>  <span class="number">8</span>]</span><br><span class="line"> [ <span class="number">9</span> <span class="number">10</span>]</span><br><span class="line"> [<span class="number">11</span> <span class="number">12</span>]]</span><br><span class="line">[[ <span class="number">1</span>  <span class="number">2</span>  <span class="number">7</span>  <span class="number">8</span>]</span><br><span class="line"> [ <span class="number">3</span>  <span class="number">4</span>  <span class="number">9</span> <span class="number">10</span>]</span><br><span class="line"> [ <span class="number">5</span>  <span class="number">6</span> <span class="number">11</span> <span class="number">12</span>]]              </span><br></pre></td></tr></table></figure>
+<h2 id="enumerate"><a class="markdownIt-Anchor" href="#enumerate"></a> enumerate()</h2>
+<p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p>
+<p><strong>enumerate(sequence, [start=0])</strong></p>
+<p>start: 默认从0开始</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> c, d <span class="keyword">in</span> <span class="built_in">enumerate</span>([<span class="number">3.0</span>]):</span><br><span class="line">    print(c, d)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">0</span> <span class="number">3.0</span></span><br></pre></td></tr></table></figure>
+<h2 id="argmax"><a class="markdownIt-Anchor" href="#argmax"></a> argmax()</h2>
+<blockquote>
+<p><a href="https://www.cnblogs.com/touch-skyer/p/8509217.html">argmax用法</a></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">2</span>],</span><br><span class="line">              [<span class="number">9</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">8</span>],</span><br><span class="line">              [<span class="number">3</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>]])</span><br><span class="line">print(np.argmax(a, axis=<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([[<span class="number">1</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">2</span>],</span><br><span class="line">              [<span class="number">9</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">8</span>],</span><br><span class="line">              [<span class="number">3</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>]])</span><br><span class="line">print(np.argmax(a, axis=<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="randomrand"><a class="markdownIt-Anchor" href="#randomrand"></a> random.rand()</h2>
+<p>numpy.random.rand(d0,d1,…,dn)</p>
+<p>通过本函数可以返回一个或一组服从“0~1”<strong>均匀分布</strong>的随机样本值。随机样本取值范围是[0,1)，不包括1。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 无参数时，返回一个样本</span></span><br><span class="line">x = np.random.randn()</span><br><span class="line">print(x)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">0.24745677216860873</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数为1时，返回array</span></span><br><span class="line">x = np.random.randn(<span class="number">1</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="number">0.66546358</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数&gt;1时，返回指定维度一组样本</span></span><br><span class="line">x = np.random.rand(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">print(x)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[<span class="number">0.4608127</span>  <span class="number">0.99431673</span> <span class="number">0.9204902</span> ]</span><br><span class="line"> [<span class="number">0.78585376</span> <span class="number">0.68346213</span> <span class="number">0.07962104</span>]]</span><br></pre></td></tr></table></figure>
+<h2 id="randomrandn"><a class="markdownIt-Anchor" href="#randomrandn"></a> random.randn()</h2>
+<p>numpy.random.randn(d0,d1,…,dn)</p>
+<ul>
+<li>randn函数返回一个或一组样本，具有<strong>标准正态分布</strong>。</li>
+<li>dn表格每个维度</li>
+<li>返回值为指定维度的array</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 无参数时，返回一个样本</span></span><br><span class="line">x = np.random.randn()</span><br><span class="line">print(x)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">0.3372003142381499</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数为1时，返回array</span></span><br><span class="line">x = np.random.randn(<span class="number">1</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[-<span class="number">0.81388974</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数&gt;1时，返回指定维度一组样本</span></span><br><span class="line">x = np.random.randn(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[[-<span class="number">0.73107015</span> -<span class="number">0.75779713</span> -<span class="number">0.13421781</span>]</span><br><span class="line"> [-<span class="number">0.90713738</span> -<span class="number">0.26851973</span> -<span class="number">1.48609181</span>]]</span><br></pre></td></tr></table></figure>
+<h2 id=""><a class="markdownIt-Anchor" href="#"></a> *</h2>
+<blockquote>
+<p>参考： <a href="http://voidcn.com/article/p-grchamdd-bwa.html">voidcn.com/article/p-grchamdd-bwa.html</a></p>
+</blockquote>
+<p>这不是NumPy特有的语法;它是Python语法.所谓的* -operator是Python语法,它在参数列表中对序列进行解包(参见 [Unpacking Argument Lists](javascript:void())).</p>
+<p>您的示例中的用法是将形状元组解压缩为单独的参数.这是必需的,因为numpy.random.randn将任意数量的整数作为参数,而不是整数元组.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>],[<span class="number">2</span>,<span class="number">3</span>]])</span><br><span class="line">print(x.shape)</span><br><span class="line">print(*x.shape)</span><br><span class="line">print(*x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"><span class="number">2</span> <span class="number">2</span></span><br><span class="line">[<span class="number">1</span> <span class="number">2</span>] [<span class="number">2</span> <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="uniform"><a class="markdownIt-Anchor" href="#uniform"></a> uniform()</h2>
+<p>random.uniform(x, y)</p>
+<p>将随机生成一个实数，它在 [x,y] 范围内。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.random.uniform(<span class="number">2</span>,<span class="number">10</span>)</span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="number">7.550599514372211</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>学习</category>
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
+        <tag>笔记</tag>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>卷积神经网络</title>
-    <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<blockquote>
-<p>学会变通，才能开启新的道路。——Hoohoo</p>
-</blockquote>
-<span id="more"></span>
-<p>大家好，因为最近在学SLAM14，但是由于一些原因，可能是分类过于多，我决定先把CV的前瞻课程学好——也就是深度学习这块，其实一直有了解，只是断断续续，也没有给自己一个确切的目标，毕竟现在搞视觉不带点深度学习的东西没办法搞了就。</p>
-<p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
-<p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
-<p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
-<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO5都出来了，<s>而且这本书采用的是tf1…</s> 我决定使用Pytorch，毕竟工业界用的比较多的是tf，而我们学生家家就乖乖用PyTorch吧。</p>
-<p><s>不过没关系</s>，就这样开始吧。</p>
-<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
-<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
-<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
-<p>比如三个全连接层的网络，输入784的话，隐藏层节点为100，即为（784 * 100 * 100 * 100 *100 * 10）…</p>
-<p>太多了，可以参考下图。</p>
-<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413195841238.png" class="" title="三层全连接网络">
-<p>而且全连接网络忽视了图像的形状，比如，我们一张有色彩的图片，一般是三通道的，但是全连接网络会将其压缩成1 chanel。所以全连接层无法利用与性状有关的信息。</p>
-<h3 id="卷积网络"><a class="markdownIt-Anchor" href="#卷积网络"></a> 卷积网络</h3>
-<h4 id="卷积层"><a class="markdownIt-Anchor" href="#卷积层"></a> 卷积层</h4>
-<p>卷积层的输入输出数据称为 <strong>特征图（feature map）</strong></p>
-<p><strong>输入：</strong> 输入特征图</p>
-<p><strong>输出：</strong> 输出特征图</p>
-<h4 id="卷积运算"><a class="markdownIt-Anchor" href="#卷积运算"></a> 卷积运算</h4>
-<p>卷积运算相当于图像处理中的滤波运算。</p>
-<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413200914937.png" class="" title="卷积运算">
-<p>卷积运算非常好理解，除了我画得比较丑。</p>
-<p>多层卷积就多层卷积就一对一，二对二进行卷积运算，然后叠加在一起成为一个。</p>
-<p>如果想成为多个，就输入多个滤波器。</p>
-<p>有几个滤波器，输出几个卷积。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>深度学习</tag>
       </tags>
   </entry>
 </search>
