@@ -25,19 +25,26 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="好好学习 # 顺便做个有趣的人">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:url" content="http://example.com/archives/2021/03/index.html">
+<meta name="description" content="前言 使用markdown写PPT。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Slidev安装及bug解决">
+<meta property="og:url" content="http://example.com/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="好好学习 # 顺便做个有趣的人">
+<meta property="og:description" content="前言 使用markdown写PPT。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511114107740.png">
+<meta property="og:image" content="http://example.com/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511153642119.png">
+<meta property="og:image" content="http://example.com/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511153711270.png">
+<meta property="og:image" content="http://example.com/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511153746846.png">
+<meta property="article:published_time" content="2021-05-11T03:40:26.000Z">
+<meta property="article:modified_time" content="2021-05-11T07:38:00.655Z">
 <meta property="article:author" content="Hoohoo">
 <meta property="article:tag" content="胡言">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511114107740.png">
 
 
-<link rel="canonical" href="http://example.com/archives/2021/03/">
+<link rel="canonical" href="http://example.com/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/">
 
 
 <script class="page-configurations">
@@ -45,11 +52,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>归档 | ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo</title>
+<title>Slidev安装及bug解决 | ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo</title>
   
 
 
@@ -178,7 +185,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -191,6 +198,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text"> 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bug"><span class="nav-text"> bug</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v7-%EF%B8%8F"><span class="nav-text"> v7 ⬇️</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v7-%EF%B8%8F-2"><span class="nav-text"> v7 ⬆️</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E5%9B%BE"><span class="nav-text"> 效果图</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -252,129 +260,163 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 19 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.JPG">
+      <meta itemprop="name" content="Hoohoo">
+      <meta itemprop="description" content="好好学习 # 顺便做个有趣的人">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Slidev安装及bug解决
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+
+ 
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+
+      <time title="创建时间：2021-05-11 11:40:26 / 修改时间：15:38:00" itemprop="dateCreated datePublished" datetime="2021-05-11T11:40:26+08:00">2021-05-11</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>509</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>使用markdown写PPT。</p>
+<span id="more"></span>
+<blockquote>
+<p>参考： <a target="_blank" rel="noopener" href="https://sli.dev/">Slidev</a></p>
+</blockquote>
+<h2 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h2>
+<blockquote>
+<p>系统：macOS Big Sur 11.3.1</p>
+<p>npm：7.12.1</p>
+</blockquote>
+<p>安装很简单，一行指令，也可以用<code>yarn</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init slidev</span><br></pre></td></tr></table></figure>
+<h2 id="bug"><a class="markdownIt-Anchor" href="#bug"></a> bug</h2>
+<p>但是安装这么简单，不出点问题我都害怕，果然。</p>
+<p>是<code>esbuild</code>的报错，安装失败。</p>
+<img src="/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511114107740.png" class="" title="image-20210511114107740">
+<p>这里针对 <code>npm</code> v7版本以下和以上的有不同的解决方法。</p>
+<h3 id="v7-️"><a class="markdownIt-Anchor" href="#v7-️"></a> v7 ⬇️</h3>
+<p>首先确认你的<code>ignore-scripts</code>为 <code>false</code>，可用如下命令来检查：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config get ignore-scripts	</span><br></pre></td></tr></table></figure>
+<p>如果不是 <code>false</code>，则用如下命令将其设置为 <code>false</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> ignore-scripts	<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>设置完应该就解决了。</p>
+<h3 id="v7-️-2"><a class="markdownIt-Anchor" href="#v7-️-2"></a> v7 ⬆️</h3>
+<p>首先进入 <code>slidev</code> 目录下，打开 <code>package-lock.json</code> 文件。</p>
+<p>确保</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lockfileVersion: 1 </span><br></pre></td></tr></table></figure>
+<p><strong>or</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hasInstallScript: true </span><br></pre></td></tr></table></figure>
+<p>如果设置完后还无法解决，这就是一个已知的 <code>esbuild</code> 的bug。。</p>
+<p>运行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node node_modules/esbuild/install.js</span><br></pre></td></tr></table></figure>
+<p>安装完成后，即可使用如下命令运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<h2 id="效果图"><a class="markdownIt-Anchor" href="#效果图"></a> 效果图</h2>
+<blockquote>
+<p>展示的为自带demo</p>
+</blockquote>
+<img src="/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511153642119.png" class="" title="image-20210511153642119">
+<p>Code：</p>
+<img src="/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511153711270.png" class="" title="image-20210511153711270">
+<p>LaTex：</p>
+<img src="/2021/05/11/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511153746846.png" class="" title="image-20210511153746846">
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-26T11:04:02+08:00"
-              content="2021-03-26">
-          03-26
-        </time>
-      </div>
+    
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ffdcdc;font-size:16px;">----------到结尾啦！！<i class="fa fa-paw" aria-hidden="true"></i>  Hoohoo----------</div>
+    
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/26/VTK/VR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%EF%BC%88%E4%BD%BF%E7%94%A8VTK%E5%AE%98%E6%96%B9%E4%BB%A3%E7%A0%81%EF%BC%89/" itemprop="url">
-            <span itemprop="name">VR实现过程（使用VTK官方代码）</span>
-          </a>
-      </div>
 
       
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-24T20:29:27+08:00"
-              content="2021-03-24">
-          03-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" itemprop="url">
-            <span itemprop="name">Mac的Rodin安装教程</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-17T10:58:41+08:00"
-              content="2021-03-17">
-          03-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/" itemprop="url">
-            <span itemprop="name">Rodin安装教程（附java8安装教程）</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-15T11:54:11+08:00"
-              content="2021-03-15">
-          03-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/" itemprop="url">
-            <span itemprop="name">MPR实现过程</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-03T23:53:44+08:00"
-              content="2021-03-03">
-          03-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/03/hellohoo/" itemprop="url">
-            <span itemprop="name">hellohoo</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
     </div>
-  </div>
-  
-  
-  
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-05/" rel="prev" title="2021 | 05">
+                  <i class="fa fa-chevron-left"></i> 2021 | 05
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 
 <script>
