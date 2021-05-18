@@ -126,6 +126,9 @@
 <p><a href="https://www.cnblogs.com/maidongdong/p/10853052.html">mac 上iterm终端连接Linux服务后 中文为乱码问题</a></p>
 </blockquote>
 <p>终于解决了乱码问题，因为用Ubuntu远程连接是可以正常显示的，所以觉得不是Ubuntu出问题，而是系统显示有问题，果不其然。</p>
+<p>为什么调用的包是全局的？</p>
+<p>pillow明明在虚拟环境下安装了，还是不能跑，一直定位到全局的pillow</p>
+<p>改PATH吗？</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -285,8 +288,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>python</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -928,8 +931,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
