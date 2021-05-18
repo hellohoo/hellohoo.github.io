@@ -121,7 +121,11 @@
 </ul>
 <h2 id="518"><a class="markdownIt-Anchor" href="#518"></a> 5.18</h2>
 <p><kbd>起床时间</kbd>：7:58</p>
-<p>今早醒来看了篇Transformer-UNet，在想是否做这个。</p>
+<p>今早醒来看了篇Transformer-UNet，在想是否讲这个。</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/maidongdong/p/10853052.html">mac 上iterm终端连接Linux服务后 中文为乱码问题</a></p>
+</blockquote>
+<p>终于解决了乱码问题，因为用Ubuntu远程连接是可以正常显示的，所以觉得不是Ubuntu出问题，而是系统显示有问题，果不其然。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -281,8 +285,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>书籍</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -484,7 +488,7 @@
 <h5 id="解压"><a class="markdownIt-Anchor" href="#解压"></a> 解压</h5>
 <p><code>tar [-zxvf]</code> 文件名 解压到达目录</p>
 <blockquote>
-<p><code>rm</code>中的<code>f</code>和<code>tar</code>中的<code>f</code>区别：</p>
+<p><strong><code>rm</code>中的<code>f</code>和<code>tar</code>中的<code>f</code>区别：</strong></p>
 <p><code>rm</code>: f（force） 可以提前</p>
 <p><code>tar</code>: f（file） 不可以提前，c、v可以互换位置，f必须最后</p>
 </blockquote>
@@ -814,8 +818,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>pytorch</tag>
         <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
@@ -924,8 +928,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
