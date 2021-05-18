@@ -108,6 +108,20 @@
 <p>痛苦也会习惯。</p>
 <h2 id="517"><a class="markdownIt-Anchor" href="#517"></a> 5.17</h2>
 <p><kbd>起床时间</kbd>：7:36</p>
+<p>今日宜包容。</p>
+<p>服务器上的还是没装好，第一步就卡壳，还是本地Ubuntu好，终于弄完了大部分的，差数据训练。</p>
+<p>明日计划：</p>
+<ul>
+<li>
+<p>选择小部分训练，并测试。</p>
+</li>
+<li>
+<p>好好弄完文档。</p>
+</li>
+</ul>
+<h2 id="518"><a class="markdownIt-Anchor" href="#518"></a> 5.18</h2>
+<p><kbd>起床时间</kbd>：7:58</p>
+<p>今早醒来看了篇Transformer-UNet，在想是否做这个。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -800,8 +814,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>深度学习</tag>
         <tag>pytorch</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
