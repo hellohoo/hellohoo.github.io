@@ -129,6 +129,12 @@
 <p>为什么调用的包是全局的？</p>
 <p>pillow明明在虚拟环境下安装了，还是不能跑，一直定位到全局的pillow</p>
 <p>改PATH吗？</p>
+<p>/- 学长说自己在环境下安装conda，好的。</p>
+<h2 id="519"><a class="markdownIt-Anchor" href="#519"></a> 5.19</h2>
+<p><kbd>起床时间</kbd>：7:41</p>
+<p>今日主要还是训练测试。</p>
+<p>看了篇关于Batch的论文，在考虑讲否。</p>
+<p>[Rethinking “Batch” in BatchNorm](<a href="https://arxiv.org/pdf/2105.07576.pdf">2105.07576.pdf (arxiv.org)</a>)</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -288,8 +294,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>书籍</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -931,8 +937,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1704,8 +1710,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -1800,8 +1806,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
