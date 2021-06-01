@@ -28,6 +28,7 @@
 <p>这是我第二次装<code>Ubuntu</code>，这篇文章也从第一次拖到了第二次，但是人总是在安逸里放纵，这种放纵使人暂时快乐——如果我没有这第二次的安装，可能这种暂时的时间更长些。</p>
 <p>话不多说，一起来看一看如何安装，主要是<code>分区</code>。</p>
 <p>个人电脑系统为win10，其中硬盘为256G SSD + 1T HDD。</p>
+<span id="more"></span>
 <h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
 <h3 id="win10硬盘分区"><a class="markdownIt-Anchor" href="#win10硬盘分区"></a> win10硬盘分区</h3>
 <p>我从256G的SSD中分出了115G，1T的HDD分出了366G左右给Ubuntu系统。</p>
@@ -742,8 +743,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>python</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -1275,8 +1276,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>pytorch</tag>
         <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
@@ -1385,8 +1386,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
