@@ -42,6 +42,10 @@
 <p><a href="https://blog.csdn.net/caidaoqing/article/details/90457197">语义分割常用loss介绍及pytorch实现_CaiDaoqing的博客-CSDN博客</a></p>
 <p>噹：</p>
 <p><a href="https://sspai.com/post/59114">国行 Apple Watch 如何安全开通心电图功能？ - 少数派 (sspai.com)</a></p>
+<h2 id="64"><a class="markdownIt-Anchor" href="#64"></a> 6.4</h2>
+<p><kbd>起床时间</kbd>：9:07</p>
+<p>早上吃烤吐司比单纯吃吐司好一万倍。</p>
+<p>定个小目标，UNet搞起来，然后魔改出成果。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1306,8 +1310,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>pytorch</tag>
         <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
