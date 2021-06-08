@@ -75,29 +75,21 @@
 <p>我当时高考第二天一早就在吃饭的时候计算前天数学的16题，因为我觉得很简单，但我和同学对答案的时候发现双方都有理，但是答案不一样，所以开始重新计算，导致心态不稳，理综都不知道在答什么。</p>
 <p>所以大家千万不要高考对答案。</p>
 <p>昨日了解了一些东西，对目前我的心态放平有作用，感谢。</p>
-<p>总结一下图像格式：</p>
+<p>总结一下医学图像格式：（以下未整理</p>
 <ul>
-<li>
-<p>DICOM</p>
-</li>
-<li>
-<p>MRI</p>
-</li>
-<li>
-<p>MHD</p>
-</li>
-<li>
-<p>NRRD</p>
-</li>
-<li>
-<p>NII/.gz</p>
-</li>
-<li>
-<p>CT</p>
-</li>
-<li>
-<p>CTA</p>
-</li>
+<li>DICOM</li>
+<li>MRI</li>
+<li>MHD</li>
+<li>NRRD</li>
+<li>NII/.gz</li>
+<li>CT</li>
+<li>CTA</li>
+</ul>
+<p>今日分享：</p>
+<ul>
+<li><a href="https://learngitbranching.js.org/?locale=zh_CN">git小游戏——带你学会git指令</a></li>
+<li><a href="https://juejin.cn/post/6962867017598664735">7 个有用的 PyTorch 技巧 (juejin.cn)</a></li>
+<li><a href="https://github.com/labmlai/annotated_deep_learning_paper_implementations">GitHub - labmlai/annotated_deep_learning_paper_implementations: 🧠 Implementations/tutorials of deep learning papers with side-by-side notes; including transformers (original, xl, switch, feedback), optimizers(adam, radam, adabelief), gans(dcgan, cyclegan, stylegan2), reinforcement learning (ppo, dqn), capsnet, sketch-rnn, etc.</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -660,8 +652,8 @@
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>技术</tag>
+        <tag>安装</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
@@ -718,8 +710,8 @@
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>技术</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -1543,8 +1535,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>pytorch</tag>
         <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
