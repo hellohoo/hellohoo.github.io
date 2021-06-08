@@ -62,6 +62,43 @@
 <p>冠脉其实就是分割后拼在一起，也就叫三维重建，重建这块是传统方法，不好出成果，所以还是得在分割这里加加油。</p>
 <p>用UNet来分分割，让我好好理清楚3DUNet和2DUNet的区别。</p>
 <p>把硕士论文看了，大致理一下。</p>
+<p>今日分享：</p>
+<ul>
+<li><a href="https://github.com/tgbot-collection/YYeTsBot?utm_source=gold_browser_extension">YYeTsBot</a></li>
+<li><a href="https://github.com/ParthJadhav/Tkinter-Designer">Tkinter-Designer</a></li>
+<li><a href="https://imztj.cn/?p=3073">30min学会</a></li>
+<li><a href="https://ri0016.github.io/Overleaf-zh/">Overleaf功能介绍 (ri0016.github.io)</a></li>
+</ul>
+<h2 id="68"><a class="markdownIt-Anchor" href="#68"></a> 6.8</h2>
+<p><kbd>起床时间</kbd>：8:01</p>
+<p>高考第二天，也是最后一天（我所在地区）。</p>
+<p>我当时高考第二天一早就在吃饭的时候计算前天数学的16题，因为我觉得很简单，但我和同学对答案的时候发现双方都有理，但是答案不一样，所以开始重新计算，导致心态不稳，理综都不知道在答什么。</p>
+<p>所以大家千万不要高考对答案。</p>
+<p>昨日了解了一些东西，对目前我的心态放平有作用，感谢。</p>
+<p>总结一下图像格式：</p>
+<ul>
+<li>
+<p>DICOM</p>
+</li>
+<li>
+<p>MRI</p>
+</li>
+<li>
+<p>MHD</p>
+</li>
+<li>
+<p>NRRD</p>
+</li>
+<li>
+<p>NII/.gz</p>
+</li>
+<li>
+<p>CT</p>
+</li>
+<li>
+<p>CTA</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1210,8 +1247,8 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>学习</tag>
         <tag>Linux</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
