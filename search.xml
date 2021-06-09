@@ -56,7 +56,7 @@
 <h2 id="66"><a class="markdownIt-Anchor" href="#66"></a> 6.6</h2>
 <p>今日是六月六日，按理说应该66的，实际上既没有66，也没有不66。</p>
 <p>女排输了，2:3输掉比赛，不过六大主力马上回归，期待，张常宁带全场果真yyds。</p>
-<p>我觉得我应该写个EDU或EDC。</p>
+<p>我觉得我应该写个<u>EDU</u>或<u>EDC</u>。</p>
 <p>这些东西更能激起我的兴趣。</p>
 <p>灿烂的人遇到灿烂的人就是灿烂人生。</p>
 <h2 id="67"><a class="markdownIt-Anchor" href="#67"></a> 6.7</h2>
@@ -102,7 +102,7 @@
 <li>mean teacher</li>
 <li></li>
 </ul>
-<p>今日总结：</p>
+<p><strong>今日总结：</strong></p>
 <ul>
 <li>今天看<a href="https://zh.wikipedia.org/zh-hans/%E5%86%88%E8%90%A8%E9%9B%B7%E6%96%AF">冈萨雷斯</a>的《数字图像处理第三版》，太困了，而且图片很不清晰，去找了书附带的图片集，正巧没有1002…</li>
 <li>去看了第四版英文的《数字图像处理》，发现图片太清晰了，喜极而泣。</li>
@@ -124,6 +124,12 @@
 <p><strong>今日分享</strong>：</p>
 <ul>
 <li><a href="https://blog.csdn.net/dcrmg/article/details/78146797">Linux查看GPU信息和使用情况_牧野的博客-CSDN博客_</a></li>
+<li><a href="https://www.dxy.cn/bbs/newweb/pc/post/31151540">【下载】130余G医学影像学电子书+课件+考试题完全免费分享给大家下载，无需积分金币 - 影像核医学 - 专业医生社区，医学、药学、生命科学、科研学术交流 (dxy.cn)</a></li>
+</ul>
+<p><strong>今日总结：</strong></p>
+<ul>
+<li>在写医学图像格式，觉得很乱，而且各种解释都不同，或许得找本专业书籍（见今日分享2）。</li>
+<li></li>
 </ul>
 ]]></content>
       <categories>
@@ -1592,8 +1598,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>pytorch</tag>
         <tag>深度学习</tag>
+        <tag>pytorch</tag>
       </tags>
   </entry>
   <entry>
