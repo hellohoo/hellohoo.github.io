@@ -24,6 +24,7 @@
 <li>2.<a href="https://baike.baidu.com/item/%E5%9B%BD%E9%99%85%E5%84%BF%E7%AB%A5%E8%8A%82/321613?fromtitle=%E5%84%BF%E7%AB%A5%E8%8A%82&amp;fromid=291723&amp;fr=aladdin#ref_%5B2%5D_16194"> </a><a href="https://baike.baidu.com/reference/321613/81e7PvzXV6sO8cZFwdZ0Z4pgKrQ4zb6OmKYrky6prrix3xOqEbPO2A9MqMeeZ-KOR4mO5FKbjiHu2y8T3jwGEDY81H4DYZB8_Mh_t9cbXZsP31o-meQdGpBg">人社部发布五类休假标准 妇女节儿童节适逢周末不补假- </a> ．新华网[引用日期2019-08-04]</li>
 </ul>
 </blockquote>
+<p><strong>今日分享：</strong></p>
 <p><a href="https://juejin.cn/post/6844903957676949512">GitHub项目徽标 (juejin.cn)</a></p>
 <p><a href="https://blog.csdn.net/qq_41289920/article/details/105940011">VOC数据集</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/33405410">PASCAL VOC数据集的标注格式 - 知乎 (zhihu.com)</a></p>
@@ -34,11 +35,13 @@
 <p><kbd>起床时间</kbd>：7:40</p>
 <p>准备有空写个Typora的主题。</p>
 <p>大概了解了下流程。</p>
+<p><strong>今日分享：</strong></p>
 <p><a href="https://sspai.com/post/59450#!">如何自定义你的 typora 主题，以少数派为例 - 少数派 (sspai.com)</a></p>
 <p>如果来形容今日，便是奇幻，如梦境般。</p>
 <h2 id="63"><a class="markdownIt-Anchor" href="#63"></a> 6.3</h2>
 <p><kbd>起床时间</kbd>：7:35</p>
 <p>早上吃了KFC的新品早餐——厚蛋烧，全名忘了，我喜欢鸡蛋。</p>
+<p><strong>今日分享：</strong></p>
 <p><a href="https://blog.csdn.net/caidaoqing/article/details/90457197">语义分割常用loss介绍及pytorch实现_CaiDaoqing的博客-CSDN博客</a></p>
 <p>噹：</p>
 <p><a href="https://sspai.com/post/59114">国行 Apple Watch 如何安全开通心电图功能？ - 少数派 (sspai.com)</a></p>
@@ -62,7 +65,7 @@
 <p>冠脉其实就是分割后拼在一起，也就叫三维重建，重建这块是传统方法，不好出成果，所以还是得在分割这里加加油。</p>
 <p>用UNet来分分割，让我好好理清楚3DUNet和2DUNet的区别。</p>
 <p>把硕士论文看了，大致理一下。</p>
-<p>今日分享：</p>
+<p><strong>今日分享：</strong></p>
 <ul>
 <li><a href="https://github.com/tgbot-collection/YYeTsBot?utm_source=gold_browser_extension">YYeTsBot</a></li>
 <li><a href="https://github.com/ParthJadhav/Tkinter-Designer">Tkinter-Designer</a></li>
@@ -74,8 +77,11 @@
 <p>高考第二天，也是最后一天（我所在地区）。</p>
 <p>我当时高考第二天一早就在吃饭的时候计算前天数学的16题，因为我觉得很简单，但我和同学对答案的时候发现双方都有理，但是答案不一样，所以开始重新计算，导致心态不稳，理综都不知道在答什么。</p>
 <p>所以大家千万不要高考对答案。</p>
-<p>昨日了解了一些东西，对目前我的心态放平有作用，感谢。</p>
-<p>总结一下医学图像格式：（以下未整理</p>
+<p>昨日了解了一些东西，对目前我的心态放平有作用，感谢。今日中午也是，同样感谢。</p>
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/52054982">常见医疗扫描图像处理步骤 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>总结一下医学图像：（以下未整理</p>
 <ul>
 <li>DICOM</li>
 <li>MRI</li>
@@ -85,11 +91,39 @@
 <li>CT</li>
 <li>CTA</li>
 </ul>
-<p>今日分享：</p>
+<p><strong>今日分享：</strong></p>
 <ul>
 <li><a href="https://learngitbranching.js.org/?locale=zh_CN">git小游戏——带你学会git指令</a></li>
 <li><a href="https://juejin.cn/post/6962867017598664735">7 个有用的 PyTorch 技巧 (juejin.cn)</a></li>
 <li><a href="https://github.com/labmlai/annotated_deep_learning_paper_implementations">GitHub - labmlai/annotated_deep_learning_paper_implementations: 🧠 Implementations/tutorials of deep learning papers with side-by-side notes; including transformers (original, xl, switch, feedback), optimizers(adam, radam, adabelief), gans(dcgan, cyclegan, stylegan2), reinforcement learning (ppo, dqn), capsnet, sketch-rnn, etc.</a></li>
+</ul>
+<p><strong>去了解：</strong></p>
+<ul>
+<li>mean teacher</li>
+<li></li>
+</ul>
+<p>今日总结：</p>
+<ul>
+<li>今天看<a href="https://zh.wikipedia.org/zh-hans/%E5%86%88%E8%90%A8%E9%9B%B7%E6%96%AF">冈萨雷斯</a>的《数字图像处理第三版》，太困了，而且图片很不清晰，去找了书附带的图片集，正巧没有1002…</li>
+<li>去看了第四版英文的《数字图像处理》，发现图片太清晰了，喜极而泣。</li>
+</ul>
+<h2 id="69"><a class="markdownIt-Anchor" href="#69"></a> 6.9</h2>
+<p><kbd>起床时间</kbd>：7:41</p>
+<p>我要被实验室的蚊子咬死了。</p>
+<ul>
+<li>
+<p>swin transformer</p>
+</li>
+<li>
+<p>数据集：<a href="http://coronary.bigr.nl/centerlines/index.php">Rotterdam Coronary Artery Algorithm Evaluation Framework (bigr.nl)</a>  ，去了解一下以下条例的含义：</p>
+<blockquote>
+<p>pledge that the CTA data will be used exclusively for the evaluation of stenoses detection/quantification and lumen segmentation methods through the Rotterdam Coronary Artery Algorithm Evaluation framework ( <a href="http://coronary.bigr.nl/stenoses">http://coronary.bigr.nl/stenoses</a> ).</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>今日分享</strong>：</p>
+<ul>
+<li><a href="https://blog.csdn.net/dcrmg/article/details/78146797">Linux查看GPU信息和使用情况_牧野的博客-CSDN博客_</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -98,6 +132,29 @@
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《数字图像处理》冈萨雷斯【十】图像分割</title>
+    <url>/2021/06/08/segmentation/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>整体等于其部分之和。 ——欧几里得</p>
+<p>整体大于其部分之和。 ——Max Wertheimer</p>
+</blockquote>
+<p>主要为传统分割方法，而非目前流行深度学习方法。</p>
+<span id="more"></span>
+<h2 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h2>
+<h2 id="点-线和边缘检测"><a class="markdownIt-Anchor" href="#点-线和边缘检测"></a> 点、线和边缘检测</h2>
+<h3 id="background"><a class="markdownIt-Anchor" href="#background"></a> background</h3>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>书籍</tag>
+        <tag>图像分割</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -652,8 +709,8 @@
         <category>安装</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>安装</tag>
+        <tag>技术</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
@@ -710,8 +767,8 @@
         <category>安装</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>安装</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1001,9 +1058,9 @@
         <category>学习</category>
       </categories>
       <tags>
+        <tag>书籍</tag>
         <tag>学习</tag>
         <tag>python</tag>
-        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -1535,8 +1592,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>深度学习</tag>
         <tag>pytorch</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1884,8 +1941,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
         <category>《视觉SLAM十四讲》</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>书籍</tag>
+        <tag>学习</tag>
         <tag>笔记</tag>
       </tags>
   </entry>
@@ -2145,8 +2202,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>《视觉SLAM十四讲》</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>书籍</tag>
+        <tag>学习</tag>
         <tag>笔记</tag>
       </tags>
   </entry>
@@ -2232,8 +2289,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>《视觉SLAM十四讲》</category>
       </categories>
       <tags>
-        <tag>学习</tag>
         <tag>书籍</tag>
+        <tag>学习</tag>
         <tag>笔记</tag>
       </tags>
   </entry>
@@ -2361,8 +2418,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
       </tags>
   </entry>
   <entry>
@@ -2624,10 +2681,10 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>技术</tag>
+        <tag>医学影像</tag>
         <tag>MPR</tag>
         <tag>VTK</tag>
         <tag>ITK</tag>
-        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
