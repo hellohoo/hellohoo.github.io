@@ -194,9 +194,47 @@
 </li>
 </ul>
 <h2 id="615"><a class="markdownIt-Anchor" href="#615"></a> 6.15</h2>
+<p><kbd>起床时间</kbd>：8:11</p>
 <p>假期是短暂的，我们不能去诟病这句话。</p>
 <p>因为今早在不断的惊醒中，我提醒自己必须在9点前到达。</p>
 <p>所以我是困乏的，导致了我从未有过的状况——中途回去上厕所，人是沉沉的。</p>
+<h2 id="616"><a class="markdownIt-Anchor" href="#616"></a> 6.16</h2>
+<p><kbd>起床时间</kbd>：7:41</p>
+<p>安装pytorch遇到的各种问题。</p>
+<ol>
+<li>failed to create process.</li>
+</ol>
+<p><strong>解决方法：</strong></p>
+<blockquote>
+<p>参考： <a href="https://blog.csdn.net/yichao0630/article/details/106411853">Anaconda3打不开、闪退、 failed to create process的一种解决办法</a></p>
+</blockquote>
+<p>重装anaconda，将其安装地址换成了无空格的目录。</p>
+<ol start="2">
+<li>
+<pre class="highlight"><code class="bash">Solving environment: failed
+
+InvalidVersionSpecError: Invalid version spec: =2.7
+</code></pre>
+</li>
+</ol>
+<p><strong>解决方法：</strong></p>
+<blockquote>
+<p>参考：<a href="https://blog.csdn.net/fuyouzhiyi/article/details/115659371">Solving environment: failed InvalidVersionSpecError: Invalid version spec: =2.7</a></p>
+</blockquote>
+<p>升级conda，<code>conda update conda</code>。</p>
+<ul>
+<li>对手</li>
+<li>阮玲玉</li>
+</ul>
+<h2 id="617"><a class="markdownIt-Anchor" href="#617"></a> 6.17</h2>
+<p><kbd>起床时间</kbd>：7:41</p>
+<p>验证pytorch是否安装成功：</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/dyc99/p/12674732.html">查看Pytorch是否安装成功解决办法</a></p>
+</blockquote>
+<ul>
+<li>画魂</li>
+</ul>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1664,8 +1702,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>深度学习</tag>
         <tag>pytorch</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
