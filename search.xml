@@ -210,13 +210,9 @@
 </blockquote>
 <p>重装anaconda，将其安装地址换成了无空格的目录。</p>
 <ol start="2">
-<li>
-<pre class="highlight"><code class="bash">Solving environment: failed
-
-InvalidVersionSpecError: Invalid version spec: =2.7
-</code></pre>
-</li>
+<li></li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Solving environment: failed</span><br><span class="line"></span><br><span class="line">InvalidVersionSpecError: Invalid version spec: =2.7</span><br></pre></td></tr></table></figure>
 <p><strong>解决方法：</strong></p>
 <blockquote>
 <p>参考：<a href="https://blog.csdn.net/fuyouzhiyi/article/details/115659371">Solving environment: failed InvalidVersionSpecError: Invalid version spec: =2.7</a></p>
