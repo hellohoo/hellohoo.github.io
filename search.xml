@@ -232,15 +232,94 @@
 <li>画魂</li>
 </ul>
 <h2 id="618"><a class="markdownIt-Anchor" href="#618"></a> 6.18</h2>
-<p>英语期末答辩开始了。</p>
+<p>英语期末答辩周开始了。</p>
+<p>感谢彤子帮我借来了《数字图像处理》第四版。</p>
 <ul>
 <li>战场上的圣诞快乐</li>
 </ul>
 <h2 id="619"><a class="markdownIt-Anchor" href="#619"></a> 6.19</h2>
+<p>今天去吃了饭，很开心，有人一起当然是最开心的了。</p>
+<p>一起散步也是一件美事。</p>
 <h2 id="620"><a class="markdownIt-Anchor" href="#620"></a> 6.20</h2>
 <ul>
 <li>胭脂扣</li>
 <li>薄荷糖</li>
+</ul>
+<p>要进入期末周了，很是紧张。</p>
+<p>下下周可能要考试，还有英文的答辩，而且我的确是对自己要求低了，是要逼自己一把，做些什么出来，好好想想未来做什么。</p>
+<h2 id="621"><a class="markdownIt-Anchor" href="#621"></a> 6.21</h2>
+<p><kbd>起床时间</kbd>：7:36</p>
+<p><strong>今日分享：</strong></p>
+<p><a href="https://jingyan.baidu.com/article/3052f5a1fa497197f31f86e0.html">当Windows10每次开机跳出desktop.ini的解决方法</a></p>
+<p><a href="https://www.yuque.com/docs/share/90b41842-a713-4a01-ac0c-4707cbcacb5b?#MEAU">国际期刊预警名单（试行）</a></p>
+<p><strong>今日学习：</strong></p>
+<p><a href="https://blog.csdn.net/weixin_42717395/article/details/83152059">论文：PSPNet-Pyramid scene parsing Network，阅读笔记</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/44958351">研习U-Net</a></p>
+<ul>
+<li>
+<p><strong>残差网络</strong></p>
+</li>
+<li>
+<p><strong>膨胀卷积</strong>：</p>
+<p>​	<a href="https://blog.csdn.net/qq_30241709/article/details/88080367">Dilated Convolution —— 空洞卷积（膨胀卷积）_birdguan-CSDN博客_膨胀卷积</a></p>
+</li>
+<li>
+<p><strong>Attention</strong></p>
+</li>
+<li>
+<p><strong>heuristic regulation loss</strong></p>
+</li>
+<li>
+<p><strong>ADD、CONCAT的区别：</strong></p>
+<p>​	<a href="https://blog.csdn.net/qq_42189083/article/details/89218455?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-0&amp;spm=1001.2101.3001.4242">深度神经网络中concatenate()和add层的不同_Mr_不想起床的博客-CSDN博客</a></p>
+<p>​	<a href="https://blog.csdn.net/weixin_39610043/article/details/87103358">卷积神经网络中的add和concatnate区别_孟志彬的博客-CSDN博客</a></p>
+</li>
+<li>
+<p><strong>自监督</strong></p>
+</li>
+<li>
+<p><strong>深监督</strong></p>
+</li>
+<li>
+<p><strong>无监督</strong></p>
+</li>
+<li>
+<p><strong>GAN</strong></p>
+</li>
+<li>
+<p><strong>强化学习</strong></p>
+</li>
+<li>
+<p><strong>MSE LOSS：</strong></p>
+<p>​	<a href="https://zhuanlan.zhihu.com/p/35707643">损失函数 - MSE - 知乎 (zhihu.com)</a></p>
+</li>
+<li>
+<p><strong>目标检测中<em><u>proposal</u></em>含义：</strong></p>
+<p>​	region proposal即为候选区域</p>
+</li>
+</ul>
+<blockquote>
+<p>首先我们先回顾一下物体检测的主流方式，通常会包含以下几步：</p>
+<ul>
+<li>生成一系列的候选框，这些候选框称为<strong>proposals</strong></li>
+<li>根据候选框判断候选框里的内容是前景还是背景，即是否包含了检测物体</li>
+<li>用回归的方式去微调候选框，使其更准确地框取物体，这过程我们称bounding box regression</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><strong>置信度：</strong></p>
+<p>​	<a href="https://baike.baidu.com/item/%E7%BD%AE%E4%BF%A1%E5%BA%A6/7908802?fr=aladdin">置信度_百度百科 (baidu.com)</a></p>
+</li>
+<li>
+<p><strong>sampling mask weight</strong></p>
+</li>
+</ul>
+<p><strong>今日总结：</strong></p>
+<ul>
+<li>有许多需要学习的地方，我们都要来进行一个努力的状态，给自己定计划。</li>
+<li>少说话多做事，不说妄语。</li>
+<li>关注Attention，万物皆相同。</li>
 </ul>
 ]]></content>
       <categories>
@@ -1709,8 +1788,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>深度学习</tag>
         <tag>pytorch</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1819,8 +1898,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
