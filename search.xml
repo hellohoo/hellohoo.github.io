@@ -370,11 +370,14 @@
   <entry>
     <title>Swin Transformer-Hierarchical Vision Transformer using Shifted Windows阅读笔记</title>
     <url>/2021/06/29/swin-transformer/</url>
-    <content><![CDATA[<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>本文提出一种新的transformer在cv领域 。</p>
+    <content><![CDATA[<h2 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h2>
+<p>本文提出一种新的transformer在cv领域 。</p>
 <p>介绍目前存在的问题，本文提出了swin transformer解决了这一问题。</p>
 <p>简短介绍swin transformer的概念。</p>
 <p>运用在图像都是SOTA结果。（在 XX数据集达到了XX。）</p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>句子摘抄：</p>
+<span id="more"></span>
+<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
+<p>句子摘抄：</p>
 <blockquote>
 <p><strong>Modeling in computer vision has long been dominated by convolutional neural networks (CNNs).</strong></p>
 <p><strong>计算机视觉(建模)长期以来一直由卷积神经网络主导。</strong></p>
