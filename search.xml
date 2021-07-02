@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2021-06</title>
+    <title>2021 | 07</title>
+    <url>/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/</url>
+    <content><![CDATA[<blockquote>
+<p>七月，在火上舞蹈。</p>
+</blockquote>
+<!---more-->
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>时间总是过得很快，一眨眼，半年时间没了。</p>
+<h2 id="71"><a class="markdownIt-Anchor" href="#71"></a> 7.1</h2>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2021 | 06</title>
     <url>/2021/06/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-06/</url>
     <content><![CDATA[<h1 id="2021-06"><a class="markdownIt-Anchor" href="#2021-06"></a> 2021-06</h1>
 <blockquote>
@@ -353,11 +372,14 @@
 <p>我也希望希望不只是希望。</p>
 <p>我决定讲swin transformer，让我们来看看最强的引入了CNN特点的transformer。</p>
 <h2 id="629"><a class="markdownIt-Anchor" href="#629"></a> 6.29</h2>
-<p><kbd>起床时间</kbd>：</p>
+<p><kbd>起床时间</kbd>：7:27</p>
 <p>我发现windows版的知云比Mac的好用。</p>
+<p>今日凌晨有些冲动，但冲动是快乐的。</p>
+<p>早上一杯自制冰拿铁打开一天。</p>
 <h2 id="630"><a class="markdownIt-Anchor" href="#630"></a> 6.30</h2>
 <p><kbd>起床时间</kbd>：7:39</p>
 <p>今日早晨是美好的早晨。</p>
+<p><a href="https://cloud.tencent.com/developer/article/1148375">深度卷积神经网络CNN中shortcut的使用 - 云+社区 - 腾讯云 (tencent.com)</a></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -431,11 +453,13 @@
 <h2 id="method"><a class="markdownIt-Anchor" href="#method"></a> Method</h2>
 <h3 id="overall-architecture"><a class="markdownIt-Anchor" href="#overall-architecture"></a> Overall Architecture</h3>
 <h2 id="conclusion"><a class="markdownIt-Anchor" href="#conclusion"></a> Conclusion</h2>
-<p>最终呢，我们提出的swin transformer真的蛮棒啦！</p>
+<p>结尾再说一遍！我们提出的swin transformer真的蛮棒啦！</p>
 <p>精简总结我们创新的idea，然后呢这个idea还蛮有用的。</p>
 <p>最后呢，swin transformer在cv上是有用的，那希望研究它在nlp领域的应用。</p>
+<hr />
 ]]></content>
       <categories>
+        <category>学习</category>
         <category>论文阅读</category>
       </categories>
       <tags>
