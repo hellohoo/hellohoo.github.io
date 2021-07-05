@@ -522,6 +522,7 @@
 </ul>
 <p>我记得我差不多全试了一遍，但还是没有解决，我一直是觉得我系统安装的Qt和anaconda中的Qt冲突，后来发现VS2017运行Qt是可以的，就是python中无法运行，所以又开始重新一轮的尝试，毕竟不想换电脑。</p>
 <p>终于在把环境变量删除后，<strong>重装了Qt、pyqt5后解决了</strong>，就是这么玄乎。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install qt==5.9.7</span><br><span class="line">pip install pyqt5</span><br></pre></td></tr></table></figure>
 <p>所以大家可以一一尝试，重装、plugin、环境变量都可以试一下，不要气馁。</p>
 ]]></content>
       <categories>
@@ -529,7 +530,9 @@
       </categories>
       <tags>
         <tag>技术</tag>
+        <tag>python</tag>
         <tag>问题</tag>
+        <tag>qt</tag>
       </tags>
   </entry>
   <entry>
