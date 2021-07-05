@@ -6,7 +6,7 @@
     <content><![CDATA[<blockquote>
 <p>七月，在火上舞蹈。</p>
 </blockquote>
-<!---more-->
+<span id="more"></span>
 <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>时间总是过得很快，一眨眼，半年时间没了。</p>
 <h2 id="71"><a class="markdownIt-Anchor" href="#71"></a> 7.1</h2>
@@ -33,6 +33,11 @@
 <h2 id="74"><a class="markdownIt-Anchor" href="#74"></a> 7.4</h2>
 <p>难受的我躺了一天，果然没有愧对周日这仨字。</p>
 <p>感谢彤给我的俩锅贴，甚是感动。</p>
+<h2 id="75"><a class="markdownIt-Anchor" href="#75"></a> 7.5</h2>
+<p><kbd>起床时间</kbd>：7：39</p>
+<p>今天是周一，我想我已经开始适应睡觉中途的醒来，看看时间，算算还能睡多久，然后继续睡觉，也索性自己的深度睡眠也达到了。</p>
+<img src="/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/IMG_5775.JPEG" class="" title="autosleep">
+<p><a href="https://sspai.com/post/67439">如何真实描绘 iPad 的现状？聊聊我的使用场景和思考</a></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -403,6 +408,12 @@
 <p><kbd>起床时间</kbd>：7:39</p>
 <p>今日早晨是美好的早晨。</p>
 <p><a href="https://cloud.tencent.com/developer/article/1148375">深度卷积神经网络CNN中shortcut的使用 - 云+社区 - 腾讯云 (tencent.com)</a></p>
+<p><a href="https://sspai.com/post/67355">少数派员工桌面</a></p>
+<p><a href="https://github.com/imbushuo/mac-precision-touchpad">mac-precision-touchpad</a></p>
+<p>short-cut机制</p>
+<ul>
+<li><a href="https://cloud.tencent.com/developer/article/1148375">深度卷积神经网络CNN中shortcut的使用</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -2058,8 +2069,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
