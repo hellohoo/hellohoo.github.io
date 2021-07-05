@@ -38,6 +38,55 @@
 <p>今天是周一，我想我已经开始适应睡觉中途的醒来，看看时间，算算还能睡多久，然后继续睡觉，也索性自己的深度睡眠也达到了。</p>
 <img src="/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/IMG_5775.JPEG" class="" width="520">
 <p><a href="https://sspai.com/post/67439">如何真实描绘 iPad 的现状？聊聊我的使用场景和思考</a></p>
+<img src="/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/image-20210705162523491.png" class="" title="qq_music">
+<hr />
+<p>今天总算<strong>解决</strong>了困扰我快一周的问题。</p>
+<blockquote>
+<p>This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.</p>
+</blockquote>
+<img src="/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/thhwz583ex.png" class="" title="error">
+<p>尝试了许多解决方法，<code>stackoverflow</code>上有许多回答，包括copy plugin、环境变量…</p>
+<blockquote>
+<p><a href="https://stackoverflow.com/questions/54168748/qt-creator-fails-to-open-on-windows-10-no-qt-platform-plugin-could-be-initializ">Qt creator fails to open on Windows 10 “no Qt platform plugin could be initialized” - Stack Overflow</a></p>
+</blockquote>
+<p>下面总结了遇到该问题的诸多教程，可一一尝试。</p>
+<p><strong>plugin复制/缺少dll：</strong></p>
+<ul>
+<li>
+<p><a href="https://cloud.tencent.com/developer/article/1760090">程序运行时提示This application failed to start because no Qt platform plugin could be initialized.</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=Ignw0xOKlm8">How To Fix No Qt Platform Plugin Could Be Initialized Error - This Application Failed To Start</a></p>
+</li>
+<li>
+<p><a href="https://www.pianshen.com/article/42941795280/">PyQt：解决This application failed to start because no Qt platform plugin could be initialized问题 - 程序员大本营 (pianshen.com)</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/qq_41133375/article/details/107216854?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&amp;spm=1001.2101.3001.4242">Qt Designer启动显示This application failed to start because no Qt platform plugin could be initializedin</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/calmreason/article/details/104851565">this application failed to start because no qt platform plugin could be initialized</a></p>
+</li>
+</ul>
+<p><strong>环境变量：</strong></p>
+<ul>
+<li>
+<p><a href="https://blog.csdn.net/weixin_43859329/article/details/107694491">解决designer运行报错:This application failed to start because no Qt platform plugin could be initialized问题</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/Williamcsj/article/details/106734702">Designer——运行报错:This application failed to start because no Qt platform plugin could be initialized_Williamcsj的博客-CSDN博客</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/qq_37633082/article/details/100565144?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs">解决This application failed to start because no Qt platform plugin could be initialized问题_种言和的白菜的博客-CSDN博客</a></p>
+</li>
+</ul>
+<p><strong>中文路径：</strong></p>
+<ul>
+<li><a href="https://www.shuzhiduo.com/A/l1dy7mAVJe/">解决QT5移植报错：This application failed to start because no Qt platform plugin could be initialized (shuzhiduo.com)</a></li>
+</ul>
+<p>我记得我差不多全试了一遍，但还是没有解决，我一直是觉得我系统安装的Qt和anaconda中的Qt冲突，后来发现VS2017运行Qt是可以的，就是python中无法运行，所以又开始重新一轮的尝试，毕竟不想换电脑。</p>
+<p>终于在把环境变量删除后，重装了Qt、pyqt5后解决了，就是这么玄乎。</p>
+<p>所以大家可以一一尝试，重装、plugin、环境变量都可以试一下，不要气馁。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -421,6 +470,66 @@
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>This application failed to start because no Qt platform plugin could be initialized问题解决合集</title>
+    <url>/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/</url>
+    <content><![CDATA[<p>今天总算<strong>解决</strong>了困扰我快一周的问题。</p>
+<blockquote>
+<p>This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.</p>
+</blockquote>
+<img src="/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/thhwz583ex.png" class="" title="error">
+<span id="more"></span>
+<p>尝试了许多解决方法，<code>stackoverflow</code>上有许多回答，包括copy plugin、环境变量…</p>
+<blockquote>
+<p><a href="https://stackoverflow.com/questions/54168748/qt-creator-fails-to-open-on-windows-10-no-qt-platform-plugin-could-be-initializ">Qt creator fails to open on Windows 10 “no Qt platform plugin could be initialized” - Stack Overflow</a></p>
+</blockquote>
+<p>下面总结了遇到该问题的诸多教程，可一一尝试。</p>
+<p><strong>plugin复制/缺少dll：</strong></p>
+<ul>
+<li>
+<p><a href="https://cloud.tencent.com/developer/article/1760090">程序运行时提示This application failed to start because no Qt platform plugin could be initialized.</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=Ignw0xOKlm8">How To Fix No Qt Platform Plugin Could Be Initialized Error - This Application Failed To Start</a></p>
+</li>
+<li>
+<p><a href="https://www.pianshen.com/article/42941795280/">PyQt：解决This application failed to start because no Qt platform plugin could be initialized问题 - 程序员大本营 (pianshen.com)</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/qq_41133375/article/details/107216854?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&amp;spm=1001.2101.3001.4242">Qt Designer启动显示This application failed to start because no Qt platform plugin could be initializedin</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/calmreason/article/details/104851565">this application failed to start because no qt platform plugin could be initialized</a></p>
+</li>
+</ul>
+<p><strong>环境变量：</strong></p>
+<ul>
+<li>
+<p><a href="https://blog.csdn.net/weixin_43859329/article/details/107694491">解决designer运行报错:This application failed to start because no Qt platform plugin could be initialized问题</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/Williamcsj/article/details/106734702">Designer——运行报错:This application failed to start because no Qt platform plugin could be initialized_Williamcsj的博客-CSDN博客</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/qq_37633082/article/details/100565144?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs">解决This application failed to start because no Qt platform plugin could be initialized问题_种言和的白菜的博客-CSDN博客</a></p>
+</li>
+</ul>
+<p><strong>中文路径：</strong></p>
+<ul>
+<li><a href="https://www.shuzhiduo.com/A/l1dy7mAVJe/">解决QT5移植报错：This application failed to start because no Qt platform plugin could be initialized (shuzhiduo.com)</a></li>
+</ul>
+<p>我记得我差不多全试了一遍，但还是没有解决，我一直是觉得我系统安装的Qt和anaconda中的Qt冲突，后来发现VS2017运行Qt是可以的，就是python中无法运行，所以又开始重新一轮的尝试，毕竟不想换电脑。</p>
+<p>终于在把环境变量删除后，<strong>重装了Qt、pyqt5后解决了</strong>，就是这么玄乎。</p>
+<p>所以大家可以一一尝试，重装、plugin、环境变量都可以试一下，不要气馁。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
   <entry>
@@ -1959,8 +2068,8 @@
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>深度学习</tag>
         <tag>pytorch</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
