@@ -9,6 +9,8 @@
 <span id="more"></span>
 <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>时间总是过得很快，一眨眼，半年时间没了。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=1412006703&auto=0&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=1383742702&auto=0&height=66"></iframe>
 <h2 id="71"><a class="markdownIt-Anchor" href="#71"></a> 7.1</h2>
 <p><kbd>起床时间</kbd>：7:32</p>
 <p>首先纪念今日，建党100周年，我很自豪生在中国，长在中国。</p>
@@ -30,6 +32,7 @@
 <p><a href="https://www.zhihu.com/question/266562472">encoder-decoder适用领域？—知乎</a></p>
 <h2 id="73"><a class="markdownIt-Anchor" href="#73"></a> 7.3</h2>
 <p>今天是周六，快乐的一天，按理说。</p>
+<p>但是今天见到蟑螂了，但是今天也打死它了。</p>
 <h2 id="74"><a class="markdownIt-Anchor" href="#74"></a> 7.4</h2>
 <p>难受的我躺了一天，果然没有愧对周日这仨字。</p>
 <p>感谢彤给我的俩锅贴，甚是感动。</p>
@@ -38,13 +41,37 @@
 <p>今天是周一，我想我已经开始适应睡觉中途的醒来，看看时间，算算还能睡多久，然后继续睡觉，也索性自己的深度睡眠也达到了。</p>
 <img src="/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/IMG_5775.JPEG" class="" width="520">
 <p><a href="https://sspai.com/post/67439">如何真实描绘 iPad 的现状？聊聊我的使用场景和思考</a></p>
+<p>今日更新QQ音乐：</p>
 <img src="/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/image-20210705162523491.png" class="" title="qq_music">
+<blockquote>
+<p>分词是词法分析（还包括词性标注和命名实体识别）中最基本的任务，可以说既简单又复杂。说简单是因为分词的算法研究已经很成熟了，大部分的准确率都可以达到95%以上，说复杂是因为剩下的5%很难有突破，主要因为三点：</p>
+<ol>
+<li>粒度，不同应用对粒度的要求不一样，比如“苹果手机”可以是一个词也可以是两个词</li>
+<li>歧义，比如“下雨天留人天留我不留”</li>
+<li>未登录词，比如“skrrr”、“打call”等新兴词语</li>
+</ol>
+<p>详见 <a href="https://zhuanlan.zhihu.com/p/50444885">NLP分词算法深度综述</a></p>
+</blockquote>
 <hr />
-<p>今天总算<strong>解决</strong>了困扰我快一周的问题。</p>
+<p><a href="http://hellohoohoo.com/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/#more">This application failed to start because no Qt platform plugin could be initialized问题解决合集 | ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo (hellohoohoo.com)</a></p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>This application failed to start because no Qt platform plugin could be initialized问题解决合集</title>
+    <url>/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/</url>
+    <content><![CDATA[<p>今天总算<strong>解决</strong>了困扰我快一周的问题。</p>
 <blockquote>
 <p>This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.</p>
 </blockquote>
-<img src="/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/thhwz583ex.png" class="" title="error">
+<img src="/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/thhwz583ex.png" class="" title="error">
+<span id="more"></span>
 <p>尝试了许多解决方法，<code>stackoverflow</code>上有许多回答，包括copy plugin、环境变量…</p>
 <blockquote>
 <p><a href="https://stackoverflow.com/questions/54168748/qt-creator-fails-to-open-on-windows-10-no-qt-platform-plugin-could-be-initializ">Qt creator fails to open on Windows 10 “no Qt platform plugin could be initialized” - Stack Overflow</a></p>
@@ -85,15 +112,299 @@
 <li><a href="https://www.shuzhiduo.com/A/l1dy7mAVJe/">解决QT5移植报错：This application failed to start because no Qt platform plugin could be initialized (shuzhiduo.com)</a></li>
 </ul>
 <p>我记得我差不多全试了一遍，但还是没有解决，我一直是觉得我系统安装的Qt和anaconda中的Qt冲突，后来发现VS2017运行Qt是可以的，就是python中无法运行，所以又开始重新一轮的尝试，毕竟不想换电脑。</p>
-<p>终于在把环境变量删除后，重装了Qt、pyqt5后解决了，就是这么玄乎。</p>
+<p>终于在把环境变量删除后，<strong>重装了Qt、pyqt5后解决了</strong>，就是这么玄乎。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install qt==5.9.7</span><br><span class="line">pip install pyqt5</span><br></pre></td></tr></table></figure>
 <p>所以大家可以一一尝试，重装、plugin、环境变量都可以试一下，不要气馁。</p>
 ]]></content>
       <categories>
-        <category>生活</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>生活</tag>
-        <tag>记录</tag>
+        <tag>技术</tag>
+        <tag>python</tag>
+        <tag>问题</tag>
+        <tag>qt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Swin Transformer: Hierarchical Vision Transformer using Shifted Windows》阅读笔记</title>
+    <url>/2021/06/29/swin-transformer/</url>
+    <content><![CDATA[<h2 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h2>
+<p>本文提出一种新的transformer在cv领域 。</p>
+<p>介绍目前存在的问题，本文提出了swin transformer解决了这一问题。</p>
+<p>简短介绍swin transformer的概念。</p>
+<p>运用在图像都是SOTA结果。（在 XX数据集达到了XX。）</p>
+<span id="more"></span>
+<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
+<blockquote>
+<p><strong>Modeling in computer vision has long been dominated by convolutional neural networks (CNNs).</strong></p>
+<p><strong>计算机视觉长期以来一直由卷积神经网络模型主导。</strong></p>
+</blockquote>
+<p>接下来介绍CNN在CV领域一直占主导，从AlexNet开始，由于其架构更广阔…</p>
+<p>又开始介绍在NLP领域的发展，出现了一篇神文《All You Need is Attention》…</p>
+<blockquote>
+<p><strong>IIts tremendous success in the language domain has led researchers to investigate its adaptation to computer vision,where it has recently demonstrated promising results on certain tasks, specifically image classification [19] and joint vision-language modeling [46].</strong></p>
+<p><strong>它在语言领域的巨大成功促使研究人员研究它对计算机视觉的适应性，最近它在某些任务上显示出有希望的结果，特别是图像分类[19]和联合视觉-语言建模[46]。</strong></p>
+<p>[19] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is worth 16x16 words: Transformers for image recognition at scale. In International Conference on Learning Representations, 2021. 1, 2, 3, 4, 5, 6, 9</p>
+<p>[46]  Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, and Ilya Sutskever. Learning transferable visual models from natural language supervision, 2021. 1</p>
+</blockquote>
+<p>接下来就开始结合起来了。</p>
+<p>然后列举别人最近有关工作，并评判相关工作的缺点，提出自己的优点。</p>
+<blockquote>
+<p><strong>As illustrated in Figure1(a), …</strong></p>
+<p><strong>如图1(a)所示，…</strong></p>
+</blockquote>
+<p>图1主要是和文献19做对比，提出自己的复杂度是线性的，而非二次，而且不是单一分辨率特征图。</p>
+<blockquote>
+<p><strong>conveniently leverage advanced techniques</strong></p>
+<p><strong>方便利用先进技术</strong></p>
+</blockquote>
+<p>图2介绍了滑动窗口，在窗口计算SA，而且每个窗口中的patch是同样的k，减少latency。</p>
+<p>在Introduction最后再次强调自己工作的优势，该模型<strong>achieves strong performance</strong>在cv不同的领域，如目标检测、分割、分类，用数据来佐证其strong。</p>
+<p>最后一段写出了我们的信念，我们把两个领域结合在一起，我们也希望我们提出的模型可以鼓励统一建模（unified modeling）。</p>
+<h2 id="related-work"><a class="markdownIt-Anchor" href="#related-work"></a> Related Work</h2>
+<h3 id="cnn-and-variants"><a class="markdownIt-Anchor" href="#cnn-and-variants"></a> CNN and variants</h3>
+<p>介绍了CNN在CV领域的霸权地位，介绍了开山之AlexNet，以及后续如春笋般涌出的CNNs，除了在结构上进步，也有改进了单个卷积层的进步。</p>
+<p>不过既然这篇文章是想用transformer来运用到cv领域，肯定是要在最后一点表明其巨大潜力是可以有助于建模转变。</p>
+<h3 id="self-attention-based-backbone-architectures"><a class="markdownIt-Anchor" href="#self-attention-based-backbone-architectures"></a> Self-attention based backbone architectures</h3>
+<p>提出了SA作为主干网络架构，并分析了之前他人的工作由于内存cost导致其latency明显大于CNNs。</p>
+<p>所以本文使用shift window来进行替换，在连续层间，这样的话在一般硬件中也可以有效地实现。</p>
+<h3 id="self-attentiontransformers-to-complement-cnns"><a class="markdownIt-Anchor" href="#self-attentiontransformers-to-complement-cnns"></a> Self-attention/Transformers to complement CNNs</h3>
+<p>用SA/Transformer来补充增强CNNs。</p>
+<p>先是介绍一些相关工作（providing the capability to encode distant dependencies or heterogeneous interactions.），接下来突出自己的工作，探索了Transformer拓展了对CV的adaption，并且是对之前一些相关工作的补充。</p>
+<h3 id="transformer-based-vision-backbones"><a class="markdownIt-Anchor" href="#transformer-based-vision-backbones"></a> Transformer based vision backbones</h3>
+<p>介绍了和我们工作最接近的相关工作[19]，和其后续。</p>
+<p>但是优点介绍完后，是要介绍一些后续工作对缺点的改进，当然了，要是改进完了我们这篇论文算什么，所以提出对方的<del>致命</del>缺点：</p>
+<blockquote>
+<p>but its architecture is unsuitable for use as a general-purpose backbone network on dense vision tasks or when the input image resolution is high, due to its low-resolution feature maps and the quadratic increase in complexity with image size.</p>
+<p>但是，由于其低分辨率的特征映射和复杂度随图像尺寸的二次增加，其体系结构不适合用作密集视觉任务或输入图像分辨率高时的通用backbone。</p>
+</blockquote>
+<p>然后介绍了一些并行的修改ViT架构获得更好的图像分类。</p>
+<p>但是我们的工作在分类中也获得了好的结果，虽然我们工作侧重于通用性能呢，才不仅仅只是分类呢。</p>
+<p>有一项工作[63]探求了一种类似的思路，不过它的复杂度也是二次的哦，我们是<strong>线性</strong>的！</p>
+<p>当然啦，反正我们是最棒的。</p>
+<blockquote>
+<p>[19] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is worth 16x16 words: Transformers for image recognition at scale. In International Conference on Learning Representations, 2021. 1, 2, 3, 4, 5, 6, 9</p>
+<p>[63] Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, Kaitao Song, Ding Liang, Tong Lu, Ping Luo, and Ling Shao. Pyramid vision transformer: A versatile backbone for dense prediction without convolutions. arXiv preprint arXiv:2102.12122, 2021. 3</p>
+</blockquote>
+<h2 id="method"><a class="markdownIt-Anchor" href="#method"></a> Method</h2>
+<h3 id="overall-architecture"><a class="markdownIt-Anchor" href="#overall-architecture"></a> Overall Architecture</h3>
+<h2 id="conclusion"><a class="markdownIt-Anchor" href="#conclusion"></a> Conclusion</h2>
+<p>结尾再说一遍！我们提出的swin transformer真的蛮棒啦！</p>
+<p>精简总结我们创新的idea，然后呢这个idea还蛮有用的。</p>
+<p>最后呢，swin transformer在cv上是有用的，那希望研究它在nlp领域的应用。</p>
+<hr />
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>论文阅读</category>
+      </categories>
+      <tags>
+        <tag>医学影像</tag>
+        <tag>论文阅读</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《数字图像处理》冈萨雷斯【十】图像分割</title>
+    <url>/2021/06/08/segmentation/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>整体等于其部分之和。 ——欧几里得</p>
+<p>整体大于其部分之和。 ——Max Wertheimer</p>
+</blockquote>
+<p>主要为传统分割方法，而非目前流行深度学习方法。</p>
+<span id="more"></span>
+<h2 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h2>
+<h2 id="点-线和边缘检测"><a class="markdownIt-Anchor" href="#点-线和边缘检测"></a> 点、线和边缘检测</h2>
+<h3 id="background"><a class="markdownIt-Anchor" href="#background"></a> background</h3>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>书籍</tag>
+        <tag>图像分割</tag>
+        <tag>医学影像</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>胡看的上海国际电影节</title>
+    <url>/2021/06/04/SIFF/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>电影是人类进步的电梯。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="观影清单"><a class="markdownIt-Anchor" href="#观影清单"></a> 观影清单</h2>
+<table>
+<thead>
+<tr>
+<th>片名</th>
+<th>单元</th>
+<th>导演</th>
+<th>时间</th>
+<th>评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阿甘正传（IMAX）</td>
+<td>新视野</td>
+<td>罗伯特·泽米吉斯</td>
+<td>1994</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>海上钢琴师（4K）</td>
+<td>向大师致敬</td>
+<td>朱塞佩·托纳多雷</td>
+<td>1998</td>
+<td>9.3</td>
+</tr>
+<tr>
+<td>寻子遇仙记</td>
+<td>SIFF经典</td>
+<td>查理·卓别林</td>
+<td>1921</td>
+<td>9.2</td>
+</tr>
+<tr>
+<td>沉默的羔羊（4K）</td>
+<td>多元视角</td>
+<td>乔纳森·戴米</td>
+<td>1991</td>
+<td>8.9</td>
+</tr>
+<tr>
+<td>末路狂花</td>
+<td>SIFF经典</td>
+<td>雷德利·斯科特</td>
+<td>1991</td>
+<td>8.8</td>
+</tr>
+<tr>
+<td>战场上的快乐圣诞（4K）</td>
+<td>SIFF经典</td>
+<td>大岛渚</td>
+<td>1983</td>
+<td>8.8</td>
+</tr>
+<tr>
+<td>西部往事</td>
+<td>向大师致敬</td>
+<td>赛尔乔·莱昂内</td>
+<td>1968</td>
+<td>8.7</td>
+</tr>
+<tr>
+<td>阮玲玉（4K）</td>
+<td>SIFF经典</td>
+<td>关锦鹏</td>
+<td>1991</td>
+<td>8.6</td>
+</tr>
+<tr>
+<td>钢的琴</td>
+<td>SIFF经典</td>
+<td>张猛</td>
+<td>2010</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>薄荷糖（4K）</td>
+<td>SIFF经典</td>
+<td>李沧东</td>
+<td>1999</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>胭脂扣（4K）</td>
+<td>SIFF经典</td>
+<td>关锦鹏</td>
+<td>1987</td>
+<td>8.4</td>
+</tr>
+<tr>
+<td>风声</td>
+<td>百年征程•红色光影</td>
+<td>陈国富</td>
+<td>2009</td>
+<td>8.3</td>
+</tr>
+<tr>
+<td>我的野蛮女友（4K）</td>
+<td>SIFF经典</td>
+<td>郭在容</td>
+<td>2001</td>
+<td>8.2</td>
+</tr>
+<tr>
+<td>女人韵事（4K）</td>
+<td>SIFF经典</td>
+<td>克洛德·夏布洛尔</td>
+<td>1988</td>
+<td>8.2</td>
+</tr>
+<tr>
+<td>祝福（4K）</td>
+<td>SIFF经典</td>
+<td>桑弧</td>
+<td>1956</td>
+<td>8.1</td>
+</tr>
+<tr>
+<td>夏日纪事</td>
+<td>SIFF经典</td>
+<td>让·鲁什</td>
+<td>1961</td>
+<td>8.1</td>
+</tr>
+<tr>
+<td>前程似锦的女孩</td>
+<td>官方推荐</td>
+<td>默拉尔德·芬内尔</td>
+<td>2020</td>
+<td>7.6</td>
+</tr>
+<tr>
+<td>里夫金的电影节（4K）</td>
+<td>官方推荐</td>
+<td>伍迪·艾伦</td>
+<td>2020</td>
+<td>7.2</td>
+</tr>
+<tr>
+<td>画魂（4K）</td>
+<td>SIFF经典</td>
+<td>黄蜀芹</td>
+<td>1994</td>
+<td>7.2</td>
+</tr>
+<tr>
+<td>求求你，表扬我</td>
+<td>官方推荐</td>
+<td>黄建新</td>
+<td>2005</td>
+<td>7</td>
+</tr>
+<tr>
+<td>三人行</td>
+<td>官方推荐</td>
+<td>安娜·米利克扬</td>
+<td>2020</td>
+<td>暂无评分</td>
+</tr>
+</tbody>
+</table>
+<h2 id="时间表格"><a class="markdownIt-Anchor" href="#时间表格"></a> 时间表格</h2>
+<img src="/2021/06/04/SIFF/image-20210604193619348.png" class="" title="image-20210604193619348">
+]]></content>
+      <categories>
+        <category>胡看</category>
+      </categories>
+      <tags>
+        <tag>ART</tag>
+        <tag>MOVIE</tag>
       </tags>
   </entry>
   <entry>
@@ -470,350 +781,6 @@
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>This application failed to start because no Qt platform plugin could be initialized问题解决合集</title>
-    <url>/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/</url>
-    <content><![CDATA[<p>今天总算<strong>解决</strong>了困扰我快一周的问题。</p>
-<blockquote>
-<p>This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.</p>
-</blockquote>
-<img src="/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/thhwz583ex.png" class="" title="error">
-<span id="more"></span>
-<p>尝试了许多解决方法，<code>stackoverflow</code>上有许多回答，包括copy plugin、环境变量…</p>
-<blockquote>
-<p><a href="https://stackoverflow.com/questions/54168748/qt-creator-fails-to-open-on-windows-10-no-qt-platform-plugin-could-be-initializ">Qt creator fails to open on Windows 10 “no Qt platform plugin could be initialized” - Stack Overflow</a></p>
-</blockquote>
-<p>下面总结了遇到该问题的诸多教程，可一一尝试。</p>
-<p><strong>plugin复制/缺少dll：</strong></p>
-<ul>
-<li>
-<p><a href="https://cloud.tencent.com/developer/article/1760090">程序运行时提示This application failed to start because no Qt platform plugin could be initialized.</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=Ignw0xOKlm8">How To Fix No Qt Platform Plugin Could Be Initialized Error - This Application Failed To Start</a></p>
-</li>
-<li>
-<p><a href="https://www.pianshen.com/article/42941795280/">PyQt：解决This application failed to start because no Qt platform plugin could be initialized问题 - 程序员大本营 (pianshen.com)</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/qq_41133375/article/details/107216854?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&amp;spm=1001.2101.3001.4242">Qt Designer启动显示This application failed to start because no Qt platform plugin could be initializedin</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/calmreason/article/details/104851565">this application failed to start because no qt platform plugin could be initialized</a></p>
-</li>
-</ul>
-<p><strong>环境变量：</strong></p>
-<ul>
-<li>
-<p><a href="https://blog.csdn.net/weixin_43859329/article/details/107694491">解决designer运行报错:This application failed to start because no Qt platform plugin could be initialized问题</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/Williamcsj/article/details/106734702">Designer——运行报错:This application failed to start because no Qt platform plugin could be initialized_Williamcsj的博客-CSDN博客</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/qq_37633082/article/details/100565144?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs">解决This application failed to start because no Qt platform plugin could be initialized问题_种言和的白菜的博客-CSDN博客</a></p>
-</li>
-</ul>
-<p><strong>中文路径：</strong></p>
-<ul>
-<li><a href="https://www.shuzhiduo.com/A/l1dy7mAVJe/">解决QT5移植报错：This application failed to start because no Qt platform plugin could be initialized (shuzhiduo.com)</a></li>
-</ul>
-<p>我记得我差不多全试了一遍，但还是没有解决，我一直是觉得我系统安装的Qt和anaconda中的Qt冲突，后来发现VS2017运行Qt是可以的，就是python中无法运行，所以又开始重新一轮的尝试，毕竟不想换电脑。</p>
-<p>终于在把环境变量删除后，<strong>重装了Qt、pyqt5后解决了</strong>，就是这么玄乎。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install qt==5.9.7</span><br><span class="line">pip install pyqt5</span><br></pre></td></tr></table></figure>
-<p>所以大家可以一一尝试，重装、plugin、环境变量都可以试一下，不要气馁。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>python</tag>
-        <tag>问题</tag>
-        <tag>qt</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Swin Transformer: Hierarchical Vision Transformer using Shifted Windows》阅读笔记</title>
-    <url>/2021/06/29/swin-transformer/</url>
-    <content><![CDATA[<h2 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h2>
-<p>本文提出一种新的transformer在cv领域 。</p>
-<p>介绍目前存在的问题，本文提出了swin transformer解决了这一问题。</p>
-<p>简短介绍swin transformer的概念。</p>
-<p>运用在图像都是SOTA结果。（在 XX数据集达到了XX。）</p>
-<span id="more"></span>
-<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
-<blockquote>
-<p><strong>Modeling in computer vision has long been dominated by convolutional neural networks (CNNs).</strong></p>
-<p><strong>计算机视觉长期以来一直由卷积神经网络模型主导。</strong></p>
-</blockquote>
-<p>接下来介绍CNN在CV领域一直占主导，从AlexNet开始，由于其架构更广阔…</p>
-<p>又开始介绍在NLP领域的发展，出现了一篇神文《All You Need is Attention》…</p>
-<blockquote>
-<p><strong>IIts tremendous success in the language domain has led researchers to investigate its adaptation to computer vision,where it has recently demonstrated promising results on certain tasks, specifically image classification [19] and joint vision-language modeling [46].</strong></p>
-<p><strong>它在语言领域的巨大成功促使研究人员研究它对计算机视觉的适应性，最近它在某些任务上显示出有希望的结果，特别是图像分类[19]和联合视觉-语言建模[46]。</strong></p>
-<p>[19] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is worth 16x16 words: Transformers for image recognition at scale. In International Conference on Learning Representations, 2021. 1, 2, 3, 4, 5, 6, 9</p>
-<p>[46]  Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, and Ilya Sutskever. Learning transferable visual models from natural language supervision, 2021. 1</p>
-</blockquote>
-<p>接下来就开始结合起来了。</p>
-<p>然后列举别人最近有关工作，并评判相关工作的缺点，提出自己的优点。</p>
-<blockquote>
-<p><strong>As illustrated in Figure1(a), …</strong></p>
-<p><strong>如图1(a)所示，…</strong></p>
-</blockquote>
-<p>图1主要是和文献19做对比，提出自己的复杂度是线性的，而非二次，而且不是单一分辨率特征图。</p>
-<blockquote>
-<p><strong>conveniently leverage advanced techniques</strong></p>
-<p><strong>方便利用先进技术</strong></p>
-</blockquote>
-<p>图2介绍了滑动窗口，在窗口计算SA，而且每个窗口中的patch是同样的k，减少latency。</p>
-<p>在Introduction最后再次强调自己工作的优势，该模型<strong>achieves strong performance</strong>在cv不同的领域，如目标检测、分割、分类，用数据来佐证其strong。</p>
-<p>最后一段写出了我们的信念，我们把两个领域结合在一起，我们也希望我们提出的模型可以鼓励统一建模（unified modeling）。</p>
-<h2 id="related-work"><a class="markdownIt-Anchor" href="#related-work"></a> Related Work</h2>
-<h3 id="cnn-and-variants"><a class="markdownIt-Anchor" href="#cnn-and-variants"></a> CNN and variants</h3>
-<p>介绍了CNN在CV领域的霸权地位，介绍了开山之AlexNet，以及后续如春笋般涌出的CNNs，除了在结构上进步，也有改进了单个卷积层的进步。</p>
-<p>不过既然这篇文章是想用transformer来运用到cv领域，肯定是要在最后一点表明其巨大潜力是可以有助于建模转变。</p>
-<h3 id="self-attention-based-backbone-architectures"><a class="markdownIt-Anchor" href="#self-attention-based-backbone-architectures"></a> Self-attention based backbone architectures</h3>
-<p>提出了SA作为主干网络架构，并分析了之前他人的工作由于内存cost导致其latency明显大于CNNs。</p>
-<p>所以本文使用shift window来进行替换，在连续层间，这样的话在一般硬件中也可以有效地实现。</p>
-<h3 id="self-attentiontransformers-to-complement-cnns"><a class="markdownIt-Anchor" href="#self-attentiontransformers-to-complement-cnns"></a> Self-attention/Transformers to complement CNNs</h3>
-<p>用SA/Transformer来补充增强CNNs。</p>
-<p>先是介绍一些相关工作（providing the capability to encode distant dependencies or heterogeneous interactions.），接下来突出自己的工作，探索了Transformer拓展了对CV的adaption，并且是对之前一些相关工作的补充。</p>
-<h3 id="transformer-based-vision-backbones"><a class="markdownIt-Anchor" href="#transformer-based-vision-backbones"></a> Transformer based vision backbones</h3>
-<p>介绍了和我们工作最接近的相关工作[19]，和其后续。</p>
-<p>但是优点介绍完后，是要介绍一些后续工作对缺点的改进，当然了，要是改进完了我们这篇论文算什么，所以提出对方的<del>致命</del>缺点：</p>
-<blockquote>
-<p>but its architecture is unsuitable for use as a general-purpose backbone network on dense vision tasks or when the input image resolution is high, due to its low-resolution feature maps and the quadratic increase in complexity with image size.</p>
-<p>但是，由于其低分辨率的特征映射和复杂度随图像尺寸的二次增加，其体系结构不适合用作密集视觉任务或输入图像分辨率高时的通用backbone。</p>
-</blockquote>
-<p>然后介绍了一些并行的修改ViT架构获得更好的图像分类。</p>
-<p>但是我们的工作在分类中也获得了好的结果，虽然我们工作侧重于通用性能呢，才不仅仅只是分类呢。</p>
-<p>有一项工作[63]探求了一种类似的思路，不过它的复杂度也是二次的哦，我们是<strong>线性</strong>的！</p>
-<p>当然啦，反正我们是最棒的。</p>
-<blockquote>
-<p>[19] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is worth 16x16 words: Transformers for image recognition at scale. In International Conference on Learning Representations, 2021. 1, 2, 3, 4, 5, 6, 9</p>
-<p>[63] Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, Kaitao Song, Ding Liang, Tong Lu, Ping Luo, and Ling Shao. Pyramid vision transformer: A versatile backbone for dense prediction without convolutions. arXiv preprint arXiv:2102.12122, 2021. 3</p>
-</blockquote>
-<h2 id="method"><a class="markdownIt-Anchor" href="#method"></a> Method</h2>
-<h3 id="overall-architecture"><a class="markdownIt-Anchor" href="#overall-architecture"></a> Overall Architecture</h3>
-<h2 id="conclusion"><a class="markdownIt-Anchor" href="#conclusion"></a> Conclusion</h2>
-<p>结尾再说一遍！我们提出的swin transformer真的蛮棒啦！</p>
-<p>精简总结我们创新的idea，然后呢这个idea还蛮有用的。</p>
-<p>最后呢，swin transformer在cv上是有用的，那希望研究它在nlp领域的应用。</p>
-<hr />
-]]></content>
-      <categories>
-        <category>学习</category>
-        <category>论文阅读</category>
-      </categories>
-      <tags>
-        <tag>医学影像</tag>
-        <tag>论文阅读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《数字图像处理》冈萨雷斯【十】图像分割</title>
-    <url>/2021/06/08/segmentation/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<blockquote>
-<p>整体等于其部分之和。 ——欧几里得</p>
-<p>整体大于其部分之和。 ——Max Wertheimer</p>
-</blockquote>
-<p>主要为传统分割方法，而非目前流行深度学习方法。</p>
-<span id="more"></span>
-<h2 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h2>
-<h2 id="点-线和边缘检测"><a class="markdownIt-Anchor" href="#点-线和边缘检测"></a> 点、线和边缘检测</h2>
-<h3 id="background"><a class="markdownIt-Anchor" href="#background"></a> background</h3>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>书籍</tag>
-        <tag>图像分割</tag>
-        <tag>医学影像</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>胡看的上海国际电影节</title>
-    <url>/2021/06/04/SIFF/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<blockquote>
-<p>电影是人类进步的电梯。</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="观影清单"><a class="markdownIt-Anchor" href="#观影清单"></a> 观影清单</h2>
-<table>
-<thead>
-<tr>
-<th>片名</th>
-<th>单元</th>
-<th>导演</th>
-<th>时间</th>
-<th>评分</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>阿甘正传（IMAX）</td>
-<td>新视野</td>
-<td>罗伯特·泽米吉斯</td>
-<td>1994</td>
-<td>9.5</td>
-</tr>
-<tr>
-<td>海上钢琴师（4K）</td>
-<td>向大师致敬</td>
-<td>朱塞佩·托纳多雷</td>
-<td>1998</td>
-<td>9.3</td>
-</tr>
-<tr>
-<td>寻子遇仙记</td>
-<td>SIFF经典</td>
-<td>查理·卓别林</td>
-<td>1921</td>
-<td>9.2</td>
-</tr>
-<tr>
-<td>沉默的羔羊（4K）</td>
-<td>多元视角</td>
-<td>乔纳森·戴米</td>
-<td>1991</td>
-<td>8.9</td>
-</tr>
-<tr>
-<td>末路狂花</td>
-<td>SIFF经典</td>
-<td>雷德利·斯科特</td>
-<td>1991</td>
-<td>8.8</td>
-</tr>
-<tr>
-<td>战场上的快乐圣诞（4K）</td>
-<td>SIFF经典</td>
-<td>大岛渚</td>
-<td>1983</td>
-<td>8.8</td>
-</tr>
-<tr>
-<td>西部往事</td>
-<td>向大师致敬</td>
-<td>赛尔乔·莱昂内</td>
-<td>1968</td>
-<td>8.7</td>
-</tr>
-<tr>
-<td>阮玲玉（4K）</td>
-<td>SIFF经典</td>
-<td>关锦鹏</td>
-<td>1991</td>
-<td>8.6</td>
-</tr>
-<tr>
-<td>钢的琴</td>
-<td>SIFF经典</td>
-<td>张猛</td>
-<td>2010</td>
-<td>8.5</td>
-</tr>
-<tr>
-<td>薄荷糖（4K）</td>
-<td>SIFF经典</td>
-<td>李沧东</td>
-<td>1999</td>
-<td>8.5</td>
-</tr>
-<tr>
-<td>胭脂扣（4K）</td>
-<td>SIFF经典</td>
-<td>关锦鹏</td>
-<td>1987</td>
-<td>8.4</td>
-</tr>
-<tr>
-<td>风声</td>
-<td>百年征程•红色光影</td>
-<td>陈国富</td>
-<td>2009</td>
-<td>8.3</td>
-</tr>
-<tr>
-<td>我的野蛮女友（4K）</td>
-<td>SIFF经典</td>
-<td>郭在容</td>
-<td>2001</td>
-<td>8.2</td>
-</tr>
-<tr>
-<td>女人韵事（4K）</td>
-<td>SIFF经典</td>
-<td>克洛德·夏布洛尔</td>
-<td>1988</td>
-<td>8.2</td>
-</tr>
-<tr>
-<td>祝福（4K）</td>
-<td>SIFF经典</td>
-<td>桑弧</td>
-<td>1956</td>
-<td>8.1</td>
-</tr>
-<tr>
-<td>夏日纪事</td>
-<td>SIFF经典</td>
-<td>让·鲁什</td>
-<td>1961</td>
-<td>8.1</td>
-</tr>
-<tr>
-<td>前程似锦的女孩</td>
-<td>官方推荐</td>
-<td>默拉尔德·芬内尔</td>
-<td>2020</td>
-<td>7.6</td>
-</tr>
-<tr>
-<td>里夫金的电影节（4K）</td>
-<td>官方推荐</td>
-<td>伍迪·艾伦</td>
-<td>2020</td>
-<td>7.2</td>
-</tr>
-<tr>
-<td>画魂（4K）</td>
-<td>SIFF经典</td>
-<td>黄蜀芹</td>
-<td>1994</td>
-<td>7.2</td>
-</tr>
-<tr>
-<td>求求你，表扬我</td>
-<td>官方推荐</td>
-<td>黄建新</td>
-<td>2005</td>
-<td>7</td>
-</tr>
-<tr>
-<td>三人行</td>
-<td>官方推荐</td>
-<td>安娜·米利克扬</td>
-<td>2020</td>
-<td>暂无评分</td>
-</tr>
-</tbody>
-</table>
-<h2 id="时间表格"><a class="markdownIt-Anchor" href="#时间表格"></a> 时间表格</h2>
-<img src="/2021/06/04/SIFF/image-20210604193619348.png" class="" title="image-20210604193619348">
-]]></content>
-      <categories>
-        <category>胡看</category>
-      </categories>
-      <tags>
-        <tag>ART</tag>
-        <tag>MOVIE</tag>
       </tags>
   </entry>
   <entry>
