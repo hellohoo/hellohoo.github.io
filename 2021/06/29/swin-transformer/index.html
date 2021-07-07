@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Abstract 本文提出一种新的transformer在cv领域 。 介绍目前存在的问题，本文提出了swin transformer解决了这一问题。 简短介绍swin transformer的概念。 运用在图像都是SOTA结果。（在 XX数据集达到了XX。）">
+<meta name="description" content="Abstract本文提出一种新的transformer在cv领域 。 介绍目前存在的问题，本文提出了swin transformer解决了这一问题。 简短介绍swin transformer的概念。 运用在图像都是SOTA结果。（在 XX数据集达到了XX。）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Swin Transformer: Hierarchical Vision Transformer using Shifted Windows》阅读笔记">
 <meta property="og:url" content="http://example.com/2021/06/29/swin-transformer/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="Abstract 本文提出一种新的transformer在cv领域 。 介绍目前存在的问题，本文提出了swin transformer解决了这一问题。 简短介绍swin transformer的概念。 运用在图像都是SOTA结果。（在 XX数据集达到了XX。）">
+<meta property="og:description" content="Abstract本文提出一种新的transformer在cv领域 。 介绍目前存在的问题，本文提出了swin transformer解决了这一问题。 简短介绍swin transformer的概念。 运用在图像都是SOTA结果。（在 XX数据集达到了XX。）">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-29T15:42:48.000Z">
 <meta property="article:modified_time" content="2021-06-30T16:07:44.521Z">
@@ -194,7 +194,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#abstract"><span class="nav-text"> Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-text"> Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#related-work"><span class="nav-text"> Related Work</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cnn-and-variants"><span class="nav-text"> CNN and variants</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#self-attention-based-backbone-architectures"><span class="nav-text"> Self-attention based backbone architectures</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#self-attentiontransformers-to-complement-cnns"><span class="nav-text"> Self-attention&#x2F;Transformers to complement CNNs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transformer-based-vision-backbones"><span class="nav-text"> Transformer based vision backbones</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method"><span class="nav-text"> Method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#overall-architecture"><span class="nav-text"> Overall Architecture</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusion"><span class="nav-text"> Conclusion</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Related-Work"><span class="nav-text">Related Work</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CNN-and-variants"><span class="nav-text">CNN and variants</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Self-attention-based-backbone-architectures"><span class="nav-text">Self-attention based backbone architectures</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Self-attention-Transformers-to-complement-CNNs"><span class="nav-text">Self-attention&#x2F;Transformers to complement CNNs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Transformer-based-vision-backbones"><span class="nav-text">Transformer based vision backbones</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Method"><span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overall-Architecture"><span class="nav-text">Overall Architecture</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-text">Conclusion</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -349,14 +349,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h2>
-<p>本文提出一种新的transformer在cv领域 。</p>
+        <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>本文提出一种新的transformer在cv领域 。</p>
 <p>介绍目前存在的问题，本文提出了swin transformer解决了这一问题。</p>
 <p>简短介绍swin transformer的概念。</p>
 <p>运用在图像都是SOTA结果。（在 XX数据集达到了XX。）</p>
 <span id="more"></span>
-<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
-<blockquote>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
 <p><strong>Modeling in computer vision has long been dominated by convolutional neural networks (CNNs).</strong></p>
 <p><strong>计算机视觉长期以来一直由卷积神经网络模型主导。</strong></p>
 </blockquote>
@@ -371,29 +369,24 @@
 <p>接下来就开始结合起来了。</p>
 <p>然后列举别人最近有关工作，并评判相关工作的缺点，提出自己的优点。</p>
 <blockquote>
-<p><strong>As illustrated in Figure1(a), …</strong></p>
-<p><strong>如图1(a)所示，…</strong></p>
+<p> <strong>As illustrated in Figure1(a), …</strong></p>
+<p> <strong>如图1(a)所示，…</strong></p>
 </blockquote>
 <p>图1主要是和文献19做对比，提出自己的复杂度是线性的，而非二次，而且不是单一分辨率特征图。</p>
 <blockquote>
-<p><strong>conveniently leverage advanced techniques</strong></p>
-<p><strong>方便利用先进技术</strong></p>
+<p> <strong>conveniently leverage advanced techniques</strong></p>
+<p> <strong>方便利用先进技术</strong></p>
 </blockquote>
 <p>图2介绍了滑动窗口，在窗口计算SA，而且每个窗口中的patch是同样的k，减少latency。</p>
 <p>在Introduction最后再次强调自己工作的优势，该模型<strong>achieves strong performance</strong>在cv不同的领域，如目标检测、分割、分类，用数据来佐证其strong。</p>
 <p>最后一段写出了我们的信念，我们把两个领域结合在一起，我们也希望我们提出的模型可以鼓励统一建模（unified modeling）。</p>
-<h2 id="related-work"><a class="markdownIt-Anchor" href="#related-work"></a> Related Work</h2>
-<h3 id="cnn-and-variants"><a class="markdownIt-Anchor" href="#cnn-and-variants"></a> CNN and variants</h3>
-<p>介绍了CNN在CV领域的霸权地位，介绍了开山之AlexNet，以及后续如春笋般涌出的CNNs，除了在结构上进步，也有改进了单个卷积层的进步。</p>
+<h2 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h2><h3 id="CNN-and-variants"><a href="#CNN-and-variants" class="headerlink" title="CNN and variants"></a>CNN and variants</h3><p>介绍了CNN在CV领域的霸权地位，介绍了开山之AlexNet，以及后续如春笋般涌出的CNNs，除了在结构上进步，也有改进了单个卷积层的进步。</p>
 <p>不过既然这篇文章是想用transformer来运用到cv领域，肯定是要在最后一点表明其巨大潜力是可以有助于建模转变。</p>
-<h3 id="self-attention-based-backbone-architectures"><a class="markdownIt-Anchor" href="#self-attention-based-backbone-architectures"></a> Self-attention based backbone architectures</h3>
-<p>提出了SA作为主干网络架构，并分析了之前他人的工作由于内存cost导致其latency明显大于CNNs。</p>
+<h3 id="Self-attention-based-backbone-architectures"><a href="#Self-attention-based-backbone-architectures" class="headerlink" title="Self-attention based backbone architectures"></a>Self-attention based backbone architectures</h3><p>提出了SA作为主干网络架构，并分析了之前他人的工作由于内存cost导致其latency明显大于CNNs。</p>
 <p>所以本文使用shift window来进行替换，在连续层间，这样的话在一般硬件中也可以有效地实现。</p>
-<h3 id="self-attentiontransformers-to-complement-cnns"><a class="markdownIt-Anchor" href="#self-attentiontransformers-to-complement-cnns"></a> Self-attention/Transformers to complement CNNs</h3>
-<p>用SA/Transformer来补充增强CNNs。</p>
+<h3 id="Self-attention-Transformers-to-complement-CNNs"><a href="#Self-attention-Transformers-to-complement-CNNs" class="headerlink" title="Self-attention/Transformers to complement CNNs"></a>Self-attention/Transformers to complement CNNs</h3><p>用SA/Transformer来补充增强CNNs。</p>
 <p>先是介绍一些相关工作（providing the capability to encode distant dependencies or heterogeneous interactions.），接下来突出自己的工作，探索了Transformer拓展了对CV的adaption，并且是对之前一些相关工作的补充。</p>
-<h3 id="transformer-based-vision-backbones"><a class="markdownIt-Anchor" href="#transformer-based-vision-backbones"></a> Transformer based vision backbones</h3>
-<p>介绍了和我们工作最接近的相关工作[19]，和其后续。</p>
+<h3 id="Transformer-based-vision-backbones"><a href="#Transformer-based-vision-backbones" class="headerlink" title="Transformer based vision backbones"></a>Transformer based vision backbones</h3><p>介绍了和我们工作最接近的相关工作[19]，和其后续。</p>
 <p>但是优点介绍完后，是要介绍一些后续工作对缺点的改进，当然了，要是改进完了我们这篇论文算什么，所以提出对方的<del>致命</del>缺点：</p>
 <blockquote>
 <p>but its architecture is unsuitable for use as a general-purpose backbone network on dense vision tasks or when the input image resolution is high, due to its low-resolution feature maps and the quadratic increase in complexity with image size.</p>
@@ -407,13 +400,10 @@
 <p>[19] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is worth 16x16 words: Transformers for image recognition at scale. In International Conference on Learning Representations, 2021. 1, 2, 3, 4, 5, 6, 9</p>
 <p>[63] Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, Kaitao Song, Ding Liang, Tong Lu, Ping Luo, and Ling Shao. Pyramid vision transformer: A versatile backbone for dense prediction without convolutions. arXiv preprint arXiv:2102.12122, 2021. 3</p>
 </blockquote>
-<h2 id="method"><a class="markdownIt-Anchor" href="#method"></a> Method</h2>
-<h3 id="overall-architecture"><a class="markdownIt-Anchor" href="#overall-architecture"></a> Overall Architecture</h3>
-<h2 id="conclusion"><a class="markdownIt-Anchor" href="#conclusion"></a> Conclusion</h2>
-<p>结尾再说一遍！我们提出的swin transformer真的蛮棒啦！</p>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><h3 id="Overall-Architecture"><a href="#Overall-Architecture" class="headerlink" title="Overall Architecture"></a>Overall Architecture</h3><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>结尾再说一遍！我们提出的swin transformer真的蛮棒啦！</p>
 <p>精简总结我们创新的idea，然后呢这个idea还蛮有用的。</p>
 <p>最后呢，swin transformer在cv上是有用的，那希望研究它在nlp领域的应用。</p>
-<hr />
+<hr>
 
     </div>
 
@@ -504,13 +494,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">60k</span>
+    <span title="站点总字数">58k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:19</span>
+    <span title="站点阅读时长">3:14</span>
   </span>
 </div>
 <div class="busuanzi-count">
