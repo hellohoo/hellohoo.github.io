@@ -112,6 +112,20 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p><a href="https://blog.csdn.net/The_Time_Runner/article/details/90143662">itertools.product()结构及用法_漫步量化-CSDN博客</a></p>
 <p><a href="https://pytorch.org/docs/stable/torch.html">pytorch文档</a></p>
 <p><a href="https://www.xcwmoon.com/post/134">jupyter notebook补全</a></p>
+<h2 id="78"><a class="markdownIt-Anchor" href="#78"></a> 7.8</h2>
+<p><kbd>起床时间</kbd>：8:20</p>
+<ul>
+<li>
+<p>model.eval() 和 train() 区别</p>
+<blockquote>
+<p>model.train() ：启用 BatchNormalization 和 Dropout</p>
+<p>model.eval() ：不启用 BatchNormalization 和 Dropout</p>
+</blockquote>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/m0_46653437/article/details/110680090">PyTorch中的train()方法和eval()方法的作用和区别</a></p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -2251,8 +2265,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
