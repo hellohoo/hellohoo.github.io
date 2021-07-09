@@ -126,6 +126,9 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p><a href="https://blog.csdn.net/m0_46653437/article/details/110680090">PyTorch中的train()方法和eval()方法的作用和区别</a></p>
 </li>
 </ul>
+<h2 id="79"><a class="markdownIt-Anchor" href="#79"></a> 7.9</h2>
+<p><kbd>起床时间</kbd>：8:20</p>
+<p>今日终于弄完了大概pyTorch，感觉有些书真的很烂，示例代码也烂，没有注释，更烂了。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -238,8 +241,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>python</tag>
         <tag>问题</tag>
+        <tag>python</tag>
         <tag>qt</tag>
       </tags>
   </entry>
