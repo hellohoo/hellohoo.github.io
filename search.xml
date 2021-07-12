@@ -135,6 +135,14 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>在痛苦中度过。</p>
 <h2 id="711"><a class="markdownIt-Anchor" href="#711"></a> 7.11</h2>
 <p>周日。</p>
+<h2 id="712"><a class="markdownIt-Anchor" href="#712"></a> 7.12</h2>
+<p><kbd>起床时间</kbd>：7:42</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/137719986">CNN 模型所需的计算力flops是什么？怎么计算？ - 知乎 (zhihu.com)</a></li>
+<li>what’s the token？</li>
+</ul>
+<p>今天在看论文《CSWin Transformer》，只能佩服科研人员的能力，见到什么就立马有新的idea，cross- shaped是真的顶👍，而且在location embedding上做文章，牛。</p>
+<img src="/2021/07/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-07/IMG_6110.JPEG" class="" width="520">
 ]]></content>
       <categories>
         <category>生活</category>
@@ -2274,8 +2282,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
