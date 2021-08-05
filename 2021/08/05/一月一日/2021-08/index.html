@@ -25,34 +25,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="MPR的介绍MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X&#x2F;Y&#x2F;Z三个轴可以绕三维坐标原点任意旋">
+<meta name="description" content="八月，在沉静中上升。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MPR实现过程">
-<meta property="og:url" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:title" content="2021-08">
+<meta property="og:url" content="http://example.com/2021/08/05/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-08/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="MPR的介绍MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X&#x2F;Y&#x2F;Z三个轴可以绕三维坐标原点任意旋">
+<meta property="og:description" content="八月，在沉静中上升。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png">
-<meta property="og:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png">
-<meta property="og:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png">
-<meta property="og:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png">
-<meta property="og:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png">
-<meta property="og:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png">
-<meta property="og:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png">
-<meta property="og:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png">
-<meta property="article:published_time" content="2021-03-15T03:54:11.000Z">
-<meta property="article:modified_time" content="2021-04-07T08:32:22.682Z">
+<meta property="article:published_time" content="2021-08-05T14:51:53.000Z">
+<meta property="article:modified_time" content="2021-08-05T15:30:43.579Z">
 <meta property="article:author" content="Hoohoo">
-<meta property="article:tag" content="技术">
-<meta property="article:tag" content="医学影像">
-<meta property="article:tag" content="MPR">
-<meta property="article:tag" content="VTK">
-<meta property="article:tag" content="ITK">
+<meta property="article:tag" content="生活">
+<meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png">
 
 
-<link rel="canonical" href="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/">
+<link rel="canonical" href="http://example.com/2021/08/05/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-08/">
 
 
 <script class="page-configurations">
@@ -64,7 +52,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>MPR实现过程 | ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo</title>
+<title>2021-08 | ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo</title>
   
 
 
@@ -206,7 +194,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MPR%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-text">MPR的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%B7%A5%E5%85%B7%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-text">实验工具及配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4"><span class="nav-text">实验步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-text">配置环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85VS2017"><span class="nav-text">安装VS2017</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Qt"><span class="nav-text">安装Qt</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85CMake"><span class="nav-text">安装CMake</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85VTK"><span class="nav-text">安装VTK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85ITK"><span class="nav-text">安装ITK</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4-1"><span class="nav-text">实验步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C"><span class="nav-text">实验效果</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1"><span class="nav-text">8.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2"><span class="nav-text">8.2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3"><span class="nav-text">8.3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-4"><span class="nav-text">8.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-5"><span class="nav-text">8.5</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -279,7 +267,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/05/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-08/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.JPG">
@@ -292,43 +280,35 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          MPR实现过程
+          2021-08
         </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
 
  
+      <span class="post-meta-item-icon">
+      <i class="fa fa-thumb-tack" aria-hidden="true"></i> 
+      </span>
+      <span style="color:#ffb26b;font-weight:bold;">置顶啊！</span>
+      <span class="post-meta-divider"></span>
+
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-03-15 11:54:11" itemprop="dateCreated datePublished" datetime="2021-03-15T11:54:11+08:00">2021-03-15</time>
+      <time title="创建时间：2021-08-05 22:51:53 / 修改时间：23:30:43" itemprop="dateCreated datePublished" datetime="2021-08-05T22:51:53+08:00">2021-08-05</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i> 
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-07 16:32:22" itemprop="dateModified" datetime="2021-04-07T16:32:22+08:00">2021-04-07</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/VTK/" itemprop="url" rel="index"><span itemprop="name">VTK</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/ITK/" itemprop="url" rel="index"><span itemprop="name">ITK</span></a>
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
         </span>
     </span>
 
@@ -347,14 +327,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>866</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -365,90 +345,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="MPR的介绍"><a href="#MPR的介绍" class="headerlink" title="MPR的介绍"></a>MPR的介绍</h2><p>MPR(multi-planner reformation)也称多平面重建，多重面重建是将扫描范围内所有的轴位图像叠加起来再对某些标线标定的重组线所指定的组织进行冠状、矢状位、任意角度斜位图像重组。MPR是CT三维数据呈现的重要内容，其在三维数据的任一点空间位置，采用XY、XZ和YZ三个平面切空间数据得到三个切面分别为轴状面、冠状面和矢状面，而且X/Y/Z三个轴可以绕三维坐标原点任意旋转。</p>
-<p><em><span id="more"></span></em></p>
-<p>MPR 的<strong>优点</strong></p>
-<ul>
-<li>能任意产生新的断层图像，而无需重复扫描。</li>
-<li>曲面重组能在一幅图像里展开显示弯曲物体的生长。</li>
-</ul>
-<p>MPR的<strong>缺点</strong></p>
-<ul>
-<li>难以表达复杂的空间结构。</li>
-<li>曲面重组易造成假阳性。</li>
-</ul>
-<h2 id="实验工具及配置"><a href="#实验工具及配置" class="headerlink" title="实验工具及配置"></a>实验工具及配置</h2><blockquote>
-<p>平台：Windows 10</p>
-<p>数据集：<a target="_blank" rel="noopener" href="https://promise12.grand-challenge.org/Home/">Promise12</a> 也可以参考 <a target="_blank" rel="noopener" href="https://my.oschina.net/u/4579165/blog/4344038">医学影像公开数据集（续）</a></p>
+        <blockquote>
+<p>八月，在沉静中上升。</p>
 </blockquote>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:center">地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">ITK</td>
-<td style="text-align:center">4.13.2</td>
-<td style="text-align:center"><a target="_blank" rel="noopener" href="https://itk.org/download/">https://itk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">VTK</td>
-<td style="text-align:center">8.2.0</td>
-<td style="text-align:center"><a target="_blank" rel="noopener" href="https://vtk.org/download/">https://vtk.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">CMake</td>
-<td style="text-align:center">3.14.0</td>
-<td style="text-align:center"><a target="_blank" rel="noopener" href="https://cmake.org/download/">https://cmake.org/download/</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Qt</td>
-<td style="text-align:center">5.12.0</td>
-<td style="text-align:center"><a target="_blank" rel="noopener" href="https://www.qt.io/download">https://www.qt.io/download</a></td>
-</tr>
-<tr>
-<td style="text-align:center">Visual Studio</td>
-<td style="text-align:center">2017_64 bit</td>
-<td style="text-align:center"><a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><h4 id="安装VS2017"><a href="#安装VS2017" class="headerlink" title="安装VS2017"></a>安装VS2017</h4><p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36556893/article/details/79430133">VS2017的安装与应用</a></p>
-<h4 id="安装Qt"><a href="#安装Qt" class="headerlink" title="安装Qt"></a>安装Qt</h4><p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/gaojixu/article/details/82185694">Qt的安装与VS2017的配置</a></p>
-<h4 id="安装CMake"><a href="#安装CMake" class="headerlink" title="安装CMake"></a>安装CMake</h4><p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/github_35160620/article/details/52365824?utm_source=blogxgwz0">Windows系统 安装 CMake</a></p>
-<h4 id="安装VTK"><a href="#安装VTK" class="headerlink" title="安装VTK"></a>安装VTK</h4><p>参考博客：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jepco1/article/details/80628026">VTK8.1 在 Qt5.9 环境下的配置、编译和安装</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hrq3333/article/details/81260963">VS2017动态编译VTK8.1.1</a></p>
-<h4 id="安装ITK"><a href="#安装ITK" class="headerlink" title="安装ITK"></a>安装ITK</h4><p>参考博客：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yu253/article/details/78412307?utm_source=blogxgwz0">ITK4.12+VS2015配置详解</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/numit/article/details/9985045">Qt VTK ITK安装与测试（三）ITK的安装与测试</a></p>
-<h3 id="实验步骤-1"><a href="#实验步骤-1" class="headerlink" title="实验步骤"></a>实验步骤</h3><blockquote>
-<p>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/seugxf/article/details/105201516">基于VTK的MPR实现</a></p>
+<span id="more"></span>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大家好，现在是八月，很遗憾在家里的我并没有什么劲头，我总把这些归咎于环境的问题，也或许是，也或许是在家里的轻松让人觉得是该更好的陪伴家人，尤其是七月的暴雨和现在的疫情，都令我感觉到生命的可贵，以及我奶奶的年老。</p>
+<p>我在家时有天晚上打开我爸零几年买的笔记本电脑，本意是我爸充上电让我帮他看下电脑还能用吗，联想的笔记本，勾起我很多回忆，我那时候总是希望我爸妈出去旅游，把我们丢给其他的亲戚，然后我就可以掂着笔记本到我家Wi-Fi信号最好的地方上QQ——那时候没有微信，顺便浏览一些网页，从小我就不喜欢玩游戏——大型的网游，现在也是。</p>
+<p>然后我开始用我目前有的一些计算机知识查看了一下笔记本的配置， 直观看的话就是配置相比于现在太loooooow了，不过十几年前的也不能同日而语，内存很小，几十G的样子，我就开始翻看D盘，我爸放照片的地方，二十一世纪开头的头一个十年，我爸徘徊在四十岁左右，照片中的他和我妈年轻极了，也包括我奶奶，让我无法相信。</p>
+<p>所以时光一直在飞，我也常怀念幼时的环境和人。</p>
+<blockquote>
+<p>黄昏升起的时候的天空带着些许黄色，在遥远的透过高楼的缝隙里。</p>
+<p>我偶尔怀念这个时候，和幼时见过最高的6层的楼不同，也和大片的眼球的感受野不同。</p>
+<p>那时候的树叶也带着偶尔的不屑，在秋风中洋洋洒洒地飘落下来，于是我总无法理解将人之死喻为落叶。</p>
+<p>我总执着于一对铁门围起的院子，奔跑中也带着跳跃的懵懂，复杂是一件简单的事，而非如今，简单是一件复杂的事。</p>
+<p>一板一眼走路的时候，空中扬起的灰尘沾满裤子，这令我想到拖家带口。</p>
+<p>在你和我说第三十遍拖家带口是一种贬义味道的词汇时，我咽了下去，在吞咽时候情感带给我一种充实的团聚感。</p>
+<p>而在我混沌不醒的时刻，天边云是我的光。</p>
 </blockquote>
-<p>将MPR压缩包解压，并新建install和TestData文件夹。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092535090.png" class="" title="MPR文件夹下新建">
-<p>打开CMake，source code路径即为MPR/source，build路径即为MPR/build。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092853496.png" class="" title="设置source和build路径">
-<p>点击configure按钮，使用本地编译器，选择Visual Studio 15 2017，并选择x64后点击Finish，之后会出现一片红色，将其中CMAKE_INSTALL_PREFIX的路径改为新建的MPR/install，并选择ItkVtkGlue模块。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315092827410.png" class="" title="配置">
-<p>继续configure，直到无红色出现，点击generate。</p>
-<p>generate结束后，打开vs2017，找到build下的<code>QtVTKRenderWindows.sln</code>文件选择打开，并将<code>QtVTKRenderWindows</code>设为启动项目，点击本地Windows调试器即可。</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094459509.png" class="" title="设置为启动项目">
-<h3 id="实验效果"><a href="#实验效果" class="headerlink" title="实验效果"></a>实验效果</h3><p>将三个面板的初始位置均设置为0，即体数据的三个边缘，同时将它们的颜色分别设计为红、绿、蓝三种颜色，与后面的映射图像窗口的颜色是对应的。</p>
-<p>初始界面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094853813.png" class="" title="初始界面">
-<p>旋转切面：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315094945787.png" class="" title="旋转切面">
-<p>像素点的三维坐标与灰度值信息的显示：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095034822.png" class="" title="坐标及灰度信息显示">
-<p>灰度变化：</p>
-<img src="/2021/03/15/VTK/MPR%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/image-20210315095104254.png" class="" title="灰度变化">
+<p>只是到了8月，到了学校，快一点，再快一点完成自己的任务吧。</p>
+<h2 id="8-1"><a href="#8-1" class="headerlink" title="8.1"></a>8.1</h2><h2 id="8-2"><a href="#8-2" class="headerlink" title="8.2"></a>8.2</h2><h2 id="8-3"><a href="#8-3" class="headerlink" title="8.3"></a>8.3</h2><h2 id="8-4"><a href="#8-4" class="headerlink" title="8.4"></a>8.4</h2><p>早上睡不着觉的我在五点多进入梦乡，不到1h的深度睡眠时间让我在飞机上睡爽了。</p>
+<p>回家的收获和反思就是一定要随身带眼罩。</p>
+<h2 id="8-5"><a href="#8-5" class="headerlink" title="8.5"></a>8.5</h2><p>腰酸背痛的在下午才起床，奖励自己一顿好的，也就是麻辣香锅。</p>
+<p>明天要开始恢复日常工作日时间了，开始吧。</p>
 
     </div>
 
@@ -470,25 +388,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> 技术</a>
-              <a href="/tags/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F/" rel="tag"><i class="fa fa-tag"></i> 医学影像</a>
-              <a href="/tags/MPR/" rel="tag"><i class="fa fa-tag"></i> MPR</a>
-              <a href="/tags/VTK/" rel="tag"><i class="fa fa-tag"></i> VTK</a>
-              <a href="/tags/ITK/" rel="tag"><i class="fa fa-tag"></i> ITK</a>
+              <a href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag"><i class="fa fa-tag"></i> 生活</a>
+              <a href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag"><i class="fa fa-tag"></i> 记录</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/03/03/hellohoo/" rel="prev" title="hellohoo">
-                  <i class="fa fa-chevron-left"></i> hellohoo
+                <a href="/2021/07/06/%E6%8A%80%E6%9C%AF/iPhone%E5%A4%87%E5%BF%98%E5%BD%95%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98/" rel="prev" title="iPhone备忘录清除缓存">
+                  <i class="fa fa-chevron-left"></i> iPhone备忘录清除缓存
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/" rel="next" title="Rodin安装教程（附java8安装教程）">
-                  Rodin安装教程（附java8安装教程） <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
