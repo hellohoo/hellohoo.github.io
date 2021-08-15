@@ -91,6 +91,7 @@
 <h2 id="813"><a class="markdownIt-Anchor" href="#813"></a> 8.13</h2>
 <h2 id="814"><a class="markdownIt-Anchor" href="#814"></a> 8.14</h2>
 <p>今天是七夕，奖励自己去看了部电影。</p>
+<img src="/2021/08/05/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-08/%E6%9C%AA%E5%91%BD%E5%90%8D%E4%BD%9C%E5%93%81.PNG" class="" title="兔子暴力">
 <p>下午在寝室和本科老师打电话，感动，他说“我感受到你遇到了困难”，我说“困难常有，你这样的好老师不常有”，他说“我们是好朋友”，呜呜本科还和同学说他好直男，真是感动我呜呜呜。</p>
 <p>我哭了，transformer要求很高，不知道能不能跑起来，等我明天试一试。</p>
 <p>早点写完专利，我决定写三个。</p>
@@ -417,8 +418,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>python</tag>
         <tag>问题</tag>
+        <tag>python</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -496,8 +497,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>论文阅读</tag>
         <tag>医学影像</tag>
+        <tag>论文阅读</tag>
       </tags>
   </entry>
   <entry>
@@ -518,9 +519,9 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>技术</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>书籍</tag>
         <tag>图像分割</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -3424,8 +3425,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       <tags>
         <tag>技术</tag>
         <tag>医学影像</tag>
-        <tag>VTK</tag>
         <tag>MPR</tag>
+        <tag>VTK</tag>
         <tag>ITK</tag>
       </tags>
   </entry>
