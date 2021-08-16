@@ -325,7 +325,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>让我们呢，从最初开始。</p>
 <span id="more"></span>
 <h2 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h2>
-<p>人们普遍认为深度网络的训练需要大量的标签训练样本。本文提出了一种网络架构和训练策略，可以在数据增强的强大使用下更有效利用。然后介绍了一下这个网络的结构：包括用于捕捉上下文的收缩路径和用于实现精确定位的对称扩展路径。介绍这种网络的优势：可以在很小的图片集上端对端训练，并且在ISBI challenge上优于先前最好的方法。并且通过在透射光学显微镜图像上训练的该网络以巨大优势赢得了ISBI2015 cell tracking challenge。速度也很快，在目前（2015）GPU 上，一张512 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span>​​​​ 512的图像分割只需要不到 1s 的时间。最后介绍可以在 <a href="http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net%E4%B8%8A%E6%9F%A5%E7%9C%8Bimplementation%EF%BC%88based">http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net上查看implementation（based</a> on Caffe）。</p>
+<p>人们普遍认为深度网络的训练需要大量的标签训练样本。本文提出了一种网络架构和训练策略，可以在数据增强的强大使用下更有效利用。然后介绍了一下这个网络的结构：包括用于捕捉上下文的收缩路径和用于实现精确定位的对称扩展路径。介绍这种网络的优势：可以在很小的图片集上端对端训练，并且在ISBI challenge上优于先前最好的方法。并且通过在透射光学显微镜图像上训练的该网络以巨大优势赢得了ISBI2015 cell tracking challenge。速度也很快，在目前（2015）GPU 上，一张512 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span>​​​​ 512的图像分割只需要不到 1s 的时间。最后介绍可以在 <a href="http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net">http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net</a> 上查看implementation（based on Caffe）。</p>
 <h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
 <p>【深度网路在视觉任务中的进程】</p>
 <p>在过去两年，在许多视觉识别任务中深度卷积网络的性能超过目前最先进的技术，如[7, 3]。虽然深度网络存在时间很长了[8]，但是它们被训练集的大小和网络大小所限制，Krizhevsky等人[7]的突破是在一个具有8层和百万参数的大型网络上对具有100万个训练图像的ImageNet数据集上进行了训练。从此之后，更大更深的网络也被训练出来[12]。</p>
@@ -364,7 +364,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 </blockquote>
 <p>【介绍本片论文】</p>
 <p>在这片论文中，我们建立在一个更优雅的架构上——全卷积网络[9]。我们修改和扩充了这个架构使其能在更小的训练集并产生更精确的分割结果，见图1（see Figure 1）。</p>
-<p><img src="UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%5Cimage-20210816113912590.png" alt="Figure 1" /></p>
+<p><img src="%5CUNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%5Cimage-20210816113912590.png" alt="Figure 1" /></p>
 <p>[9]的中心思想主要是通过连续层来补充下采样网络（contracting network），其中池化操作被上采样操作代替。因此，这些层提高了输出的分辨率。为了精准定位，将下采样和上采样的高分辨率图像combine。随后，连续卷基层学习这个信息可以得到更精确的输出。</p>
 <blockquote>
 <ol start="9">
@@ -544,8 +544,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>python</tag>
         <tag>问题</tag>
+        <tag>python</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -2571,8 +2571,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
