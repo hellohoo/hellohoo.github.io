@@ -100,6 +100,8 @@
 <h2 id="816"><a class="markdownIt-Anchor" href="#816"></a> 8.16</h2>
 <p><kbd>起床时间</kbd>：8:37</p>
 <p>前一天晚上四点后千万不要喝咖啡！</p>
+<p>差不多写完了论文笔记。</p>
+<p>图也被画得差不多啦！</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -364,7 +366,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 </blockquote>
 <p>【介绍本片论文】</p>
 <p>在这片论文中，我们建立在一个更优雅的架构上——全卷积网络[9]。我们修改和扩充了这个架构使其能在更小的训练集并产生更精确的分割结果，见图1（see Figure 1）。</p>
-<p><img src="%5CUNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%5Cimage-20210816113912590.png" alt="Figure 1" /></p>
+<img src="/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816113912590.png" class="" title="Figure 1">
 <p>[9]的中心思想主要是通过连续层来补充下采样网络（contracting network），其中池化操作被上采样操作代替。因此，这些层提高了输出的分辨率。为了精准定位，将下采样和上采样的高分辨率图像combine。随后，连续卷基层学习这个信息可以得到更精确的输出。</p>
 <blockquote>
 <ol start="9">
@@ -375,7 +377,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>因此，上采样和下采样差不多是对称的 ，产生了U型结构。U-net也没有全连接层，是一个FCN的架构网络。网络的最终的分割图像是与输入像素相同的图像。运用了<strong>overlap-tile</strong>（see Figure 2）策略，使得在任意图像分类上都达到无缝分割。</p>
 <p><strong>overlap-tile策略</strong>：对图片缺失的上下文进行了镜像，使得图像边缘也能很好的分割。</p>
 <p>这种策略对于大图像很重要，否则分辨率会受到GPU内存限制。（这个策略基于GPU内存不够的情况下所提出的）</p>
-<p><img src="UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%5Cimage-20210816172647096.png" alt="Figure 2" /></p>
+<img src="/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816172647096.png" class="" title="Figure 2">
 <p>接下来就是对小数量的数据集做数据增强。这在医学图像分割中特别重要。</p>
 <p>在无监督的特征学习中，数据加强对于学习不变性的价值已经在[2]中凸显出来了。</p>
 <blockquote>
@@ -387,7 +389,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 </ol>
 </blockquote>
 <p>细胞分割任务中的另一个挑战就是同类且相互接触细胞的分离(see Figure 3)。为此，提出使用加权loss，也就是赋予相互接触的两个细胞之间的background标签更高的权重。</p>
-<p><img src="UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%5Cimage-20210816174048171.png" alt="Figure 3" /></p>
+<img src="/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816174048171.png" class="" title="Figure 3">
 <p>【总结，谈贡献】</p>
 <p>该网络结构适合各种医学分割问题。在这篇论文中，我们展示了在neuronal structures in EM stacks (an ongoing competition started at ISBI 2012)的分割结果，我们的表现优于Ciresan等人的网络[1]。此外，我们还展示了2015的ISBI cell tracking challenge的分割结果，我们在两个most challenging的2D 透射光数据集上断层第一哦！</p>
 <blockquote>
@@ -544,8 +546,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>问题</tag>
         <tag>python</tag>
+        <tag>问题</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -2571,8 +2573,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
