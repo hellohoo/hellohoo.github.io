@@ -332,46 +332,26 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>【深度网路在视觉任务中的进程】</p>
 <p>在过去两年，在许多视觉识别任务中深度卷积网络的性能超过目前最先进的技术，如[7, 3]。虽然深度网络存在时间很长了[8]，但是它们被训练集的大小和网络大小所限制，Krizhevsky等人[7]的突破是在一个具有8层和百万参数的大型网络上对具有100万个训练图像的ImageNet数据集上进行了训练。从此之后，更大更深的网络也被训练出来[12]。</p>
 <blockquote>
-<ol start="7">
-<li>
-<p>Krizhevsky, A., Sutskever, I., Hinton, G.E.: Imagenet classification with deep convolutional neural networks. In: NIPS. pp. 1106–1114 (2012)</p>
-</li>
-<li>
-<p>Girshick, R., Donahue, J., Darrell, T., Malik, J.: Rich feature hierarchies for accurate object detection and semantic segmentation. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2014)</p>
-</li>
-<li>
-<p>LeCun, Y., Boser, B., Denker, J.S., Henderson, D., Howard, R.E., Hubbard, W., Jackel, L.D.: Backpropagation applied to handwritten zip code recognition. Neural Computation 1(4), 541–551 (1989)</p>
-</li>
-<li>
-<p>Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition (2014), arXiv:1409.1556 [<a href="http://cs.CV">cs.CV</a>]</p>
-</li>
-</ol>
+<p>[7] Krizhevsky, A., Sutskever, I., Hinton, G.E.: Imagenet classification with deep convolutional neural networks. In: NIPS. pp. 1106–1114 (2012)</p>
+<p>[3] Girshick, R., Donahue, J., Darrell, T., Malik, J.: Rich feature hierarchies for accurate object detection and semantic segmentation. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2014)</p>
+<p>[8] LeCun, Y., Boser, B., Denker, J.S., Henderson, D., Howard, R.E., Hubbard, W., Jackel, L.D.: Backpropagation applied to handwritten zip code recognition. Neural Computation 1(4), 541–551 (1989)</p>
+<p>[12] Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition (2014), arXiv:1409.1556 [<a href="http://cs.CV">cs.CV</a>]</p>
 </blockquote>
 <p>【医学分割上目前最好的网络架构介绍】</p>
 <p>卷积神经网络的典型用途是分类任务，其中图像输出的是单个类别标签，比如猫阿狗啊。但在许多视觉任务的处理中，特别是在医学分割上，期望的输出包括localization，即（i.e.），应该每个像素都有类别标签。而且在医学上成千上万的训练图像通常是很难达到的，因此Ciresan等人[1]在sliding-window设置训练了一个网络通过输入的像素点周围提供的一个局部区域(patch)来预测每个像素的类标签。首先，这个网络可以localize。其次，以patch为单位的训练数据远远大于训练图像。于是该网络在2012年的ISBI的EM分割挑战赛中以很大优势胜出。</p>
 <p>【接下来，分析他人缺点，并提出最近一些论文解决了该缺点而使用的方法】</p>
 <p>显而易见，[1]提出的网络结构有两个缺点。第一，太<strong>慢</strong>了，因为需要在每个patch上分别run，而且有大量冗余在重叠patch部分。第二，在localization  accuracy(定位精确度)和use of context(上下文的使用上)会有一个权衡——较大的patch需要更多地最大池化层，但这会降低定位精度，而较小的patch只允许网络得到小的上下文信息。最近的方法[11,4]提出了一种分类器输出that考虑了多层特征。可能让定位精度和上下文的使用上同时达到GOOD的程度。</p>
 <blockquote>
-<ol>
-<li>
-<p>Ciresan, D.C., Gambardella, L.M., Giusti, A., Schmidhuber, J.: Deep neural networks segment neuronal membranes in electron microscopy images. In: NIPS. pp. 2852–2860 (2012)</p>
-</li>
-<li>
-<p>Seyedhosseini, M., Sajjadi, M., Tasdizen, T.: Image segmentation with cascaded hierarchical models and logistic disjunctive normal networks. In: Computer Vision (ICCV), 2013 IEEE International Conference on. pp. 2168–2175 (2013)</p>
-</li>
-<li>
-<p>Hariharan, B., Arbelez, P., Girshick, R., Malik, J.: Hypercolumns for object segmentation and fine-grained localization (2014), arXiv:1411.5752 [<a href="http://cs.CV">cs.CV</a>]</p>
-</li>
-</ol>
+<p>[1] Ciresan, D.C., Gambardella, L.M., Giusti, A., Schmidhuber, J.: Deep neural networks segment neuronal membranes in electron microscopy images. In: NIPS. pp. 2852–2860 (2012)</p>
+<p>[11] Seyedhosseini, M., Sajjadi, M., Tasdizen, T.: Image segmentation with cascaded hierarchical models and logistic disjunctive normal networks. In: Computer Vision (ICCV), 2013 IEEE International Conference on. pp. 2168–2175 (2013)</p>
+<p>[4] Hariharan, B., Arbelez, P., Girshick, R., Malik, J.: Hypercolumns for object segmentation and fine-grained localization (2014), arXiv:1411.5752 [<a href="http://cs.CV">cs.CV</a>]</p>
 </blockquote>
 <p>【介绍本片论文】</p>
 <p>在这片论文中，我们建立在一个更优雅的架构上——全卷积网络[9]。我们修改和扩充了这个架构使其能在更小的训练集并产生更精确的分割结果，见图1（see Figure 1）。</p>
 <img src="/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816113912590.png" class="" title="Figure 1">
 <p>[9]的中心思想主要是通过连续层来补充下采样网络（contracting network），其中池化操作被上采样操作代替。因此，这些层提高了输出的分辨率。为了精准定位，将下采样和上采样的高分辨率图像combine。随后，连续卷基层学习这个信息可以得到更精确的输出。</p>
 <blockquote>
-<ol start="9">
-<li>Long,  J.,  Shelhamer,  E.,  Darrell,  T.:  Fully  convolutional  networks  for  semanticsegmentation (2014), arXiv:1411.4038 [<a href="http://cs.CV">cs.CV</a>]</li>
-</ol>
+<p>[9] Long,  J.,  Shelhamer,  E.,  Darrell,  T.:  Fully  convolutional  networks  for  semanticsegmentation (2014), arXiv:1411.4038 [<a href="http://cs.CV">cs.CV</a>]</p>
 </blockquote>
 <p>阐述我们提出的网络的修改。在上采样部分，我们也有大量的特征通道允许网络将上下文信息传播到更高分辨率的层。</p>
 <p>因此，上采样和下采样差不多是对称的 ，产生了U型结构。U-net也没有全连接层，是一个FCN的架构网络。网络的最终的分割图像是与输入像素相同的图像。运用了<strong>overlap-tile</strong>（see Figure 2）策略，使得在任意图像分类上都达到无缝分割。</p>
@@ -384,18 +364,14 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p><strong>This allows the network to learn invariance to such deformations, without the need to see these transformations in the annotated image corpus. This is particularly important in biomedical segmentation, since deformation used to be the most common variation in tissue and realistic deformations can be simulated efficiently.</strong></p>
 </blockquote>
 <blockquote>
-<ol start="2">
-<li>Dosovitskiy, A., Springenberg, J.T., Riedmiller, M., Brox, T.: Discriminative unsupervised feature learning with convolutional neural networks. In: NIPS (2014)</li>
-</ol>
+<p>[2] Dosovitskiy, A., Springenberg, J.T., Riedmiller, M., Brox, T.: Discriminative unsupervised feature learning with convolutional neural networks. In: NIPS (2014)</p>
 </blockquote>
 <p>细胞分割任务中的另一个挑战就是同类且相互接触细胞的分离(see Figure 3)。为此，提出使用加权loss，也就是赋予相互接触的两个细胞之间的background标签更高的权重。</p>
 <img src="/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816174048171.png" class="" title="Figure 3">
 <p>【总结，谈贡献】</p>
 <p>该网络结构适合各种医学分割问题。在这篇论文中，我们展示了在neuronal structures in EM stacks (an ongoing competition started at ISBI 2012)的分割结果，我们的表现优于Ciresan等人的网络[1]。此外，我们还展示了2015的ISBI cell tracking challenge的分割结果，我们在两个most challenging的2D 透射光数据集上断层第一哦！</p>
 <blockquote>
-<ol>
-<li>Ciresan, D.C., Gambardella, L.M., Giusti, A., Schmidhuber, J.: Deep neural networks segment neuronal membranes in electron microscopy images. In: NIPS. pp. 2852–2860 (2012)</li>
-</ol>
+<p>[1] Ciresan, D.C., Gambardella, L.M., Giusti, A., Schmidhuber, J.: Deep neural networks segment neuronal membranes in electron microscopy images. In: NIPS. pp. 2852–2860 (2012)</p>
 </blockquote>
 <h2 id="network-architecture"><a class="markdownIt-Anchor" href="#network-architecture"></a> Network Architecture</h2>
 <p>The network architecture is illustrated in Figure 1.</p>
@@ -425,9 +401,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>【最后再总结一下我们的工作真的很棒！性能很棒哦！比方！给你举例哦！】</p>
 <p>u-net在不同的医学图像分割应用上都取得了比较好的性能。得益于弹性变形的数据增强，它只需要很少的图像，并且训练时间也很合理，只要10h，我们提供完整的基于Caffe[6]的实现和训练有素的网络，我们确信u-net架构可以很容易地应用于更多的任务。</p>
 <blockquote>
-<ol start="6">
-<li>Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R., Guadarrama, S., Darrell, T.: Caffe: Convolutional architecture for fast feature embedding (2014), arXiv:1408.5093 [<a href="http://cs.CV">cs.CV</a>]</li>
-</ol>
+<p>[6] Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R., Guadarrama, S., Darrell, T.: Caffe: Convolutional architecture for fast feature embedding (2014), arXiv:1408.5093 [<a href="http://cs.CV">cs.CV</a>]</p>
 </blockquote>
 <h2 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h2>
 <blockquote>
