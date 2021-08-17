@@ -35,8 +35,9 @@
 <meta property="og:image" content="http://example.com/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816113912590.png">
 <meta property="og:image" content="http://example.com/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816172647096.png">
 <meta property="og:image" content="http://example.com/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816174048171.png">
+<meta property="og:image" content="http://example.com/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210817195118832.png">
 <meta property="article:published_time" content="2021-08-16T17:15:04.000Z">
-<meta property="article:modified_time" content="2021-08-16T17:35:59.251Z">
+<meta property="article:modified_time" content="2021-08-17T11:51:36.848Z">
 <meta property="article:author" content="Hoohoo">
 <meta property="article:tag" content="技术">
 <meta property="article:tag" content="医学影像">
@@ -299,7 +300,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-17 01:15:04 / 修改时间：01:35:59" itemprop="dateCreated datePublished" datetime="2021-08-17T01:15:04+08:00">2021-08-17</time>
+      <time title="创建时间：2021-08-17 01:15:04 / 修改时间：19:51:36" itemprop="dateCreated datePublished" datetime="2021-08-17T01:15:04+08:00">2021-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -413,6 +414,7 @@
 <li>为了最大限度地减少开销并最大限度地利用 GPU 内存，我们倾向于使用大输入图块而不是大批量，从而将批量减少到单个图像。因此，我们使用高momentum (0.99)，使得大量先前看到的训练样本确定当前优化步骤中的更新</li>
 <li><strong>能量函数</strong></li>
 </ul>
+<img src="/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210817195118832.png" class="" title="Energy Function">
 <h3 id="data-argumentation"><a class="markdownIt-Anchor" href="#data-argumentation"></a> Data Argumentation</h3>
 <p>当只有很少的训练样本可用时，数据增强对于教导网络期望的不变性和鲁棒性是至关重要的。对于显微图像，我们主要需要平移和旋转不变性，以及对变形和灰度值变化的鲁棒性。尤其是训练样本的随机弹性变形似乎是训练带有很少注释图像的分割网络的关键概念。我们使用粗糙的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>​ 网格上的随机位移向量生成平滑变形。位移从标准偏差为10像素的高斯分布中采样。然后使用双三次插值计算每像素位移。缩路径末端的退出层执行进一步的隐式数据扩充。</p>
 <h2 id="experiments"><a class="markdownIt-Anchor" href="#experiments"></a> Experiments</h2>
@@ -427,15 +429,10 @@
 <h2 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h2>
 <blockquote>
 <ul>
-<li>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_36474809/article/details/87931260">Unet论文详解U-Net:Convolutional Networks for Biomedical Image Segmentation_祥瑞的技术博客-CSDN博客_unet论文</a></p>
-</li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012328159/article/details/80311892">深度学习中优化方法——momentum、Nesterov Momentum、AdaGrad、Adadelta、RMSprop、Adam_天泽28的专栏-CSDN博客_momentum</a></p>
-</li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_37947156/article/details/99068983">一文带你了解深度学习中的各种卷积（上）_小岁月太着急-CSDN博客_一文带你了解深度学习中的各种卷积</a></p>
-</li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_36474809/article/details/87931260">Unet论文详解U-Net:Convolutional Networks for Biomedical Image Segmentation_祥瑞的技术博客-CSDN博客_unet论文</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012328159/article/details/80311892">深度学习中优化方法——momentum、Nesterov Momentum、AdaGrad、Adadelta、RMSprop、Adam_天泽28的专栏-CSDN博客_momentum</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_37947156/article/details/99068983">一文带你了解深度学习中的各种卷积（上）_小岁月太着急-CSDN博客_一文带你了解深度学习中的各种卷积</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1v7411Z7b9">论文讲解：U-Net: Convolutional Networks for Biomedical Image Segmentation及源码分析_哔哩哔哩_bilibili</a></li>
 </ul>
 </blockquote>
 
@@ -532,7 +529,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:47</span>
+    <span title="站点阅读时长">3:48</span>
   </span>
 </div>
 <div class="busuanzi-count">
