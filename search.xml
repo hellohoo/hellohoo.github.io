@@ -526,7 +526,11 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>后续你可以选择自己的爱好把备忘录继续放在iCloud中或者像我一样又把它们移回了本地，3.49g是我移回本地的内存占用。</p>
 <p>#我猜测是iCloud之间的来回移动或者是其它导致的缓存冗余，但时间真的很久，我折腾了至少俩小时。</p>
 <p>试试吧！</p>
-<p>这个缓存会一直存在，所以我建议以后要么只用本地写备忘录，要么买大内存手机，来回往复把人折腾够呛。</p>
+<h2 id="后记"><a class="markdownIt-Anchor" href="#后记"></a> 后记</h2>
+<p><strong>两月后repo：</strong></p>
+<p>这个缓存会一直存在，所以我建议：</p>
+<p>要么只用本地写备忘录，要么<strong>买大内存手机</strong>，来回往复把人折腾够呛。</p>
+<p>所以我买手机后不会有任何使用上的变化，但只要让我能打开微信就好，不要再用内存这个借口来闪退我了。</p>
 ]]></content>
       <categories>
         <category>胡整</category>
@@ -596,8 +600,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>问题</tag>
         <tag>python</tag>
+        <tag>问题</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -2623,8 +2627,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
