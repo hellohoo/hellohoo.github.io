@@ -691,6 +691,383 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac的Rodin安装教程</title>
+    <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
+<blockquote>
+<p>系统：macOS Big Sur 11.2.3</p>
+<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
+</blockquote>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<h5 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h5>
+<p>在Mac上直接<code>terminal</code>中输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
+<h5 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h5>
+<p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
+<p>点击右上角文件夹图标：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
+<p>点击<code>Download JDK</code>：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
+<h4 id="测试jdk-8是否安装成功"><a class="markdownIt-Anchor" href="#测试jdk-8是否安装成功"></a> 测试JDK 8是否安装成功</h4>
+<p>输入以下命令不报错即成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
+<blockquote>
+<h4 id="macos-caveat"><a class="markdownIt-Anchor" href="#macos-caveat"></a> macOS caveat</h4>
+<p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
+</blockquote>
+<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
+<p>但是又继续报错：</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
+<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
+<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
+<p>发现有一段被注释掉了</p>
+<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
+<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
+<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
+<p>修改并保存，就可以成功启动Rodin了。</p>
+<blockquote>
+<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+        <tag>Rodin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rodin安装教程（附java8安装教程）</title>
+    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
+    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
+<blockquote>
+<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
+</blockquote>
+<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
+<p><em><span id="more"></span></em></p>
+<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
+<blockquote>
+<p>系统：WIndows 10</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>软件</th>
+<th>安装地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JDK 8</td>
+<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
+</tr>
+<tr>
+<td>Rodin</td>
+<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
+<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
+<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
+<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
+<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
+<p>更改安装路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
+<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
+<p>点击下一步后就安装成功了：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
+<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
+<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
+<p>并点击<code>高级系统设置</code></p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
+<p>点击<code>环境变量</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
+<p>点击<code>系统变量</code>-<code>新建</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
+<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
+<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
+<p>建议使用JAVA_HOME进行新建：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
+<p>点击确定环境变量配置完成。</p>
+<blockquote>
+<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
+<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
+</blockquote>
+<p>打开cmd分别输入以下三条指令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
+<p>显示如下内容则jdk 8安装成功。</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
+<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
+<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
+<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
+<p>下载解压后直接打开rodin.exe`:</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
+<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
+<p>打开后出现如下界面即为安装成功：</p>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
+<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
+<p>在<code>Work with</code>里输入相应名称即可安装。</p>
+<blockquote>
+<p>安装插件过程较慢，可以搭梯子。</p>
+</blockquote>
+<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+        <tag>Rodin</tag>
+        <tag>JDK</tag>
+        <tag>Event-B</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>胡看的上海国际电影节</title>
+    <url>/2021/06/04/GALA/SIFF/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>电影是人类进步的电梯。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="观影清单"><a class="markdownIt-Anchor" href="#观影清单"></a> 观影清单</h2>
+<table>
+<thead>
+<tr>
+<th>片名</th>
+<th>单元</th>
+<th>导演</th>
+<th>时间</th>
+<th>评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阿甘正传（IMAX）</td>
+<td>新视野</td>
+<td>罗伯特·泽米吉斯</td>
+<td>1994</td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>海上钢琴师（4K）</td>
+<td>向大师致敬</td>
+<td>朱塞佩·托纳多雷</td>
+<td>1998</td>
+<td>9.3</td>
+</tr>
+<tr>
+<td>寻子遇仙记</td>
+<td>SIFF经典</td>
+<td>查理·卓别林</td>
+<td>1921</td>
+<td>9.2</td>
+</tr>
+<tr>
+<td>沉默的羔羊（4K）</td>
+<td>多元视角</td>
+<td>乔纳森·戴米</td>
+<td>1991</td>
+<td>8.9</td>
+</tr>
+<tr>
+<td>末路狂花</td>
+<td>SIFF经典</td>
+<td>雷德利·斯科特</td>
+<td>1991</td>
+<td>8.8</td>
+</tr>
+<tr>
+<td>战场上的快乐圣诞（4K）</td>
+<td>SIFF经典</td>
+<td>大岛渚</td>
+<td>1983</td>
+<td>8.8</td>
+</tr>
+<tr>
+<td>西部往事</td>
+<td>向大师致敬</td>
+<td>赛尔乔·莱昂内</td>
+<td>1968</td>
+<td>8.7</td>
+</tr>
+<tr>
+<td>阮玲玉（4K）</td>
+<td>SIFF经典</td>
+<td>关锦鹏</td>
+<td>1991</td>
+<td>8.6</td>
+</tr>
+<tr>
+<td>钢的琴</td>
+<td>SIFF经典</td>
+<td>张猛</td>
+<td>2010</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>薄荷糖（4K）</td>
+<td>SIFF经典</td>
+<td>李沧东</td>
+<td>1999</td>
+<td>8.5</td>
+</tr>
+<tr>
+<td>胭脂扣（4K）</td>
+<td>SIFF经典</td>
+<td>关锦鹏</td>
+<td>1987</td>
+<td>8.4</td>
+</tr>
+<tr>
+<td>风声</td>
+<td>百年征程•红色光影</td>
+<td>陈国富</td>
+<td>2009</td>
+<td>8.3</td>
+</tr>
+<tr>
+<td>我的野蛮女友（4K）</td>
+<td>SIFF经典</td>
+<td>郭在容</td>
+<td>2001</td>
+<td>8.2</td>
+</tr>
+<tr>
+<td>女人韵事（4K）</td>
+<td>SIFF经典</td>
+<td>克洛德·夏布洛尔</td>
+<td>1988</td>
+<td>8.2</td>
+</tr>
+<tr>
+<td>祝福（4K）</td>
+<td>SIFF经典</td>
+<td>桑弧</td>
+<td>1956</td>
+<td>8.1</td>
+</tr>
+<tr>
+<td>夏日纪事</td>
+<td>SIFF经典</td>
+<td>让·鲁什</td>
+<td>1961</td>
+<td>8.1</td>
+</tr>
+<tr>
+<td>前程似锦的女孩</td>
+<td>官方推荐</td>
+<td>默拉尔德·芬内尔</td>
+<td>2020</td>
+<td>7.6</td>
+</tr>
+<tr>
+<td>里夫金的电影节（4K）</td>
+<td>官方推荐</td>
+<td>伍迪·艾伦</td>
+<td>2020</td>
+<td>7.2</td>
+</tr>
+<tr>
+<td>画魂（4K）</td>
+<td>SIFF经典</td>
+<td>黄蜀芹</td>
+<td>1994</td>
+<td>7.2</td>
+</tr>
+<tr>
+<td>求求你，表扬我</td>
+<td>官方推荐</td>
+<td>黄建新</td>
+<td>2005</td>
+<td>7</td>
+</tr>
+<tr>
+<td>三人行</td>
+<td>官方推荐</td>
+<td>安娜·米利克扬</td>
+<td>2020</td>
+<td>暂无评分</td>
+</tr>
+</tbody>
+</table>
+<h2 id="时间表格"><a class="markdownIt-Anchor" href="#时间表格"></a> 时间表格</h2>
+<img src="/2021/06/04/GALA/SIFF/image-20210604193619348.png" class="" title="image-20210604193619348">
+]]></content>
+      <categories>
+        <category>胡看</category>
+      </categories>
+      <tags>
+        <tag>ART</tag>
+        <tag>MOVIE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>卷积神经网络</title>
+    <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
+<p>学会变通，才能开启新的道路。——Hoohoo</p>
+</blockquote>
+<span id="more"></span>
+<p>大家好，因为最近在学SLAM14，但是由于一些原因，可能是分类过于多，我决定先把CV的前瞻课程学好——也就是深度学习这块，其实一直有了解，只是断断续续，也没有给自己一个确切的目标，毕竟现在搞视觉不带点深度学习的东西没办法搞了就。</p>
+<p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
+<p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
+<p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
+<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO5都出来了，<s>而且这本书采用的是tf1…</s> 我决定使用Pytorch，毕竟工业界用的比较多的是tf，而我们学生家家就乖乖用PyTorch吧。</p>
+<p><s>不过没关系</s>，就这样开始吧。</p>
+<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
+<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
+<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
+<p>比如三个全连接层的网络，输入784的话，隐藏层节点为100，即为（784 * 100 * 100 * 100 *100 * 10）…</p>
+<p>太多了，可以参考下图。</p>
+<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413195841238.png" class="" title="三层全连接网络">
+<p>而且全连接网络忽视了图像的形状，比如，我们一张有色彩的图片，一般是三通道的，但是全连接网络会将其压缩成1 chanel。所以全连接层无法利用与性状有关的信息。</p>
+<h3 id="卷积网络"><a class="markdownIt-Anchor" href="#卷积网络"></a> 卷积网络</h3>
+<h4 id="卷积层"><a class="markdownIt-Anchor" href="#卷积层"></a> 卷积层</h4>
+<p>卷积层的输入输出数据称为 <strong>特征图（feature map）</strong></p>
+<p><strong>输入：</strong> 输入特征图</p>
+<p><strong>输出：</strong> 输出特征图</p>
+<h4 id="卷积运算"><a class="markdownIt-Anchor" href="#卷积运算"></a> 卷积运算</h4>
+<p>卷积运算相当于图像处理中的滤波运算。</p>
+<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413200914937.png" class="" title="卷积运算">
+<p>卷积运算非常好理解，除了我画得比较丑。</p>
+<p>多层卷积就多层卷积就一对一，二对二进行卷积运算，然后叠加在一起成为一个。</p>
+<p>如果想成为多个，就输入多个滤波器。</p>
+<p>有几个滤波器，输出几个卷积。</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《视觉SLAM十四讲 第2版》学习笔记 第1讲</title>
     <url>/2021/04/02/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -1086,383 +1463,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <tag>书籍</tag>
         <tag>学习</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>胡看的上海国际电影节</title>
-    <url>/2021/06/04/GALA/SIFF/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<blockquote>
-<p>电影是人类进步的电梯。</p>
-</blockquote>
-<span id="more"></span>
-<h2 id="观影清单"><a class="markdownIt-Anchor" href="#观影清单"></a> 观影清单</h2>
-<table>
-<thead>
-<tr>
-<th>片名</th>
-<th>单元</th>
-<th>导演</th>
-<th>时间</th>
-<th>评分</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>阿甘正传（IMAX）</td>
-<td>新视野</td>
-<td>罗伯特·泽米吉斯</td>
-<td>1994</td>
-<td>9.5</td>
-</tr>
-<tr>
-<td>海上钢琴师（4K）</td>
-<td>向大师致敬</td>
-<td>朱塞佩·托纳多雷</td>
-<td>1998</td>
-<td>9.3</td>
-</tr>
-<tr>
-<td>寻子遇仙记</td>
-<td>SIFF经典</td>
-<td>查理·卓别林</td>
-<td>1921</td>
-<td>9.2</td>
-</tr>
-<tr>
-<td>沉默的羔羊（4K）</td>
-<td>多元视角</td>
-<td>乔纳森·戴米</td>
-<td>1991</td>
-<td>8.9</td>
-</tr>
-<tr>
-<td>末路狂花</td>
-<td>SIFF经典</td>
-<td>雷德利·斯科特</td>
-<td>1991</td>
-<td>8.8</td>
-</tr>
-<tr>
-<td>战场上的快乐圣诞（4K）</td>
-<td>SIFF经典</td>
-<td>大岛渚</td>
-<td>1983</td>
-<td>8.8</td>
-</tr>
-<tr>
-<td>西部往事</td>
-<td>向大师致敬</td>
-<td>赛尔乔·莱昂内</td>
-<td>1968</td>
-<td>8.7</td>
-</tr>
-<tr>
-<td>阮玲玉（4K）</td>
-<td>SIFF经典</td>
-<td>关锦鹏</td>
-<td>1991</td>
-<td>8.6</td>
-</tr>
-<tr>
-<td>钢的琴</td>
-<td>SIFF经典</td>
-<td>张猛</td>
-<td>2010</td>
-<td>8.5</td>
-</tr>
-<tr>
-<td>薄荷糖（4K）</td>
-<td>SIFF经典</td>
-<td>李沧东</td>
-<td>1999</td>
-<td>8.5</td>
-</tr>
-<tr>
-<td>胭脂扣（4K）</td>
-<td>SIFF经典</td>
-<td>关锦鹏</td>
-<td>1987</td>
-<td>8.4</td>
-</tr>
-<tr>
-<td>风声</td>
-<td>百年征程•红色光影</td>
-<td>陈国富</td>
-<td>2009</td>
-<td>8.3</td>
-</tr>
-<tr>
-<td>我的野蛮女友（4K）</td>
-<td>SIFF经典</td>
-<td>郭在容</td>
-<td>2001</td>
-<td>8.2</td>
-</tr>
-<tr>
-<td>女人韵事（4K）</td>
-<td>SIFF经典</td>
-<td>克洛德·夏布洛尔</td>
-<td>1988</td>
-<td>8.2</td>
-</tr>
-<tr>
-<td>祝福（4K）</td>
-<td>SIFF经典</td>
-<td>桑弧</td>
-<td>1956</td>
-<td>8.1</td>
-</tr>
-<tr>
-<td>夏日纪事</td>
-<td>SIFF经典</td>
-<td>让·鲁什</td>
-<td>1961</td>
-<td>8.1</td>
-</tr>
-<tr>
-<td>前程似锦的女孩</td>
-<td>官方推荐</td>
-<td>默拉尔德·芬内尔</td>
-<td>2020</td>
-<td>7.6</td>
-</tr>
-<tr>
-<td>里夫金的电影节（4K）</td>
-<td>官方推荐</td>
-<td>伍迪·艾伦</td>
-<td>2020</td>
-<td>7.2</td>
-</tr>
-<tr>
-<td>画魂（4K）</td>
-<td>SIFF经典</td>
-<td>黄蜀芹</td>
-<td>1994</td>
-<td>7.2</td>
-</tr>
-<tr>
-<td>求求你，表扬我</td>
-<td>官方推荐</td>
-<td>黄建新</td>
-<td>2005</td>
-<td>7</td>
-</tr>
-<tr>
-<td>三人行</td>
-<td>官方推荐</td>
-<td>安娜·米利克扬</td>
-<td>2020</td>
-<td>暂无评分</td>
-</tr>
-</tbody>
-</table>
-<h2 id="时间表格"><a class="markdownIt-Anchor" href="#时间表格"></a> 时间表格</h2>
-<img src="/2021/06/04/GALA/SIFF/image-20210604193619348.png" class="" title="image-20210604193619348">
-]]></content>
-      <categories>
-        <category>胡看</category>
-      </categories>
-      <tags>
-        <tag>ART</tag>
-        <tag>MOVIE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>卷积神经网络</title>
-    <url>/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<blockquote>
-<p>学会变通，才能开启新的道路。——Hoohoo</p>
-</blockquote>
-<span id="more"></span>
-<p>大家好，因为最近在学SLAM14，但是由于一些原因，可能是分类过于多，我决定先把CV的前瞻课程学好——也就是深度学习这块，其实一直有了解，只是断断续续，也没有给自己一个确切的目标，毕竟现在搞视觉不带点深度学习的东西没办法搞了就。</p>
-<p>当然深度学习其实是蛮简单的，知乎上有一篇文章：<a href="https://zhuanlan.zhihu.com/p/65472471">《神经网络15分钟入门！足够通俗易懂了吧》</a>十分不错，希望有兴趣的可以去看下，当时我看的时候，脑子里浮现的就俩字，“就这？”，当然不是来质疑作者的噱头，而是震惊神经网络就这吗？直到后来，系统地看了《深度学习入门——基于python的理论与实现》，这本书很好，而且字也蛮大，看得很快，会比较有成就感，发现神经网络还真就这。</p>
-<p>我也结合了《深度学习之TensorFlow——入门、原理与进阶实战》，看了上面那两个资料后，就会发现这本书学起来非常快，因为tf封装了许多内容，比如Loss这里，你直接调用就好了，而我当时抓耳挠腮纠结了许久原理以及求导。</p>
-<p>但是因为我个人是有一定的python基础和机器学习基础，所以学起来觉得并没有那么难，就像是之前问过一个同学的，学学原理，发现现有的框架里封装的函数直接给你实现了，不用你搞那么多，毕竟有轮子我就不造了。</p>
-<p>我会写一个大概的合集，来介绍目前的一些神经网络，但是是基础的神经网络，毕竟我看的书才YOLO2，现在YOLO5都出来了，<s>而且这本书采用的是tf1…</s> 我决定使用Pytorch，毕竟工业界用的比较多的是tf，而我们学生家家就乖乖用PyTorch吧。</p>
-<p><s>不过没关系</s>，就这样开始吧。</p>
-<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
-<h3 id="全连接网络的局限性"><a class="markdownIt-Anchor" href="#全连接网络的局限性"></a> 全连接网络的局限性</h3>
-<p>如果说有很多个输入节点，而且隐藏层一多，那么会导致参数过多。</p>
-<p>比如三个全连接层的网络，输入784的话，隐藏层节点为100，即为（784 * 100 * 100 * 100 *100 * 10）…</p>
-<p>太多了，可以参考下图。</p>
-<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413195841238.png" class="" title="三层全连接网络">
-<p>而且全连接网络忽视了图像的形状，比如，我们一张有色彩的图片，一般是三通道的，但是全连接网络会将其压缩成1 chanel。所以全连接层无法利用与性状有关的信息。</p>
-<h3 id="卷积网络"><a class="markdownIt-Anchor" href="#卷积网络"></a> 卷积网络</h3>
-<h4 id="卷积层"><a class="markdownIt-Anchor" href="#卷积层"></a> 卷积层</h4>
-<p>卷积层的输入输出数据称为 <strong>特征图（feature map）</strong></p>
-<p><strong>输入：</strong> 输入特征图</p>
-<p><strong>输出：</strong> 输出特征图</p>
-<h4 id="卷积运算"><a class="markdownIt-Anchor" href="#卷积运算"></a> 卷积运算</h4>
-<p>卷积运算相当于图像处理中的滤波运算。</p>
-<img src="/2021/04/07/DL/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-20210413200914937.png" class="" title="卷积运算">
-<p>卷积运算非常好理解，除了我画得比较丑。</p>
-<p>多层卷积就多层卷积就一对一，二对二进行卷积运算，然后叠加在一起成为一个。</p>
-<p>如果想成为多个，就输入多个滤波器。</p>
-<p>有几个滤波器，输出几个卷积。</p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac的Rodin安装教程</title>
-    <url>/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>上篇文章写的是Windows 10下的Rodin安装，但由于Windows电脑过于沉重，而且续航不行，难以维持2个半小时的课程，故选择在Mac上安装。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：macOS Big Sur 11.2.3</p>
-<p>Rodin 3.5 下载地址：<a href="https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/">https://sourceforge.net/projects/rodin-b-sharp/files/Core_Rodin_Platform/3.5/</a></p>
-</blockquote>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<h5 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h5>
-<p>在Mac上直接<code>terminal</code>中输入：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew cask install corretto8</span><br></pre></td></tr></table></figure>
-<h5 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h5>
-<p>在IDEA中点击<code>File</code>-<code>Project Sturcture</code>:</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/1.png" class="" title="打开Project Structure">
-<p>点击右上角文件夹图标：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/2.png" class="" title="点击右上角文件夹图标">
-<p>点击<code>Download JDK</code>：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/3.png" class="" title="选择Version为1.8">
-<h4 id="测试jdk-8是否安装成功"><a class="markdownIt-Anchor" href="#测试jdk-8是否安装成功"></a> 测试JDK 8是否安装成功</h4>
-<p>输入以下命令不报错即成功</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<blockquote>
-<h4 id="macos-caveat"><a class="markdownIt-Anchor" href="#macos-caveat"></a> macOS caveat</h4>
-<p>The Rodin application is not notarized. This means that when you download it from SourceForge, macOS will quarantine the application and tell you that it is broken. Just run the command <code>xattr -rc Rodin.app</code> in a Terminal to remove the quarantine tag.</p>
-</blockquote>
-<p>Rodin的官网有提示，下载后解压出现的<code>Rodin.app</code>直接点击会报错，需要在<code>Rodin.app</code>路径下打开终端输入<code>xattr -rc Rodin.app</code> 命令。</p>
-<p>但是又继续报错：</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/4.jpeg" class="" title="无法创建jvm">
-<p>问题是无法创建JVM，因为网络上关于Rodin的教程本来就少，Mac的更少了，但是它和eclipse是一体的，所以我就去找了eclipse报该错误的原因，果然找到很多，发现是需要添加<code>-vm</code>。</p>
-<p>进入Rodin.app路径下，因为我直接把它拉进Applications里，所以在终端直接输入以下指令进入Contents文件夹下修改<code>Info.plist</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;Applications&#x2F;rodin.app&#x2F;Contents</span><br><span class="line">vim Info.plist</span><br></pre></td></tr></table></figure>
-<p>发现有一段被注释掉了</p>
-<img src="/2021/03/24/Rodin/Mac%E7%9A%84Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/5.png" class="" title="被注释掉了">
-<p>在终端中执行如下命令来获得JDK完整的安装路径：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;usr&#x2F;libexec&#x2F;java_home --verbose</span><br></pre></td></tr></table></figure>
-<p>则可在<code>Info.plist</code>中将注释内容改为自己的安装路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;string&gt;-vm&lt;&#x2F;string&gt;&lt;string&gt;&#x2F;Users&#x2F;hoohoo&#x2F;Library&#x2F;Java&#x2F;JavaVirtualMachines&#x2F;corretto-1.8.0_282&#x2F;Contents&#x2F;Home&#x2F;bin&#x2F;java&lt;&#x2F;string&gt;</span><br></pre></td></tr></table></figure>
-<p>修改并保存，就可以成功启动Rodin了。</p>
-<blockquote>
-<p>安装插件等步骤详见上一篇文章：<a href="http://hellohoohoo.com/2021/03/17/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/#more">Rodin安装教程（附java8安装教程）</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>安装</tag>
-        <tag>Rodin</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Rodin安装教程（附java8安装教程）</title>
-    <url>/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/</url>
-    <content><![CDATA[<p>由于本学期需要学习Event-B语言。</p>
-<blockquote>
-<p><em>Event-B</em>是一种基于传统的谓词演算和定理证明的形式化语言。</p>
-</blockquote>
-<p>需要使用Rodin进行开发，因为下载的是3.5版本的，所以需要8以上（包含）的JRE的版本。</p>
-<p><em><span id="more"></span></em></p>
-<h2 id="软件列表"><a class="markdownIt-Anchor" href="#软件列表"></a> 软件列表</h2>
-<blockquote>
-<p>系统：WIndows 10</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>安装地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JDK 8</td>
-<td><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html</a></td>
-</tr>
-<tr>
-<td>Rodin</td>
-<td><a href="https://wiki.event-b.org/index.php/Main_Page">https://wiki.event-b.org/index.php/Main_Page</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
-<h3 id="安装jdk-8"><a class="markdownIt-Anchor" href="#安装jdk-8"></a> 安装JDK 8</h3>
-<h4 id="下载jdk-8"><a class="markdownIt-Anchor" href="#下载jdk-8"></a> 下载JDK 8</h4>
-<p>下载版本8需要登录oracle，没有账户的话可以注册一下。</p>
-<p>打开下载后的<code>jdk-8u281-windows-x64.exe</code>文件：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/1.png" class="" title="JDK 8安装界面">
-<p>点击下一步，可以更改安装路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/2.png" class="" title="安装路径更改">
-<p>更改安装路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/3.png" class="" title="更改安装路径">
-<p>点击下一步，更改目标文件夹路径（也可以按默认路径直接下一步）：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/4.png" class="" title="目标文件夹路径">
-<p>点击下一步后就安装成功了：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/5.png" class="" title="安装成功">
-<h4 id="添加环境变量"><a class="markdownIt-Anchor" href="#添加环境变量"></a> 添加环境变量</h4>
-<p>右键<code>我的电脑</code>-<code>属性</code>：</p>
-<p>并点击<code>高级系统设置</code></p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/6.png" class="" title="点击高级系统设置">
-<p>点击<code>环境变量</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/7.png" class="" title="点击环境变量">
-<p>点击<code>系统变量</code>-<code>新建</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/8.png" class="" title="新建JAVA_HOME">
-<p>新建<code>JAVA_HOME</code>，变量值为安装的jdk目录：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：D:\Program Files\Java\jdk1.8.0_281</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/9.png" class="" title="新建环境变量JAVA_HOME">
-<p>配置环境变量<code>Path</code>，双击Path，新建：</p>
-<p>建议使用JAVA_HOME进行新建：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br></pre></td></tr></table></figure>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/10.png" class="" title="配置环境变量Path">
-<p>点击确定环境变量配置完成。</p>
-<blockquote>
-<p>关于CLASSPATH：<strong>在JDK1.5之后的版本，配置Java环境变量的时候我们不再需要配置classpath，只需要配置Java_Home以及path即可！</strong></p>
-<p>参考博客：<a href="https://www.cnblogs.com/ideal-20/p/11050114.html">Java开发环境不再需要配置classpath！</a></p>
-</blockquote>
-<p>打开cmd分别输入以下三条指令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java</span><br><span class="line">javac</span><br><span class="line">java-version</span><br></pre></td></tr></table></figure>
-<p>显示如下内容则jdk 8安装成功。</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/11.png" class="" title="输入JAVA">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/12.png" class="" title="输入java -version">
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/13.png" class="" title="输入javac">
-<h3 id="安装rodin"><a class="markdownIt-Anchor" href="#安装rodin"></a> 安装Rodin</h3>
-<h4 id="下载rodin"><a class="markdownIt-Anchor" href="#下载rodin"></a> 下载Rodin</h4>
-<p>Windows 10下选择<code>rodin-3.5.0.202009111309-74e0e4188-win32.win32.x86_64</code>：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/14.png" class="" title="下载Rodin">
-<p>下载解压后直接打开rodin.exe`:</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/15.png" class="" title="下载Rodin">
-<p>点开后，Workspace可以默认路径也可以自己改路径：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/16.png" class="" title="Workspace">
-<p>打开后出现如下界面即为安装成功：</p>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/17.png" class="" title="安装成功">
-<p>如果想要安装插件，点击<code>Help</code>-<code>Install New Software</code>：</p>
-<p>在<code>Work with</code>里输入相应名称即可安装。</p>
-<blockquote>
-<p>安装插件过程较慢，可以搭梯子。</p>
-</blockquote>
-<img src="/2021/03/17/Rodin/Rodin%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%88%E9%99%84java8%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%EF%BC%89/18.png" class="" title="安装插件">]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>安装</tag>
-        <tag>Rodin</tag>
-        <tag>JDK</tag>
-        <tag>Event-B</tag>
       </tags>
   </entry>
   <entry>
@@ -1952,69 +1952,6 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>This application failed to start because no Qt platform plugin could be initialized问题解决合集</title>
-    <url>/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/</url>
-    <content><![CDATA[<p>今天总算<strong>解决</strong>了困扰我快一周的问题。</p>
-<blockquote>
-<p>This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.</p>
-</blockquote>
-<img src="/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/thhwz583ex.png" class="" title="error">
-<span id="more"></span>
-<p>尝试了许多解决方法，<code>stackoverflow</code>上有许多回答，包括copy plugin、环境变量…</p>
-<blockquote>
-<p><a href="https://stackoverflow.com/questions/54168748/qt-creator-fails-to-open-on-windows-10-no-qt-platform-plugin-could-be-initializ">Qt creator fails to open on Windows 10 “no Qt platform plugin could be initialized” - Stack Overflow</a></p>
-</blockquote>
-<p>下面总结了遇到该问题的诸多教程，可一一尝试。</p>
-<p><strong>plugin复制/缺少dll：</strong></p>
-<ul>
-<li>
-<p><a href="https://cloud.tencent.com/developer/article/1760090">程序运行时提示This application failed to start because no Qt platform plugin could be initialized.</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=Ignw0xOKlm8">How To Fix No Qt Platform Plugin Could Be Initialized Error - This Application Failed To Start</a></p>
-</li>
-<li>
-<p><a href="https://www.pianshen.com/article/42941795280/">PyQt：解决This application failed to start because no Qt platform plugin could be initialized问题 - 程序员大本营 (pianshen.com)</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/qq_41133375/article/details/107216854?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&amp;spm=1001.2101.3001.4242">Qt Designer启动显示This application failed to start because no Qt platform plugin could be initializedin</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/calmreason/article/details/104851565">this application failed to start because no qt platform plugin could be initialized</a></p>
-</li>
-</ul>
-<p><strong>环境变量：</strong></p>
-<ul>
-<li>
-<p><a href="https://blog.csdn.net/weixin_43859329/article/details/107694491">解决designer运行报错:This application failed to start because no Qt platform plugin could be initialized问题</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/Williamcsj/article/details/106734702">Designer——运行报错:This application failed to start because no Qt platform plugin could be initialized_Williamcsj的博客-CSDN博客</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/qq_37633082/article/details/100565144?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs">解决This application failed to start because no Qt platform plugin could be initialized问题_种言和的白菜的博客-CSDN博客</a></p>
-</li>
-</ul>
-<p><strong>中文路径：</strong></p>
-<ul>
-<li><a href="https://www.shuzhiduo.com/A/l1dy7mAVJe/">解决QT5移植报错：This application failed to start because no Qt platform plugin could be initialized (shuzhiduo.com)</a></li>
-</ul>
-<p>我记得我差不多全试了一遍，但还是没有解决，我一直是觉得我系统安装的Qt和anaconda中的Qt冲突，后来发现VS2017运行Qt是可以的，就是python中无法运行，所以又开始重新一轮的尝试，毕竟不想换电脑。</p>
-<p>终于在把环境变量删除后，<strong>重装了Qt、pyqt5后解决了</strong>，就是这么玄乎。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install qt==5.9.7</span><br><span class="line">pip install pyqt5</span><br></pre></td></tr></table></figure>
-<p>所以大家可以一一尝试，重装、plugin、环境变量都可以试一下，不要气馁。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>python</tag>
-        <tag>问题</tag>
-        <tag>qt</tag>
       </tags>
   </entry>
   <entry>
@@ -2993,10 +2930,26 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>第一次组会。</p>
 <h2 id="910"><a class="markdownIt-Anchor" href="#910"></a> 9.10</h2>
 <p>今天是教师节。</p>
+<p><a href="https://blog.csdn.net/qq_34965596/article/details/103784003">【debug】moduleNotFoundError:No module named ‘exceptions’</a></p>
 <h2 id="911"><a class="markdownIt-Anchor" href="#911"></a> 9.11</h2>
 <p>周六。</p>
 <h2 id="912"><a class="markdownIt-Anchor" href="#912"></a> 9.12</h2>
 <p>从明天开始好好进入正式工作周。</p>
+<h2 id="913"><a class="markdownIt-Anchor" href="#913"></a> 9.13</h2>
+<p><kbd>起床时间</kbd>：8:26</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=1331819055&auto=1&height=66"></iframe>
+<p>祝大家周一快乐，进入到新的一周也要做些新的事情，不要让时间白白流走。</p>
+<p>感谢上面这首歌，让我在阴雨天，也可以有些快乐的感觉。</p>
+<p>学姐和我说只要你愿意做就可以，只要多在创新点上加码。</p>
+<ul>
+<li>
+<p>跌倒检测。</p>
+</li>
+<li>
+<p>心率？</p>
+</li>
+<li></li>
+</ul>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -3004,6 +2957,69 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>This application failed to start because no Qt platform plugin could be initialized问题解决合集</title>
+    <url>/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/</url>
+    <content><![CDATA[<p>今天总算<strong>解决</strong>了困扰我快一周的问题。</p>
+<blockquote>
+<p>This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.</p>
+</blockquote>
+<img src="/2021/07/05/problems/This-application-failed-to-start-because-no-Qt-platform-plugin-could-be-initialized/thhwz583ex.png" class="" title="error">
+<span id="more"></span>
+<p>尝试了许多解决方法，<code>stackoverflow</code>上有许多回答，包括copy plugin、环境变量…</p>
+<blockquote>
+<p><a href="https://stackoverflow.com/questions/54168748/qt-creator-fails-to-open-on-windows-10-no-qt-platform-plugin-could-be-initializ">Qt creator fails to open on Windows 10 “no Qt platform plugin could be initialized” - Stack Overflow</a></p>
+</blockquote>
+<p>下面总结了遇到该问题的诸多教程，可一一尝试。</p>
+<p><strong>plugin复制/缺少dll：</strong></p>
+<ul>
+<li>
+<p><a href="https://cloud.tencent.com/developer/article/1760090">程序运行时提示This application failed to start because no Qt platform plugin could be initialized.</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=Ignw0xOKlm8">How To Fix No Qt Platform Plugin Could Be Initialized Error - This Application Failed To Start</a></p>
+</li>
+<li>
+<p><a href="https://www.pianshen.com/article/42941795280/">PyQt：解决This application failed to start because no Qt platform plugin could be initialized问题 - 程序员大本营 (pianshen.com)</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/qq_41133375/article/details/107216854?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&amp;spm=1001.2101.3001.4242">Qt Designer启动显示This application failed to start because no Qt platform plugin could be initializedin</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/calmreason/article/details/104851565">this application failed to start because no qt platform plugin could be initialized</a></p>
+</li>
+</ul>
+<p><strong>环境变量：</strong></p>
+<ul>
+<li>
+<p><a href="https://blog.csdn.net/weixin_43859329/article/details/107694491">解决designer运行报错:This application failed to start because no Qt platform plugin could be initialized问题</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/Williamcsj/article/details/106734702">Designer——运行报错:This application failed to start because no Qt platform plugin could be initialized_Williamcsj的博客-CSDN博客</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/qq_37633082/article/details/100565144?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.baidujs">解决This application failed to start because no Qt platform plugin could be initialized问题_种言和的白菜的博客-CSDN博客</a></p>
+</li>
+</ul>
+<p><strong>中文路径：</strong></p>
+<ul>
+<li><a href="https://www.shuzhiduo.com/A/l1dy7mAVJe/">解决QT5移植报错：This application failed to start because no Qt platform plugin could be initialized (shuzhiduo.com)</a></li>
+</ul>
+<p>我记得我差不多全试了一遍，但还是没有解决，我一直是觉得我系统安装的Qt和anaconda中的Qt冲突，后来发现VS2017运行Qt是可以的，就是python中无法运行，所以又开始重新一轮的尝试，毕竟不想换电脑。</p>
+<p>终于在把环境变量删除后，<strong>重装了Qt、pyqt5后解决了</strong>，就是这么玄乎。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install qt==5.9.7</span><br><span class="line">pip install pyqt5</span><br></pre></td></tr></table></figure>
+<p>所以大家可以一一尝试，重装、plugin、环境变量都可以试一下，不要气馁。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>python</tag>
+        <tag>问题</tag>
+        <tag>qt</tag>
       </tags>
   </entry>
   <entry>
