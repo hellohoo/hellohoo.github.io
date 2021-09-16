@@ -67,6 +67,26 @@
 <p>一模一样的思路，python就是慢，就是占空间…</p>
 <img src="/2021/09/03/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-09/image-20210915111441967.png" class="" title="image-20210915111441967">
 <p>下午把调研报告完成，顺便去了解下技术，实在不行就去问客服吧。</p>
+<p><a href="https://blog.csdn.net/yangzhongblog/article/details/8184707">Timsort原理介绍_公众号（猴子数据分析）-CSDN博客</a></p>
+<p>学姐给的建议：</p>
+<ul>
+<li>自适应学习</li>
+<li>多智能体决策</li>
+</ul>
+<p>2 points：</p>
+<ul>
+<li>
+<p>跌倒检测</p>
+</li>
+<li>
+<p>心率检测</p>
+</li>
+</ul>
+<h2 id="916"><a class="markdownIt-Anchor" href="#916"></a> 9.16</h2>
+<p><kbd>起床时间</kbd>：9:45</p>
+<ul>
+<li>一些特别的点</li>
+</ul>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -2686,8 +2706,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
