@@ -102,6 +102,18 @@
 <p>让我们走入放假的第一天。</p>
 <p>去看了《一直游到海水变蓝》</p>
 <p>很喜欢余华。</p>
+<h2 id="920"><a class="markdownIt-Anchor" href="#920"></a> 9.20</h2>
+<p>属于今天的动作应该是“动脑”。</p>
+<p>好久没有这么精神集中+萎靡了。</p>
+<h2 id="921"><a class="markdownIt-Anchor" href="#921"></a> 9.21</h2>
+<p>今天是中秋节，祝大家中秋节快乐，千里共婵娟。</p>
+<blockquote>
+<p>unable to access ‘<a href="https://github.com/XXXXXX">https://github.com/XXXXXX</a>’: LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to <a href="http://github.com:443">github.com:443</a></p>
+<p><strong>初步解决方案是：</strong></p>
+<p>将<code>https</code>改为<code>git</code></p>
+</blockquote>
+<p><a href="https://viencoding.com/article/182">Mac命令行图片格式转换：jpg转png、png转jpg (viencoding.com)</a></p>
+<p><a href="https://github.com/beurtschipper/Depix">GitHub - beurtschipper/Depix: Recovers passwords from pixelized screenshots</a></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -2721,8 +2733,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
