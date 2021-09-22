@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="前言 开始是成功的左括号。——Hoohoo">
+<meta name="description" content="前言  开始是成功的左括号。——Hoohoo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《视觉SLAM十四讲 第2版》学习笔记 第1讲">
 <meta property="og:url" content="http://example.com/2021/04/02/SLAM14/%E3%80%8A%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2-%E7%AC%AC2%E7%89%88%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC1%E8%AE%B2/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="前言 开始是成功的左括号。——Hoohoo">
+<meta property="og:description" content="前言  开始是成功的左括号。——Hoohoo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-01T16:10:45.000Z">
 <meta property="article:modified_time" content="2021-04-03T16:24:17.610Z">
@@ -195,7 +195,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-text">学习笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98"><span class="nav-text">习题</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-text"> 学习笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98"><span class="nav-text"> 习题</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -350,31 +350,38 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
 <p>开始是成功的左括号。——Hoohoo</p>
 </blockquote>
 <span id="more"></span>
 <p>最近开始学习CV领域，因为老师想让我做医学影像的三维重建，依我理解，医学影像的三维重建就是面绘制、体绘制之类的，使用VTK、ITK工具包完成，也询问了一些学长等专业人士，得知这边并不好出成果，好出成果的就是切割、MRI之类的，我并没有很大的兴趣，而且老师希望我继续做，我只能曲线救国，先学学重建之类的知识，也就是计算机视觉这方面的，而非专一的医学影像方向。</p>
 <p>并且一定要学习的话，反正都是从0开始，就先学着吧！</p>
 <p>最近在看的一篇论文，十年前的一篇开山之作，就是SLAM中的前端技术，所以在推荐下，就开始学习高翔等著的《视觉SLAM十四讲 从理论到实践》第2版。</p>
-<h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><p>第一讲是预备知识，介绍本书的基本信息。</p>
+<h2 id="学习笔记"><a class="markdownIt-Anchor" href="#学习笔记"></a> 学习笔记</h2>
+<p>第一讲是预备知识，介绍本书的基本信息。</p>
 <blockquote>
 <p>本书代码：<a target="_blank" rel="noopener" href="https://github.com/gaoxiang12/slambook2">https://github.com/gaoxiang12/slambook2</a></p>
 </blockquote>
 <p><strong>SLAM：</strong> <strong>S</strong>imultaneous <strong>L</strong>ocalization <strong>a</strong>nd <strong>M</strong>apping （<strong>同时定位与地图构建</strong>）的缩写。指搭载特定传感器的主体，在没有环境先验信息情况下，于运动过程中建立环境的模型，同时估计自己的运动。如果传感器主要是相机，则称为“视觉SLAM”。</p>
 <p>所需前备知识：</p>
 <ul>
-<li><p>高等数学、<strong>线性代数</strong>(!!!!)、概率论</p>
+<li>
+<p>高等数学、<strong>线性代数</strong>(!!!)、概率论</p>
 </li>
-<li><p>C++语言基础</p>
+<li>
+<p>C++语言基础</p>
 </li>
-<li>Linux基础</li>
+<li>
+<p>Linux基础</p>
+</li>
 </ul>
 <p>需要用到的主要库：<code>Eigen</code>、<code>OpenCV</code>、<code>PCL</code>、<code>g2o</code>、<code>Ceres</code>等。</p>
-<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><ol>
-<li><p>有线性方程 Ax = b，当我们知道 A, b，想要求解 x 时，如何求解？这对 A 和 b 需 要哪些条件？提示:从 A 的维度和秩角度来分析。</p>
-<label style="color:#f5222d">**答：**</label>
-
+<h2 id="习题"><a class="markdownIt-Anchor" href="#习题"></a> 习题</h2>
+<ol>
+<li>
+<p>有线性方程 Ax = b，当我们知道 A, b，想要求解 x 时，如何求解？这对 A 和 b 需 要哪些条件？提示:从 A 的维度和秩角度来分析。</p>
+<p><label style="color:#f5222d"><strong>答：</strong></label></p>
 <ul>
 <li>当R(A) = R(A,b) = n时，有唯一解。</li>
 <li>当R(A) = R(A,b) &lt; n时，有多解。</li>
@@ -382,45 +389,37 @@
 </ul>
 <p>// 其中R()为秩的个数，n为未知数的个数。</p>
 </li>
-</ol>
-<ol>
-<li><p>高斯分布是什么？它的一维形式是什么样子？它的高维形式是什么样子？</p>
+<li>
+<p>高斯分布是什么？它的一维形式是什么样子？它的高维形式是什么样子？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> 高斯分布又称为正态分布===</p>
 </li>
-</ol>
-<ol>
-<li><p>你知道 C++ 的类吗？你知道 STL 吗？你使用过它们吗？</p>
+<li>
+<p>你知道 C++ 的类吗？你知道 STL 吗？你使用过它们吗？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label>知道一些类，使用过STL。</p>
 </li>
-</ol>
-<ol>
-<li><p>你以前怎样书写 C++ 程序？(你完全可以说只在 VC6.0 下写过 C++ 工程，只要你 有写 C++ 和 C 语言经验就行。)</p>
+<li>
+<p>你以前怎样书写 C++ 程序？(你完全可以说只在 VC6.0 下写过 C++ 工程，只要你 有写 C++ 和 C 语言经验就行。)</p>
 <p><label style="color:#f5222dd"><strong>答：</strong></label>刚开始使用<code>CodeBlock</code>写C语言，后来使用<code>Clion</code>，前段时间做VTK，也用过一段时间<code>Visual Studio</code>。</p>
 </li>
-</ol>
-<ol>
-<li><p>你知道 C++11 标准吗？其中哪些新特性你之前听说过或使用过？有没有其他的标准？</p>
+<li>
+<p>你知道 C++11 标准吗？其中哪些新特性你之前听说过或使用过？有没有其他的标准？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label>====</p>
 </li>
-</ol>
-<ol>
-<li><p>你知道 Linux 吗？你有没有至少使用过其中之一(安卓不算)，比如 Ubuntu？</p>
+<li>
+<p>你知道 Linux 吗？你有没有至少使用过其中之一(安卓不算)，比如 Ubuntu？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> 知道。用过MacOS、Windows、CentOS、Federa、Ubuntu。</p>
 </li>
-</ol>
-<ol>
-<li><p>Linux 的目录结构是什么样的？你知道哪些基本命令，比如 ls, cat 等等？</p>
+<li>
+<p>Linux 的目录结构是什么样的？你知道哪些基本命令，比如 ls, cat 等等？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> Linux下的目录结构主要是由<code>/</code>延伸。</p>
 <p>一些命令：<code>ls</code>、<code>ll</code>、<code>mkdir</code>、<code>rm</code>、<code>tar</code>、<code>vim</code>、<code>pwd</code>、<code>which</code>…</p>
 </li>
-</ol>
-<ol>
-<li><p>如何在 Ubuntu 中安装软件(不打开软件中心的情况下)？这些软件被安装在什么地方？当我只知道模糊的软件名称(比如我想要装一个 eigen 名称的库)，我应该如何安装它？</p>
+<li>
+<p>如何在 Ubuntu 中安装软件(不打开软件中心的情况下)？这些软件被安装在什么地方？当我只知道模糊的软件名称(比如我想要装一个 eigen 名称的库)，我应该如何安装它？</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label> <code>apt-get install</code>，===</p>
 </li>
-</ol>
-<ol>
-<li><p>*花一个小时学习一下Vim，因为你迟早会用它。你可以在终端中输入vimtutor阅 读一遍所有内容。我们不需要你非常熟练地操作它，只要在学习本书的过程中使用它 键入代码即可。不要在它的插件上浪费时间，不要想着把 vim 用成 IDE，我们只用 它做文本编辑的工作。</p>
+<li>
+<p>*花一个小时学习一下Vim，因为你迟早会用它。你可以在终端中输入vimtutor阅 读一遍所有内容。我们不需要你非常熟练地操作它，只要在学习本书的过程中使用它 键入代码即可。不要在它的插件上浪费时间，不要想着把 vim 用成 IDE，我们只用 它做文本编辑的工作。</p>
 <p><label style="color:#f5222d"><strong>答：</strong></label>Vim！！！</p>
 </li>
 </ol>
@@ -515,13 +514,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">69k</span>
+    <span title="站点总字数">70k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:49</span>
+    <span title="站点阅读时长">3:55</span>
   </span>
 </div>
 <div class="busuanzi-count">

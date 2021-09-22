@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="前言使用 markdown 写 Slide 。">
+<meta name="description" content="前言 使用 markdown 写 Slide 。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Slidev安装及bug解决">
 <meta property="og:url" content="http://example.com/2021/05/11/%E6%8A%80%E6%9C%AF/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="前言使用 markdown 写 Slide 。">
+<meta property="og:description" content="前言 使用 markdown 写 Slide 。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/05/11/%E6%8A%80%E6%9C%AF/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511114107740.png">
 <meta property="og:image" content="http://example.com/2021/05/11/%E6%8A%80%E6%9C%AF/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511153642119.png">
@@ -199,7 +199,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bug"><span class="nav-text">bug</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v7-%E2%AC%87%EF%B8%8F"><span class="nav-text">v7 ⬇️</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v7-%E2%AC%86%EF%B8%8F"><span class="nav-text">v7 ⬆️</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E5%9B%BE"><span class="nav-text">效果图</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text"> 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bug"><span class="nav-text"> bug</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v7-%EF%B8%8F"><span class="nav-text"> v7 ⬇️</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v7-%EF%B8%8F-2"><span class="nav-text"> v7 ⬆️</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E5%9B%BE"><span class="nav-text"> 效果图</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -348,28 +348,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用 markdown 写 Slide 。</p>
+        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>使用 markdown 写 Slide 。</p>
 <span id="more"></span>
 <blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="https://sli.dev/">Slidev</a></p>
 </blockquote>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<h2 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h2>
+<blockquote>
 <p>系统：macOS Big Sur 11.3.1</p>
-<p> npm：7.12.1</p>
+<p>npm：7.12.1</p>
 </blockquote>
 <p>安装很简单，一行指令，也可以用<code>yarn</code>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init slidev</span><br></pre></td></tr></table></figure>
-<h2 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h2><p>但是安装这么简单，不出点问题我都害怕，果然。</p>
+<h2 id="bug"><a class="markdownIt-Anchor" href="#bug"></a> bug</h2>
+<p>但是安装这么简单，不出点问题我都害怕，果然。</p>
 <p>是<code>esbuild</code>的报错，安装失败。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Error: esbuild: Failed to install correctly</span><br><span class="line"></span><br><span class="line">Make sure you don<span class="string">&#x27;t have &quot;ignore-scripts&quot; set to true. You can check this with</span></span><br><span class="line"><span class="string">&quot;npm config get ignore-scripts&quot;. If that returns true you can reset it back to</span></span><br><span class="line"><span class="string">false using &quot;npm config set ignore-scripts false&quot; and then reinstall esbuild.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">If you&#x27;</span>re using npm v7, make sure your package-lock.json file contains either</span><br><span class="line"><span class="string">&quot;lockfileVersion&quot;</span>: 1 or the code <span class="string">&quot;hasInstallScript&quot;</span>: <span class="literal">true</span>. If it doesn<span class="string">&#x27;t have</span></span><br><span class="line"><span class="string">either of those, then it is likely the case that a known bug in npm v7 has</span></span><br><span class="line"><span class="string">corrupted your package-lock.json file. Regenerating your package-lock.json file</span></span><br><span class="line"><span class="string">should fix this issue.</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
 <img src="/2021/05/11/%E6%8A%80%E6%9C%AF/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511114107740.png" class="" width="778">
 <p>这里针对 <code>npm</code> v7版本以下和以上的有不同的解决方法。</p>
-<h3 id="v7-⬇️"><a href="#v7-⬇️" class="headerlink" title="v7 ⬇️"></a>v7 ⬇️</h3><p>首先确认你的<code>ignore-scripts</code>为 <code>false</code>，可用如下命令来检查：</p>
+<h3 id="v7-️"><a class="markdownIt-Anchor" href="#v7-️"></a> v7 ⬇️</h3>
+<p>首先确认你的<code>ignore-scripts</code>为 <code>false</code>，可用如下命令来检查：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config get ignore-scripts	</span><br></pre></td></tr></table></figure>
 <p>如果不是 <code>false</code>，则用如下命令将其设置为 <code>false</code>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> ignore-scripts	<span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <p>设置完应该就解决了。</p>
-<h3 id="v7-⬆️"><a href="#v7-⬆️" class="headerlink" title="v7 ⬆️"></a>v7 ⬆️</h3><p>首先进入 <code>slidev</code> 目录下，打开 <code>package-lock.json</code> 文件。</p>
+<h3 id="v7-️-2"><a class="markdownIt-Anchor" href="#v7-️-2"></a> v7 ⬆️</h3>
+<p>首先进入 <code>slidev</code> 目录下，打开 <code>package-lock.json</code> 文件。</p>
 <p>确保</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lockfileVersion: 1 </span><br></pre></td></tr></table></figure>
 <p><strong>or</strong></p>
@@ -379,7 +384,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node node_modules/esbuild/install.js</span><br></pre></td></tr></table></figure>
 <p>安装完成后，即可使用如下命令运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><blockquote>
+<h2 id="效果图"><a class="markdownIt-Anchor" href="#效果图"></a> 效果图</h2>
+<blockquote>
 <p>展示的为自带demo</p>
 </blockquote>
 <img src="/2021/05/11/%E6%8A%80%E6%9C%AF/Slidev%E5%AE%89%E8%A3%85%E5%8F%8Abug%E8%A7%A3%E5%86%B3/image-20210511153642119.png" class="" title="image-20210511153642119">
@@ -476,13 +482,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">69k</span>
+    <span title="站点总字数">70k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:49</span>
+    <span title="站点阅读时长">3:55</span>
   </span>
 </div>
 <div class="busuanzi-count">
