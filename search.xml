@@ -144,6 +144,7 @@
 <h2 id="927"><a class="markdownIt-Anchor" href="#927"></a> 9.27</h2>
 <p><kbd>起床时间</kbd>：8:01</p>
 <p>快慢指针一绝👍</p>
+<p>记住有*则用<code>-&gt;</code>。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -736,8 +737,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>python</tag>
         <tag>问题</tag>
+        <tag>python</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -2763,8 +2764,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3743,8 +3744,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       <tags>
         <tag>技术</tag>
         <tag>医学影像</tag>
-        <tag>MPR</tag>
         <tag>VTK</tag>
+        <tag>MPR</tag>
         <tag>ITK</tag>
       </tags>
   </entry>
