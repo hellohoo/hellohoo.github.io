@@ -134,7 +134,7 @@
 <h2 id="924"><a class="markdownIt-Anchor" href="#924"></a> 9.24</h2>
 <p>在这个下午，我想歌颂风，正是因为风，我才拥有凉爽的权利。</p>
 <p>我想歌颂冰淇淋，正是因为冰淇淋，我才拥有自我降温的权利。</p>
-<p>我想歌颂夜晚，正是因为夜晚，我才</p>
+<p>我想歌颂夜晚，正是因为夜晚，我才拥有自由的权利。</p>
 <h2 id="925"><a class="markdownIt-Anchor" href="#925"></a> 9.25</h2>
 <p>在太阳天下的中午十二点醒来，去吃红烧牛肉面，就是一件很开心的事情。</p>
 <h2 id="926"><a class="markdownIt-Anchor" href="#926"></a> 9.26</h2>
@@ -627,8 +627,8 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>问题</tag>
         <tag>python</tag>
+        <tag>问题</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -3843,8 +3843,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       <tags>
         <tag>技术</tag>
         <tag>医学影像</tag>
-        <tag>VTK</tag>
         <tag>MPR</tag>
+        <tag>VTK</tag>
         <tag>ITK</tag>
       </tags>
   </entry>
