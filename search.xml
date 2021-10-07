@@ -97,6 +97,7 @@
 </li>
 </ul>
 <p><a href="https://blog.csdn.net/Swallow_shangtou/article/details/119184313">C++数组长度计算sizeof() strlen() size() length()</a></p>
+<p>今天学到的，不能用（left+right）/2形式，当left和right都是int，两个值的初始值都超过int限定大小的一半，那么left+right就会发生溢出，所以应该用left+(right-left)/2来防止求中值时候的溢出。</p>
 <h2 id="914"><a class="markdownIt-Anchor" href="#914"></a> 9.14</h2>
 <p><kbd>起床时间</kbd>：8:44</p>
 <p>希望自己认真一点，要看清题目要求哦。</p>
@@ -2903,8 +2904,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
