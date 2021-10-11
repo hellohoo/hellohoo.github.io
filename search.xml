@@ -51,6 +51,9 @@
 <p>如何摸鱼摸得有些技术呢？</p>
 <h2 id="1010"><a class="markdownIt-Anchor" href="#1010"></a> 10.10</h2>
 <p>十月十日是萌。</p>
+<h2 id="1011"><a class="markdownIt-Anchor" href="#1011"></a> 10.11</h2>
+<p><kbd>起床时间</kbd>：8:42</p>
+<p>算是新的起航，算是新的开始，但算是有点迷茫的开门。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -411,9 +414,9 @@
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>图像分割</tag>
-        <tag>医学影像</tag>
         <tag>技术</tag>
+        <tag>医学影像</tag>
+        <tag>图像分割</tag>
       </tags>
   </entry>
   <entry>
@@ -971,8 +974,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <hr />
 ]]></content>
       <categories>
-        <category>学习</category>
         <category>论文阅读</category>
+        <category>学习</category>
       </categories>
       <tags>
         <tag>医学影像</tag>
@@ -997,9 +1000,9 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>技术</category>
       </categories>
       <tags>
-        <tag>书籍</tag>
-        <tag>图像分割</tag>
         <tag>医学影像</tag>
+        <tag>图像分割</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -2923,8 +2926,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3901,8 +3904,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>技术</tag>
+        <tag>医学影像</tag>
         <tag>MPR</tag>
         <tag>VTK</tag>
         <tag>ITK</tag>
