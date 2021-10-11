@@ -61,6 +61,9 @@
 <li>
 <p>deeplab</p>
 </li>
+<li>
+<p>FCN</p>
+</li>
 </ul>
 <p><a href="https://kexue.fm/archives/8620">浅谈Transformer的初始化、参数化与标准化</a></p>
 <p>答应我不要这样好吗？</p>
@@ -425,9 +428,9 @@
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>图像分割</tag>
-        <tag>医学影像</tag>
         <tag>技术</tag>
+        <tag>医学影像</tag>
+        <tag>图像分割</tag>
       </tags>
   </entry>
   <entry>
@@ -701,8 +704,8 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>问题</tag>
         <tag>python</tag>
+        <tag>问题</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -985,8 +988,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <hr />
 ]]></content>
       <categories>
-        <category>学习</category>
         <category>论文阅读</category>
+        <category>学习</category>
       </categories>
       <tags>
         <tag>医学影像</tag>
@@ -1011,9 +1014,9 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>技术</category>
       </categories>
       <tags>
-        <tag>书籍</tag>
-        <tag>图像分割</tag>
         <tag>医学影像</tag>
+        <tag>图像分割</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -2937,8 +2940,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -3915,8 +3918,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>技术</tag>
+        <tag>医学影像</tag>
         <tag>MPR</tag>
         <tag>VTK</tag>
         <tag>ITK</tag>
