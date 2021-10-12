@@ -194,7 +194,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%83%B3%E6%B3%95"><span class="nav-text"> 想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E8%84%9A%E6%9C%AC"><span class="nav-text"> 本地预览脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E8%84%9A%E6%9C%AC"><span class="nav-text"> 上传脚本</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%83%B3%E6%B3%95"><span class="nav-text">想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E8%84%9A%E6%9C%AC"><span class="nav-text">本地预览脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E8%84%9A%E6%9C%AC"><span class="nav-text">上传脚本</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -349,51 +349,47 @@
 <p>脚本脚本，用手写。</p>
 </blockquote>
 <span id="more"></span>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>是看到少数派动手写脚本的一篇文章受了启发，而且mac系统本来和Linux都差不多的，博客本地预览和上传永远都是固定的命令，却要烦琐的等待，所以懒惰的人就要写点什么让自己心安理得的更加懒惰。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>是看到少数派动手写脚本的一篇文章受了启发，而且mac系统本来和Linux都差不多的，博客本地预览和上传永远都是固定的命令，却要烦琐的等待，所以懒惰的人就要写点什么让自己心安理得的更加懒惰。</p>
 <p>开始吧。</p>
-<h2 id="想法"><a class="markdownIt-Anchor" href="#想法"></a> 想法</h2>
-<p>我的hexo博客地址是<code>/Users/hoohoo/Clutter/Blog</code>，所以每次都需要先进入，再输入命令，而且有些时候网速不行，就习惯性等待先clean后再继续。</p>
+<h2 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h2><p>我的hexo博客地址是<code>/Users/hoohoo/Clutter/Blog</code>，所以每次都需要先进入，再输入命令，而且有些时候网速不行，就习惯性等待先clean后再继续。</p>
 <p>都是一些固定的操作，所以脚本也很简单。</p>
-<h2 id="本地预览脚本"><a class="markdownIt-Anchor" href="#本地预览脚本"></a> 本地预览脚本</h2>
-<ol>
+<h2 id="本地预览脚本"><a href="#本地预览脚本" class="headerlink" title="本地预览脚本"></a>本地预览脚本</h2><ol>
 <li>随便在哪个目录下创建本地预览脚本<code>hs.sh</code></li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim hs.sh</span><br></pre></td></tr></table></figure>
-<ol start="2">
+<ol>
 <li>输入以下内容：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;clean完啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行本地预览命令</span></span><br><span class="line">y=`hexo s`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;http://localhost:4000/&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="3">
+<ol>
 <li>使用<code>chmod</code>对<code>hs.sh</code>添加可执行权限：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 hs.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
+<ol>
 <li>将<code>hs.sh</code>改名为<code>hs</code>，在终端下输入：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv hs.sh hs</span><br></pre></td></tr></table></figure>
-<ol start="4">
+<ol>
 <li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv hs /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
-<h2 id="上传脚本"><a class="markdownIt-Anchor" href="#上传脚本"></a> 上传脚本</h2>
-<ol>
+<h2 id="上传脚本"><a href="#上传脚本" class="headerlink" title="上传脚本"></a>上传脚本</h2><ol>
 <li>随便在哪个目录下创建本地预览脚本<code>hgd.sh</code></li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim hdg.sh</span><br></pre></td></tr></table></figure>
-<ol start="2">
+<ol>
 <li>输入以下内容：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果是bash则为【#!/bin/bash】</span></span><br><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入博客目录</span></span><br><span class="line"><span class="built_in">cd</span> /Users/hoohoo/Clutter/Blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行clean命令</span></span><br><span class="line">x=`hexo cl`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$x</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$x</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你clean好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行generate命令</span></span><br><span class="line">y=`hexo g`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$y</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$y</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你generate好啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行deploy命令</span></span><br><span class="line">z=`hexo d`</span><br><span class="line"><span class="keyword">if</span> [[ -n <span class="string">&quot;<span class="variable">$z</span>&quot;</span> ]]; <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$d</span>&quot;</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;小胡你可以去你的hellohoohoo.com上看啦！&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="3">
+<ol>
 <li>使用<code>chmod</code>对<code>hgd.sh</code>添加可执行权限：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 hgd.sh</span><br></pre></td></tr></table></figure>
-<ol start="3">
+<ol>
 <li>将<code>hgd.sh</code>改名为<code>hgd</code>，在终端下输入：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv hgd.sh hgd</span><br></pre></td></tr></table></figure>
-<ol start="4">
+<ol>
 <li>将其移动到<code>/usr/local/bin</code>下，就可以在任意目录执行脚本：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv hgd /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
@@ -487,13 +483,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">73k</span>
+    <span title="站点总字数">72k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:05</span>
+    <span title="站点阅读时长">3:59</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="前言 让我们呢，从最初开始。">
+<meta name="description" content="前言让我们呢，从最初开始。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《U-Net: Convolutional Networks for Biomedical Image Segmentation》阅读笔记">
 <meta property="og:url" content="http://example.com/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="前言 让我们呢，从最初开始。">
+<meta property="og:description" content="前言让我们呢，从最初开始。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816113912590.png">
 <meta property="og:image" content="http://example.com/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816172647096.png">
@@ -200,7 +200,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#abstract"><span class="nav-text"> Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-text"> Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#network-architecture"><span class="nav-text"> Network Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#training"><span class="nav-text"> Training</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#data-argumentation"><span class="nav-text"> Data Argumentation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experiments"><span class="nav-text"> Experiments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusion"><span class="nav-text"> Conclusion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text"> 参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-Architecture"><span class="nav-text">Network Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Training"><span class="nav-text">Training</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Argumentation"><span class="nav-text">Data Argumentation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiments"><span class="nav-text">Experiments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-text">Conclusion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -351,19 +351,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>让我们呢，从最初开始。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>让我们呢，从最初开始。</p>
 <span id="more"></span>
-<h2 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h2>
-<p>人们普遍认为深度网络的训练需要大量的标签训练样本。本文提出了一种网络架构和训练策略，可以在数据增强的强大使用下更有效利用。然后介绍了一下这个网络的结构：包括用于捕捉上下文的收缩路径和用于实现精确定位的对称扩展路径。介绍这种网络的优势：可以在很小的图片集上端对端训练，并且在ISBI challenge上优于先前最好的方法。并且通过在透射光学显微镜图像上训练的该网络以巨大优势赢得了ISBI2015 cell tracking challenge。速度也很快，在目前（2015）GPU 上，一张512 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span>​​​​ 512的图像分割只需要不到 1s 的时间。最后介绍可以在 <a target="_blank" rel="noopener" href="http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net">http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net</a> 上查看implementation（based on Caffe）。</p>
-<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
-<p>【深度网路在视觉任务中的进程】</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>人们普遍认为深度网络的训练需要大量的标签训练样本。本文提出了一种网络架构和训练策略，可以在数据增强的强大使用下更有效利用。然后介绍了一下这个网络的结构：包括用于捕捉上下文的收缩路径和用于实现精确定位的对称扩展路径。介绍这种网络的优势：可以在很小的图片集上端对端训练，并且在ISBI challenge上优于先前最好的方法。并且通过在透射光学显微镜图像上训练的该网络以巨大优势赢得了ISBI2015 cell tracking challenge。速度也很快，在目前（2015）GPU 上，一张512 $\times$​​​​ 512的图像分割只需要不到 1s 的时间。最后介绍可以在 <a target="_blank" rel="noopener" href="http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net">http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net</a> 上查看implementation（based on Caffe）。</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>【深度网路在视觉任务中的进程】</p>
 <p>在过去两年，在许多视觉识别任务中深度卷积网络的性能超过目前最先进的技术，如[7, 3]。虽然深度网络存在时间很长了[8]，但是它们被训练集的大小和网络大小所限制，Krizhevsky等人[7]的突破是在一个具有8层和百万参数的大型网络上对具有100万个训练图像的ImageNet数据集上进行了训练。从此之后，更大更深的网络也被训练出来[12]。</p>
 <blockquote>
 <p>[7] Krizhevsky, A., Sutskever, I., Hinton, G.E.: Imagenet classification with deep convolutional neural networks. In: NIPS. pp. 1106–1114 (2012)</p>
 <p>[3] Girshick, R., Donahue, J., Darrell, T., Malik, J.: Rich feature hierarchies for accurate object detection and semantic segmentation. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2014)</p>
 <p>[8] LeCun, Y., Boser, B., Denker, J.S., Henderson, D., Howard, R.E., Hubbard, W., Jackel, L.D.: Backpropagation applied to handwritten zip code recognition. Neural Computation 1(4), 541–551 (1989)</p>
-<p>[12] Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition (2014), arXiv:1409.1556 [<a target="_blank" rel="noopener" href="http://cs.CV">cs.CV</a>]</p>
+<p>[12] Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition (2014), arXiv:1409.1556 [cs.CV]</p>
 </blockquote>
 <p>【医学分割上目前最好的网络架构介绍】</p>
 <p>卷积神经网络的典型用途是分类任务，其中图像输出的是单个类别标签，比如猫阿狗啊。但在许多视觉任务的处理中，特别是在医学分割上，期望的输出包括localization，即（i.e.），应该每个像素都有类别标签。而且在医学上成千上万的训练图像通常是很难达到的，因此Ciresan等人[1]在sliding-window设置训练了一个网络通过输入的像素点周围提供的一个局部区域(patch)来预测每个像素的类标签。首先，这个网络可以localize。其次，以patch为单位的训练数据远远大于训练图像。于是该网络在2012年的ISBI的EM分割挑战赛中以很大优势胜出。</p>
@@ -372,14 +369,14 @@
 <blockquote>
 <p>[1] Ciresan, D.C., Gambardella, L.M., Giusti, A., Schmidhuber, J.: Deep neural networks segment neuronal membranes in electron microscopy images. In: NIPS. pp. 2852–2860 (2012)</p>
 <p>[11] Seyedhosseini, M., Sajjadi, M., Tasdizen, T.: Image segmentation with cascaded hierarchical models and logistic disjunctive normal networks. In: Computer Vision (ICCV), 2013 IEEE International Conference on. pp. 2168–2175 (2013)</p>
-<p>[4] Hariharan, B., Arbelez, P., Girshick, R., Malik, J.: Hypercolumns for object segmentation and fine-grained localization (2014), arXiv:1411.5752 [<a target="_blank" rel="noopener" href="http://cs.CV">cs.CV</a>]</p>
+<p>[4] Hariharan, B., Arbelez, P., Girshick, R., Malik, J.: Hypercolumns for object segmentation and fine-grained localization (2014), arXiv:1411.5752 [cs.CV]</p>
 </blockquote>
 <p>【介绍本片论文】</p>
 <p>在这片论文中，我们建立在一个更优雅的架构上——全卷积网络[9]。我们修改和扩充了这个架构使其能在更小的训练集并产生更精确的分割结果，见图1（see Figure 1）。</p>
 <img src="/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210816113912590.png" class="" title="Figure 1">
 <p>[9]的中心思想主要是通过连续层来补充下采样网络（contracting network），其中池化操作被上采样操作代替。因此，这些层提高了输出的分辨率。为了精准定位，将下采样和上采样的高分辨率图像combine。随后，连续卷基层学习这个信息可以得到更精确的输出。</p>
 <blockquote>
-<p>[9] Long,  J.,  Shelhamer,  E.,  Darrell,  T.:  Fully  convolutional  networks  for  semanticsegmentation (2014), arXiv:1411.4038 [<a target="_blank" rel="noopener" href="http://cs.CV">cs.CV</a>]</p>
+<p>[9] Long,  J.,  Shelhamer,  E.,  Darrell,  T.:  Fully  convolutional  networks  for  semanticsegmentation (2014), arXiv:1411.4038 [cs.CV]</p>
 </blockquote>
 <p>阐述我们提出的网络的修改。在上采样部分，我们也有大量的特征通道允许网络将上下文信息传播到更高分辨率的层。</p>
 <p>因此，上采样和下采样差不多是对称的 ，产生了U型结构。U-net也没有全连接层，是一个FCN的架构网络。网络的最终的分割图像是与输入像素相同的图像。运用了<strong>overlap-tile</strong>（see Figure 2）策略，使得在任意图像分类上都达到无缝分割。</p>
@@ -390,8 +387,6 @@
 <p>在无监督的特征学习中，数据加强对于学习不变性的价值已经在[2]中凸显出来了。</p>
 <blockquote>
 <p><strong>This allows the network to learn invariance to such deformations, without the need to see these transformations in the annotated image corpus. This is particularly important in biomedical segmentation, since deformation used to be the most common variation in tissue and realistic deformations can be simulated efficiently.</strong></p>
-</blockquote>
-<blockquote>
 <p>[2] Dosovitskiy, A., Springenberg, J.T., Riedmiller, M., Brox, T.: Discriminative unsupervised feature learning with convolutional neural networks. In: NIPS (2014)</p>
 </blockquote>
 <p>细胞分割任务中的另一个挑战就是同类且相互接触细胞的分离(see Figure 3)。为此，提出使用加权loss，也就是赋予相互接触的两个细胞之间的background标签更高的权重。</p>
@@ -401,39 +396,33 @@
 <blockquote>
 <p>[1] Ciresan, D.C., Gambardella, L.M., Giusti, A., Schmidhuber, J.: Deep neural networks segment neuronal membranes in electron microscopy images. In: NIPS. pp. 2852–2860 (2012)</p>
 </blockquote>
-<h2 id="network-architecture"><a class="markdownIt-Anchor" href="#network-architecture"></a> Network Architecture</h2>
-<p>The network architecture is illustrated in Figure 1.</p>
+<h2 id="Network-Architecture"><a href="#Network-Architecture" class="headerlink" title="Network Architecture"></a>Network Architecture</h2><p>The network architecture is illustrated in Figure 1. </p>
 <p>其实图片介绍很清晰，每个箭头的不同含义也都介绍了。</p>
 <p>介绍网络架构，如double卷积，池化层，stride等等等。</p>
 <ul>
 <li>左边是下采样，右边是上采样。</li>
-<li>下采样（收缩）路径遵循卷积网络的典型架构，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 的卷积，每个卷积后ReLU，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2 \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>​​​ 最大池化，stride为2，每个下采样中，将特征通道数加倍。</li>
-<li>上采样使用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2 \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 的上卷积将特征通道数减半，以及拼接下采样的特征图，以及double <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 卷积+ReLU。</li>
+<li>下采样（收缩）路径遵循卷积网络的典型架构，$3 \times 3$ 的卷积，每个卷积后ReLU，$2 \times 2$​​​ 最大池化，stride为2，每个下采样中，将特征通道数加倍。</li>
+<li>上采样使用 $2 \times 2$ 的上卷积将特征通道数减半，以及拼接下采样的特征图，以及double $3 \times 3$ 卷积+ReLU。</li>
 <li>优于每次卷积边界像素的丢失，裁剪是必要的？</li>
-<li>最后一层，使用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>​​卷积将每个 64 分量特征向量映射到所需数量的类。</li>
+<li>最后一层，使用 $1 \times 1$​​卷积将每个 64 分量特征向量映射到所需数量的类。</li>
 <li>该网络总共有 23 个卷积层。</li>
-<li>为了允许输出分割图的无缝平铺（see Figure 2），重要的是选择输入平铺大小，以便将所有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2 \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 最大池化操作应用于具有偶数 x 和 y 大小的层。</li>
+<li>为了允许输出分割图的无缝平铺（see Figure 2），重要的是选择输入平铺大小，以便将所有 $2 \times 2$ 最大池化操作应用于具有偶数 x 和 y 大小的层。</li>
 </ul>
-<h2 id="training"><a class="markdownIt-Anchor" href="#training"></a> Training</h2>
-<ul>
+<h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2><ul>
 <li>使用SGD来训练网络</li>
 <li>为了最大限度地减少开销并最大限度地利用 GPU 内存，我们倾向于使用大输入图块而不是大批量，从而将批量减少到单个图像。因此，我们使用高momentum (0.99)，使得大量先前看到的训练样本确定当前优化步骤中的更新</li>
 <li><strong>能量函数</strong></li>
 </ul>
 <img src="/2021/08/17/UNET%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/image-20210817195118832.png" class="" title="Energy Function">
-<h3 id="data-argumentation"><a class="markdownIt-Anchor" href="#data-argumentation"></a> Data Argumentation</h3>
-<p>当只有很少的训练样本可用时，数据增强对于教导网络期望的不变性和鲁棒性是至关重要的。对于显微图像，我们主要需要平移和旋转不变性，以及对变形和灰度值变化的鲁棒性。尤其是训练样本的随机弹性变形似乎是训练带有很少注释图像的分割网络的关键概念。我们使用粗糙的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3 \times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>​ 网格上的随机位移向量生成平滑变形。位移从标准偏差为10像素的高斯分布中采样。然后使用双三次插值计算每像素位移。缩路径末端的退出层执行进一步的隐式数据扩充。</p>
-<h2 id="experiments"><a class="markdownIt-Anchor" href="#experiments"></a> Experiments</h2>
-<p>介绍了在三种不同分割任务的应用结果。</p>
+<h3 id="Data-Argumentation"><a href="#Data-Argumentation" class="headerlink" title="Data Argumentation"></a>Data Argumentation</h3><p>当只有很少的训练样本可用时，数据增强对于教导网络期望的不变性和鲁棒性是至关重要的。对于显微图像，我们主要需要平移和旋转不变性，以及对变形和灰度值变化的鲁棒性。尤其是训练样本的随机弹性变形似乎是训练带有很少注释图像的分割网络的关键概念。我们使用粗糙的 $3 \times 3$​ 网格上的随机位移向量生成平滑变形。位移从标准偏差为10像素的高斯分布中采样。然后使用双三次插值计算每像素位移。缩路径末端的退出层执行进一步的隐式数据扩充。</p>
+<h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><p>介绍了在三种不同分割任务的应用结果。</p>
 <p>主要是介绍了任务，然后介绍结果。</p>
-<h2 id="conclusion"><a class="markdownIt-Anchor" href="#conclusion"></a> Conclusion</h2>
-<p>【最后再总结一下我们的工作真的很棒！性能很棒哦！比方！给你举例最后说一下就结尾哦！】</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>【最后再总结一下我们的工作真的很棒！性能很棒哦！比方！给你举例最后说一下就结尾哦！】</p>
 <p>u-net在不同的医学图像分割应用上都取得了比较好的性能。得益于弹性变形的数据增强，它只需要很少的图像，并且训练时间也很合理，只要10h，我们提供完整的基于Caffe[6]的实现和训练有素的网络，我们确信u-net架构可以很容易地应用于更多的任务。</p>
 <blockquote>
-<p>[6] Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R., Guadarrama, S., Darrell, T.: Caffe: Convolutional architecture for fast feature embedding (2014), arXiv:1408.5093 [<a target="_blank" rel="noopener" href="http://cs.CV">cs.CV</a>]</p>
+<p>[6] Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R., Guadarrama, S., Darrell, T.: Caffe: Convolutional architecture for fast feature embedding (2014), arXiv:1408.5093 [cs.CV]</p>
 </blockquote>
-<h2 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h2>
-<blockquote>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_36474809/article/details/87931260">Unet论文详解U-Net:Convolutional Networks for Biomedical Image Segmentation_祥瑞的技术博客-CSDN博客_unet论文</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012328159/article/details/80311892">深度学习中优化方法——momentum、Nesterov Momentum、AdaGrad、Adadelta、RMSprop、Adam_天泽28的专栏-CSDN博客_momentum</a></li>
@@ -532,13 +521,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">73k</span>
+    <span title="站点总字数">72k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:05</span>
+    <span title="站点阅读时长">3:59</span>
   </span>
 </div>
 <div class="busuanzi-count">
