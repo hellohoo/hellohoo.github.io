@@ -98,6 +98,17 @@
 <h2 id="1017"><a class="markdownIt-Anchor" href="#1017"></a> 10.17</h2>
 <p>我是一个敏感的人。</p>
 <p>敏感的人是敏感的。</p>
+<h2 id="1018"><a class="markdownIt-Anchor" href="#1018"></a> 10.18</h2>
+<p>感谢学硕帮我解决了我困惑的问题，虽然很低级，但我很开心。</p>
+<ul>
+<li><a href="https://medium.datadriveninvestor.com/deep-learning-in-medical-imaging-3c1008431aaf">Deep Learning in Medical Imaging V</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/349046748">Metric评价指标-Dice 与损失函数-Dice Loss</a></li>
+</ul>
+<hr />
+<ul>
+<li>文献管理</li>
+<li></li>
+</ul>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -734,8 +745,8 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>问题</tag>
         <tag>python</tag>
+        <tag>问题</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -2970,8 +2981,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
