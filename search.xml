@@ -103,12 +103,17 @@
 <ul>
 <li><a href="https://medium.datadriveninvestor.com/deep-learning-in-medical-imaging-3c1008431aaf">Deep Learning in Medical Imaging V</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/349046748">Metric评价指标-Dice 与损失函数-Dice Loss</a></li>
+<li><a href="https://blog.csdn.net/patience_of_study/article/details/113457134">pytorch语义分割中CrossEntropy、FocalLoss和DiceLoss三类损失函数的理解与分析</a></li>
 </ul>
 <hr />
 <ul>
 <li>文献管理</li>
-<li></li>
+<li>《数字图像处理》</li>
 </ul>
+<h2 id="1019"><a class="markdownIt-Anchor" href="#1019"></a> 10.19</h2>
+<p>找一个数据集。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/354860190">MRI（nii数据）切片，转2D图像</a></p>
+<p><a href="https://blog.csdn.net/saltriver/article/details/78990520">图像二阶导数的推导</a></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -745,8 +750,8 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>python</tag>
         <tag>问题</tag>
+        <tag>python</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -2981,8 +2986,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
