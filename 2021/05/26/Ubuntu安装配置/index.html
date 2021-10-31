@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="前言这是我第二次装Ubuntu，这篇文章也从第一次拖到了第二次，但是人总是在安逸里放纵，这种放纵使人暂时快乐——如果我没有这第二次的安装，可能这种暂时的时间更长些。 话不多说，一起来看一看如何安装，主要是分区。 个人电脑系统为win10，其中硬盘为256G SSD + 1T HDD。">
+<meta name="description" content="前言 这是我第二次装Ubuntu，这篇文章也从第一次拖到了第二次，但是人总是在安逸里放纵，这种放纵使人暂时快乐——如果我没有这第二次的安装，可能这种暂时的时间更长些。 话不多说，一起来看一看如何安装，主要是分区。 个人电脑系统为win10，其中硬盘为256G SSD + 1T HDD。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Win10+Ubuntu18.04双系统双硬盘安装及操作">
 <meta property="og:url" content="http://example.com/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="前言这是我第二次装Ubuntu，这篇文章也从第一次拖到了第二次，但是人总是在安逸里放纵，这种放纵使人暂时快乐——如果我没有这第二次的安装，可能这种暂时的时间更长些。 话不多说，一起来看一看如何安装，主要是分区。 个人电脑系统为win10，其中硬盘为256G SSD + 1T HDD。">
+<meta property="og:description" content="前言 这是我第二次装Ubuntu，这篇文章也从第一次拖到了第二次，但是人总是在安逸里放纵，这种放纵使人暂时快乐——如果我没有这第二次的安装，可能这种暂时的时间更长些。 话不多说，一起来看一看如何安装，主要是分区。 个人电脑系统为win10，其中硬盘为256G SSD + 1T HDD。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/v2-602cf0677d24216acbcb7418a0ddcedc_720w-20210528181516626.jpg">
 <meta property="og:image" content="http://example.com/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153024845.png">
@@ -211,7 +211,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-text">安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#win10%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-text">win10硬盘分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%98"><span class="nav-text">制作系统盘</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%9C%80%E8%A6%81%E8%BD%AF%E4%BB%B6"><span class="nav-text">安装需要软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%98-1"><span class="nav-text">制作系统盘</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-text">安装过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#BIOS"><span class="nav-text">BIOS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#INSTALL"><span class="nav-text">INSTALL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%9B%98-%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86"><span class="nav-text">分盘-磁盘管理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu-%E9%85%8D%E7%BD%AE"><span class="nav-text">Ubuntu 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95"><span class="nav-text">搜狗输入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jetbrains"><span class="nav-text">Jetbrains</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Qv2ray"><span class="nav-text">Qv2ray</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typora"><span class="nav-text">typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flameshot"><span class="nav-text">flameshot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim"><span class="nav-text">vim</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vim%E4%B8%AD%E8%AE%BE%E7%BD%AE%E8%A1%8C%E5%8F%B7"><span class="nav-text">vim中设置行号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sublime-text"><span class="nav-text">sublime-text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1"><span class="nav-text">微信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-text">网易云音乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86APPImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8"><span class="nav-text">将APPImage应用添加图标并添加到应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gnome%E9%85%8D%E7%BD%AE"><span class="nav-text">gnome配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%9C%89%E8%B6%A3%E6%8F%92%E4%BB%B6"><span class="nav-text">其他有趣插件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#pv"><span class="nav-text">pv</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#figlet"><span class="nav-text">figlet</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88"><span class="nav-text">Ubuntu问题集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows%E5%92%8CUbuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E4%B8%8D%E7%BB%9F%E4%B8%80"><span class="nav-text">Windows和Ubuntu双系统时间不统一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E6%97%B6%E4%BF%9D%E6%8C%81NumLock%E5%B8%B8%E5%BC%80"><span class="nav-text">开机时保持NumLock常开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh-connect-to-host-port-22-Connection-timed-out"><span class="nav-text">ssh: connect to host *port 22: Connection timed out</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-text"> 安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#win10%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-text"> win10硬盘分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%98"><span class="nav-text"> 制作系统盘</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%9C%80%E8%A6%81%E8%BD%AF%E4%BB%B6"><span class="nav-text"> 安装需要软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%98-2"><span class="nav-text"> 制作系统盘</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-text"> 安装过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bios"><span class="nav-text"> BIOS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#install"><span class="nav-text"> INSTALL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%9B%98-%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86"><span class="nav-text"> 分盘-磁盘管理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu-%E9%85%8D%E7%BD%AE"><span class="nav-text"> Ubuntu 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95"><span class="nav-text"> 搜狗输入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jetbrains"><span class="nav-text"> Jetbrains</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#qv2ray"><span class="nav-text"> Qv2ray</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#typora"><span class="nav-text"> typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flameshot"><span class="nav-text"> flameshot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim"><span class="nav-text"> vim</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vim%E4%B8%AD%E8%AE%BE%E7%BD%AE%E8%A1%8C%E5%8F%B7"><span class="nav-text"> vim中设置行号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sublime-text"><span class="nav-text"> sublime-text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text"> 其他</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1"><span class="nav-text"> 微信</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="nav-text"> 网易云音乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86appimage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8"><span class="nav-text"> 将APPImage应用添加图标并添加到应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gnome%E9%85%8D%E7%BD%AE"><span class="nav-text"> gnome配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%9C%89%E8%B6%A3%E6%8F%92%E4%BB%B6"><span class="nav-text"> 其他有趣插件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#pv"><span class="nav-text"> pv</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#figlet"><span class="nav-text"> figlet</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ubuntu%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88"><span class="nav-text"> Ubuntu问题集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#windows%E5%92%8Cubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E4%B8%8D%E7%BB%9F%E4%B8%80"><span class="nav-text"> Windows和Ubuntu双系统时间不统一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E6%97%B6%E4%BF%9D%E6%8C%81numlock%E5%B8%B8%E5%BC%80"><span class="nav-text"> 开机时保持NumLock常开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh-connect-to-host-port-22-connection-timed-out"><span class="nav-text"> ssh: connect to host ***port 22: Connection timed out</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -366,13 +366,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是我第二次装<code>Ubuntu</code>，这篇文章也从第一次拖到了第二次，但是人总是在安逸里放纵，这种放纵使人暂时快乐——如果我没有这第二次的安装，可能这种暂时的时间更长些。</p>
+        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>这是我第二次装<code>Ubuntu</code>，这篇文章也从第一次拖到了第二次，但是人总是在安逸里放纵，这种放纵使人暂时快乐——如果我没有这第二次的安装，可能这种暂时的时间更长些。</p>
 <p>话不多说，一起来看一看如何安装，主要是<code>分区</code>。</p>
 <p>个人电脑系统为win10，其中硬盘为256G SSD + 1T HDD。</p>
 <span id="more"></span>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><h3 id="win10硬盘分区"><a href="#win10硬盘分区" class="headerlink" title="win10硬盘分区"></a>win10硬盘分区</h3><p>我从256G的SSD中分出了115G，1T的HDD分出了366G左右给Ubuntu系统。</p>
-<h3 id="制作系统盘"><a href="#制作系统盘" class="headerlink" title="制作系统盘"></a>制作系统盘</h3><h4 id="安装需要软件"><a href="#安装需要软件" class="headerlink" title="安装需要软件"></a>安装需要软件</h4><p>硬件：4g以上U盘</p>
-<div class="table-container">
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
+<h3 id="win10硬盘分区"><a class="markdownIt-Anchor" href="#win10硬盘分区"></a> win10硬盘分区</h3>
+<p>我从256G的SSD中分出了115G，1T的HDD分出了366G左右给Ubuntu系统。</p>
+<h3 id="制作系统盘"><a class="markdownIt-Anchor" href="#制作系统盘"></a> 制作系统盘</h3>
+<h4 id="安装需要软件"><a class="markdownIt-Anchor" href="#安装需要软件"></a> 安装需要软件</h4>
+<p>硬件：4g以上U盘</p>
 <table>
 <thead>
 <tr>
@@ -391,13 +395,14 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="制作系统盘-1"><a href="#制作系统盘-1" class="headerlink" title="制作系统盘"></a>制作系统盘</h4><p>在选择中将下载的系统镜像导入，分区类型选择<code>MBR</code> ，目标系统类型选择<code>BIOS 或 UEFI</code>，文件系统和簇大小按<code>默认</code>。</p>
+<h4 id="制作系统盘-2"><a class="markdownIt-Anchor" href="#制作系统盘-2"></a> 制作系统盘</h4>
+<p>在选择中将下载的系统镜像导入，分区类型选择<code>MBR</code> ，目标系统类型选择<code>BIOS 或 UEFI</code>，文件系统和簇大小按<code>默认</code>。</p>
 <p>点击开始后选择以<code>ISO</code>镜像写入。</p>
 <p>(由于个人将win10也重装了，许多软件丢失，故在网络找了一张图。）</p>
 <p><strong>（图源网络有侵删)</strong></p>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/v2-602cf0677d24216acbcb7418a0ddcedc_720w-20210528181516626.jpg" class="" title="图源网络有侵删">
-<h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><p>我个人使用的引导方式为<code>UEFI</code>。</p>
+<h3 id="安装过程"><a class="markdownIt-Anchor" href="#安装过程"></a> 安装过程</h3>
+<p>我个人使用的引导方式为<code>UEFI</code>。</p>
 <ol>
 <li>插入U盘；</li>
 <li>进入BIOS；</li>
@@ -405,13 +410,13 @@
 <li>语言地区选择+<strong>分区</strong>；</li>
 <li>完成安装。</li>
 </ol>
-<h4 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h4><p>建议先去查一下电脑进入BIOS的方式，以免手忙脚乱 ，多浪费重启时间，如若手慢，请选择关机-开机的方式进入，而非重启。</p>
+<h4 id="bios"><a class="markdownIt-Anchor" href="#bios"></a> BIOS</h4>
+<p>建议先去查一下电脑进入BIOS的方式，以免手忙脚乱 ，多浪费重启时间，如若手慢，请选择关机-开机的方式进入，而非重启。</p>
 <p>大部分电脑都是<kbd>Delete</kbd>或<kbd>F2</kbd>。</p>
 <blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="http://www.xitongcheng.com/jiaocheng/xtazjc_article_14476.html">怎么进入主板BIOS设置|不同品牌电脑开机进BIOS界面方法</a>。</p>
 </blockquote>
 <p><strong>下表为大部分电脑进入BIOS方式</strong></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -462,9 +467,10 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h4 id="INSTALL"><a href="#INSTALL" class="headerlink" title="INSTALL"></a>INSTALL</h4><p>按提示配置，<strong>注意</strong>选择语言为<strong>English</strong>，因为选择中文的话会自动生成中文目录，后期在terminal中不好操作，所以建议先选择English进行操作，后期安装完成再换语言。</p>
-<h4 id="分盘-磁盘管理"><a href="#分盘-磁盘管理" class="headerlink" title="分盘-磁盘管理"></a>分盘-磁盘管理</h4><blockquote>
+<h4 id="install"><a class="markdownIt-Anchor" href="#install"></a> INSTALL</h4>
+<p>按提示配置，<strong>注意</strong>选择语言为<strong>English</strong>，因为选择中文的话会自动生成中文目录，后期在terminal中不好操作，所以建议先选择English进行操作，后期安装完成再换语言。</p>
+<h4 id="分盘-磁盘管理"><a class="markdownIt-Anchor" href="#分盘-磁盘管理"></a> 分盘-磁盘管理</h4>
+<blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="https://blog.csdn.net/cainiaohudi/article/details/82931169">ubuntu分区设置</a></p>
 <p><code>Swap</code>（相当于电脑内存）：逻辑分区、大小设置为电脑内存大小，2G，4G，8G；</p>
 <p><code>/home</code>（用户存储数据用）：逻辑分区，要尽可能大。</p>
@@ -472,13 +478,12 @@
 </blockquote>
 <p>个人分区：</p>
 <p>由于上次只给了<code>/</code>了20G，导致后期安装其他软件的时候内存不够，其实所有内存都给<code>/</code>最好，即不分区。</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>—-</th>
-<th>—-</th>
-<th>—-</th>
+<th>—</th>
+<th>—</th>
+<th>—</th>
 </tr>
 </thead>
 <tbody>
@@ -499,28 +504,36 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="Ubuntu-配置"><a href="#Ubuntu-配置" class="headerlink" title="Ubuntu 配置"></a>Ubuntu 配置</h2><h3 id="搜狗输入法"><a href="#搜狗输入法" class="headerlink" title="搜狗输入法"></a>搜狗输入法</h3><blockquote>
+<h2 id="ubuntu-配置"><a class="markdownIt-Anchor" href="#ubuntu-配置"></a> Ubuntu 配置</h2>
+<h3 id="搜狗输入法"><a class="markdownIt-Anchor" href="#搜狗输入法"></a> 搜狗输入法</h3>
+<blockquote>
 <p>下载地址： <a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/">https://pinyin.sogou.com/linux/</a></p>
 <p>安装指南： <a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/help.php">https://pinyin.sogou.com/linux/help.php</a></p>
 </blockquote>
 <ol>
-<li><p>添加中文语言支持</p>
+<li>
+<p>添加中文语言支持</p>
 </li>
-<li><p>在键盘输入法系统中选择<code>fcitx</code>，如果没有该选项，则使用<code>sudo apt-get install fcitx</code>安装</p>
+<li>
+<p>在键盘输入法系统中选择<code>fcitx</code>，如果没有该选项，则使用<code>sudo apt-get install fcitx</code>安装</p>
 </li>
-<li><p>点击应用到整个系统，关闭窗口，重启电脑</p>
+<li>
+<p>点击应用到整个系统，关闭窗口，重启电脑</p>
 </li>
-<li><p>安装搜狗输入法，在下载文件目录下终端输入<code>sudo dpkg -i sogoupinyin_版本号_amd64.deb</code>，如果安装过程中提示缺少相关依赖，则执行<code>sudo apt -f install</code>命令解决</p>
+<li>
+<p>安装搜狗输入法，在下载文件目录下终端输入<code>sudo dpkg -i sogoupinyin_版本号_amd64.deb</code>，如果安装过程中提示缺少相关依赖，则执行<code>sudo apt -f install</code>命令解决</p>
 </li>
-<li><p>注销计算机即可正常使用搜狗输入法</p>
+<li>
+<p>注销计算机即可正常使用搜狗输入法</p>
 </li>
 </ol>
-<h3 id="Jetbrains"><a href="#Jetbrains" class="headerlink" title="Jetbrains"></a>Jetbrains</h3><blockquote>
+<h3 id="jetbrains"><a class="markdownIt-Anchor" href="#jetbrains"></a> Jetbrains</h3>
+<blockquote>
 <p>Jetbrains Toolbox App下载地址: <a target="_blank" rel="noopener" href="https://www.jetbrains.com/toolbox-app/">https://www.jetbrains.com/toolbox-app/</a></p>
 </blockquote>
-<p>使用 JetBrains 的 ToolBox App 后可以⼀键安装旗下各种 IDE。  </p>
-<h3 id="Qv2ray"><a href="#Qv2ray" class="headerlink" title="Qv2ray"></a>Qv2ray</h3><blockquote>
+<p>使用 JetBrains 的 ToolBox App 后可以⼀键安装旗下各种 IDE。</p>
+<h3 id="qv2ray"><a class="markdownIt-Anchor" href="#qv2ray"></a> Qv2ray</h3>
+<blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/298035232">Ubuntu中使用qv2ray</a></p>
 <p>（说明：以下网盘链接均为该文章中作者链接。）</p>
 <p><a target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=hPKp0V4J54YihTsh05zhOQ">软件地址</a>：1lph</p>
@@ -530,8 +543,9 @@
 <li>解压软件文件后，打开<code>Qv2ray.v2.6.3.AppImage</code></li>
 </ol>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153024845.png" class="" title="image-20210528153024845">
-<ol>
-<li><p>下载插件后，导入软件中</p>
+<ol start="2">
+<li>
+<p>下载插件后，导入软件中</p>
 <p>a. 点击<code>插件</code></p>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153418375.png" class="" title="image-20210528153418375">
 <p>b. 点击<code>打开本地插件目录</code></p>
@@ -540,19 +554,21 @@
 <p>d. 关闭软件并重启Ubuntu即可看到如下界面，未重启即为空白</p>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153754394.png" class="" title="image-20210528153754394">
 </li>
-<li><p>配置kernel</p>
+<li>
+<p>配置kernel</p>
 <p>a. 点击<code>首选项</code></p>
 </li>
 </ol>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153939805.png" class="" title="image-20210528153939805">
-<p>​    b. 选择<code>内核设置</code>，将其修改为下载软件的核心可执行文件与目录</p>
-<p>​    <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154044457.png" class="" title="image-20210528154044457"></p>
-<p>​    c. 检查是否通过</p>
-<p>​    <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154227127.png" class="" title="image-20210528154227127"></p>
-<p>​    d. 若未通过，请重复以上步骤。</p>
-<p>​    <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154248644.png" class="" title="image-20210528154248644"></p>
-<ol>
-<li><p>添加订阅链接</p>
+<p>​	b. 选择<code>内核设置</code>，将其修改为下载软件的核心可执行文件与目录</p>
+<p>​	<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154044457.png" class="" title="image-20210528154044457"></p>
+<p>​	c. 检查是否通过</p>
+<p>​	<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154227127.png" class="" title="image-20210528154227127"></p>
+<p>​	d. 若未通过，请重复以上步骤。</p>
+<p>​	<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154248644.png" class="" title="image-20210528154248644"></p>
+<ol start="4">
+<li>
+<p>添加订阅链接</p>
 <p>a. 点击<code>分组</code></p>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154614292.png" class="" title="image-20210528154614292">
 <p>b. 按照图片顺序进行添加</p>
@@ -560,16 +576,20 @@
 </li>
 </ol>
 <p>点击<code>OK</code>后，双击选择的节点即可连接。</p>
-<h3 id="typora"><a href="#typora" class="headerlink" title="typora"></a>typora</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># or run:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE</span></span><br><span class="line"></span><br><span class="line">wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -</span><br><span class="line"></span><br><span class="line"><span class="comment"># add Typora&#x27;s repository</span></span><br><span class="line"></span><br><span class="line">sudo add-apt-repository <span class="string">&#x27;deb https://typora.io/linux ./&#x27;</span></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line"><span class="comment"># install typora</span></span><br><span class="line"></span><br><span class="line">sudo apt-get install typora</span><br></pre></td></tr></table></figure>
-<h3 id="flameshot"><a href="#flameshot" class="headerlink" title="flameshot"></a>flameshot</h3><blockquote>
+<h3 id="typora"><a class="markdownIt-Anchor" href="#typora"></a> typora</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># or run:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE</span></span><br><span class="line"></span><br><span class="line">wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -</span><br><span class="line"></span><br><span class="line"><span class="comment"># add Typora&#x27;s repository</span></span><br><span class="line"></span><br><span class="line">sudo add-apt-repository <span class="string">&#x27;deb https://typora.io/linux ./&#x27;</span></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line"><span class="comment"># install typora</span></span><br><span class="line"></span><br><span class="line">sudo apt-get install typora</span><br></pre></td></tr></table></figure>
+<h3 id="flameshot"><a class="markdownIt-Anchor" href="#flameshot"></a> flameshot</h3>
+<blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="https://github.com/flameshot-org/flameshot">flameshot-github</a></p>
 </blockquote>
 <ol>
-<li><p><code>apt</code>安装：</p>
+<li>
+<p><code>apt</code>安装：</p>
 <p>该方法安装的版本在6以下，无法有文本工具，但胜在方便，如果需要。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install flameshot</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>源码安装（如果您愿意<strong>动手</strong>，则<strong>巨巨巨巨推荐</strong>该方式）</p>
+<li>
+<p>源码安装（如果您愿意<strong>动手</strong>，则<strong>巨巨巨巨推荐</strong>该方式）</p>
 <p>a. 安装编译所需的文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Compile-time</span></span><br><span class="line">apt install g++ cmake build-essential qt5-default qttools5-dev-tools libqt5svg5-dev qttools5-dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run-time</span></span><br><span class="line">apt install libqt5dbus5 libqt5network5 libqt5core5a libqt5widgets5 libqt5gui5 libqt5svg5</span><br><span class="line"></span><br><span class="line"><span class="comment"># Optional</span></span><br><span class="line">apt install git openssl ca-certificates</span><br></pre></td></tr></table></figure>
 <p>b. clone源码到本地</p>
@@ -584,33 +604,38 @@
 </ol>
 <p>双击该图标即可截图。</p>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528171135788.png" class="" title="image-20210528171135788">
-<p>​    </p>
-<h3 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h3><h4 id="vim中设置行号"><a href="#vim中设置行号" class="headerlink" title="vim中设置行号"></a>vim中设置行号</h4><blockquote>
+<p>​</p>
+<h3 id="vim"><a class="markdownIt-Anchor" href="#vim"></a> vim</h3>
+<h4 id="vim中设置行号"><a class="markdownIt-Anchor" href="#vim中设置行号"></a> vim中设置行号</h4>
+<blockquote>
 <p>参考：<a target="_blank" rel="noopener" href="https://m.linuxidc.com/Linux/2012-12/75485.htm">vim中设置行号</a></p>
 </blockquote>
 <ol>
 <li>进入<code>/etc/vim</code>目录</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/vim</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="2">
 <li>备份<code>vimrc</code>文件</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp vimrc vimrc.bak</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="3">
 <li>打开并编辑<code>vimrc</code>文件（<strong>sudo</strong>）</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim vimrc</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="4">
 <li>在<code>vimrc</code>文件最后加：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> nu;</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="5">
 <li>重新载入<code>vimrc</code></li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> vimrc</span><br></pre></td></tr></table></figure>
-<h3 id="sublime-text"><a href="#sublime-text" class="headerlink" title="sublime-text"></a>sublime-text</h3><p>安装方式：</p>
+<h3 id="sublime-text"><a class="markdownIt-Anchor" href="#sublime-text"></a> sublime-text</h3>
+<p>安装方式：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/sublime-text-3 </span><br><span class="line">sudo apt-get update    </span><br><span class="line"><span class="comment"># sudo apt-get install sublime-text</span></span><br><span class="line">sudo snap install sublime-text --classic</span><br></pre></td></tr></table></figure>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h4><blockquote>
+<h3 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h3>
+<h4 id="微信"><a class="markdownIt-Anchor" href="#微信"></a> 微信</h4>
+<blockquote>
 <p>下载地址：<a target="_blank" rel="noopener" href="https://bbs.deepin.org/post/181938#mod=viewthread&amp;tid=181938&amp;extra=">https://bbs.deepin.org/post/181938#mod=viewthread&amp;tid=181938&amp;extra=</a></p>
 </blockquote>
 <p>github 上有⼈开发了⼀个项⽬ deepin-wine-ubuntu，将 deepin-wine 及其之上是配好的各种 deb 软件包迁移到了 Ubuntu 上。要安装微信、QQ等软件，我们需要先安装 deep-wine-ubuntu。</p>
@@ -625,62 +650,80 @@
 <p>参考博客： <a target="_blank" rel="noopener" href="https://blog.csdn.net/hymanjack/article/details/100168300">deepin wechat 中文乱码解决方案 Ubuntu18.04</a></p>
 </blockquote>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210531161109966.png" class="" title="成功">
-<p>​    </p>
-<h4 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h4><blockquote>
+<p>​</p>
+<h4 id="网易云音乐"><a class="markdownIt-Anchor" href="#网易云音乐"></a> 网易云音乐</h4>
+<blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="https://music.163.com/#/download">网易云音乐</a></p>
 </blockquote>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528175724397.png" class="" title="image-20210528175724397">
-<h4 id="将APPImage应用添加图标并添加到应用"><a href="#将APPImage应用添加图标并添加到应用" class="headerlink" title="将APPImage应用添加图标并添加到应用"></a>将APPImage应用添加图标并添加到应用</h4><blockquote>
+<h4 id="将appimage应用添加图标并添加到应用"><a class="markdownIt-Anchor" href="#将appimage应用添加图标并添加到应用"></a> 将APPImage应用添加图标并添加到应用</h4>
+<blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/215507075">Ubuntu下为AppImage应用添加图标并添加到应用</a></p>
 </blockquote>
 <ol>
-<li><p>准备好图标图片</p>
+<li>
+<p>准备好图标图片</p>
 </li>
-<li><p>进入<code>/usr/share/applications</code>目录下并创建<code>XXX.desktop</code>，其中XXX为你AppImage的名称</p>
+<li>
+<p>进入<code>/usr/share/applications</code>目录下并创建<code>XXX.desktop</code>，其中XXX为你AppImage的名称</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/applicationsvim XXX.desktop</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>编辑<code>XXX.desktop</code>，添加以下内容：</p>
+<li>
+<p>编辑<code>XXX.desktop</code>，添加以下内容：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]Name=XXXExec=/home/xxx/.../XXX.AppImageIcon=/home/xxx/.../XXX.pngType=ApplicationStartupNotify=true</span><br></pre></td></tr></table></figure>
 <p>其中<code>Name</code>为该应用名称，<code>Exec</code>为该应用AppImage的路径，<code>Icon</code>为该应用的图片图片路径。</p>
 </li>
-<li><p>给<code>XXX.desktop</code>运行权限</p>
+<li>
+<p>给<code>XXX.desktop</code>运行权限</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 XXX.desktop</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="gnome配置"><a href="#gnome配置" class="headerlink" title="gnome配置"></a>gnome配置</h4><p><a target="_blank" rel="noopener" href="https://www.gnome-look.org/browse/cat/">gnome配置神网站</a></p>
-<h4 id="其他有趣插件"><a href="#其他有趣插件" class="headerlink" title="其他有趣插件"></a>其他有趣插件</h4><h5 id="pv"><a href="#pv" class="headerlink" title="pv"></a>pv</h5><blockquote>
+<h4 id="gnome配置"><a class="markdownIt-Anchor" href="#gnome配置"></a> gnome配置</h4>
+<p><a target="_blank" rel="noopener" href="https://www.gnome-look.org/browse/cat/">gnome配置神网站</a></p>
+<h4 id="其他有趣插件"><a class="markdownIt-Anchor" href="#其他有趣插件"></a> 其他有趣插件</h4>
+<h5 id="pv"><a class="markdownIt-Anchor" href="#pv"></a> pv</h5>
+<blockquote>
 <p>你也许曾经看到过电影里的模拟字幕, 它们好像是被实时敲打出来的. 如果我么能在终端里实现这样的效果, 那不是很好?</p>
 </blockquote>
 <p>安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install pv</span><br></pre></td></tr></table></figure>
 <p>运行效果：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo helloooooo | pv -qL 10</span><br></pre></td></tr></table></figure>
-<h5 id="figlet"><a href="#figlet" class="headerlink" title="figlet"></a>figlet</h5><blockquote>
+<h5 id="figlet"><a class="markdownIt-Anchor" href="#figlet"></a> figlet</h5>
+<blockquote>
 <p>figlet是一款在终端上显示艺术字的工具。</p>
 </blockquote>
 <p>安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install figlet</span><br></pre></td></tr></table></figure>
 <p>运行效果：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> hello | figlet</span><br></pre></td></tr></table></figure>
-<h2 id="Ubuntu问题集合"><a href="#Ubuntu问题集合" class="headerlink" title="Ubuntu问题集合"></a>Ubuntu问题集合</h2><h3 id="Windows和Ubuntu双系统时间不统一"><a href="#Windows和Ubuntu双系统时间不统一" class="headerlink" title="Windows和Ubuntu双系统时间不统一"></a>Windows和Ubuntu双系统时间不统一</h3><p>解决⽅案：在 Ubuntu 中把计算机硬件的时间改成系统显示时间，即禁⽤ Ubuntu 中的 UTC</p>
+<h2 id="ubuntu问题集合"><a class="markdownIt-Anchor" href="#ubuntu问题集合"></a> Ubuntu问题集合</h2>
+<h3 id="windows和ubuntu双系统时间不统一"><a class="markdownIt-Anchor" href="#windows和ubuntu双系统时间不统一"></a> Windows和Ubuntu双系统时间不统一</h3>
+<p>解决⽅案：在 Ubuntu 中把计算机硬件的时间改成系统显示时间，即禁⽤ Ubuntu 中的 UTC</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timedatectl set-local-rtc 1 --adjust-system-clock</span><br></pre></td></tr></table></figure>
-<h3 id="开机时保持NumLock常开"><a href="#开机时保持NumLock常开" class="headerlink" title="开机时保持NumLock常开"></a>开机时保持NumLock常开</h3><blockquote>
+<h3 id="开机时保持numlock常开"><a class="markdownIt-Anchor" href="#开机时保持numlock常开"></a> 开机时保持NumLock常开</h3>
+<blockquote>
 <p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/artourins/article/details/86411786">Ubuntu 18.04 开机开启小键盘数字键numlock灯</a></p>
 </blockquote>
 <ol>
-<li><p>登录root用户</p>
+<li>
+<p>登录root用户</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>切换到gdm用户模式</p>
+<li>
+<p>切换到gdm用户模式</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su gdm -s /bin/bash</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>设置开机自动开启小键盘数字键numlock灯</p>
+<li>
+<p>设置开机自动开启小键盘数字键numlock灯</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state &#x27;on&#x27;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>重启设备. </p>
+<li>
+<p>重启设备.</p>
 </li>
 </ol>
-<h3 id="ssh-connect-to-host-port-22-Connection-timed-out"><a href="#ssh-connect-to-host-port-22-Connection-timed-out" class="headerlink" title="ssh: connect to host *port 22: Connection timed out"></a>ssh: connect to host <em>*</em>port 22: Connection timed out</h3><blockquote>
+<h3 id="ssh-connect-to-host-port-22-connection-timed-out"><a class="markdownIt-Anchor" href="#ssh-connect-to-host-port-22-connection-timed-out"></a> ssh: connect to host ***port 22: Connection timed out</h3>
+<blockquote>
 <p>参考： <a target="_blank" rel="noopener" href="https://blog.csdn.net/angou6476/article/details/101998185/">Ubuntu下防火墙</a></p>
 </blockquote>
 <p>解决方法：关掉防火墙</p>
@@ -777,13 +820,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">73k</span>
+    <span title="站点总字数">75k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:05</span>
+    <span title="站点阅读时长">4:11</span>
   </span>
 </div>
 <div class="busuanzi-count">
