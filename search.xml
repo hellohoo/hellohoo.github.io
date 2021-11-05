@@ -831,8 +831,8 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>问题</tag>
         <tag>python</tag>
+        <tag>问题</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -1854,7 +1854,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p><strong>小注释</strong>：网络上如果搜索分区可以查找到许多分区方法，我当时因为分区也头疼了很久，装了至少不下十次的结果<s>就是来来回回反反复复</s>，刚开始用得很好，后期安装软件发现<code>/</code>已经满了，所以如果不想麻烦的话，后期改来改去，就按照上表来进行分区。</p>
 </blockquote>
 <h4 id="后安装指南"><a class="markdownIt-Anchor" href="#后安装指南"></a> 后安装指南</h4>
-<p>最难的步骤（指分区）已经进行完了，地区我选择的是上海，继续等待就好了。</p>
+<p>最难的步骤（指分区）已经进行完了，地区我选择的是<strong>上海</strong>，然后在漫长的进度条下继续等待就好了。</p>
 <p>切记，不要那么着急——在安装后拔U盘。</p>
 <h3 id="安装问题合集"><a class="markdownIt-Anchor" href="#安装问题合集"></a> 安装问题合集</h3>
 <h4 id="grub"><a class="markdownIt-Anchor" href="#grub"></a> grub</h4>
@@ -1863,7 +1863,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>改错：第一行<code>sodu</code>应为<code>sudo</code></p>
 </blockquote>
 <p>如果顺利的话，参考上面的博客的就可以顺利解决了。</p>
-<p>如果不顺利，可以参考以下进行解决。</p>
+<p>如果上述过程中出错，可以参考以下教程进行解决。</p>
 <blockquote>
 <p><a href="https://www.tok9.com/archives/480/">Error: retrieving gpg key timed out</a></p>
 <p><a href="https://launchpad.net/~yannubuntu/+archive/ubuntu/boot-repair">Boot-Repair</a></p>
@@ -1942,7 +1942,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>点击<code>OK</code>后，双击选择的节点即可连接。</p>
 <h3 id="typora"><a class="markdownIt-Anchor" href="#typora"></a> typora</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># or run:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE</span></span><br><span class="line"></span><br><span class="line">wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -</span><br><span class="line"></span><br><span class="line"><span class="comment"># add Typora&#x27;s repository</span></span><br><span class="line"></span><br><span class="line">sudo add-apt-repository <span class="string">&#x27;deb https://typora.io/linux ./&#x27;</span></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line"><span class="comment"># install typora</span></span><br><span class="line"></span><br><span class="line">sudo apt-get install typora</span><br></pre></td></tr></table></figure>
-<h3 id="flameshot"><a class="markdownIt-Anchor" href="#flameshot"></a> flameshot</h3>
+<h3 id="flameshot-截图软件"><a class="markdownIt-Anchor" href="#flameshot-截图软件"></a> flameshot （截图软件）</h3>
 <blockquote>
 <p>参考： <a href="https://github.com/flameshot-org/flameshot">flameshot-github</a></p>
 </blockquote>
@@ -1969,7 +1969,10 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>双击该图标即可截图。</p>
 <img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528171135788.png" class="" title="image-20210528171135788">
 <p>​</p>
-<h3 id="vim"><a class="markdownIt-Anchor" href="#vim"></a> vim</h3>
+<h3 id="sublime-text"><a class="markdownIt-Anchor" href="#sublime-text"></a> sublime-text</h3>
+<p>安装方式：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/sublime-text-3 </span><br><span class="line">sudo apt-get update    </span><br><span class="line"><span class="comment"># sudo apt-get install sublime-text</span></span><br><span class="line">sudo snap install sublime-text --classic</span><br></pre></td></tr></table></figure>
+<h3 id="vim-操作"><a class="markdownIt-Anchor" href="#vim-操作"></a> vim 操作</h3>
 <h4 id="vim中设置行号"><a class="markdownIt-Anchor" href="#vim中设置行号"></a> vim中设置行号</h4>
 <blockquote>
 <p>参考：<a href="https://m.linuxidc.com/Linux/2012-12/75485.htm">vim中设置行号</a></p>
@@ -1994,9 +1997,6 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <li>重新载入<code>vimrc</code></li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> vimrc</span><br></pre></td></tr></table></figure>
-<h3 id="sublime-text"><a class="markdownIt-Anchor" href="#sublime-text"></a> sublime-text</h3>
-<p>安装方式：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/sublime-text-3 </span><br><span class="line">sudo apt-get update    </span><br><span class="line"><span class="comment"># sudo apt-get install sublime-text</span></span><br><span class="line">sudo snap install sublime-text --classic</span><br></pre></td></tr></table></figure>
 <h3 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h3>
 <h4 id="微信"><a class="markdownIt-Anchor" href="#微信"></a> 微信</h4>
 <blockquote>
@@ -2092,7 +2092,10 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 </blockquote>
 <p>解决方法：关掉防火墙</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo ufw <span class="built_in">disable</span> </span><br></pre></td></tr></table></figure>
+<hr />
+<blockquote>
 <p>致谢： <a href="https://www.jb51.net/article/187736.htm">https://www.jb51.net/article/187736.htm</a></p>
+</blockquote>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -3092,8 +3095,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
