@@ -19,6 +19,7 @@
 <h2 id="1106"><a class="markdownIt-Anchor" href="#1106"></a> 11.06</h2>
 <p>又要重新开始立flag了，就像三年前，我说到的就尽量做到，有些东西是好的，有些东西是不好的，一定要把握住一个度，为自己负责。</p>
 <p>谢谢。</p>
+<p><a href="https://distill.pub/2021/gnn-intro/">A Gentle Introduction to Graph Neural Networks</a></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -3099,8 +3100,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
