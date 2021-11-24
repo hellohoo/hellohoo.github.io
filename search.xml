@@ -83,6 +83,7 @@
 <p>特征融合。</p>
 <p><a href="https://github.com/YimianDai/open-aff/blob/master/aff_pytorch/aff_net/fusion.py">https://github.com/YimianDai/open-aff/blob/master/aff_pytorch/aff_net/fusion.py</a></p>
 <p>哦亲爱的妈妈，您知道吗？我今天下午定了基本题目，我觉得基本极了，可您也知道，我目前并没有想法，所以妈妈，就先这样吧。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;参考：https://blog.csdn.net/tototuzuoquan/article/details/113828042&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MNIST_Net</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">  </span><br><span class="line">  <span class="string">&#x27;&#x27;&#x27;Conv -&gt; MaxPool -&gt; RELU -&gt; Conv -&gt; MaxPool -&gt; RELU -&gt; FC -&gt; RELU -&gt; FC -&gt; SOFTMAX&#x27;&#x27;&#x27;</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">    <span class="built_in">super</span>(MNIST_Net,self).__init__()</span><br><span class="line">    self.conv1 = nn.Conv2d(<span class="number">1</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">1</span>)</span><br><span class="line">        self.conv2 = nn.Conv2d(<span class="number">10</span>, <span class="number">20</span>, <span class="number">5</span>, <span class="number">1</span>)</span><br><span class="line">        self.fc1 = nn.Linear(<span class="number">4</span>*<span class="number">4</span>*<span class="number">20</span>, <span class="number">50</span>)</span><br><span class="line">        self.fc2 = nn.Linear(<span class="number">50</span>, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, x</span>):</span></span><br><span class="line">        x = F.relu(self.conv1(x))</span><br><span class="line">        x = F.max_pool2d(x, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">        x = F.relu(self.conv2(x))</span><br><span class="line">        x = F.max_pool2d(x, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">        x = x.view(-<span class="number">1</span>, <span class="number">4</span>*<span class="number">4</span>*<span class="number">20</span>)</span><br><span class="line">        x = F.relu(self.fc1(x))</span><br><span class="line">        x = self.fc2(x)</span><br><span class="line">        <span class="keyword">return</span> F.log_softmax(x, dim=<span class="number">1</span>)</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -532,9 +533,9 @@
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>图像分割</tag>
         <tag>医学影像</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3580,8 +3581,8 @@ z_{k,j}=h(y_j,x_k,v_{k,j}) \tag{2.2}</script><p>这里，$v_{k,j}$ 是这次观�
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>医学影像</tag>
+        <tag>技术</tag>
         <tag>MPR</tag>
         <tag>VTK</tag>
         <tag>ITK</tag>
