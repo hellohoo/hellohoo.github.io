@@ -118,6 +118,7 @@
 <p>要学好多啊呜呜，会努力的！</p>
 <h2 id="1126"><a class="markdownIt-Anchor" href="#1126"></a> 11.26</h2>
 <p><a href="https://tinylab-1.gitbook.io/shellbook/">Shell 编程范例</a></p>
+<p><a href="https://github.com/davidwernhart/AlDente">davidwernhart/AlDente: macOS tool to limit maximum charging percentage (github.com)</a></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -3218,8 +3219,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -4198,8 +4199,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       <tags>
         <tag>技术</tag>
         <tag>医学影像</tag>
-        <tag>MPR</tag>
         <tag>VTK</tag>
+        <tag>MPR</tag>
         <tag>ITK</tag>
       </tags>
   </entry>
