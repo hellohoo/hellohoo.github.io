@@ -492,6 +492,7 @@
     <url>/2021/11/25/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/AFF%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h1>
 <p>特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合不同尺度的特征时出现的问题。我们还证明了特征图的初始整合会成为一个瓶颈，这个问题可以通过增加另一个层次的注意来缓解，我们称之为迭代注意特征融合。在较少的层或参数下，我们的模型在CIFAR-100和ImageNet数据集上的表现都优于最先进的网络，这表明更复杂的注意力机制的特征融合具有很大的潜力，与直接的对应物相比，可以持续产生更好的再结果。我们的代码和训练好的模型可以在网上找到[1]。</p>
+<span id="more"></span>
 <hr />
 <p>InceptionNet：</p>
 <h1 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h1>
@@ -2232,8 +2233,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>技术</tag>
+        <tag>安装</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
@@ -2290,8 +2291,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>技术</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
