@@ -684,9 +684,9 @@
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>图像分割</tag>
         <tag>医学影像</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -959,8 +959,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>python</tag>
+        <tag>技术</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -1834,7 +1834,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
   </entry>
   <entry>
     <title>Win10+Ubuntu18.04双系统双硬盘安装及操作</title>
-    <url>/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</url>
+    <url>/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>这是我第二次装<code>Ubuntu</code>，这篇文章也从第一次拖到了第二次，但是人总是在安逸里放纵，这种放纵使人暂时快乐——如果我没有这第二次的安装，可能这种暂时的时间更长些。</p>
 <p>话不多说，一起来看一看如何安装，主要是<code>分区</code>。</p>
@@ -1869,7 +1869,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>点击开始后选择以<code>ISO</code>镜像写入。</p>
 <p>(由于个人将win10也重装了，许多软件丢失，故在网络找了一张图。）</p>
 <p><strong>（图源网络有侵删)</strong></p>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/v2-602cf0677d24216acbcb7418a0ddcedc_720w-20210528181516626.jpg" class="" title="图源网络有侵删">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/v2-602cf0677d24216acbcb7418a0ddcedc_720w-20210528181516626.jpg" class="" title="图源网络有侵删">
 <h3 id="安装过程"><a class="markdownIt-Anchor" href="#安装过程"></a> 安装过程</h3>
 <p>我个人使用的引导方式为<code>UEFI</code>。</p>
 <ol>
@@ -2036,37 +2036,37 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <ol>
 <li>解压软件文件后，打开<code>Qv2ray.v2.6.3.AppImage</code></li>
 </ol>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153024845.png" class="" title="image-20210528153024845">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153024845.png" class="" title="image-20210528153024845">
 <ol start="2">
 <li>
 <p>下载插件后，导入软件中</p>
 <p>a. 点击<code>插件</code></p>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153418375.png" class="" title="image-20210528153418375">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153418375.png" class="" title="image-20210528153418375">
 <p>b. 点击<code>打开本地插件目录</code></p>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153600611.png" class="" title="image-20210528153600611">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153600611.png" class="" title="image-20210528153600611">
 <p>c. 将插件复制到该目录下</p>
 <p>d. 关闭软件并重启Ubuntu即可看到如下界面，未重启即为空白</p>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153754394.png" class="" title="image-20210528153754394">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153754394.png" class="" title="image-20210528153754394">
 </li>
 <li>
 <p>配置kernel</p>
 <p>a. 点击<code>首选项</code></p>
 </li>
 </ol>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153939805.png" class="" title="image-20210528153939805">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528153939805.png" class="" title="image-20210528153939805">
 <p>​	b. 选择<code>内核设置</code>，将其修改为下载软件的核心可执行文件与目录</p>
-<p>​	<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154044457.png" class="" title="image-20210528154044457"></p>
+<p>​	<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154044457.png" class="" title="image-20210528154044457"></p>
 <p>​	c. 检查是否通过</p>
-<p>​	<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154227127.png" class="" title="image-20210528154227127"></p>
+<p>​	<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154227127.png" class="" title="image-20210528154227127"></p>
 <p>​	d. 若未通过，请重复以上步骤。</p>
-<p>​	<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154248644.png" class="" title="image-20210528154248644"></p>
+<p>​	<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154248644.png" class="" title="image-20210528154248644"></p>
 <ol start="4">
 <li>
 <p>添加订阅链接</p>
 <p>a. 点击<code>分组</code></p>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154614292.png" class="" title="image-20210528154614292">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528154614292.png" class="" title="image-20210528154614292">
 <p>b. 按照图片顺序进行添加</p>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528173614922.png" class="" title="image-20210528173614922">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528173614922.png" class="" title="image-20210528173614922">
 </li>
 </ol>
 <p>点击<code>OK</code>后，双击选择的节点即可连接。</p>
@@ -2097,7 +2097,7 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 </li>
 </ol>
 <p>双击该图标即可截图。</p>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528171135788.png" class="" title="image-20210528171135788">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528171135788.png" class="" title="image-20210528171135788">
 <p>​</p>
 <h3 id="sublime-text"><a class="markdownIt-Anchor" href="#sublime-text"></a> sublime-text</h3>
 <p>安装方式：</p>
@@ -2138,18 +2138,18 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 <p>deep-wine-ubuntu 安装完成之后，下载deepin的软件包后就可以安装：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">sudo apt install ./&lt;file&gt;.deb</span><br></pre></td></tr></table></figure>
 <p>微信中文乱码：</p>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210531155739983.png" class="" title="中文为黑块">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210531155739983.png" class="" title="中文为黑块">
 <p>解决方案：</p>
 <blockquote>
 <p>参考博客： <a href="https://blog.csdn.net/hymanjack/article/details/100168300">deepin wechat 中文乱码解决方案 Ubuntu18.04</a></p>
 </blockquote>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210531161109966.png" class="" title="成功">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210531161109966.png" class="" title="成功">
 <p>​</p>
 <h4 id="网易云音乐"><a class="markdownIt-Anchor" href="#网易云音乐"></a> 网易云音乐</h4>
 <blockquote>
 <p>参考： <a href="https://music.163.com/#/download">网易云音乐</a></p>
 </blockquote>
-<img src="/2021/05/26/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528175724397.png" class="" title="image-20210528175724397">
+<img src="/2021/05/26/%E6%8A%80%E6%9C%AF/Ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/image-20210528175724397.png" class="" title="image-20210528175724397">
 <h4 id="将appimage应用添加图标并添加到应用"><a class="markdownIt-Anchor" href="#将appimage应用添加图标并添加到应用"></a> 将APPImage应用添加图标并添加到应用</h4>
 <blockquote>
 <p>参考： <a href="https://zhuanlan.zhihu.com/p/215507075">Ubuntu下为AppImage应用添加图标并添加到应用</a></p>
@@ -2160,11 +2160,11 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
 </li>
 <li>
 <p>进入<code>/usr/share/applications</code>目录下并创建<code>XXX.desktop</code>，其中XXX为你AppImage的名称</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/applicationsvim XXX.desktop</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/applications</span><br><span class="line">vim XXX.desktop</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>编辑<code>XXX.desktop</code>，添加以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]Name=XXXExec=/home/xxx/.../XXX.AppImageIcon=/home/xxx/.../XXX.pngType=ApplicationStartupNotify=true</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=XXX</span><br><span class="line">Exec=/home/xxx/.../XXX.AppImage</span><br><span class="line">Icon=/home/xxx/.../XXX.png</span><br><span class="line">Type=Application</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure>
 <p>其中<code>Name</code>为该应用名称，<code>Exec</code>为该应用AppImage的路径，<code>Icon</code>为该应用的图片图片路径。</p>
 </li>
 <li>
@@ -2818,9 +2818,9 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>技术</category>
       </categories>
       <tags>
+        <tag>学习</tag>
         <tag>技术</tag>
         <tag>Linux</tag>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -3998,8 +3998,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -4094,8 +4094,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -4203,11 +4203,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>医学影像</tag>
         <tag>MPR</tag>
         <tag>VTK</tag>
         <tag>ITK</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
