@@ -119,6 +119,12 @@
 <h2 id="1126"><a class="markdownIt-Anchor" href="#1126"></a> 11.26</h2>
 <p><a href="https://tinylab-1.gitbook.io/shellbook/">Shell 编程范例</a></p>
 <p><a href="https://github.com/davidwernhart/AlDente">davidwernhart/AlDente: macOS tool to limit maximum charging percentage (github.com)</a></p>
+<h2 id="1127"><a class="markdownIt-Anchor" href="#1127"></a> 11.27</h2>
+<p><code>typora</code>发布正式版了哦！</p>
+<p>89买断3设备，还是可以的，不过大版本更新是否要重新付费还不清楚呢，不过还是要试一下<code>obsidian</code>，毕竟他对我说了永远诶，我们狗狗是没办法不信这个的！</p>
+<img src="/2021/11/02/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-11/image-20211127172015948.png" class="" title="obsidian">
+
+<img src="/2021/11/02/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-11/image-20211127181514235.png" class="" title="obsidian">
 ]]></content>
       <categories>
         <category>生活</category>
@@ -4199,8 +4205,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       <tags>
         <tag>技术</tag>
         <tag>医学影像</tag>
-        <tag>VTK</tag>
         <tag>MPR</tag>
+        <tag>VTK</tag>
         <tag>ITK</tag>
       </tags>
   </entry>
