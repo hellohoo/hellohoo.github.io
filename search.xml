@@ -127,6 +127,7 @@
 <img src="/2021/11/02/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-11/image-20211127181425524.png" class="" title="obsidian">
 <img src="/2021/11/02/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-11/image-20211127181514235.png" class="" title="obsidian">
 <h2 id="1128"><a class="markdownIt-Anchor" href="#1128"></a> 11.28</h2>
+<p>就差写开题第一章了，效率还行。</p>
 <p>小工具：</p>
 <p><a href="https://cloudconvert.com/icns-to-png">icns转png</a></p>
 ]]></content>
@@ -496,6 +497,7 @@
     <url>/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>Typora终于升级为正式版了。</p>
+<p>这也相对出现了一些改变，比如付费制度的来临，声明一下，我个人非常支持软件付费、知识付费等。</p>
 <span id="more"></span>
 ]]></content>
       <categories>
@@ -981,8 +983,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>技术</tag>
+        <tag>python</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -3247,8 +3249,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -4020,8 +4022,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -4116,8 +4118,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -4226,10 +4228,10 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>医学影像</tag>
-        <tag>技术</tag>
         <tag>MPR</tag>
         <tag>VTK</tag>
         <tag>ITK</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
