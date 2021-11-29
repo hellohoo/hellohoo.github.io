@@ -127,9 +127,13 @@
 <img src="/2021/11/02/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-11/image-20211127181425524.png" class="" title="obsidian">
 <img src="/2021/11/02/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-11/image-20211127181514235.png" class="" title="obsidian">
 <h2 id="1128"><a class="markdownIt-Anchor" href="#1128"></a> 11.28</h2>
-<p>就差写开题第一章了，效率还行。</p>
+<p>就差开题第一章了，效率还行。</p>
 <p>小工具：</p>
 <p><a href="https://cloudconvert.com/icns-to-png">icns转png</a></p>
+<p>开题差不多写完了。</p>
+<h2 id="1129"><a class="markdownIt-Anchor" href="#1129"></a> 11.29</h2>
+<p><a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html">Linux工具快速教程</a></p>
+<p><a href="https://blog.csdn.net/weixin_40519315/article/details/104670106">[概念]MICCAI+BraTS+多模态t1,t2,flair,t1c+HGG,LGG+WT,ET,TC</a></p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1032,8 +1036,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>技术</tag>
+        <tag>python</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -3298,8 +3302,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -4277,10 +4281,10 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>医学影像</tag>
-        <tag>技术</tag>
-        <tag>VTK</tag>
         <tag>MPR</tag>
+        <tag>VTK</tag>
         <tag>ITK</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
