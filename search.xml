@@ -3,7 +3,10 @@
   <entry>
     <title>2021-12</title>
     <url>/2021/12/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-12/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>今年的12月来得早了些。</p>
+<p>我还在徘徊中，就快宣告了</p>
+]]></content>
       <categories>
         <category>生活</category>
       </categories>
@@ -220,8 +223,8 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -4105,8 +4108,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -4201,8 +4204,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
