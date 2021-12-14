@@ -38,6 +38,8 @@
 <h2 id="1212"><a class="markdownIt-Anchor" href="#1212"></a> 12.12</h2>
 <h2 id="1213"><a class="markdownIt-Anchor" href="#1213"></a> 12.13</h2>
 <p>周一总是难捱的，下午去听讲座一直站着，站得腰疼。</p>
+<h2 id="1214"><a class="markdownIt-Anchor" href="#1214"></a> 12.14</h2>
+<p>今天是和财务打交道。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1101,9 +1103,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>技术</tag>
         <tag>问题</tag>
+        <tag>python</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -2374,9 +2376,9 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>技术</tag>
         <tag>Linux</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -2432,8 +2434,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>技术</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -3367,8 +3369,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -4140,8 +4142,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -4236,8 +4238,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -4346,10 +4348,10 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>医学影像</tag>
-        <tag>MPR</tag>
-        <tag>VTK</tag>
-        <tag>ITK</tag>
         <tag>技术</tag>
+        <tag>VTK</tag>
+        <tag>MPR</tag>
+        <tag>ITK</tag>
       </tags>
   </entry>
   <entry>
