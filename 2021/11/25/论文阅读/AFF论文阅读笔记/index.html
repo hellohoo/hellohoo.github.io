@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Abstract 特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合">
+<meta name="description" content="Abstract特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合不同">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Attentional Feature Fusion》论文阅读笔记">
 <meta property="og:url" content="http://example.com/2021/11/25/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/AFF%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="Abstract 特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合">
+<meta property="og:description" content="Abstract特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合不同">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-24T17:43:36.000Z">
 <meta property="article:modified_time" content="2021-11-27T18:25:49.275Z">
@@ -195,7 +195,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#abstract"><span class="nav-text"> Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-text"> Introduction</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -346,13 +346,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h1>
-<p>特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合不同尺度的特征时出现的问题。我们还证明了特征图的初始整合会成为一个瓶颈，这个问题可以通过增加另一个层次的注意来缓解，我们称之为迭代注意特征融合。在较少的层或参数下，我们的模型在CIFAR-100和ImageNet数据集上的表现都优于最先进的网络，这表明更复杂的注意力机制的特征融合具有很大的潜力，与直接的对应物相比，可以持续产生更好的再结果。我们的代码和训练好的模型可以在网上找到[1]。</p>
+        <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合不同尺度的特征时出现的问题。我们还证明了特征图的初始整合会成为一个瓶颈，这个问题可以通过增加另一个层次的注意来缓解，我们称之为迭代注意特征融合。在较少的层或参数下，我们的模型在CIFAR-100和ImageNet数据集上的表现都优于最先进的网络，这表明更复杂的注意力机制的特征融合具有很大的潜力，与直接的对应物相比，可以持续产生更好的再结果。我们的代码和训练好的模型可以在网上找到[1]。</p>
 <span id="more"></span>
-<hr />
+<hr>
 <p>InceptionNet：</p>
-<h1 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h1>
-<p>ParseNet：一个端到端的用于语义分割的卷及神经网络，这篇文章最大的贡献在于使用了全局语义信息（Global Context）来做分割，ParseNet可以直接对网络中任意一层进行全局池化得到一个代表全图特征的特征图，并利用这个特征图进行分割。</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>ParseNet：一个端到端的用于语义分割的卷及神经网络，这篇文章最大的贡献在于使用了全局语义信息（Global Context）来做分割，ParseNet可以直接对网络中任意一层进行全局池化得到一个代表全图特征的特征图，并利用这个特征图进行分割。</p>
 
     </div>
 
@@ -444,13 +442,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">80k</span>
+    <span title="站点总字数">78k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:27</span>
+    <span title="站点阅读时长">4:21</span>
   </span>
 </div>
 <div class="busuanzi-count">
