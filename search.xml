@@ -44,6 +44,8 @@
 <p><a href="https://pkuflyingpig.github.io/pku-cs-self-learning/">CS自学指南</a></p>
 <p><a href="https://macwk.com/soft/all/p1">https://macwk.com/soft/all/p1</a></p>
 <p><a href="https://www.runoob.com/python/os-listdir.html">https://www.runoob.com/python/os-listdir.html</a></p>
+<h2 id="1216"><a class="markdownIt-Anchor" href="#1216"></a> 12.16</h2>
+<p>在改专利的时候我突然就觉得如果说发明是非常的，那非常也是非常的。</p>
 ]]></content>
       <categories>
         <category>生活</category>
@@ -1108,8 +1110,8 @@
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>python</tag>
         <tag>问题</tag>
+        <tag>python</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -2730,8 +2732,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>书籍</tag>
-        <tag>学习</tag>
         <tag>python</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -3372,9 +3374,9 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>学习</category>
       </categories>
       <tags>
+        <tag>python</tag>
         <tag>学习</tag>
         <tag>笔记</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -4146,8 +4148,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -4242,8 +4244,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -4352,8 +4354,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>医学影像</tag>
-        <tag>MPR</tag>
         <tag>VTK</tag>
+        <tag>MPR</tag>
         <tag>ITK</tag>
         <tag>技术</tag>
       </tags>
