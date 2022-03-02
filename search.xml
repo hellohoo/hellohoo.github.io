@@ -107,6 +107,67 @@
       </tags>
   </entry>
   <entry>
+    <title>css笔记</title>
+    <url>/2022/02/23/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/css%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>目前在写一份typora的主题<code>hoo</code>，主要是css文件，之前学过，但知识总需要温习，需要记笔记。</p>
+<p>顺便写出我的主题创作过程。</p>
+<p>首先声明我的主题灵感来源于<a href="https://github.com/Theigrams/My-Typora-Themes">zj</a>，并基于zj.css进行修改。</p>
+<p>感谢少数派的<a href="https://sspai.com/post/59450">这篇文章</a>。</p>
+<h2 id="配色"><a class="markdownIt-Anchor" href="#配色"></a> 配色</h2>
+<h3 id="nnn"><a class="markdownIt-Anchor" href="#nnn"></a> nnn</h3>
+<h4 id="hhh"><a class="markdownIt-Anchor" href="#hhh"></a> Hhh</h4>
+<img src="/2022/02/23/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/css%E7%AC%94%E8%AE%B0/image-20220223225124618.png" class="" title="image-20220223225124618">
+<p>来源于<a href="https://coolors.co/palette/ff7b00-ff8800-ff9500-ffa200-ffaa00-ffb700-ffc300-ffd000-ffdd00-ffea00">网站</a>。</p>
+<h2 id="css属性"><a class="markdownIt-Anchor" href="#css属性"></a> CSS属性</h2>
+<h3 id="important规则"><a class="markdownIt-Anchor" href="#important规则"></a> !important规则</h3>
+<p>用于增加样式的权重。<strong>!important</strong> 与优先级无关，但它与最终的结果直接相关，使用一个 !important 规则时，此声明将覆盖任何其他声明。</p>
+<h3 id="css-after-选择器"><a class="markdownIt-Anchor" href="#css-after-选择器"></a> CSS :after 选择器</h3>
+<p>在每个 &lt;p&gt; 元素的内容之后插入新内容：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>:after</span><br><span class="line">&#123; </span><br><span class="line">content:<span class="string">&quot;台词：&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="root-选择器"><a class="markdownIt-Anchor" href="#root-选择器"></a> :root 选择器</h3>
+<p>匹配文档根元素。</p>
+<blockquote>
+<p>在 HTML 中，根元素始终是 html 元素。</p>
+</blockquote>
+<h4 id="h4"><a class="markdownIt-Anchor" href="#h4"></a> h4</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">print(random.randint(<span class="number">0</span>,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<h5 id="nihao"><a class="markdownIt-Anchor" href="#nihao"></a> nihao</h5>
+<h6 id="nihao-2"><a class="markdownIt-Anchor" href="#nihao-2"></a> nihao</h6>
+<table>
+<thead>
+<tr>
+<th>ni</th>
+<th>zai</th>
+<th>Xiang</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shen</td>
+<td>me</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>hao</p>
+<hr />
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>笔记</tag>
+        <tag>css</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2021-12</title>
     <url>/2021/12/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2021-12/</url>
     <content><![CDATA[<blockquote>
@@ -212,6 +273,93 @@
       </categories>
       <tags>
         <tag>生活 - 记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu下为AppImage应用添加图标并添加到应用</title>
+    <url>/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>Typora终于升级为正式版了。</p>
+<p>这也相对出现了一些改变，比如付费制度的来临，声明一下，我个人非常支持软件付费、知识付费等。</p>
+<p>但是在众多的答案中还是许多人说了<a href="https://obsidian.md"><code>Obsidian</code></a>，作为一个爱常识的人就下下来试了，并且在Linux系统中下载了。</p>
+<p>Obsidian提供了Linux三种下载格式，分别为AppImage、Snap以及flatpak。</p>
+<p>我个人选择的是默认的AppImage，如何将AppImage添加相应的图标呢以及添加到应用呢？</p>
+<span id="more"></span>
+<h2 id="appimage"><a class="markdownIt-Anchor" href="#appimage"></a> AppImage</h2>
+<p><a href="https://blog.csdn.net/aboutmn/article/details/87254930">什么是AppImage</a></p>
+<h2 id="过程"><a class="markdownIt-Anchor" href="#过程"></a> 过程</h2>
+<blockquote>
+<p>参考： <a href="https://zhuanlan.zhihu.com/p/215507075">Ubuntu下为AppImage应用添加图标并添加到应用</a></p>
+<p>注：<strong>由于移动较为繁琐，选择直接进入/usr/share/applications目录中创建文件</strong>。</p>
+</blockquote>
+<h3 id="准备好图标图片"><a class="markdownIt-Anchor" href="#准备好图标图片"></a> 准备好图标图片</h3>
+<h4 id="方法1-百度或google"><a class="markdownIt-Anchor" href="#方法1-百度或google"></a> 方法1: 百度或google</h4>
+<p>在搜索引擎中直接搜索该软件图标/icon</p>
+<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/image-20211128110301110.png" class="" title="baidu">
+<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/image-20211128110418303.png" class="" title="google">
+<h4 id="方法2-从mac已下载软件resources中获取"><a class="markdownIt-Anchor" href="#方法2-从mac已下载软件resources中获取"></a> 方法2: 从Mac已下载软件Resources中获取</h4>
+<ol>
+<li>
+<p>进入<code>/Applications/Obsidian.app/Contents/Resources</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Applications/Obsidian.app/Contents/Resources</span><br></pre></td></tr></table></figure>
+<p>如图所示，以<code>icns</code>结尾的即为icon图标，但是无法被Linux系统识别，需要转换为png格式。</p>
+<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/image-20211128110939275.png" class="" title="icns">
+</li>
+<li>
+<p><code>icns</code>转<code>png</code></p>
+<p>利用在线网站转换：<a href="https://cloudconvert.com/icns-to-png">icns转png</a></p>
+</li>
+</ol>
+<h3 id="添加图标应用"><a class="markdownIt-Anchor" href="#添加图标应用"></a> 添加图标/应用</h3>
+<ol>
+<li>
+<p>进入<code>/usr/share/applications</code>目录下并创建<code>XXX.desktop</code>，其中XXX为你AppImage的名称</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/applications</span><br><span class="line">sudo vim XXX.desktop</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>编辑<code>XXX.desktop</code>，添加以下内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=XXX</span><br><span class="line">Exec=/home/xxx/.../XXX.AppImage</span><br><span class="line">Icon=/home/xxx/.../XXX.png</span><br><span class="line">Type=Application</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure>
+<p>其中<code>Name</code>为该应用名称，<code>Exec</code>为该应用AppImage的路径，<code>Icon</code>为该应用的图片图片路径。</p>
+</li>
+<li>
+<p>给<code>XXX.desktop</code>运行权限</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod 777 XXX.desktop</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="效果"><a class="markdownIt-Anchor" href="#效果"></a> 效果</h2>
+<p>上图为百度找到的一张图片并非透明背景。</p>
+<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/before.png" class="" title="before">
+<p>下图为准备好图标图片方法2获取的图片。</p>
+<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/after.png" class="" title="after">
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Attentional Feature Fusion》论文阅读笔记</title>
+    <url>/2021/11/25/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/AFF%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h1>
+<p>特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合不同尺度的特征时出现的问题。我们还证明了特征图的初始整合会成为一个瓶颈，这个问题可以通过增加另一个层次的注意来缓解，我们称之为迭代注意特征融合。在较少的层或参数下，我们的模型在CIFAR-100和ImageNet数据集上的表现都优于最先进的网络，这表明更复杂的注意力机制的特征融合具有很大的潜力，与直接的对应物相比，可以持续产生更好的再结果。我们的代码和训练好的模型可以在网上找到[1]。</p>
+<span id="more"></span>
+<hr />
+<p>InceptionNet：</p>
+<h1 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h1>
+<p>ParseNet：一个端到端的用于语义分割的卷及神经网络，这篇文章最大的贡献在于使用了全局语义信息（Global Context）来做分割，ParseNet可以直接对网络中任意一层进行全局池化得到一个代表全图特征的特征图，并利用这个特征图进行分割。</p>
+]]></content>
+      <categories>
+        <category>论文阅读</category>
+      </categories>
+      <tags>
+        <tag>注意力机制</tag>
+        <tag>特征融合</tag>
+        <tag>图像分割</tag>
       </tags>
   </entry>
   <entry>
@@ -358,154 +506,6 @@
       </categories>
       <tags>
         <tag>生活 - 记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css笔记</title>
-    <url>/2022/02/23/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/css%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>目前在写一份typora的主题<code>hoo</code>，主要是css文件，之前学过，但知识总需要温习，需要记笔记。</p>
-<p>顺便写出我的主题创作过程。</p>
-<p>首先声明我的主题灵感来源于<a href="https://github.com/Theigrams/My-Typora-Themes">zj</a>，并基于zj.css进行修改。</p>
-<p>感谢少数派的<a href="https://sspai.com/post/59450">这篇文章</a>。</p>
-<h2 id="配色"><a class="markdownIt-Anchor" href="#配色"></a> 配色</h2>
-<h3 id="nnn"><a class="markdownIt-Anchor" href="#nnn"></a> nnn</h3>
-<h4 id="hhh"><a class="markdownIt-Anchor" href="#hhh"></a> Hhh</h4>
-<img src="/2022/02/23/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/css%E7%AC%94%E8%AE%B0/image-20220223225124618.png" class="" title="image-20220223225124618">
-<p>来源于<a href="https://coolors.co/palette/ff7b00-ff8800-ff9500-ffa200-ffaa00-ffb700-ffc300-ffd000-ffdd00-ffea00">网站</a>。</p>
-<h2 id="css属性"><a class="markdownIt-Anchor" href="#css属性"></a> CSS属性</h2>
-<h3 id="important规则"><a class="markdownIt-Anchor" href="#important规则"></a> !important规则</h3>
-<p>用于增加样式的权重。<strong>!important</strong> 与优先级无关，但它与最终的结果直接相关，使用一个 !important 规则时，此声明将覆盖任何其他声明。</p>
-<h3 id="css-after-选择器"><a class="markdownIt-Anchor" href="#css-after-选择器"></a> CSS :after 选择器</h3>
-<p>在每个 &lt;p&gt; 元素的内容之后插入新内容：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>:after</span><br><span class="line">&#123; </span><br><span class="line">content:<span class="string">&quot;台词：&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="root-选择器"><a class="markdownIt-Anchor" href="#root-选择器"></a> :root 选择器</h3>
-<p>匹配文档根元素。</p>
-<blockquote>
-<p>在 HTML 中，根元素始终是 html 元素。</p>
-</blockquote>
-<h4 id="h4"><a class="markdownIt-Anchor" href="#h4"></a> h4</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">print(random.randint(<span class="number">0</span>,<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
-<h5 id="nihao"><a class="markdownIt-Anchor" href="#nihao"></a> nihao</h5>
-<h6 id="nihao-2"><a class="markdownIt-Anchor" href="#nihao-2"></a> nihao</h6>
-<table>
-<thead>
-<tr>
-<th>ni</th>
-<th>zai</th>
-<th>Xiang</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>shen</td>
-<td>me</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<p>hao</p>
-<hr />
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-        <tag>笔记</tag>
-        <tag>css</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ubuntu下为AppImage应用添加图标并添加到应用</title>
-    <url>/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>Typora终于升级为正式版了。</p>
-<p>这也相对出现了一些改变，比如付费制度的来临，声明一下，我个人非常支持软件付费、知识付费等。</p>
-<p>但是在众多的答案中还是许多人说了<a href="https://obsidian.md"><code>Obsidian</code></a>，作为一个爱常识的人就下下来试了，并且在Linux系统中下载了。</p>
-<p>Obsidian提供了Linux三种下载格式，分别为AppImage、Snap以及flatpak。</p>
-<p>我个人选择的是默认的AppImage，如何将AppImage添加相应的图标呢以及添加到应用呢？</p>
-<span id="more"></span>
-<h2 id="appimage"><a class="markdownIt-Anchor" href="#appimage"></a> AppImage</h2>
-<p><a href="https://blog.csdn.net/aboutmn/article/details/87254930">什么是AppImage</a></p>
-<h2 id="过程"><a class="markdownIt-Anchor" href="#过程"></a> 过程</h2>
-<blockquote>
-<p>参考： <a href="https://zhuanlan.zhihu.com/p/215507075">Ubuntu下为AppImage应用添加图标并添加到应用</a></p>
-<p>注：<strong>由于移动较为繁琐，选择直接进入/usr/share/applications目录中创建文件</strong>。</p>
-</blockquote>
-<h3 id="准备好图标图片"><a class="markdownIt-Anchor" href="#准备好图标图片"></a> 准备好图标图片</h3>
-<h4 id="方法1-百度或google"><a class="markdownIt-Anchor" href="#方法1-百度或google"></a> 方法1: 百度或google</h4>
-<p>在搜索引擎中直接搜索该软件图标/icon</p>
-<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/image-20211128110301110.png" class="" title="baidu">
-<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/image-20211128110418303.png" class="" title="google">
-<h4 id="方法2-从mac已下载软件resources中获取"><a class="markdownIt-Anchor" href="#方法2-从mac已下载软件resources中获取"></a> 方法2: 从Mac已下载软件Resources中获取</h4>
-<ol>
-<li>
-<p>进入<code>/Applications/Obsidian.app/Contents/Resources</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Applications/Obsidian.app/Contents/Resources</span><br></pre></td></tr></table></figure>
-<p>如图所示，以<code>icns</code>结尾的即为icon图标，但是无法被Linux系统识别，需要转换为png格式。</p>
-<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/image-20211128110939275.png" class="" title="icns">
-</li>
-<li>
-<p><code>icns</code>转<code>png</code></p>
-<p>利用在线网站转换：<a href="https://cloudconvert.com/icns-to-png">icns转png</a></p>
-</li>
-</ol>
-<h3 id="添加图标应用"><a class="markdownIt-Anchor" href="#添加图标应用"></a> 添加图标/应用</h3>
-<ol>
-<li>
-<p>进入<code>/usr/share/applications</code>目录下并创建<code>XXX.desktop</code>，其中XXX为你AppImage的名称</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/applications</span><br><span class="line">sudo vim XXX.desktop</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>编辑<code>XXX.desktop</code>，添加以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=XXX</span><br><span class="line">Exec=/home/xxx/.../XXX.AppImage</span><br><span class="line">Icon=/home/xxx/.../XXX.png</span><br><span class="line">Type=Application</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure>
-<p>其中<code>Name</code>为该应用名称，<code>Exec</code>为该应用AppImage的路径，<code>Icon</code>为该应用的图片图片路径。</p>
-</li>
-<li>
-<p>给<code>XXX.desktop</code>运行权限</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chmod 777 XXX.desktop</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="效果"><a class="markdownIt-Anchor" href="#效果"></a> 效果</h2>
-<p>上图为百度找到的一张图片并非透明背景。</p>
-<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/before.png" class="" title="before">
-<p>下图为准备好图标图片方法2获取的图片。</p>
-<img src="/2021/11/28/%E6%8A%80%E6%9C%AF/Ubuntu%E4%B8%8B%E4%B8%BAAppImage%E5%BA%94%E7%94%A8%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BA%94%E7%94%A8/after.png" class="" title="after">
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>Ubuntu</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Attentional Feature Fusion》论文阅读笔记</title>
-    <url>/2021/11/25/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/AFF%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h1>
-<p>特征融合，即来自不同层或分支的特征的组合，是现代网络结构的一个无所不在的部分。它通常通过简单的操作实现，如求和或串联，但这可能不是最好的选择。在这项工作中，我们提出了一个统一的通用方案，即注意力特征融合，它适用于大多数常见的情况，包括由短和长的跳过连接以及Inception层内引起的特征融合。为了更好地融合语义和尺度不一致的特征，我们提出了一个多尺度通道注意模块，它解决了在融合不同尺度的特征时出现的问题。我们还证明了特征图的初始整合会成为一个瓶颈，这个问题可以通过增加另一个层次的注意来缓解，我们称之为迭代注意特征融合。在较少的层或参数下，我们的模型在CIFAR-100和ImageNet数据集上的表现都优于最先进的网络，这表明更复杂的注意力机制的特征融合具有很大的潜力，与直接的对应物相比，可以持续产生更好的再结果。我们的代码和训练好的模型可以在网上找到[1]。</p>
-<span id="more"></span>
-<hr />
-<p>InceptionNet：</p>
-<h1 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h1>
-<p>ParseNet：一个端到端的用于语义分割的卷及神经网络，这篇文章最大的贡献在于使用了全局语义信息（Global Context）来做分割，ParseNet可以直接对网络中任意一层进行全局池化得到一个代表全图特征的特征图，并利用这个特征图进行分割。</p>
-]]></content>
-      <categories>
-        <category>论文阅读</category>
-      </categories>
-      <tags>
-        <tag>图像分割</tag>
-        <tag>注意力机制</tag>
-        <tag>特征融合</tag>
       </tags>
   </entry>
   <entry>
@@ -1330,8 +1330,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>python</tag>
+        <tag>技术</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -1642,8 +1642,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>技术</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>书籍</tag>
+        <tag>医学影像</tag>
         <tag>图像分割</tag>
       </tags>
   </entry>
@@ -2953,8 +2953,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>书籍</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -3596,8 +3596,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -4369,8 +4369,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -4465,8 +4465,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
