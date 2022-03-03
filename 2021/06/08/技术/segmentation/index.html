@@ -25,18 +25,18 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="前言 整体等于其部分之和。 ——欧几里得 整体大于其部分之和。 ——Max Wertheimer  主要为传统分割方法，而非目前流行深度学习方法。">
+<meta name="description" content="前言  整体等于其部分之和。 ——欧几里得 整体大于其部分之和。 ——Max Wertheimer  主要为传统分割方法，而非目前流行深度学习方法。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《数字图像处理》冈萨雷斯【十】图像分割">
 <meta property="og:url" content="http://example.com/2021/06/08/%E6%8A%80%E6%9C%AF/segmentation/index.html">
 <meta property="og:site_name" content="ଘ(੭ˊ꒳ˋ)੭✧ Hoohoo">
-<meta property="og:description" content="前言 整体等于其部分之和。 ——欧几里得 整体大于其部分之和。 ——Max Wertheimer  主要为传统分割方法，而非目前流行深度学习方法。">
+<meta property="og:description" content="前言  整体等于其部分之和。 ——欧几里得 整体大于其部分之和。 ——Max Wertheimer  主要为传统分割方法，而非目前流行深度学习方法。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-08T10:48:05.000Z">
 <meta property="article:modified_time" content="2021-06-08T13:32:08.896Z">
 <meta property="article:author" content="Hoohoo">
-<meta property="article:tag" content="医学影像">
 <meta property="article:tag" content="书籍">
+<meta property="article:tag" content="医学影像">
 <meta property="article:tag" content="图像分割">
 <meta name="twitter:card" content="summary">
 
@@ -195,7 +195,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E3%80%81%E7%BA%BF%E5%92%8C%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B"><span class="nav-text">点、线和边缘检测</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background"><span class="nav-text">background</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-text"> 基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9-%E7%BA%BF%E5%92%8C%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B"><span class="nav-text"> 点、线和边缘检测</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background"><span class="nav-text"> background</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -340,13 +340,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<blockquote>
 <p>整体等于其部分之和。 ——欧几里得</p>
 <p>整体大于其部分之和。 ——Max Wertheimer</p>
 </blockquote>
 <p>主要为传统分割方法，而非目前流行深度学习方法。</p>
 <span id="more"></span>
-<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h2 id="点、线和边缘检测"><a href="#点、线和边缘检测" class="headerlink" title="点、线和边缘检测"></a>点、线和边缘检测</h2><h3 id="background"><a href="#background" class="headerlink" title="background"></a>background</h3>
+<h2 id="基础知识"><a class="markdownIt-Anchor" href="#基础知识"></a> 基础知识</h2>
+<h2 id="点-线和边缘检测"><a class="markdownIt-Anchor" href="#点-线和边缘检测"></a> 点、线和边缘检测</h2>
+<h3 id="background"><a class="markdownIt-Anchor" href="#background"></a> background</h3>
+
     </div>
 
     
@@ -367,8 +371,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F/" rel="tag"><i class="fa fa-tag"></i> 医学影像</a>
               <a href="/tags/%E4%B9%A6%E7%B1%8D/" rel="tag"><i class="fa fa-tag"></i> 书籍</a>
+              <a href="/tags/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F/" rel="tag"><i class="fa fa-tag"></i> 医学影像</a>
               <a href="/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/" rel="tag"><i class="fa fa-tag"></i> 图像分割</a>
           </div>
 
@@ -437,13 +441,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">81k</span>
+    <span title="站点总字数">82k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:28</span>
+    <span title="站点阅读时长">4:34</span>
   </span>
 </div>
 <div class="busuanzi-count">
