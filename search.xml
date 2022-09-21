@@ -1,138 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2022-03</title>
-    <url>/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/</url>
-    <content><![CDATA[<blockquote>
-<p>三月，开启美妙神奇的一月吧！</p>
-</blockquote>
-<span id="more"></span>
-<img src="/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/image-20220301141247209.png" class="" title="日历来源于https:&#x2F;&#x2F;wannianrili.bmcx.com&#x2F;">
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>三月，也叫春季开学月。</p>
-<p>很快，很快，快到我都没有意识，只是在0点到来后还了花呗，是一种特别的仪式感，感知月份的跨越。</p>
-<h2 id="31"><a class="markdownIt-Anchor" href="#31"></a> 3.1</h2>
-<h3 id="如何生成requirementstxt"><a class="markdownIt-Anchor" href="#如何生成requirementstxt"></a> <strong>如何生成<code>requirements.txt？</code></strong></h3>
-<blockquote>
-<p><a href="https://www.cnblogs.com/kaerxifa/p/11473841.html">【Python】requirements.txt文件的使用，导出|安装 依赖 </a></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
-<h3 id="cad中solid填充多出许多线条"><a class="markdownIt-Anchor" href="#cad中solid填充多出许多线条"></a> <strong>CAD中solid填充多出许多线条</strong></h3>
-<blockquote>
-<p><a href="https://www.yutu.cn/question/tiwen_99043.html">Auto CAD导出PDF文件中图案填充Solid出现乱线该怎办？</a></p>
-</blockquote>
-<p>解决方法：</p>
-<p>1、用Adobe Acrobat 打开相应的PDF文件，点击菜单“ 编辑——首选项”， 打开首选项窗口。</p>
-<p>2、在左侧选“ 页面显 示”，把“使 用2D图形加速”和“平滑线状图”前的勾去掉 。</p>
-<p><strong>彩蛋</strong>：</p>
-<p>很好很暴躁很喜欢👍</p>
-<img src="/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/image-20220301140831269.png" class="" title="image-20220301140831269">
-<h3 id="升级windows-11"><a class="markdownIt-Anchor" href="#升级windows-11"></a> 升级Windows 11</h3>
-<img src="/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/image-20220301163137129.png" class="" title="win11">
-<h2 id="32"><a class="markdownIt-Anchor" href="#32"></a> 3.2</h2>
-<p><a href="https://juejin.cn/post/7064550821089771550?utm_source=gold_browser_extension">图文详解神秘的梯度下降算法原理(附Python代码)</a></p>
-<p><a href="https://juejin.cn/post/7036558106117013512?utm_source=gold_browser_extension">24个好用到爆的 Python 实用技巧</a></p>
-<p>今天也没干什么。</p>
-<p>开始下载20g的数据集。</p>
-<h2 id="33"><a class="markdownIt-Anchor" href="#33"></a> 3.3</h2>
-<p>不失为一种浪漫。</p>
-<img src="/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/image-20220303143452373.png" class="" title="image-20220303143452373">
-<p>如果一定要说今天做的，安装了<code>pycharm</code>，看了看model。</p>
-<h2 id="37"><a class="markdownIt-Anchor" href="#37"></a> 3.7</h2>
-<p>几乎一天一改的图，分不清东南西北。</p>
-<p>开始准备组会。</p>
-<h2 id="38"><a class="markdownIt-Anchor" href="#38"></a> 3.8</h2>
-<p>开组会</p>
-<h2 id="315"><a class="markdownIt-Anchor" href="#315"></a> 3.15</h2>
-<p>继续开组会</p>
-<ul>
-<li>一个关于kindle的projetc：<a href="https://github.com/edgartaor/kindleServer">kindleServer</a></li>
-</ul>
-<h2 id="316"><a class="markdownIt-Anchor" href="#316"></a> 3.16</h2>
-<p>接下来的任务就是搞画图。</p>
-<p>今日分享：</p>
-<p><a href="https://blog.csdn.net/u010608296/article/details/123469296?utm_source=gold_browser_extension">Linux 之shell脚本编程_wangchuang2017的博客-CSDN博客</a></p>
-<p>我对shell脚本编程有种不一般的热情，感谢当时学Linux时候好好学了，也感谢当时的老师，现在都成院长了。</p>
-<p>他总是按照名单让我们上去输入指令，也会下来一个个指导，当时总觉得烦，但在后来使用Mac，得到了巨大便利，以及跑代码。</p>
-<h2 id="330"><a class="markdownIt-Anchor" href="#330"></a> 3.30</h2>
-<p><a href="https://blog.csdn.net/jal517486222/article/details/88960147">解决mac中的CLion无法识别bits/stdc++.h头文件</a></p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活 - 记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2022-02</title>
-    <url>/2022/02/23/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-02/</url>
-    <content><![CDATA[<blockquote>
-<p>二月，最短的月做最多的事。</p>
-</blockquote>
-<span id="more"></span>
-<img src="/2022/02/23/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-02/image-20220223211444929.png" class="" title="日历来源于https:&#x2F;&#x2F;www.rili.com.cn&#x2F;">
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>真应该原谅我，我是一个坏人。</p>
-<h2 id="223"><a class="markdownIt-Anchor" href="#223"></a> 2.23</h2>
-<p>问题client_loop: send disconnect: Broken pipe解决方案</p>
-<ul>
-<li>
-<p><a href="https://www.pkslow.com/archives/ssh-keep-alive">解决ssh连接长时间不操作断开连接的问题（client_loop/ send disconnect/ Broken pipe）</a></p>
-</li>
-<li>
-<p><a href="https://www.jianshu.com/p/f183d577042f">SSH登录报错client_loop: send disconnect: Broken pipe</a></p>
-</li>
-</ul>
-<p>今日typora主题hoo建造：</p>
-<ul>
-<li>修改了blockquote的margin, background-color, border,</li>
-<li>修改了h3的h3::before</li>
-<li>修改了主题颜色</li>
-<li>修改了h2的after</li>
-<li>修改了hr颜色和height</li>
-</ul>
-<p>主要是需要有个大概规划，对于标题的显示，目前对h3还是不满意。</p>
-<hr />
-<h2 id="228"><a class="markdownIt-Anchor" href="#228"></a> 2.28</h2>
-<blockquote>
-<p><a href="https://sspai.com/post/34146">Mac 上如何输入声调拼音</a></p>
-</blockquote>
-<img src="/2022/02/23/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-02/image-20220228164100482.png" class="" title="image-20220228164100482">
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活 - 记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2022-01</title>
-    <url>/2022/01/21/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-01/</url>
-    <content><![CDATA[<blockquote>
-<ol start="22">
-<li></li>
-</ol>
-</blockquote>
-<span id="more"></span>
-<img src="/2022/01/21/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-01/image-20220121002320991.png" class="" title="image-20220121002320991">
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>大家好，这是我2022年第一篇，似乎已经过了快一个月，我才开始动笔。</p>
-<p>如果要我来用技术的角度展开2022，我觉得是匮乏的，似乎在很多技术中，我都是一个背向者。</p>
-<p><font face="" color="blue"size=20>
-  段落test。
-  </font></p>
-<center>居中test</center>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>生活 - 记录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>22年秋招B站测试开发编程题</title>
     <url>/2022/09/21/interview-Bilibili/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -205,6 +73,70 @@
       </tags>
   </entry>
   <entry>
+    <title>2022-03</title>
+    <url>/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/</url>
+    <content><![CDATA[<blockquote>
+<p>三月，开启美妙神奇的一月吧！</p>
+</blockquote>
+<span id="more"></span>
+<img src="/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/image-20220301141247209.png" class="" title="日历来源于https:&#x2F;&#x2F;wannianrili.bmcx.com&#x2F;">
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>三月，也叫春季开学月。</p>
+<p>很快，很快，快到我都没有意识，只是在0点到来后还了花呗，是一种特别的仪式感，感知月份的跨越。</p>
+<h2 id="31"><a class="markdownIt-Anchor" href="#31"></a> 3.1</h2>
+<h3 id="如何生成requirementstxt"><a class="markdownIt-Anchor" href="#如何生成requirementstxt"></a> <strong>如何生成<code>requirements.txt？</code></strong></h3>
+<blockquote>
+<p><a href="https://www.cnblogs.com/kaerxifa/p/11473841.html">【Python】requirements.txt文件的使用，导出|安装 依赖 </a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+<h3 id="cad中solid填充多出许多线条"><a class="markdownIt-Anchor" href="#cad中solid填充多出许多线条"></a> <strong>CAD中solid填充多出许多线条</strong></h3>
+<blockquote>
+<p><a href="https://www.yutu.cn/question/tiwen_99043.html">Auto CAD导出PDF文件中图案填充Solid出现乱线该怎办？</a></p>
+</blockquote>
+<p>解决方法：</p>
+<p>1、用Adobe Acrobat 打开相应的PDF文件，点击菜单“ 编辑——首选项”， 打开首选项窗口。</p>
+<p>2、在左侧选“ 页面显 示”，把“使 用2D图形加速”和“平滑线状图”前的勾去掉 。</p>
+<p><strong>彩蛋</strong>：</p>
+<p>很好很暴躁很喜欢👍</p>
+<img src="/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/image-20220301140831269.png" class="" title="image-20220301140831269">
+<h3 id="升级windows-11"><a class="markdownIt-Anchor" href="#升级windows-11"></a> 升级Windows 11</h3>
+<img src="/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/image-20220301163137129.png" class="" title="win11">
+<h2 id="32"><a class="markdownIt-Anchor" href="#32"></a> 3.2</h2>
+<p><a href="https://juejin.cn/post/7064550821089771550?utm_source=gold_browser_extension">图文详解神秘的梯度下降算法原理(附Python代码)</a></p>
+<p><a href="https://juejin.cn/post/7036558106117013512?utm_source=gold_browser_extension">24个好用到爆的 Python 实用技巧</a></p>
+<p>今天也没干什么。</p>
+<p>开始下载20g的数据集。</p>
+<h2 id="33"><a class="markdownIt-Anchor" href="#33"></a> 3.3</h2>
+<p>不失为一种浪漫。</p>
+<img src="/2022/03/01/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-03/image-20220303143452373.png" class="" title="image-20220303143452373">
+<p>如果一定要说今天做的，安装了<code>pycharm</code>，看了看model。</p>
+<h2 id="37"><a class="markdownIt-Anchor" href="#37"></a> 3.7</h2>
+<p>几乎一天一改的图，分不清东南西北。</p>
+<p>开始准备组会。</p>
+<h2 id="38"><a class="markdownIt-Anchor" href="#38"></a> 3.8</h2>
+<p>开组会</p>
+<h2 id="315"><a class="markdownIt-Anchor" href="#315"></a> 3.15</h2>
+<p>继续开组会</p>
+<ul>
+<li>一个关于kindle的projetc：<a href="https://github.com/edgartaor/kindleServer">kindleServer</a></li>
+</ul>
+<h2 id="316"><a class="markdownIt-Anchor" href="#316"></a> 3.16</h2>
+<p>接下来的任务就是搞画图。</p>
+<p>今日分享：</p>
+<p><a href="https://blog.csdn.net/u010608296/article/details/123469296?utm_source=gold_browser_extension">Linux 之shell脚本编程_wangchuang2017的博客-CSDN博客</a></p>
+<p>我对shell脚本编程有种不一般的热情，感谢当时学Linux时候好好学了，也感谢当时的老师，现在都成院长了。</p>
+<p>他总是按照名单让我们上去输入指令，也会下来一个个指导，当时总觉得烦，但在后来使用Mac，得到了巨大便利，以及跑代码。</p>
+<h2 id="330"><a class="markdownIt-Anchor" href="#330"></a> 3.30</h2>
+<p><a href="https://blog.csdn.net/jal517486222/article/details/88960147">解决mac中的CLion无法识别bits/stdc++.h头文件</a></p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活 - 记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css笔记</title>
     <url>/2022/02/23/%E5%AD%A6%E4%B9%A0%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/css%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -238,6 +170,74 @@
         <tag>学习</tag>
         <tag>css</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022-02</title>
+    <url>/2022/02/23/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-02/</url>
+    <content><![CDATA[<blockquote>
+<p>二月，最短的月做最多的事。</p>
+</blockquote>
+<span id="more"></span>
+<img src="/2022/02/23/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-02/image-20220223211444929.png" class="" title="日历来源于https:&#x2F;&#x2F;www.rili.com.cn&#x2F;">
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>真应该原谅我，我是一个坏人。</p>
+<h2 id="223"><a class="markdownIt-Anchor" href="#223"></a> 2.23</h2>
+<p>问题client_loop: send disconnect: Broken pipe解决方案</p>
+<ul>
+<li>
+<p><a href="https://www.pkslow.com/archives/ssh-keep-alive">解决ssh连接长时间不操作断开连接的问题（client_loop/ send disconnect/ Broken pipe）</a></p>
+</li>
+<li>
+<p><a href="https://www.jianshu.com/p/f183d577042f">SSH登录报错client_loop: send disconnect: Broken pipe</a></p>
+</li>
+</ul>
+<p>今日typora主题hoo建造：</p>
+<ul>
+<li>修改了blockquote的margin, background-color, border,</li>
+<li>修改了h3的h3::before</li>
+<li>修改了主题颜色</li>
+<li>修改了h2的after</li>
+<li>修改了hr颜色和height</li>
+</ul>
+<p>主要是需要有个大概规划，对于标题的显示，目前对h3还是不满意。</p>
+<hr />
+<h2 id="228"><a class="markdownIt-Anchor" href="#228"></a> 2.28</h2>
+<blockquote>
+<p><a href="https://sspai.com/post/34146">Mac 上如何输入声调拼音</a></p>
+</blockquote>
+<img src="/2022/02/23/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-02/image-20220228164100482.png" class="" title="image-20220228164100482">
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活 - 记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022-01</title>
+    <url>/2022/01/21/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-01/</url>
+    <content><![CDATA[<blockquote>
+<ol start="22">
+<li></li>
+</ol>
+</blockquote>
+<span id="more"></span>
+<img src="/2022/01/21/%E4%B8%80%E6%9C%88%E4%B8%80%E6%97%A5/2022-01/image-20220121002320991.png" class="" title="image-20220121002320991">
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>大家好，这是我2022年第一篇，似乎已经过了快一个月，我才开始动笔。</p>
+<p>如果要我来用技术的角度展开2022，我觉得是匮乏的，似乎在很多技术中，我都是一个背向者。</p>
+<p><font face="" color="blue"size=20>
+  段落test。
+  </font></p>
+<center>居中test</center>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活 - 记录</tag>
       </tags>
   </entry>
   <entry>
