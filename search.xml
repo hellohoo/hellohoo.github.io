@@ -19,7 +19,7 @@
 </blockquote>
 <p><strong>输出描述:</strong></p>
 <blockquote>
-<p>输出$ \textstyle \sum_{i=1}<sup>{i=n}(-1)</sup>{i-1}\times a_i$的最大值</p>
+<p>输出$ \sum_{i=1}<sup>{i=n}(-1)</sup>{i-1}\times a_i$的最大值</p>
 </blockquote>
 <p><strong>示例1</strong><br />
 输入：</p>
@@ -432,9 +432,9 @@
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>图像分割</tag>
         <tag>注意力机制</tag>
         <tag>特征融合</tag>
+        <tag>图像分割</tag>
       </tags>
   </entry>
   <entry>
