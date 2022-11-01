@@ -225,8 +225,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>python</tag>
+        <tag>算法</tag>
         <tag>刷题</tag>
         <tag>哈希表</tag>
       </tags>
@@ -506,8 +506,8 @@ linkedList.get(1);            //返回3</p>
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>python</tag>
+        <tag>算法</tag>
         <tag>刷题</tag>
         <tag>链表</tag>
       </tags>
@@ -581,9 +581,9 @@ linkedList.get(1);            //返回3</p>
         <category>面试</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>python</tag>
         <tag>笔记</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1627,8 +1627,8 @@ linkedList.get(1);            //返回3</p>
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>医学影像</tag>
+        <tag>技术</tag>
         <tag>图像分割</tag>
       </tags>
   </entry>
@@ -1917,8 +1917,8 @@ linkedList.get(1);            //返回3</p>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>python</tag>
+        <tag>技术</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -2229,8 +2229,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>技术</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>书籍</tag>
+        <tag>医学影像</tag>
         <tag>图像分割</tag>
       </tags>
   </entry>
@@ -4423,8 +4423,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>书籍</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -4684,8 +4684,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>书籍</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -4771,8 +4771,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>书籍</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -4899,8 +4899,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
       </tags>
   </entry>
   <entry>
@@ -4956,8 +4956,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -5052,8 +5052,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -5161,11 +5161,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
-        <tag>MPR</tag>
+        <tag>医学影像</tag>
         <tag>VTK</tag>
+        <tag>MPR</tag>
         <tag>ITK</tag>
         <tag>技术</tag>
-        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
