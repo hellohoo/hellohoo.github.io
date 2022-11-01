@@ -1,8 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>计算机网络知识点</title>
+    <url>/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/ComputerNetwork/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>记录一些基础并重要的问题。</p>
+<span id="more"></span>
+<h2 id="三次握手"><a class="markdownIt-Anchor" href="#三次握手"></a> 三次握手</h2>
+<ul>
+<li>客户端向服务器发送SYN （test客户端发送能力、服务器接收能力）</li>
+<li>服务器接收到向客户端发送SYN、ACK （test服务器发送能力、客户端接收能力）</li>
+<li>客户端接收到向服务器发送ACK （客户端能接收到）</li>
+</ul>
+<p>作用：</p>
+<ul>
+<li>确认双方的接受发送能力正常</li>
+<li>制定自己的初始化序列号（initial sequence number, ISN）<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，为后面可靠传输做准备</li>
+</ul>
+<h2 id="四次挥手"><a class="markdownIt-Anchor" href="#四次挥手"></a> 四次挥手</h2>
+<ul>
+<li>客户端发送FIN，制定一个序列号，处于<strong>FIN_WAIT1</strong>状态</li>
+<li>服务器收到FIN后，发送ACK，且把序列号值+1作为ACK的序列号值，表明已经接收到了客户端的报文，此时服务器处于<strong>CLOSE_WAIT</strong>状态</li>
+<li>如果服务器也想断开连接，向客户端发送FIN，且制定一个序列号，此时处于<strong>CLOSE_WAIT</strong>状态</li>
+<li>客户端收到FIN后，一样发送ACK作为应答，且把序列号值+1作为ACK的序列号值，此时处于<strong>TIME_WAIT</strong><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>状态，需要过一阵子确保收到ACK才会进入<strong>CLOSED</strong>状态</li>
+<li>服务器收到ACK后，处于关闭状态，处于<strong>CLOSED</strong>状态</li>
+</ul>
+<h2 id="tcp"><a class="markdownIt-Anchor" href="#tcp"></a> TCP</h2>
+<h3 id="特点"><a class="markdownIt-Anchor" href="#特点"></a> 特点</h3>
+<ul>
+<li>面向连接：即双方传输前建立一条通道，如三次握手四次挥手</li>
+<li>只能有两个端点，即两个套接字<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>，只能点对点</li>
+<li>提供可靠传输：无差错、不丢失、无重复、按序到达</li>
+<li>提供全双工通信：允许通信双方的应用进程在任何时候都可以发送数据，因为两端都没有发送缓存和接受缓存</li>
+<li>面向字节流：虽然应用程序与TCP交互是一次一个大小不等的数据块，但TCP将这些数据看成一连串无结构的字节流，不保证接收方收到的和发送的具有对应大小关系。（可能发送方应用程序交给发送方的TCP10个数据块，但就受访的TCP可能只用了4个数据块就保收到的字节流交付给上层的应用程序，但字节流完全一致。）</li>
+</ul>
+<h3 id="可靠性原理"><a class="markdownIt-Anchor" href="#可靠性原理"></a> 可靠性原理</h3>
+<ul>
+<li>传输信道无差错，保证传输数据正确</li>
+<li>不管发送方以多快的速度发送数据，接收方总是来得及处理收到的数据</li>
+</ul>
+<p>（1）首先，采用三次握手和四次挥手来建立和释放TCP连接，保证可靠</p>
+<p>（2）其次，TCP采用连续ARQ协议<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>（回退N，Go-back-N；超时自动重传）来保证数据传输的正确性，使用滑动窗口协议来保证接收方能及时处理所接收到的数据，进行流量控制</p>
+<p>（3）最后，TCP采用 <strong>慢开始、用色避免、快重传和快恢复</strong> 进行拥塞控制，避免网络拥塞</p>
+<h2 id="udp"><a class="markdownIt-Anchor" href="#udp"></a> UDP</h2>
+<ul>
+<li>无连接</li>
+<li>尽最大努力交付，不保证可靠</li>
+<li>无拥塞控制，出现拥塞也不会降低发送速率</li>
+<li>支持一对一、一对多、多对多</li>
+<li>首部开销小，只有8字节</li>
+<li>面向报文，对应用层交下来的报文不合并不拆分，保留原报文边界</li>
+</ul>
+<h2 id="tcp和udp对比"><a class="markdownIt-Anchor" href="#tcp和udp对比"></a> TCP和UDP对比</h2>
+<h3 id="不同"><a class="markdownIt-Anchor" href="#不同"></a> 不同</h3>
+<ul>
+<li>TCP可靠，UDP不可靠</li>
+<li>TCP面向连接，UDP无连接</li>
+<li>TCP传输数据有序，UDP不保证有序性</li>
+<li>TCP不保存数据边界，UDP保留</li>
+<li>TCP慢</li>
+<li>TCP有流量控制和拥塞控制</li>
+<li>TCP重量级，UDP轻量级</li>
+<li>TCP首部 20 字节，UDP 8 字节</li>
+</ul>
+<h3 id="常用协议"><a class="markdownIt-Anchor" href="#常用协议"></a> 常用协议</h3>
+<p>TCP</p>
+<ul>
+<li>HTTP</li>
+<li>HTTPS</li>
+<li>FTP</li>
+<li>TELNET</li>
+<li>SMTP</li>
+</ul>
+<p>UDP</p>
+<ul>
+<li>DNS</li>
+<li>DHCP</li>
+<li>TFTP</li>
+<li>SNMP</li>
+<li>RIP</li>
+</ul>
+<h3 id="应用场景"><a class="markdownIt-Anchor" href="#应用场景"></a> 应用场景</h3>
+<p>TCP</p>
+<p>效率要求低，准确性要求高（因为传输种需要对数据确认、重发、排序等）</p>
+<ul>
+<li>文件传输</li>
+<li>收发邮件</li>
+<li>远程登录</li>
+</ul>
+<p>UDP</p>
+<p>效率高，准确性要求低</p>
+<ul>
+<li>QQ</li>
+<li>在线视频</li>
+<li>即时通讯（速度要求高，偶尔出现断连不是大问题，无需重发机制）</li>
+<li>广播通信</li>
+</ul>
+<h2 id="post和get"><a class="markdownIt-Anchor" href="#post和get"></a> POST和GET</h2>
+<p>GET用于获取资源，POST用于传输实体主体</p>
+<hr class="footnotes-sep" />
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>ISN是动态生成的，防止攻击者猜出后续确认号 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>主要为了确定服务器能否收到ACK <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>Socket，就是对网络中不同主机上的应用进程之间进行双向通信的端点的抽象。一个套接字就是网络上进程通信的一端，提供了应用层进程利用网络协议交换数据的机制。从所处的地位来讲，套接字上联应用进程，下联网络协议栈，是应用程序通过网络协议进行通信的接口，是应用程序与网络协议栈进行交互的接口。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>自动重传请求（Automatic Repeat-reQuest，ARQ）是OSI模型中数据链路层的错误纠正协议之一。它包括停止等待ARQ协议和连续ARQ协议，错误侦测（Error Detection）、正面确认（Positive Acknowledgment）、逾时重传（Retransmission after Timeout）与负面确认继以重传（Negative Acknowledgment and Retransmission）等机制。 <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>计算机基础</category>
+      </categories>
+      <tags>
+        <tag>计算机基础</tag>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac上selenium安装教程+报错解决</title>
-    <url>/2022/10/30/%E5%AE%89%E8%A3%85selenium%E5%85%A8%E8%BF%87%E7%A8%8B/</url>
+    <url>/2022/10/30/%E6%B5%8B%E8%AF%95/%E5%AE%89%E8%A3%85selenium%E5%85%A8%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>最近在学习自动化测试，故重新捡起之前爬虫时候的<code>selenium</code>。本来以为正常<code>pip</code>就可以完事，却在安装的路上踩了许多坑，也参考了一些资料，并对其中的一些内容做一些更新。</p>
 <span id="more"></span>
@@ -26,8 +146,8 @@
 <h4 id="查看浏览器版本本文以chrome为例"><a class="markdownIt-Anchor" href="#查看浏览器版本本文以chrome为例"></a> 查看浏览器版本（本文以<code>Chrome</code>为例）</h4>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">chrome:&#x2F;&#x2F;version&#x2F;</span><br></pre></td></tr></table></figure>
 <p>查看浏览器的版本，再下载对应的驱动，不然下载下来后仍无法使用。</p>
-<img src="/2022/10/30/%E5%AE%89%E8%A3%85selenium%E5%85%A8%E8%BF%87%E7%A8%8B/image-20221031001700728.png" class="" title="image-20221031001700728">可以看到我的版本是107开头的，故点击后面的链接直接下载即可。
-<img src="/2022/10/30/%E5%AE%89%E8%A3%85selenium%E5%85%A8%E8%BF%87%E7%A8%8B/image-20221031001924349.png" class="" title="image-20221031001924349">
+<img src="/2022/10/30/%E6%B5%8B%E8%AF%95/%E5%AE%89%E8%A3%85selenium%E5%85%A8%E8%BF%87%E7%A8%8B/image-20221031001700728.png" class="" title="image-20221031001700728">可以看到我的版本是107开头的，故点击后面的链接直接下载即可。
+<img src="/2022/10/30/%E6%B5%8B%E8%AF%95/%E5%AE%89%E8%A3%85selenium%E5%85%A8%E8%BF%87%E7%A8%8B/image-20221031001924349.png" class="" title="image-20221031001924349">
 <p>下载后解压，这时候我看的一个<a href="https://blog.csdn.net/Steven_Qw/article/details/116277442">教程</a>是建议放在应用程序的Chrome包下，然后在<code>~/.bash_profile</code>中export path。在我尝试了至少三遍后，我放弃了，因为这一步的内核其实只是将chromedriver的path导入而已，那在那个path都是可以的呀，只要这个path已经被export了。</p>
 <p>于是我选择将解压后的 <code>chromedriver</code> 放在了<code>/usr/local/bin</code>下。</p>
 <p>美美运行剩下的程序，终于跳出了浏览器。</p>
@@ -41,7 +161,7 @@
 <p>导入包：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By <span class="comment"># 导入By</span></span><br><span class="line">driver.find_element(By.属性,‘内容’) <span class="comment"># 使用方法</span></span><br></pre></td></tr></table></figure>
 <p>最终美美跑出了第一个自动化的程序。</p>
-<img src="/2022/10/30/%E5%AE%89%E8%A3%85selenium%E5%85%A8%E8%BF%87%E7%A8%8B/image-20221031002159494.png" class="" title="image-20221031002159494">
+<img src="/2022/10/30/%E6%B5%8B%E8%AF%95/%E5%AE%89%E8%A3%85selenium%E5%85%A8%E8%BF%87%E7%A8%8B/image-20221031002159494.png" class="" title="image-20221031002159494">
 <p>正确（修改后）的完整代码如下：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By <span class="comment"># 导入By</span></span><br><span class="line"></span><br><span class="line">driver = webdriver.Chrome() </span><br><span class="line">driver.get(<span class="string">&quot;http://www.baidu.com&quot;</span>)</span><br><span class="line">driver.find_element(By.ID, <span class="string">&#x27;kw&#x27;</span>).send_keys(<span class="string">&#x27;selenium&#x27;</span>)</span><br><span class="line">driver.find_element(By.ID, <span class="string">&#x27;su&#x27;</span>).click()</span><br><span class="line"><span class="comment"># driver.quit()</span></span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -52,10 +172,10 @@
         <category>自动化测试</category>
       </categories>
       <tags>
+        <tag>python</tag>
         <tag>教程</tag>
         <tag>测试</tag>
         <tag>自动化</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -105,8 +225,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>算法</tag>
+        <tag>python</tag>
         <tag>刷题</tag>
         <tag>哈希表</tag>
       </tags>
@@ -386,8 +506,8 @@ linkedList.get(1);            //返回3</p>
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>算法</tag>
+        <tag>python</tag>
         <tag>刷题</tag>
         <tag>链表</tag>
       </tags>
@@ -461,9 +581,9 @@ linkedList.get(1);            //返回3</p>
         <category>面试</category>
       </categories>
       <tags>
+        <tag>算法</tag>
         <tag>python</tag>
         <tag>笔记</tag>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1797,8 +1917,8 @@ linkedList.get(1);            //返回3</p>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>技术</tag>
+        <tag>python</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -2109,8 +2229,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>技术</category>
       </categories>
       <tags>
-        <tag>书籍</tag>
         <tag>医学影像</tag>
+        <tag>书籍</tag>
         <tag>图像分割</tag>
       </tags>
   </entry>
@@ -3070,8 +3190,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>安装</tag>
+        <tag>技术</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
@@ -3128,8 +3248,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>安装</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3419,8 +3539,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>学习</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>学习</tag>
+        <tag>python</tag>
         <tag>书籍</tag>
       </tags>
   </entry>
@@ -4062,8 +4182,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>学习</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>学习</tag>
+        <tag>python</tag>
         <tag>笔记</tag>
       </tags>
   </entry>
@@ -4303,8 +4423,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -4564,8 +4684,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -4651,8 +4771,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -4836,8 +4956,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -4932,8 +5052,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
