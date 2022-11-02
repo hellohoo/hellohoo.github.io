@@ -1,6 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试问题以及基础知识点总结</title>
+    <url>/2022/11/03/%E6%B5%8B%E8%AF%95/test-QA/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>一些常见的测试问题以及基础知识点总结。</p>
+<span id="more"></span>
+<h2 id="postman"><a class="markdownIt-Anchor" href="#postman"></a> POSTMAN</h2>
+<h3 id="postman添加cookie-cookie是否明文"><a class="markdownIt-Anchor" href="#postman添加cookie-cookie是否明文"></a> postman添加cookie cookie是否明文</h3>
+<ol>
+<li>在Headers中直接设置</li>
+<li>根据<code>Cookies</code>标签设置
+<ul>
+<li>在浏览器中找到cookie信息</li>
+<li>在postman中右上角有<code>Cookies</code>设置</li>
+</ul>
+</li>
+</ol>
+<p>Cookie是明文</p>
+<h2 id="如何测试一根铅笔"><a class="markdownIt-Anchor" href="#如何测试一根铅笔"></a> 如何测试一根铅笔</h2>
+<ol>
+<li>
+<p><strong>需求测试</strong>：查看说明书</p>
+</li>
+<li>
+<p><strong>功能测试</strong>：是否能写字</p>
+</li>
+<li>
+<p><strong>界面测试</strong>：外观</p>
+</li>
+<li>
+<p><strong>可靠性</strong>：怎样能摔坏，摔坏的程度</p>
+</li>
+<li>
+<p><strong>安全性</strong>：细菌或毒</p>
+</li>
+<li>
+<p><strong>可移植性</strong>：不同纸质、温度等环境下是否能使用</p>
+</li>
+<li>
+<p><strong>兼容性</strong>：是否能装下不同颜色、大小的笔芯</p>
+</li>
+<li>
+<p><strong>易用性</strong>：是否方便使用、携带</p>
+</li>
+<li>
+<p><strong>压力测试</strong>：不断增加压力，看什么时候坏</p>
+</li>
+<li>
+<p><strong>振动测试</strong>：在包装时候，各面震动，检查能否应对恶劣的运输</p>
+</li>
+<li>
+<p><strong>跌落测试</strong>：包装时候多高摔不坏</p>
+</li>
+</ol>
+<h2 id="黑盒测试-vs-白盒测试"><a class="markdownIt-Anchor" href="#黑盒测试-vs-白盒测试"></a> 黑盒测试 VS 白盒测试</h2>
+<h3 id="黑盒测试"><a class="markdownIt-Anchor" href="#黑盒测试"></a> 黑盒测试</h3>
+<p>功能测试，代码实现不可见</p>
+<ul>
+<li><strong>等价类划分</strong></li>
+<li><strong>边界值分析</strong></li>
+<li>因果图</li>
+<li>判定表</li>
+<li>错误分析</li>
+</ul>
+<h3 id="白盒测试"><a class="markdownIt-Anchor" href="#白盒测试"></a> 白盒测试</h3>
+<p>结构测试。</p>
+<p>强度从低到高：</p>
+<ul>
+<li>语句覆盖：每个语句</li>
+<li>判定覆盖：每个判断每个取值分支</li>
+<li>条件覆盖：每个调节的所有可能结果至少出现一次，但未必能覆盖全部分支</li>
+<li>判定调节覆盖：包含判定覆盖和条件覆盖。说白了就是我们设计的测试用例可以使得判断中每个条件所有的可能取值至少执行一次(条件覆盖)，同时每个判断本身所有的结果，也要至少执行一次（判定覆盖）</li>
+<li>条件组合覆盖：每个条件的每种组合</li>
+<li>路径覆盖：所有路径</li>
+</ul>
+<p>也分为：</p>
+<ul>
+<li>静态分析</li>
+<li>动态分析</li>
+</ul>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>问答</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux基础知识点总结</title>
+    <url>/2022/11/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>Linux的一些基础重要知识点。</p>
+<span id="more"></span>
+<h3 id="查看端口号命令"><a class="markdownIt-Anchor" href="#查看端口号命令"></a> 查看端口号命令</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lsof -i:端口号</span><br></pre></td></tr></table></figure>
+<h2 id="删除文件"><a class="markdownIt-Anchor" href="#删除文件"></a> 删除文件</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rvf</span><br></pre></td></tr></table></figure>
+<p><strong>-f:</strong> (force) 无提示强制删除；<br />
+<strong>-i:</strong> (interactive) 交互式删除，删除前会询问；<br />
+<strong>-r:</strong> (recursive) 递归地处理文件；<br />
+<strong>-v:</strong> (verbose) 详细显示进行的步骤</p>
+<h2 id="移动文件"><a class="markdownIt-Anchor" href="#移动文件"></a> 移动文件</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp A B</span><br></pre></td></tr></table></figure>
+<h2 id="查找文件"><a class="markdownIt-Anchor" href="#查找文件"></a> 查找文件</h2>
+<p><a href="https://www.cnblogs.com/novae/p/15502230.html">linux中查找文件</a></p>
+<ul>
+<li>find</li>
+<li>locate</li>
+<li>where</li>
+<li>whereis</li>
+<li>which</li>
+<li>type</li>
+</ul>
+<h2 id="查看文件和编辑文本"><a class="markdownIt-Anchor" href="#查看文件和编辑文本"></a> 查看文件和编辑文本</h2>
+<ul>
+<li>vi/vim 可编辑</li>
+<li>less</li>
+<li>more</li>
+<li>cat</li>
+<li>head</li>
+<li>tail</li>
+</ul>
+<h2 id="如何在文件中查找关键词"><a class="markdownIt-Anchor" href="#如何在文件中查找关键词"></a> 如何在文件中查找关键词</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep</span><br><span class="line">grep abc test.txt</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>计算机基础</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>计算机基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DataBase</title>
     <url>/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/DataBase/</url>
     <content><![CDATA[]]></content>
@@ -65,7 +200,7 @@
 </ul>
 <h2 id="tcp和udp对比"><a class="markdownIt-Anchor" href="#tcp和udp对比"></a> TCP和UDP对比</h2>
 <h3 id="不同"><a class="markdownIt-Anchor" href="#不同"></a> 不同</h3>
-<ul>
+<ol>
 <li>TCP可靠，UDP不可靠</li>
 <li>TCP面向连接，UDP无连接</li>
 <li>TCP传输数据有序，UDP不保证有序性</li>
@@ -74,7 +209,7 @@
 <li>TCP有流量控制和拥塞控制</li>
 <li>TCP重量级，UDP轻量级</li>
 <li>TCP首部 20 字节，UDP 8 字节</li>
-</ul>
+</ol>
 <h3 id="常用协议"><a class="markdownIt-Anchor" href="#常用协议"></a> 常用协议</h3>
 <p><strong>TCP</strong></p>
 <ul>
@@ -107,6 +242,18 @@
 <li>在线视频</li>
 <li>即时通讯（速度要求高，偶尔出现断连不是大问题，无需重发机制）</li>
 <li>广播通信</li>
+</ul>
+<h2 id="http方法"><a class="markdownIt-Anchor" href="#http方法"></a> HTTP方法</h2>
+<ul>
+<li><strong>GET</strong>：获取资源，大部分使用</li>
+<li><strong>POST</strong>：传输实体主体</li>
+<li><strong>HEAD</strong>：获取报文首部，但不返回报文实体主体部分，与GET类似</li>
+<li><strong>PUT</strong>：上传文件，但是不带验证机制，任何人都能上传，存在安全性问题❌</li>
+<li><strong>DELETE</strong>：与PUT相反，用来删除，也不带验证机制</li>
+<li><strong>PATCH</strong>：对资源部分修改。PUT虽然也可以修改，但是是完全代替的方式</li>
+<li><strong>OPTIONS</strong>：查询制定URL支持的方法</li>
+<li><strong>CONNECT</strong>：要求在与代理服务器通信时建立隧道。使用SSL和TLS（Transport Layer Security，传输层安全）协议把通信内容加密后经网络隧道传输</li>
+<li><strong>TRACE</strong>：追踪路径。服务器会将通信路径返回给客户端。容易收到XST攻击（Cross-Site Tracing，跨站追踪）</li>
 </ul>
 <h2 id="http状态码"><a class="markdownIt-Anchor" href="#http状态码"></a> HTTP状态码</h2>
 <p>**1XX： **表示目前是协议的中间状态，还需要后续请求</p>
@@ -205,8 +352,8 @@
 <ul>
 <li><strong>A类：</strong> 1～126，网络号占8位，0开头，主机号占24位</li>
 <li><strong>B类：</strong> 128～191，网络号占16位，10开头，主机号占24位</li>
-<li>**C类： **192～223，网络号占24位，110开头，主机号占24位</li>
-<li>**D类： **224～239，1110开头，保留位多播地址</li>
+<li>**C类： ** 192～223，网络号占24位，110开头，主机号占24位</li>
+<li>**D类： ** 224～239，1110开头，保留位多播地址</li>
 <li><strong>E类：</strong> 240～255，1111开头，保留位今后使用</li>
 </ul>
 <p>（<strong>127</strong>开头的IP地址是保留回环地址，不可能出现在网络上的。127开头的IP主要用于测试 如:127.0.0.1 本机地址，主要用于测试。）</p>
@@ -245,9 +392,9 @@
 <ol>
 <li><strong>DNS解析</strong>：浏览器查询DNS，获取域名对应的IP地址。</li>
 <li><strong>TCP连接</strong>：获得域名所对应的IP地址后，浏览器向服务器请求三次握手</li>
-<li><strong>发送HTTP请求</strong></li>
-<li><strong>服务器处理HTTP请求并返回HTTP报文</strong></li>
-<li><strong>浏览器渲染解析页面</strong></li>
+<li><strong>发送HTTP请求</strong> ：TCP建立后，发送HTTP请求</li>
+<li><strong>服务器处理HTTP请求并返回HTTP报文</strong> ：根据响应参数处理并返回视图给浏览器</li>
+<li><strong>浏览器渲染解析页面</strong> ：解析渲染，与到对js、css等引用重复以上步骤请求资源，最后呈现出一个完整的界面</li>
 <li><strong>连接结束</strong></li>
 </ol>
 <h2 id="osi参考模型-vs-tcpip参考模型"><a class="markdownIt-Anchor" href="#osi参考模型-vs-tcpip参考模型"></a> OSI参考模型 VS TCP/IP参考模型</h2>
@@ -412,14 +559,14 @@
 ]]></content>
       <categories>
         <category>技术</category>
-        <category>教程</category>
         <category>测试</category>
+        <category>教程</category>
         <category>自动化测试</category>
       </categories>
       <tags>
         <tag>python</tag>
-        <tag>教程</tag>
         <tag>测试</tag>
+        <tag>教程</tag>
         <tag>自动化</tag>
       </tags>
   </entry>
@@ -1170,8 +1317,8 @@ linkedList.get(1);            //返回3</p>
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1189,9 +1336,9 @@ linkedList.get(1);            //返回3</p>
         <category>论文阅读</category>
       </categories>
       <tags>
+        <tag>图像分割</tag>
         <tag>注意力机制</tag>
         <tag>特征融合</tag>
-        <tag>图像分割</tag>
       </tags>
   </entry>
   <entry>
@@ -3435,8 +3582,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>技术</tag>
+        <tag>安装</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
@@ -3493,8 +3640,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>技术</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
