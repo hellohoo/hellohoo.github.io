@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>algorithm</title>
+    <url>/2022/11/03/algorithm/</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>一些见过的算法题总结。</p>
+<span id="more"></span>
+<h2 id="leetcode_365"><a class="markdownIt-Anchor" href="#leetcode_365"></a> leetcode_365</h2>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试问题以及基础知识点总结</title>
     <url>/2022/11/03/%E6%B5%8B%E8%AF%95/test-QA/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -1317,8 +1332,8 @@ linkedList.get(1);            //返回3</p>
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -3582,8 +3597,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>安装</tag>
+        <tag>技术</tag>
         <tag>Linux</tag>
       </tags>
   </entry>
@@ -3640,8 +3655,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>安装</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>安装</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -5348,8 +5363,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -5444,8 +5459,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>安装</tag>
         <tag>Rodin</tag>
+        <tag>安装</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
