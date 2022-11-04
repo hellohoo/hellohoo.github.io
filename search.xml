@@ -21,6 +21,24 @@
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>一些常见的测试问题以及基础知识点总结。</p>
 <span id="more"></span>
+<h2 id="测试流程"><a class="markdownIt-Anchor" href="#测试流程"></a> 测试流程</h2>
+<ol>
+<li>根据项目、产品的需求提炼<strong>测试需求</strong>。</li>
+<li>根据测试需求和项目的整体计划，<strong>制定测试计划，测试方案等</strong>，包括测试的时间节点安排，人力资源安排，测试策略等，并进行<strong>评审</strong>。</li>
+<li>根据测试需求以及相关的<strong>设计文档，编写测试用例</strong>，即明确每个测试点的具体的操作步骤，预期结果等内容，并对用例进行评审。</li>
+<li><strong>准备测试环境和测试数据</strong>，包括测试系统部署的硬件环境和软件环境。</li>
+<li><strong>执行测试用例</strong>，提交测试过程中发现的bug，并通过版本迭代进行回归测试，验证相关的bug。</li>
+<li>完成内部软件系统的功能测试，系统测试之后，系统趋于稳定，<strong>提交客户进行验收测试</strong>。</li>
+<li><strong>编写软件测试报告</strong>。</li>
+<li>对测试过程进行<strong>总结</strong>，并将测试过程中的所有文档进行<strong>归档</strong>。</li>
+</ol>
+<h2 id="测试开发的理解"><a class="markdownIt-Anchor" href="#测试开发的理解"></a> 测试开发的理解</h2>
+<p>测试开发的核心有2点：</p>
+<ol>
+<li>通过技术手段提高产品质量</li>
+<li>通过技术手段帮助开发提高效率</li>
+</ol>
+<p>测试开发能够很好的把握软件测试各个方面的环节，更懂得如何提升软件测试的效率和测试需求中心点。能大幅度降低测试人员和开发人员之间不必要的无效沟通和对接，也能更全面的保障公司产品的不间断性运行。</p>
 <h2 id="postman"><a class="markdownIt-Anchor" href="#postman"></a> POSTMAN</h2>
 <h3 id="postman添加cookie-cookie是否明文"><a class="markdownIt-Anchor" href="#postman添加cookie-cookie是否明文"></a> postman添加cookie cookie是否明文</h3>
 <ol>
@@ -33,6 +51,51 @@
 </li>
 </ol>
 <p>Cookie是明文</p>
+<h2 id="抓包工具-wireshark-vs-fiddler"><a class="markdownIt-Anchor" href="#抓包工具-wireshark-vs-fiddler"></a> 抓包工具 WireShark VS Fiddler</h2>
+<p><strong>Fiddler</strong>：专门用来捕获HTTP、HTTPS的。</p>
+<p><strong>WireShark</strong>：能获取HTTP，也能获取HTTPS，但是不能解密HTTPS。</p>
+<p>如果处理HTTP、HTTPS，使用Fiddler，其他协议用WireShark。</p>
+<h2 id="使用的抓包工具如何测试app端"><a class="markdownIt-Anchor" href="#使用的抓包工具如何测试app端"></a> 使用的抓包工具如何测试APP端</h2>
+<p>以 <code>WireShark</code> 为例：</p>
+<ol>
+<li>电脑开热点</li>
+<li>查看热点的设备网段</li>
+<li>使用 <code>ipconfig</code> 查看接口</li>
+<li>打开软件，Capture -&gt; Options -&gt; Input 找到对应接口，点击开始</li>
+<li>后续抓包可过滤相应字段</li>
+</ol>
+<h2 id="兼容性测试"><a class="markdownIt-Anchor" href="#兼容性测试"></a> 兼容性测试</h2>
+<h3 id="分类"><a class="markdownIt-Anchor" href="#分类"></a> 分类</h3>
+<ol>
+<li><strong>浏览器</strong>：在不同路蓝旗上是否可以正常运行，功能是否正常</li>
+<li><strong>屏幕尺寸和分辨率</strong>：不同分辨率下可否正常显示</li>
+<li><strong>操作系统</strong>：不同操作系统下正常运行，功能正常，显示正常</li>
+<li><strong>不同设备型号</strong>：针对APP，在主流设备上能否正常，是否崩阔</li>
+</ol>
+<h3 id="优点"><a class="markdownIt-Anchor" href="#优点"></a> 优点</h3>
+<ol>
+<li>进一步提高产品质量和用户体验</li>
+<li>是的软件能够和其他软件不冲突，尽可能达到平台无关性</li>
+<li>尽可能保证软件存在价值，是衡量一个软件质量的重要指标</li>
+<li>使产品市场更广阔</li>
+</ol>
+<h3 id="在短时间怎么完成难点在哪"><a class="markdownIt-Anchor" href="#在短时间怎么完成难点在哪"></a> 在短时间怎么完成，难点在哪</h3>
+<ol>
+<li>Web</li>
+</ol>
+<ul>
+<li><strong>人工测试</strong>，主流浏览器和操作系统</li>
+<li><strong>借助第三方测试工具</strong>：IEtester、SuperPreview、Browsershots（在线）</li>
+<li>记录bug，提交bug，告知开发人员修改</li>
+</ul>
+<ol start="2">
+<li>APP</li>
+</ol>
+<ul>
+<li><strong>人工测试</strong>，测试主流程和主界面</li>
+<li><strong>借助第三方测试工具</strong>：百度众测平台和云测平台，打包apk或IPA上传，选择性好，会生成测试报告</li>
+<li>记录bug，提交bug，告知开发人员修改</li>
+</ul>
 <h2 id="如何测试一根铅笔"><a class="markdownIt-Anchor" href="#如何测试一根铅笔"></a> 如何测试一根铅笔</h2>
 <ol>
 <li>
@@ -69,6 +132,189 @@
 <p><strong>跌落测试</strong>：包装时候多高摔不坏</p>
 </li>
 </ol>
+<h2 id="如何测试直梯"><a class="markdownIt-Anchor" href="#如何测试直梯"></a> 如何测试直梯</h2>
+<p><strong>功能测试：</strong></p>
+<ul>
+<li>是否能打开门、关门</li>
+<li>是否能上行、下行</li>
+<li>是否能按下按钮</li>
+<li>是否按下按钮后能到达对应楼层</li>
+<li>是否能在关门时按下开门按钮打开</li>
+<li>电梯显示层数是否与真实层数对应</li>
+<li>报警功能是否正常</li>
+<li>选择上行时按下层无用，同理下行</li>
+<li>超载是否提示、不关门</li>
+</ul>
+<p><strong>界面测试：</strong></p>
+<ul>
+<li>是否损坏</li>
+<li>是否无法合上门</li>
+<li>外观是否符合要求</li>
+</ul>
+<p><strong>易用性测试：</strong></p>
+<ul>
+<li>按键是否清晰</li>
+<li>是否能让人理解</li>
+<li>提示声音是否合理</li>
+<li>光照是否合理</li>
+<li>通风是否合理</li>
+<li>老弱病残用户是否兼容</li>
+</ul>
+<p><strong>安全性测试：</strong></p>
+<ul>
+<li>暴力破坏是否能够报警</li>
+<li>超载是否报警</li>
+<li>应急电源</li>
+<li>能否强制开门</li>
+</ul>
+<p><strong>性能测试：</strong></p>
+<ul>
+<li>不载人运行情况</li>
+<li>单人运行情况</li>
+<li>多人运行情况</li>
+<li>多人较长时间运行情况</li>
+<li>超长时间运行情况</li>
+<li>载重能力</li>
+<li>使用次数、年限</li>
+</ul>
+<p><strong>压力测试：</strong></p>
+<ul>
+<li>最大载重</li>
+<li>超载看运行</li>
+<li>不断上升、下行</li>
+</ul>
+<h2 id="如何测试朋友圈"><a class="markdownIt-Anchor" href="#如何测试朋友圈"></a> 如何测试朋友圈</h2>
+<p>功能测试：</p>
+<ul>
+<li>
+<p>发送</p>
+<ul>
+<li>是否能点击按钮发送</li>
+<li>空值发送</li>
+<li>组合发送验证
+<ul>
+<li>文字+图片</li>
+<li>文字+视频</li>
+<li>图片+视频</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>文字</th>
+<th>图片</th>
+<th>视频</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文字数量</td>
+<td>是否能上传图片</td>
+<td>视频是否能上传</td>
+</tr>
+<tr>
+<td>文字类型</td>
+<td>图片上传数量</td>
+<td>视频数量</td>
+</tr>
+<tr>
+<td>复制粘贴支持</td>
+<td>图片清晰度、格式、大小</td>
+<td>视频清晰度、格式、时长、大小</td>
+</tr>
+<tr>
+<td>删除键支持</td>
+<td>是否能够预览、左右滑动</td>
+<td>视频预览</td>
+</tr>
+<tr>
+<td>敏感词检测</td>
+<td>是否能增删改照片</td>
+<td>是否能增删改视频</td>
+</tr>
+<tr>
+<td>无法添加图片、视频</td>
+<td>相册选择/拍摄</td>
+<td>相册选择/拍摄</td>
+</tr>
+<tr>
+<td>长按纯文字模式</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>所在位置测试</p>
+</li>
+<li>
+<p>谁可以看</p>
+</li>
+<li>
+<p>提醒谁看</p>
+</li>
+<li>
+<p>取消发送</p>
+</li>
+</ul>
+</li>
+<li>
+<p>浏览</p>
+<ul>
+<li>是否能正常显示朋友圈内容
+<ul>
+<li>文本是否被隐藏、能否察看全文</li>
+<li>可否复制、收藏、翻译</li>
+<li>url能否过跳转</li>
+<li>支持点开查看图片</li>
+<li>发送、收藏、保存、编辑图片/视频</li>
+<li>是否能够滑动浏览</li>
+<li>能否静音</li>
+<li>按播放会播放</li>
+<li>收藏</li>
+</ul>
+</li>
+<li>是否能正常点赞</li>
+<li>是否能正常评论
+<ul>
+<li>评论文字</li>
+<li>评论复制粘贴</li>
+<li>空值</li>
+<li>回复评论</li>
+<li>删除评论</li>
+</ul>
+</li>
+<li>评论多条</li>
+</ul>
+</li>
+</ul>
+<p><strong>界面测试：</strong></p>
+<ul>
+<li>和需求一致</li>
+<li>美观</li>
+</ul>
+<p><strong>易用性测试：</strong></p>
+<ul>
+<li>标签、说明等是否明晰</li>
+<li>是否能放大字体</li>
+</ul>
+<p><strong>兼容性测试：</strong></p>
+<ul>
+<li>不同系统</li>
+<li>不同软件</li>
+<li>不同版本</li>
+</ul>
+<p><strong>性能测试：</strong></p>
+<ul>
+<li>服务器性能：  可通过loadrunner/jmeter工具实现，主要关注TPS、响应时间、吞吐量、CPU、内存等</li>
+<li>APP： 可通过GT工具实现，运行时关注cpu、内存、流量、电量等占用率</li>
+</ul>
+<p><strong>压力测试：</strong></p>
+<ul>
+<li>频繁发送、浏览会崩溃吗</li>
+</ul>
 <h2 id="黑盒测试-vs-白盒测试"><a class="markdownIt-Anchor" href="#黑盒测试-vs-白盒测试"></a> 黑盒测试 VS 白盒测试</h2>
 <h3 id="黑盒测试"><a class="markdownIt-Anchor" href="#黑盒测试"></a> 黑盒测试</h3>
 <p>功能测试，代码实现不可见</p>
@@ -95,6 +341,7 @@
 <li>静态分析</li>
 <li>动态分析</li>
 </ul>
+<h2 id="自动化测试"><a class="markdownIt-Anchor" href="#自动化测试"></a> 自动化测试</h2>
 ]]></content>
       <categories>
         <category>测试</category>
@@ -136,7 +383,7 @@
 <li>less</li>
 <li>more</li>
 <li>cat</li>
-<li>head</li>
+<li>head 默认前十行</li>
 <li>tail</li>
 </ul>
 <h2 id="如何在文件中查找关键词"><a class="markdownIt-Anchor" href="#如何在文件中查找关键词"></a> 如何在文件中查找关键词</h2>
@@ -151,14 +398,132 @@
       </tags>
   </entry>
   <entry>
-    <title>DataBase</title>
+    <title>数据库系统</title>
     <url>/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/DataBase/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>记录一些数据库的基础和重要知识点。</p>
+<span id="more"></span>
+<h2 id="数据库基本操作"><a class="markdownIt-Anchor" href="#数据库基本操作"></a> 数据库基本操作</h2>
+<h3 id="创立表"><a class="markdownIt-Anchor" href="#创立表"></a> 创立表</h3>
+<ul>
+<li>
+<p>create</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create table student</span><br><span class="line">(</span><br><span class="line">  sno int primary key not null,</span><br><span class="line">  sname varchar(30) not null,</span><br><span class="line">  ssex varchar(2)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="表中数据-增删改"><a class="markdownIt-Anchor" href="#表中数据-增删改"></a> 表中数据 - 增删改</h3>
+<ul>
+<li>
+<p>insert</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">insert into student values(1,&#39;Sammy&#39;,&#39;f&#39;)</span><br><span class="line">insert into student(sno,sname) values(&#39;2&#39;,&#39;Tom&#39;)</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>update</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">update student</span><br><span class="line">set sname &#x3D; &#39;Teddy&#39;</span><br><span class="line">where sno &#x3D; 1</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>delete</p>
+<ul>
+<li>删除特定值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">delete from student</span><br><span class="line">where sname &#x3D; &#39;Tom&#39;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除所有行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 第一种</span><br><span class="line">delete from student</span><br><span class="line">-- 第二种</span><br><span class="line">delete * from student</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="删除表"><a class="markdownIt-Anchor" href="#删除表"></a> 删除表</h3>
+<ul>
+<li>
+<p>drop</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop table student</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="修改表"><a class="markdownIt-Anchor" href="#修改表"></a> 修改表</h3>
+<ul>
+<li>
+<p>alter</p>
+<ul>
+<li>
+<p>增加列</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- 增添一列班级</span><br><span class="line">alter table student add sclass varchar(255)</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>删除列</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alter table student drop sclass</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>改变列数据类型</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alter table student alter sclass int</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>视图</p>
+<ul>
+<li>
+<p>创建视图</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create view stu_view as</span><br><span class="line">select sno,sname</span><br><span class="line">from student</span><br><span class="line">where sname &#x3D; &#39;Ted&#39;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>撤销视图</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop view stu_view</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="drop-vs-delete-vs-truncate"><a class="markdownIt-Anchor" href="#drop-vs-delete-vs-truncate"></a> drop VS delete VS truncate</h2>
+<ul>
+<li>
+<p><strong>drop（丢弃数据）:</strong> drop table 表名 ，直接将表都删除掉，在删除表的时候使用。</p>
+</li>
+<li>
+<p><strong>truncate （清空数据）:</strong> truncate table 表名 ，只删除表中的数据，再插入数据的时候自增长id又从1开始，在清空表中数据的时候使用。</p>
+</li>
+<li>
+<p><strong>delete（删除数据） :</strong> delete from 表名 where 列名=值，删除某一列的数据，如果不加 where 子句和truncate table 表名作用类似。</p>
+</li>
+</ul>
+<p>truncate 和不带 where 子句的 delete、以及 drop 都会删除表内的数据。</p>
+<p>truncate 和 delete 只删除数据不删除表的结构（定义）</p>
+<p>执行drop语句，此表的结构也会删除，也就是执行 drop 之后对应的表不复存在。</p>
+<h2 id="内连接-vs-外连接"><a class="markdownIt-Anchor" href="#内连接-vs-外连接"></a> 内连接 VS 外连接</h2>
+<h2 id="索引"><a class="markdownIt-Anchor" href="#索引"></a> 索引</h2>
+<h3 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h3>
+<h3 id="创建及删除"><a class="markdownIt-Anchor" href="#创建及删除"></a> 创建及删除</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- create</span><br><span class="line">create index index_stu on student(sname)</span><br><span class="line">-- drop</span><br><span class="line">alter table student drop index index_stu on student</span><br></pre></td></tr></table></figure>
+<h2 id="数据库存储过程"><a class="markdownIt-Anchor" href="#数据库存储过程"></a> 数据库存储过程</h2>
+<h2 id="数据库隔离级别"><a class="markdownIt-Anchor" href="#数据库隔离级别"></a> 数据库隔离级别</h2>
+<p>MySQL默认：</p>
+<p>考什么保证实现</p>
+<h2 id="b数"><a class="markdownIt-Anchor" href="#b数"></a> B+数</h2>
+<h3 id="定义-2"><a class="markdownIt-Anchor" href="#定义-2"></a> 定义</h3>
+<h3 id="有点"><a class="markdownIt-Anchor" href="#有点"></a> 有点</h3>
+<h3 id="聚簇索引"><a class="markdownIt-Anchor" href="#聚簇索引"></a> 聚簇索引</h3>
+]]></content>
+      <categories>
+        <category>计算机基础</category>
+      </categories>
+      <tags>
+        <tag>计算机基础</tag>
+        <tag>数据库</tag>
+      </tags>
   </entry>
   <entry>
-    <title>DS</title>
+    <title>数据结构</title>
     <url>/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/DS/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>记录一些数据结构的基础和重要知识点。</p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>计算机基础</category>
+      </categories>
+      <tags>
+        <tag>计算机基础</tag>
+        <tag>数据结构</tag>
+      </tags>
   </entry>
   <entry>
     <title>计算机网络知识点</title>
@@ -168,9 +533,9 @@
 <span id="more"></span>
 <h2 id="三次握手"><a class="markdownIt-Anchor" href="#三次握手"></a> 三次握手</h2>
 <ul>
-<li>客户端向服务器发送SYN （test客户端发送能力、服务器接收能力）</li>
-<li>服务器接收到向客户端发送SYN、ACK （test服务器发送能力、客户端接收能力）</li>
-<li>客户端接收到向服务器发送ACK （客户端能接收到）</li>
+<li>客户端向服务器发送SYN （test客户端发送能力、服务器接收能力）【此时 Seq 初始化为 j 】</li>
+<li>服务器接收到向客户端发送SYN、ACK （test服务器发送能力、客户端接收能力）【此时 SYN 的 Seq 初始化为 k，ACK 的 Seq 为 j + 1 】</li>
+<li>客户端接收到向服务器发送ACK （客户端能接收到）【ACK 的 Seq 为 k + 1 】</li>
 </ul>
 <p>作用：</p>
 <ul>
@@ -179,10 +544,10 @@
 </ul>
 <h2 id="四次挥手"><a class="markdownIt-Anchor" href="#四次挥手"></a> 四次挥手</h2>
 <ul>
-<li>客户端发送FIN，制定一个序列号，处于<strong>FIN_WAIT1</strong>状态</li>
-<li>服务器收到FIN后，发送ACK，且把序列号值+1作为ACK的序列号值，表明已经接收到了客户端的报文，此时服务器处于<strong>CLOSE_WAIT</strong>状态</li>
-<li>如果服务器也想断开连接，向客户端发送FIN，且制定一个序列号，此时处于<strong>CLOSE_WAIT</strong>状态</li>
-<li>客户端收到FIN后，一样发送ACK作为应答，且把序列号值+1作为ACK的序列号值，此时处于<strong>TIME_WAIT</strong><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>状态，需要过一阵子确保收到ACK才会进入<strong>CLOSED</strong>状态</li>
+<li>客户端发送FIN，制定一个序列号 Seq ，处于<strong>FIN_WAIT1</strong>状态</li>
+<li>服务器收到FIN后，发送ACK，且把序列号值+1作为ACK的序列号 Seq 值，表明已经接收到了客户端的报文，此时服务器处于<strong>CLOSE_WAIT</strong>状态</li>
+<li>如果服务器也想断开连接，向客户端发送FIN，且制定一个序列号 Seq ，此时处于<strong>CLOSE_WAIT</strong>状态</li>
+<li>客户端收到FIN后，一样发送ACK作为应答，且把序列号值+1作为ACK的序列号值 Seq ，此时处于<strong>TIME_WAIT</strong><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>状态，需要过一阵子确保收到ACK才会进入<strong>CLOSED</strong>状态</li>
 <li>服务器收到ACK后，处于关闭状态，处于<strong>CLOSED</strong>状态</li>
 </ul>
 <h2 id="tcp"><a class="markdownIt-Anchor" href="#tcp"></a> TCP</h2>
@@ -274,18 +639,25 @@
 <p>**1XX： **表示目前是协议的中间状态，还需要后续请求</p>
 <p><strong>2XX：</strong> 表示请求成功</p>
 <p>**3XX： **表示重定向状态，需要重新请求</p>
-<p>**4XX： **表示请求报文错误</p>
+<p>**4XX： **表示请求报文错误（客户端错误）</p>
 <p><strong>5XX：</strong> 服务器端错误</p>
 <ul>
+<li>100 客户端应继续发送请求</li>
 <li>101 切换请求协议，从HTTP切换到WebSocket</li>
 <li>200 请求成功，有响应体</li>
 <li>301 永久重定向：会缓存</li>
 <li>302 临时重定向：不会缓存</li>
 <li>304 协商缓存命中</li>
-<li>403 服务器禁止访问</li>
+<li>400 包含语法错误，当前请求无法被服务器理解。（一般在服务器端表单验证失败）</li>
+<li>401 当前请求需要用户验证</li>
+<li>403 服务器禁止访问 （属于前端bug）</li>
 <li>404 资源未找到</li>
-<li>500 服务器端错误</li>
+<li>405 请求方法不能被用于请求相应的资源</li>
+<li>408 超时</li>
+<li>500 服务器端错误（一半是代码出错，后台bug）</li>
+<li>502 Bad Gateway，作为网关或代理工作的服务器尝试执行请求时，从上有服务器接收到无效响应</li>
 <li>503 服务器繁忙</li>
+<li>504 超时</li>
 </ul>
 <h3 id="301-vs-302"><a class="markdownIt-Anchor" href="#301-vs-302"></a> 301 VS 302</h3>
 <p><strong>301 永久重定向</strong></p>
@@ -414,6 +786,9 @@
 </ol>
 <h2 id="osi参考模型-vs-tcpip参考模型"><a class="markdownIt-Anchor" href="#osi参考模型-vs-tcpip参考模型"></a> OSI参考模型 VS TCP/IP参考模型</h2>
 <img src="/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/ComputerNetwork/image-20221101174903433.png" class="" title="image-20221101174903433">
+<h2 id="osi参考模型每一层作用及协议"><a class="markdownIt-Anchor" href="#osi参考模型每一层作用及协议"></a> OSI参考模型每一层作用及协议</h2>
+<h2 id="tcpip参考模型每一层作用及协议"><a class="markdownIt-Anchor" href="#tcpip参考模型每一层作用及协议"></a> TCP/IP参考模型每一层作用及协议</h2>
+<h2 id="cookie-vs-session-vs-token"><a class="markdownIt-Anchor" href="#cookie-vs-session-vs-token"></a> cookie VS session VS token</h2>
 <hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -518,6 +893,9 @@
 <li>Clock时钟置换算法（NRU最近未用算法）：为每个页设置一位访问位，将所有页面都通过链接指针链成一个循环队列</li>
 <li>最不常用算法：淘汰访问次数最少的页</li>
 </ul>
+<h2 id="中断-vs-异常"><a class="markdownIt-Anchor" href="#中断-vs-异常"></a> 中断 VS 异常</h2>
+<p><strong>中断</strong>：CPU执行指令以外的事件引起，如I/O完成中断，表示设备I/O处理已经完成，处理其能够发送下一个I/O请求，还有时钟中断、控制台中断、次盘中断、打印机中断</p>
+<p><strong>异常</strong>：CPU执行指令内部出现的，如非法操作码、地址越界、算数溢出</p>
 ]]></content>
       <categories>
         <category>计算机基础</category>
@@ -632,8 +1010,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>算法</tag>
+        <tag>python</tag>
         <tag>刷题</tag>
         <tag>哈希表</tag>
       </tags>
@@ -913,8 +1291,8 @@ linkedList.get(1);            //返回3</p>
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>算法</tag>
+        <tag>python</tag>
         <tag>刷题</tag>
         <tag>链表</tag>
       </tags>
@@ -988,9 +1366,9 @@ linkedList.get(1);            //返回3</p>
         <category>面试</category>
       </categories>
       <tags>
+        <tag>算法</tag>
         <tag>python</tag>
         <tag>笔记</tag>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -4830,8 +5208,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -5091,8 +5469,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -5178,8 +5556,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>笔记</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>

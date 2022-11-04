@@ -33,7 +33,7 @@
 <meta property="og:description" content="前言 一些常见的测试问题以及基础知识点总结。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-02T17:10:40.000Z">
-<meta property="article:modified_time" content="2022-11-02T17:35:29.437Z">
+<meta property="article:modified_time" content="2022-11-04T16:48:37.097Z">
 <meta property="article:author" content="Hoohoo">
 <meta property="article:tag" content="测试">
 <meta property="article:tag" content="问答">
@@ -194,7 +194,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#postman"><span class="nav-text"> POSTMAN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#postman%E6%B7%BB%E5%8A%A0cookie-cookie%E6%98%AF%E5%90%A6%E6%98%8E%E6%96%87"><span class="nav-text"> postman添加cookie cookie是否明文</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%B5%8B%E8%AF%95%E4%B8%80%E6%A0%B9%E9%93%85%E7%AC%94"><span class="nav-text"> 如何测试一根铅笔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95-vs-%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-text"> 黑盒测试 VS 白盒测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-text"> 黑盒测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-text"> 白盒测试</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B"><span class="nav-text"> 测试流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text"> 测试开发的理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#postman"><span class="nav-text"> POSTMAN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#postman%E6%B7%BB%E5%8A%A0cookie-cookie%E6%98%AF%E5%90%A6%E6%98%8E%E6%96%87"><span class="nav-text"> postman添加cookie cookie是否明文</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7-wireshark-vs-fiddler"><span class="nav-text"> 抓包工具 WireShark VS Fiddler</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E5%A6%82%E4%BD%95%E6%B5%8B%E8%AF%95app%E7%AB%AF"><span class="nav-text"> 使用的抓包工具如何测试APP端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%BC%E5%AE%B9%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="nav-text"> 兼容性测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-text"> 分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-text"> 优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%9F%AD%E6%97%B6%E9%97%B4%E6%80%8E%E4%B9%88%E5%AE%8C%E6%88%90%E9%9A%BE%E7%82%B9%E5%9C%A8%E5%93%AA"><span class="nav-text"> 在短时间怎么完成，难点在哪</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%B5%8B%E8%AF%95%E4%B8%80%E6%A0%B9%E9%93%85%E7%AC%94"><span class="nav-text"> 如何测试一根铅笔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%B5%8B%E8%AF%95%E7%9B%B4%E6%A2%AF"><span class="nav-text"> 如何测试直梯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%B5%8B%E8%AF%95%E6%9C%8B%E5%8F%8B%E5%9C%88"><span class="nav-text"> 如何测试朋友圈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95-vs-%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-text"> 黑盒测试 VS 白盒测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-text"> 黑盒测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="nav-text"> 白盒测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95"><span class="nav-text"> 自动化测试</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -222,7 +222,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-count">54</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -292,10 +292,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-11-03 01:10:40 / 修改时间：01:35:29" itemprop="dateCreated datePublished" datetime="2022-11-03T01:10:40+08:00">2022-11-03</time>
+      <time title="创建时间：2022-11-03 01:10:40" itemprop="dateCreated datePublished" datetime="2022-11-03T01:10:40+08:00">2022-11-03</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i> 
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-11-05 00:48:37" itemprop="dateModified" datetime="2022-11-05T00:48:37+08:00">2022-11-05</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -321,14 +327,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>543</span>
+      <span>2.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>8 分钟</span>
     </span>
 </div>
 
@@ -342,6 +348,24 @@
         <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>一些常见的测试问题以及基础知识点总结。</p>
 <span id="more"></span>
+<h2 id="测试流程"><a class="markdownIt-Anchor" href="#测试流程"></a> 测试流程</h2>
+<ol>
+<li>根据项目、产品的需求提炼<strong>测试需求</strong>。</li>
+<li>根据测试需求和项目的整体计划，<strong>制定测试计划，测试方案等</strong>，包括测试的时间节点安排，人力资源安排，测试策略等，并进行<strong>评审</strong>。</li>
+<li>根据测试需求以及相关的<strong>设计文档，编写测试用例</strong>，即明确每个测试点的具体的操作步骤，预期结果等内容，并对用例进行评审。</li>
+<li><strong>准备测试环境和测试数据</strong>，包括测试系统部署的硬件环境和软件环境。</li>
+<li><strong>执行测试用例</strong>，提交测试过程中发现的bug，并通过版本迭代进行回归测试，验证相关的bug。</li>
+<li>完成内部软件系统的功能测试，系统测试之后，系统趋于稳定，<strong>提交客户进行验收测试</strong>。</li>
+<li><strong>编写软件测试报告</strong>。</li>
+<li>对测试过程进行<strong>总结</strong>，并将测试过程中的所有文档进行<strong>归档</strong>。</li>
+</ol>
+<h2 id="测试开发的理解"><a class="markdownIt-Anchor" href="#测试开发的理解"></a> 测试开发的理解</h2>
+<p>测试开发的核心有2点：</p>
+<ol>
+<li>通过技术手段提高产品质量</li>
+<li>通过技术手段帮助开发提高效率</li>
+</ol>
+<p>测试开发能够很好的把握软件测试各个方面的环节，更懂得如何提升软件测试的效率和测试需求中心点。能大幅度降低测试人员和开发人员之间不必要的无效沟通和对接，也能更全面的保障公司产品的不间断性运行。</p>
 <h2 id="postman"><a class="markdownIt-Anchor" href="#postman"></a> POSTMAN</h2>
 <h3 id="postman添加cookie-cookie是否明文"><a class="markdownIt-Anchor" href="#postman添加cookie-cookie是否明文"></a> postman添加cookie cookie是否明文</h3>
 <ol>
@@ -354,6 +378,51 @@
 </li>
 </ol>
 <p>Cookie是明文</p>
+<h2 id="抓包工具-wireshark-vs-fiddler"><a class="markdownIt-Anchor" href="#抓包工具-wireshark-vs-fiddler"></a> 抓包工具 WireShark VS Fiddler</h2>
+<p><strong>Fiddler</strong>：专门用来捕获HTTP、HTTPS的。</p>
+<p><strong>WireShark</strong>：能获取HTTP，也能获取HTTPS，但是不能解密HTTPS。</p>
+<p>如果处理HTTP、HTTPS，使用Fiddler，其他协议用WireShark。</p>
+<h2 id="使用的抓包工具如何测试app端"><a class="markdownIt-Anchor" href="#使用的抓包工具如何测试app端"></a> 使用的抓包工具如何测试APP端</h2>
+<p>以 <code>WireShark</code> 为例：</p>
+<ol>
+<li>电脑开热点</li>
+<li>查看热点的设备网段</li>
+<li>使用 <code>ipconfig</code> 查看接口</li>
+<li>打开软件，Capture -&gt; Options -&gt; Input 找到对应接口，点击开始</li>
+<li>后续抓包可过滤相应字段</li>
+</ol>
+<h2 id="兼容性测试"><a class="markdownIt-Anchor" href="#兼容性测试"></a> 兼容性测试</h2>
+<h3 id="分类"><a class="markdownIt-Anchor" href="#分类"></a> 分类</h3>
+<ol>
+<li><strong>浏览器</strong>：在不同路蓝旗上是否可以正常运行，功能是否正常</li>
+<li><strong>屏幕尺寸和分辨率</strong>：不同分辨率下可否正常显示</li>
+<li><strong>操作系统</strong>：不同操作系统下正常运行，功能正常，显示正常</li>
+<li><strong>不同设备型号</strong>：针对APP，在主流设备上能否正常，是否崩阔</li>
+</ol>
+<h3 id="优点"><a class="markdownIt-Anchor" href="#优点"></a> 优点</h3>
+<ol>
+<li>进一步提高产品质量和用户体验</li>
+<li>是的软件能够和其他软件不冲突，尽可能达到平台无关性</li>
+<li>尽可能保证软件存在价值，是衡量一个软件质量的重要指标</li>
+<li>使产品市场更广阔</li>
+</ol>
+<h3 id="在短时间怎么完成难点在哪"><a class="markdownIt-Anchor" href="#在短时间怎么完成难点在哪"></a> 在短时间怎么完成，难点在哪</h3>
+<ol>
+<li>Web</li>
+</ol>
+<ul>
+<li><strong>人工测试</strong>，主流浏览器和操作系统</li>
+<li><strong>借助第三方测试工具</strong>：IEtester、SuperPreview、Browsershots（在线）</li>
+<li>记录bug，提交bug，告知开发人员修改</li>
+</ul>
+<ol start="2">
+<li>APP</li>
+</ol>
+<ul>
+<li><strong>人工测试</strong>，测试主流程和主界面</li>
+<li><strong>借助第三方测试工具</strong>：百度众测平台和云测平台，打包apk或IPA上传，选择性好，会生成测试报告</li>
+<li>记录bug，提交bug，告知开发人员修改</li>
+</ul>
 <h2 id="如何测试一根铅笔"><a class="markdownIt-Anchor" href="#如何测试一根铅笔"></a> 如何测试一根铅笔</h2>
 <ol>
 <li>
@@ -390,6 +459,189 @@
 <p><strong>跌落测试</strong>：包装时候多高摔不坏</p>
 </li>
 </ol>
+<h2 id="如何测试直梯"><a class="markdownIt-Anchor" href="#如何测试直梯"></a> 如何测试直梯</h2>
+<p><strong>功能测试：</strong></p>
+<ul>
+<li>是否能打开门、关门</li>
+<li>是否能上行、下行</li>
+<li>是否能按下按钮</li>
+<li>是否按下按钮后能到达对应楼层</li>
+<li>是否能在关门时按下开门按钮打开</li>
+<li>电梯显示层数是否与真实层数对应</li>
+<li>报警功能是否正常</li>
+<li>选择上行时按下层无用，同理下行</li>
+<li>超载是否提示、不关门</li>
+</ul>
+<p><strong>界面测试：</strong></p>
+<ul>
+<li>是否损坏</li>
+<li>是否无法合上门</li>
+<li>外观是否符合要求</li>
+</ul>
+<p><strong>易用性测试：</strong></p>
+<ul>
+<li>按键是否清晰</li>
+<li>是否能让人理解</li>
+<li>提示声音是否合理</li>
+<li>光照是否合理</li>
+<li>通风是否合理</li>
+<li>老弱病残用户是否兼容</li>
+</ul>
+<p><strong>安全性测试：</strong></p>
+<ul>
+<li>暴力破坏是否能够报警</li>
+<li>超载是否报警</li>
+<li>应急电源</li>
+<li>能否强制开门</li>
+</ul>
+<p><strong>性能测试：</strong></p>
+<ul>
+<li>不载人运行情况</li>
+<li>单人运行情况</li>
+<li>多人运行情况</li>
+<li>多人较长时间运行情况</li>
+<li>超长时间运行情况</li>
+<li>载重能力</li>
+<li>使用次数、年限</li>
+</ul>
+<p><strong>压力测试：</strong></p>
+<ul>
+<li>最大载重</li>
+<li>超载看运行</li>
+<li>不断上升、下行</li>
+</ul>
+<h2 id="如何测试朋友圈"><a class="markdownIt-Anchor" href="#如何测试朋友圈"></a> 如何测试朋友圈</h2>
+<p>功能测试：</p>
+<ul>
+<li>
+<p>发送</p>
+<ul>
+<li>是否能点击按钮发送</li>
+<li>空值发送</li>
+<li>组合发送验证
+<ul>
+<li>文字+图片</li>
+<li>文字+视频</li>
+<li>图片+视频</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>文字</th>
+<th>图片</th>
+<th>视频</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文字数量</td>
+<td>是否能上传图片</td>
+<td>视频是否能上传</td>
+</tr>
+<tr>
+<td>文字类型</td>
+<td>图片上传数量</td>
+<td>视频数量</td>
+</tr>
+<tr>
+<td>复制粘贴支持</td>
+<td>图片清晰度、格式、大小</td>
+<td>视频清晰度、格式、时长、大小</td>
+</tr>
+<tr>
+<td>删除键支持</td>
+<td>是否能够预览、左右滑动</td>
+<td>视频预览</td>
+</tr>
+<tr>
+<td>敏感词检测</td>
+<td>是否能增删改照片</td>
+<td>是否能增删改视频</td>
+</tr>
+<tr>
+<td>无法添加图片、视频</td>
+<td>相册选择/拍摄</td>
+<td>相册选择/拍摄</td>
+</tr>
+<tr>
+<td>长按纯文字模式</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>所在位置测试</p>
+</li>
+<li>
+<p>谁可以看</p>
+</li>
+<li>
+<p>提醒谁看</p>
+</li>
+<li>
+<p>取消发送</p>
+</li>
+</ul>
+</li>
+<li>
+<p>浏览</p>
+<ul>
+<li>是否能正常显示朋友圈内容
+<ul>
+<li>文本是否被隐藏、能否察看全文</li>
+<li>可否复制、收藏、翻译</li>
+<li>url能否过跳转</li>
+<li>支持点开查看图片</li>
+<li>发送、收藏、保存、编辑图片/视频</li>
+<li>是否能够滑动浏览</li>
+<li>能否静音</li>
+<li>按播放会播放</li>
+<li>收藏</li>
+</ul>
+</li>
+<li>是否能正常点赞</li>
+<li>是否能正常评论
+<ul>
+<li>评论文字</li>
+<li>评论复制粘贴</li>
+<li>空值</li>
+<li>回复评论</li>
+<li>删除评论</li>
+</ul>
+</li>
+<li>评论多条</li>
+</ul>
+</li>
+</ul>
+<p><strong>界面测试：</strong></p>
+<ul>
+<li>和需求一致</li>
+<li>美观</li>
+</ul>
+<p><strong>易用性测试：</strong></p>
+<ul>
+<li>标签、说明等是否明晰</li>
+<li>是否能放大字体</li>
+</ul>
+<p><strong>兼容性测试：</strong></p>
+<ul>
+<li>不同系统</li>
+<li>不同软件</li>
+<li>不同版本</li>
+</ul>
+<p><strong>性能测试：</strong></p>
+<ul>
+<li>服务器性能：  可通过loadrunner/jmeter工具实现，主要关注TPS、响应时间、吞吐量、CPU、内存等</li>
+<li>APP： 可通过GT工具实现，运行时关注cpu、内存、流量、电量等占用率</li>
+</ul>
+<p><strong>压力测试：</strong></p>
+<ul>
+<li>频繁发送、浏览会崩溃吗</li>
+</ul>
 <h2 id="黑盒测试-vs-白盒测试"><a class="markdownIt-Anchor" href="#黑盒测试-vs-白盒测试"></a> 黑盒测试 VS 白盒测试</h2>
 <h3 id="黑盒测试"><a class="markdownIt-Anchor" href="#黑盒测试"></a> 黑盒测试</h3>
 <p>功能测试，代码实现不可见</p>
@@ -416,6 +668,7 @@
 <li>静态分析</li>
 <li>动态分析</li>
 </ul>
+<h2 id="自动化测试"><a class="markdownIt-Anchor" href="#自动化测试"></a> 自动化测试</h2>
 
     </div>
 
@@ -506,13 +759,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">105k</span>
+    <span title="站点总字数">108k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:48</span>
+    <span title="站点阅读时长">6:01</span>
   </span>
 </div>
 <div class="busuanzi-count">
