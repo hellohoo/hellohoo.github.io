@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>algorithm</title>
+    <title>常见算法题总结</title>
     <url>/2022/11/03/algorithm/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>一些见过的算法题总结。</p>
@@ -388,13 +388,19 @@
 </ul>
 <h2 id="如何在文件中查找关键词"><a class="markdownIt-Anchor" href="#如何在文件中查找关键词"></a> 如何在文件中查找关键词</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep</span><br><span class="line">grep abc test.txt</span><br></pre></td></tr></table></figure>
+<h2 id="查看cpu使用"><a class="markdownIt-Anchor" href="#查看cpu使用"></a> 查看CPU使用</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
+<h2 id="查看磁盘空间"><a class="markdownIt-Anchor" href="#查看磁盘空间"></a> 查看磁盘空间</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">df</span><br></pre></td></tr></table></figure>
+<h2 id="查看网络连接"><a class="markdownIt-Anchor" href="#查看网络连接"></a> 查看网络连接</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">netstat</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>计算机基础</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>计算机基础</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -887,11 +893,11 @@
 </ul>
 <h2 id="页面置换算法"><a class="markdownIt-Anchor" href="#页面置换算法"></a> 页面置换算法</h2>
 <ul>
-<li>FIFO先进先出置换算法：淘汰最先进入的页</li>
-<li>OPT最佳置换算法：选择未来最远将使用的页淘汰</li>
-<li>LRU最近最久未使用算法</li>
-<li>Clock时钟置换算法（NRU最近未用算法）：为每个页设置一位访问位，将所有页面都通过链接指针链成一个循环队列</li>
-<li>最不常用算法：淘汰访问次数最少的页</li>
+<li><strong>FIFO先进先出置换算法</strong>：淘汰最先进入的页</li>
+<li><strong>OPT最佳置换算法</strong>：选择未来最远将使用的页淘汰</li>
+<li><strong>LRU最近最久未使用算法</strong></li>
+<li><strong>Clock时钟置换算法（NRU最近未用算法）</strong>：为每个页设置一位访问位，将所有页面都通过链接指针链成一个循环队列</li>
+<li><strong>最不常用算法</strong>：淘汰访问次数最少的页</li>
 </ul>
 <h2 id="中断-vs-异常"><a class="markdownIt-Anchor" href="#中断-vs-异常"></a> 中断 VS 异常</h2>
 <p><strong>中断</strong>：CPU执行指令以外的事件引起，如I/O完成中断，表示设备I/O处理已经完成，处理其能够发送下一个I/O请求，还有时钟中断、控制台中断、次盘中断、打印机中断</p>
@@ -964,7 +970,7 @@
       </tags>
   </entry>
   <entry>
-    <title>leetcode_3</title>
+    <title>【刷题】哈希表</title>
     <url>/2022/09/27/leetcode/leetcode-3/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>哈希表</p>
@@ -1366,9 +1372,9 @@ linkedList.get(1);            //返回3</p>
         <category>面试</category>
       </categories>
       <tags>
+        <tag>笔记</tag>
         <tag>算法</tag>
         <tag>python</tag>
-        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1729,9 +1735,9 @@ linkedList.get(1);            //返回3</p>
         <category>论文阅读</category>
       </categories>
       <tags>
-        <tag>图像分割</tag>
         <tag>注意力机制</tag>
         <tag>特征融合</tag>
+        <tag>图像分割</tag>
       </tags>
   </entry>
   <entry>
@@ -2702,8 +2708,8 @@ linkedList.get(1);            //返回3</p>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>技术</tag>
+        <tag>python</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -4325,8 +4331,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>书籍</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -4968,8 +4974,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -5208,8 +5214,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>书籍</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5469,8 +5475,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>书籍</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5556,8 +5562,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>书籍</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
