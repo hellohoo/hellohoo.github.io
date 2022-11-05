@@ -6,7 +6,17 @@
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>一些见过的算法题总结。</p>
 <span id="more"></span>
-<h2 id="leetcode_365"><a class="markdownIt-Anchor" href="#leetcode_365"></a> leetcode_365</h2>
+<h2 id="leetcode_365-水壶问题"><a class="markdownIt-Anchor" href="#leetcode_365-水壶问题"></a> leetcode_365 水壶问题</h2>
+<p><a href="https://leetcode.cn/problems/water-and-jug-problem/">365. 水壶问题</a></p>
+<h2 id="leetcode_146-lru缓存"><a class="markdownIt-Anchor" href="#leetcode_146-lru缓存"></a> leetcode_146 LRU缓存</h2>
+<p><a href="https://leetcode.cn/problems/lru-cache/">146. LRU缓存</a></p>
+<h2 id="36进制加法"><a class="markdownIt-Anchor" href="#36进制加法"></a> 36进制加法</h2>
+<p><a href="https://wenku.baidu.com/view/a535874ca75177232f60ddccda38376baf1fe015.html?_wkts_=1667662292949&amp;bdQuery=%E5%AE%9E%E7%8E%B036%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95python">python实现36进制加法</a></p>
+<p><strong>思路</strong></p>
+<p>第一想法是暴力法，转换成十进制后进行计算，再转回36进制。但考虑到时间和内存容易超时和溢出，还是直接相加。</p>
+<p>利用<code>python</code>中<code>list</code>的<code>index</code>来实现字符和数字的对应。</p>
+<p>主要考虑是否进位。</p>
+<p>倒叙来做，循环次数位max位，如果一个4位36进制数和2位进行相加，即循环次数为4，可利用try-except来实现更高位数的置零操作，也可以使用if来进行判断，例如m位、n位，if m &gt; n: …</p>
 ]]></content>
       <categories>
         <category>算法</category>
@@ -370,11 +380,11 @@
 <h2 id="查找文件"><a class="markdownIt-Anchor" href="#查找文件"></a> 查找文件</h2>
 <p><a href="https://www.cnblogs.com/novae/p/15502230.html">linux中查找文件</a></p>
 <ul>
-<li>find</li>
-<li>locate</li>
+<li>which 查看可执行文件的位置</li>
+<li>whereis 查看文件的位置</li>
+<li>locate 配合数据库查看文件位置</li>
+<li>find 实际搜寻硬盘查询文件名称</li>
 <li>where</li>
-<li>whereis</li>
-<li>which</li>
 <li>type</li>
 </ul>
 <h2 id="查看文件和编辑文本"><a class="markdownIt-Anchor" href="#查看文件和编辑文本"></a> 查看文件和编辑文本</h2>
@@ -388,12 +398,79 @@
 </ul>
 <h2 id="如何在文件中查找关键词"><a class="markdownIt-Anchor" href="#如何在文件中查找关键词"></a> 如何在文件中查找关键词</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep</span><br><span class="line">grep abc test.txt</span><br></pre></td></tr></table></figure>
+<h2 id="替换文件中关键词"><a class="markdownIt-Anchor" href="#替换文件中关键词"></a> 替换文件中关键词</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sed</span><br><span class="line"><span class="meta">#</span><span class="bash"> 对每行匹配到的第一个字符串进行替换</span></span><br><span class="line">sed -i &#x27;s/原字符串/新字符串/&#x27; ab.txt </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 对全局匹配上的所有字符串进行替换</span></span><br><span class="line">sed -i &#x27;s/原字符串/新字符串/g&#x27; ab.txt </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除所有匹配到字符串的行</span></span><br><span class="line">sed -i &#x27;/匹配字符串/d&#x27;  ab.txt  </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 特定字符串的行后插入新行</span></span><br><span class="line">sed -i &#x27;/特定字符串/a 新行字符串&#x27; ab.txt </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 特定字符串的行前插入新行</span></span><br><span class="line">sed -i &#x27;/特定字符串/i 新行字符串&#x27; ab.txt</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 把匹配行中的某个字符串替换为目标字符串</span></span><br><span class="line">sed -i &#x27;/匹配字符串/s/源字符串/目标字符串/g&#x27; ab.txt</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 在文件ab.txt中的末行之后，添加<span class="built_in">bye</span></span></span><br><span class="line">sed -i &#x27;$a bye&#x27; ab.txt   </span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 对于文件第3行，把匹配上的所有字符串进行替换</span></span><br><span class="line">sed -i &#x27;3s/原字符串/新字符串/g&#x27; ab.txt </span><br></pre></td></tr></table></figure>
 <h2 id="查看cpu使用"><a class="markdownIt-Anchor" href="#查看cpu使用"></a> 查看CPU使用</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
 <h2 id="查看磁盘空间"><a class="markdownIt-Anchor" href="#查看磁盘空间"></a> 查看磁盘空间</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">df</span><br></pre></td></tr></table></figure>
 <h2 id="查看网络连接"><a class="markdownIt-Anchor" href="#查看网络连接"></a> 查看网络连接</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">netstat</span><br></pre></td></tr></table></figure>
+<h2 id="chmod-777-权限等含义"><a class="markdownIt-Anchor" href="#chmod-777-权限等含义"></a> chmod 777 权限等含义</h2>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>读取 r</th>
+<th>写入 w</th>
+<th>执行 x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>1 - 3：文件所有者</p>
+<p>4 - 6：同组用户</p>
+<p>7 - 9：其他用户</p>
+<p>777：拥有rwx权限，权限最高。</p>
 ]]></content>
       <categories>
         <category>计算机基础</category>
@@ -465,8 +542,8 @@
 </li>
 </ul>
 </li>
-<li>
-<p>视图</p>
+</ul>
+<h3 id="视图"><a class="markdownIt-Anchor" href="#视图"></a> 视图</h3>
 <ul>
 <li>
 <p>创建视图</p>
@@ -477,6 +554,16 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop view stu_view</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="授权grant"><a class="markdownIt-Anchor" href="#授权grant"></a> 授权GRANT</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grant 权限 on 数据库对象 to 用户</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>授权普通用户DML操作</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">grant select on testdb.* to common_user@&#39;%&#39;</span><br><span class="line">grant insert on testdb.* to common_user@&#39;%&#39;</span><br><span class="line">grant update on testdb.* to common_user@&#39;%&#39;</span><br><span class="line">grant delete on testdb.* to common_user@&#39;%&#39;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>授权开发人员等DDL操作</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- grant 创建、修改、删除 MySQL 数据表结构权限。</span><br><span class="line">grant create on testdb.* to developer@&#39;192.168.0.%&#39;;</span><br><span class="line">grant alter on testdb.* to developer@&#39;192.168.0.%&#39;;</span><br><span class="line">grant drop on testdb.* to developer@&#39;192.168.0.%&#39;;</span><br><span class="line"></span><br><span class="line">-- grant 操作 MySQL 外键权限。</span><br><span class="line">grant references on testdb.* to developer@&#39;192.168.0.%&#39;;</span><br><span class="line"></span><br><span class="line">-- grant 操作 MySQL 临时表权限。</span><br><span class="line">grant create temporary tables on testdb.* to developer@&#39;192.168.0.%&#39;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="drop-vs-delete-vs-truncate"><a class="markdownIt-Anchor" href="#drop-vs-delete-vs-truncate"></a> drop VS delete VS truncate</h2>
@@ -501,6 +588,12 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- create</span><br><span class="line">create index index_stu on student(sname)</span><br><span class="line">-- drop</span><br><span class="line">alter table student drop index index_stu on student</span><br></pre></td></tr></table></figure>
 <h2 id="数据库存储过程"><a class="markdownIt-Anchor" href="#数据库存储过程"></a> 数据库存储过程</h2>
 <h2 id="数据库隔离级别"><a class="markdownIt-Anchor" href="#数据库隔离级别"></a> 数据库隔离级别</h2>
+<ul>
+<li>READ_UNCOMMITTED</li>
+<li>READ_COMMITTED</li>
+<li>REPEATABLE_READ</li>
+<li>SERIALIZABLE</li>
+</ul>
 <p>MySQL默认：</p>
 <p>考什么保证实现</p>
 <h2 id="b数"><a class="markdownIt-Anchor" href="#b数"></a> B+数</h2>
@@ -522,6 +615,8 @@
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>记录一些数据结构的基础和重要知识点。</p>
 <span id="more"></span>
+<h2 id="排序算法"><a class="markdownIt-Anchor" href="#排序算法"></a> 排序算法</h2>
+<img src="/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/DS/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAzNDM3OQ==,size_16,color_FFFFFF,t_70.png" class="" title="算法复杂度">
 ]]></content>
       <categories>
         <category>计算机基础</category>
@@ -1016,8 +1111,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>python</tag>
+        <tag>算法</tag>
         <tag>刷题</tag>
         <tag>哈希表</tag>
       </tags>
@@ -1297,8 +1392,8 @@ linkedList.get(1);            //返回3</p>
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>python</tag>
+        <tag>算法</tag>
         <tag>刷题</tag>
         <tag>链表</tag>
       </tags>
@@ -1372,9 +1467,9 @@ linkedList.get(1);            //返回3</p>
         <category>面试</category>
       </categories>
       <tags>
+        <tag>python</tag>
         <tag>笔记</tag>
         <tag>算法</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1735,9 +1830,9 @@ linkedList.get(1);            //返回3</p>
         <category>论文阅读</category>
       </categories>
       <tags>
+        <tag>图像分割</tag>
         <tag>注意力机制</tag>
         <tag>特征融合</tag>
-        <tag>图像分割</tag>
       </tags>
   </entry>
   <entry>
@@ -2708,8 +2803,8 @@ linkedList.get(1);            //返回3</p>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>python</tag>
+        <tag>技术</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -4331,8 +4426,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>书籍</tag>
         <tag>python</tag>
+        <tag>书籍</tag>
       </tags>
   </entry>
   <entry>
@@ -4974,8 +5069,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>笔记</tag>
         <tag>python</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5747,8 +5842,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -5843,8 +5938,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
