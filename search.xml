@@ -646,9 +646,9 @@
 <h2 id="四次挥手"><a class="markdownIt-Anchor" href="#四次挥手"></a> 四次挥手</h2>
 <ul>
 <li>客户端发送FIN，制定一个序列号 Seq ，处于<strong>FIN_WAIT1</strong>状态</li>
-<li>服务器收到FIN后，发送ACK，且把序列号值+1作为ACK的序列号 Seq 值，表明已经接收到了客户端的报文，此时服务器处于<strong>CLOSE_WAIT</strong>状态</li>
+<li>服务器收到FIN后，发送ACK，且把序列号值+1作为ACK的序列号值，表明已经接收到了客户端的报文，此时服务器处于<strong>CLOSE_WAIT</strong>状态</li>
 <li>如果服务器也想断开连接，向客户端发送FIN，且制定一个序列号 Seq ，此时处于<strong>CLOSE_WAIT</strong>状态</li>
-<li>客户端收到FIN后，一样发送ACK作为应答，且把序列号值+1作为ACK的序列号值 Seq ，此时处于<strong>TIME_WAIT</strong><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>状态，需要过一阵子确保收到ACK才会进入<strong>CLOSED</strong>状态</li>
+<li>客户端收到FIN后，一样发送ACK作为应答，且把序列号值+1作为ACK的序列号值，此时处于<strong>TIME_WAIT</strong><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>状态，需要过一阵子确保收到ACK才会进入<strong>CLOSED</strong>状态</li>
 <li>服务器收到ACK后，处于关闭状态，处于<strong>CLOSED</strong>状态</li>
 </ul>
 <h2 id="tcp"><a class="markdownIt-Anchor" href="#tcp"></a> TCP</h2>
@@ -668,7 +668,7 @@
 <ol>
 <li>首先，采用三次握手和四次挥手来建立和释放TCP连接，保证可靠</li>
 <li>其次，TCP采用连续ARQ协议<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>（回退N，Go-back-N；超时自动重传）来保证数据传输的正确性，使用滑动窗口协议来保证接收方能及时处理所接收到的数据，进行流量控制</li>
-<li>最后，TCP采用 <strong>慢开始、用色避免、快重传和快恢复</strong> 进行拥塞控制，避免网络拥塞</li>
+<li>最后，TCP采用 <strong>慢开始、拥塞避免、快重传和快恢复</strong> 进行拥塞控制，避免网络拥塞</li>
 </ol>
 <h2 id="udp"><a class="markdownIt-Anchor" href="#udp"></a> UDP</h2>
 <ul>
@@ -724,6 +724,15 @@
 <li>即时通讯（速度要求高，偶尔出现断连不是大问题，无需重发机制）</li>
 <li>广播通信</li>
 </ul>
+<h2 id="http-10-vs-11-vs-20"><a class="markdownIt-Anchor" href="#http-10-vs-11-vs-20"></a> HTTP 1.0 VS 1.1 VS 2.0</h2>
+<ul>
+<li>
+<p><strong>1.0</strong>：可以理解为短暂tcp连接</p>
+</li>
+<li>
+<p><strong>1.1</strong>：引入持久连接，默认不关闭，可以多个请求复用；引入管道机制，在一个tcp链接里，可以同时发送多个请求</p>
+</li>
+</ul>
 <h2 id="http方法"><a class="markdownIt-Anchor" href="#http方法"></a> HTTP方法</h2>
 <ul>
 <li><strong>GET</strong>：获取资源，大部分使用</li>
@@ -745,20 +754,20 @@
 <ul>
 <li>100 客户端应继续发送请求</li>
 <li>101 切换请求协议，从HTTP切换到WebSocket</li>
-<li>200 请求成功，有响应体</li>
-<li>301 永久重定向：会缓存</li>
-<li>302 临时重定向：不会缓存</li>
-<li>304 协商缓存命中</li>
+<li><strong>200 请求成功，有响应体</strong></li>
+<li><strong>301 永久重定向：会缓存</strong></li>
+<li><strong>302 临时重定向：不会缓存</strong></li>
+<li><strong>304 协商缓存命中</strong></li>
 <li>400 包含语法错误，当前请求无法被服务器理解。（一般在服务器端表单验证失败）</li>
 <li>401 当前请求需要用户验证</li>
 <li>403 服务器禁止访问 （属于前端bug）</li>
-<li>404 资源未找到</li>
+<li><strong>404 资源未找到</strong></li>
 <li>405 请求方法不能被用于请求相应的资源</li>
 <li>408 超时</li>
 <li>500 服务器端错误（一半是代码出错，后台bug）</li>
 <li>502 Bad Gateway，作为网关或代理工作的服务器尝试执行请求时，从上有服务器接收到无效响应</li>
-<li>503 服务器繁忙</li>
-<li>504 超时</li>
+<li><strong>503 服务器繁忙</strong></li>
+<li><strong>504 超时</strong></li>
 </ul>
 <h3 id="301-vs-302"><a class="markdownIt-Anchor" href="#301-vs-302"></a> 301 VS 302</h3>
 <p><strong>301 永久重定向</strong></p>
@@ -799,12 +808,41 @@
 <tr>
 <td>开销</td>
 <td>-</td>
-<td>证书需购买</td>
+<td>证书需购买（免费较少）</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>明文传输❌差</td>
+<td>好</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>快</td>
+<td>慢</td>
 </tr>
 </tbody>
 </table>
 <p>HTTPS的加密机制：共享密钥和公开密钥加密并用的<strong>混合加密</strong>机制。</p>
-<h2 id="post和get"><a class="markdownIt-Anchor" href="#post和get"></a> POST和GET</h2>
+<h2 id="https加密流程"><a class="markdownIt-Anchor" href="#https加密流程"></a> HTTPS加密流程</h2>
+<p><strong>对称加密</strong>：使用同一个密钥加密解密，问题在如何安全将密钥发送，快但没那么安全</p>
+<p><strong>非对称加密</strong>：有公钥私钥，公钥可以随意发布，私钥不可以，发送一方使用对方公钥加密，对方接受到使用私钥解密，安全但慢</p>
+<p><strong>SSL采用混合加密</strong>，融合了上量两种加密方式的优点。</p>
+<p>混合加密：先使用非对称加密保护一个对称密钥的协商过程，然后对称密钥协商完成之后，使用对称加密传输，即用对称加密来传送消息，但对称加密所使用的密钥我们可以通过非对称加密的方式发送出去。</p>
+<p>SSL加密是将身份验证和加密传输两步骤合在一起，<strong>总流程</strong>为：</p>
+<ol>
+<li>需要被验证身份的一方生成一对密钥</li>
+<li>去权威机构生成一个CA证书（并且将公钥交给权威机构）</li>
+<li>通信前将CA证书发给对端（证书会包含机构信息和公钥信息）</li>
+<li>对端对证书进行解析，对当前通信方身份进行验证。</li>
+<li>身份验证通过之后，使用混合加密方式传输数据：即先使用非对称加密方式协商对称密钥，对称密钥协商完成之后，使用对称加密传输。其中使用非对称加密方式协商对称密钥的过程为：
+<ol>
+<li>使用公钥加密数据（一个随机数+对称密钥算法列表）发送给验证方；</li>
+<li>验证方回复数据（一个随机数+对称密钥算法列表）；</li>
+<li>双方使用两个随机送以及对称密钥算法列表计算出一对密钥。</li>
+</ol>
+</li>
+</ol>
+<h2 id="get-vs-post"><a class="markdownIt-Anchor" href="#get-vs-post"></a> GET VS POST</h2>
 <p>GET用于获取资源，POST用于传输实体主体。</p>
 <h3 id="参数"><a class="markdownIt-Anchor" href="#参数"></a> 参数</h3>
 <p>GET和POST都可以使用额外的参数。</p>
@@ -839,8 +877,8 @@
 <h2 id="ip地址分类"><a class="markdownIt-Anchor" href="#ip地址分类"></a> IP地址分类</h2>
 <ul>
 <li><strong>A类：</strong> 1～126，网络号占8位，0开头，主机号占24位</li>
-<li><strong>B类：</strong> 128～191，网络号占16位，10开头，主机号占24位</li>
-<li>**C类： ** 192～223，网络号占24位，110开头，主机号占24位</li>
+<li><strong>B类：</strong> 128～191，网络号占16位，10开头，主机号占16位</li>
+<li>**C类： ** 192～223，网络号占24位，110开头，主机号占8位</li>
 <li>**D类： ** 224～239，1110开头，保留位多播地址</li>
 <li><strong>E类：</strong> 240～255，1111开头，保留位今后使用</li>
 </ul>
@@ -870,7 +908,7 @@
 <p>ARP：将目的IP 地址映射成物理MAC 地址</p>
 </li>
 </ul>
-<p><strong>网络接口层：</strong></p>
+<p><strong>数据链路层：</strong></p>
 <ul>
 <li>
 <p>LLC 和MAC：提供数据链路层的功能，实现可靠的数据链路</p>
@@ -880,16 +918,113 @@
 <ol>
 <li><strong>DNS解析</strong>：浏览器查询DNS，获取域名对应的IP地址。</li>
 <li><strong>TCP连接</strong>：获得域名所对应的IP地址后，浏览器向服务器请求三次握手</li>
-<li><strong>发送HTTP请求</strong> ：TCP建立后，发送HTTP请求</li>
-<li><strong>服务器处理HTTP请求并返回HTTP报文</strong> ：根据响应参数处理并返回视图给浏览器</li>
+<li><strong>发送HTTP请求</strong> ：TCP建立后，发送HTTP请求（应用层 -&gt;传输层 -&gt;网络层 -&gt;数据链路层）</li>
+<li><strong>服务器处理HTTP请求并返回HTTP报文</strong> ：根据响应参数处理并返回视图给浏览器（数据链路层 -&gt;网络层 -&gt;传输层 -&gt;应用层）</li>
 <li><strong>浏览器渲染解析页面</strong> ：解析渲染，与到对js、css等引用重复以上步骤请求资源，最后呈现出一个完整的界面</li>
 <li><strong>连接结束</strong></li>
 </ol>
 <h2 id="osi参考模型-vs-tcpip参考模型"><a class="markdownIt-Anchor" href="#osi参考模型-vs-tcpip参考模型"></a> OSI参考模型 VS TCP/IP参考模型</h2>
 <img src="/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/ComputerNetwork/image-20221101174903433.png" class="" title="image-20221101174903433">
-<h2 id="osi参考模型每一层作用及协议"><a class="markdownIt-Anchor" href="#osi参考模型每一层作用及协议"></a> OSI参考模型每一层作用及协议</h2>
-<h2 id="tcpip参考模型每一层作用及协议"><a class="markdownIt-Anchor" href="#tcpip参考模型每一层作用及协议"></a> TCP/IP参考模型每一层作用及协议</h2>
+<h2 id="osi-tcpip-参考模型每一层作用及协议"><a class="markdownIt-Anchor" href="#osi-tcpip-参考模型每一层作用及协议"></a> OSI &amp; TCP/IP 参考模型每一层作用及协议</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">OSI</th>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">协议</th>
+<th style="text-align:center">TCP/IP</th>
+<th style="text-align:center">数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center">各种应用程序和协议；网络服务与最终用户的一个接口</td>
+<td style="text-align:center">HTTP、TFTP、FTP、NFS、WAIS、SMTP、 DNS</td>
+<td style="text-align:center">应用层</td>
+<td style="text-align:center">Message</td>
+</tr>
+<tr>
+<td style="text-align:center">表示层</td>
+<td style="text-align:center">数据和信息的语法转换内码、数据压缩解压、加密解密。</td>
+<td style="text-align:center">Telnet、Rlogin、SNMP、HTTP、Gopher</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">会话层</td>
+<td style="text-align:center">为通信双方指定通信方式，并创建、注销会话。</td>
+<td style="text-align:center">SMPP、SCP、SSH</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">提供可靠或不可靠的传输。</td>
+<td style="text-align:center">TCP、UDP</td>
+<td style="text-align:center">传输层</td>
+<td style="text-align:center">数据段</td>
+</tr>
+<tr>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">逻辑寻址、路由选择。</td>
+<td style="text-align:center">IP 、ICMP、IGMP 、ARP 、RARP</td>
+<td style="text-align:center">网络层</td>
+<td style="text-align:center">数据包</td>
+</tr>
+<tr>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:center">建立逻辑连接，进行硬件地址寻址，差错校验等功能</td>
+<td style="text-align:center">PPP、  LLC 、MAC</td>
+<td style="text-align:center">数据链路层</td>
+<td style="text-align:center">数据帧</td>
+</tr>
+<tr>
+<td style="text-align:center">物理层</td>
+<td style="text-align:center">建立、维护、断开物理连接</td>
+<td style="text-align:center">IEEE802.3有线局域网（以太网） IEEE802.11无线局域网标准</td>
+<td style="text-align:center">物理层</td>
+<td style="text-align:center">数据流</td>
+</tr>
+</tbody>
+</table>
 <h2 id="cookie-vs-session-vs-token"><a class="markdownIt-Anchor" href="#cookie-vs-session-vs-token"></a> cookie VS session VS token</h2>
+<table>
+<thead>
+<tr>
+<th>cookie</th>
+<th>Session</th>
+<th>–</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据放在客户浏览器上</td>
+<td>存放在服务器上</td>
+<td></td>
+</tr>
+<tr>
+<td>存放本地不是很安全</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>太多会影响服务器性能</td>
+<td></td>
+</tr>
+<tr>
+<td>单个保存最多4K，大多浏览器限制一个站点最多20个</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>存放重要信息</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
