@@ -476,8 +476,8 @@
         <category>计算机基础</category>
       </categories>
       <tags>
-        <tag>计算机基础</tag>
         <tag>Linux</tag>
+        <tag>计算机基础</tag>
       </tags>
   </entry>
   <entry>
@@ -724,13 +724,82 @@
 <li>即时通讯（速度要求高，偶尔出现断连不是大问题，无需重发机制）</li>
 <li>广播通信</li>
 </ul>
+<h3 id="tcp如何保证可靠行"><a class="markdownIt-Anchor" href="#tcp如何保证可靠行"></a> TCP如何保证可靠行</h3>
+<ol>
+<li>
+<p>数据包校验</p>
+<p>主要目的是校验数据传输过程中是否会有变化，如果有错，则丢弃，TCP一段时间得不到响应，将会重传</p>
+</li>
+<li>
+<p>对失序数据包重新排列</p>
+<p>TCP会对失序数据进行重新排序，才交给应用层</p>
+</li>
+<li>
+<p>丢弃重复数据</p>
+<p>如果有重复数据，将会被丢弃</p>
+</li>
+<li>
+<p>应答机制</p>
+<p>当TCP收到发自TCP连接另一端的数据，将发送一个确认信息，但并非立即发送</p>
+</li>
+<li>
+<p>超时重发</p>
+<p>TCP发出一个段的时候，启动一个定时器，如果一段时间得不到应答，则重发</p>
+</li>
+<li>
+<p>流量控制</p>
+<p>TCP连接的每一方都有固定大小缓冲空间。只允许另一端发送能容纳的数据，防止较快主机使较慢主机的缓冲区溢出。TCP使用的流量控制协议是可变大小的<strong>滑动窗口协议</strong>。</p>
+</li>
+</ol>
+<h2 id="tcp拥塞控制"><a class="markdownIt-Anchor" href="#tcp拥塞控制"></a> TCP拥塞控制</h2>
+<h3 id="拥塞控制-vs-流量控制"><a class="markdownIt-Anchor" href="#拥塞控制-vs-流量控制"></a> 拥塞控制 VS 流量控制</h3>
+<ul>
+<li><strong>拥塞</strong>控制：全局过程，涉及到所有的主机、路由器（网络层）、以及降低网络传输性能有关所有因素</li>
+<li><strong>流量</strong>控制：点对点通信量控制，抑制发送速率，让接收方来得及接收</li>
+</ul>
+<p>在某段时间，若对网络中某一资源的需求超过了该资源所能提供的，网络就会变差，即为拥塞。</p>
+<p>拥塞控制防止过多数据注入网络，使网络中的路由器或链路不过载。</p>
+<p>为了进行拥塞控制，要维持一个拥塞窗口（cwnd）的状态变量。</p>
+<pre><code>- 取决于网络拥塞程度
+- 动态变化
+- 发送方的发送窗口 = min(拥塞窗口，接收方接收窗口)
+</code></pre>
+<h3 id="慢启动开始"><a class="markdownIt-Anchor" href="#慢启动开始"></a> 慢启动/开始</h3>
+<p>一开始就传送大量数据，容易堵塞，在不知道的情况下就慢慢来</p>
+<ul>
+<li>试探</li>
+<li>从小到大逐渐增大发送窗口</li>
+<li>cwnd初始化位1，每经过一个传播轮次，大小加倍</li>
+</ul>
+<h3 id="拥塞避免"><a class="markdownIt-Anchor" href="#拥塞避免"></a> 拥塞避免</h3>
+<p>让cwnd缓慢增大，每经过一个往返时间RTT<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>就：cwnd+=1</p>
+<h3 id="快速重传和快速恢复frr"><a class="markdownIt-Anchor" href="#快速重传和快速恢复frr"></a> 快速重传和快速恢复（FRR）<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup></h3>
+<p>快速恢复丢失数据包。</p>
+<p>如果没有FRR，数据包丢失，TCP会使用定时器要求暂停传输，暂时时间里，没有新的或复制的数据包被发送。</p>
+<p>有了FRR，如果接收方接收到不按顺序的数据段，则会给发送分发送一个重复确认，如果发送方接收到3个重复确认，会假定确认件指出的数据段丢失了，并立即重传。</p>
+<p>跟名字有关，<strong>快</strong>即不会因为定时器暂停传输耽误传输。</p>
+<p>当单独的数据包丢失，FRR有效；如若多个在段时间丢失，则不能很有效。</p>
+<h2 id="tcp滑动窗口sliding-window"><a class="markdownIt-Anchor" href="#tcp滑动窗口sliding-window"></a> TCP滑动窗口（Sliding Window）</h2>
+<p>主要利用滑动窗口来实现流量控制。</p>
+<ul>
+<li>由于早期传输中，并不会考虑网络拥堵状况，直接发送数据，导致中间节点堵塞掉包，无法继续传输。</li>
+<li>滑动窗口大小意味着接收方还有多大的缓冲区可以用于接收数据</li>
+<li>发送发可以利用滑动窗口大小确定可以发送多少数据</li>
+<li>为0时，不能再发</li>
+<li>但有两种情况是例外的：
+<ul>
+<li>允许用户终止在远端机上的运行进程</li>
+<li>发送发可以发送1字节的数据报来通知接收方重新声明它希望接收的下一字节及发送方的滑动窗口大小</li>
+</ul>
+</li>
+</ul>
 <h2 id="http-10-vs-11-vs-20"><a class="markdownIt-Anchor" href="#http-10-vs-11-vs-20"></a> HTTP 1.0 VS 1.1 VS 2.0</h2>
 <ul>
 <li>
 <p><strong>1.0</strong>：可以理解为短暂tcp连接</p>
 </li>
 <li>
-<p><strong>1.1</strong>：引入持久连接，默认不关闭，可以多个请求复用；引入管道机制，在一个tcp链接里，可以同时发送多个请求</p>
+<p><strong>1.1</strong>：引入持久连接，默认不关闭，可以多个请求复用；引入管道机制，在一个tcp连接里，可以同时发送多个请求</p>
 </li>
 </ul>
 <h2 id="http方法"><a class="markdownIt-Anchor" href="#http方法"></a> HTTP方法</h2>
@@ -847,7 +916,7 @@
 <h3 id="参数"><a class="markdownIt-Anchor" href="#参数"></a> 参数</h3>
 <p>GET和POST都可以使用额外的参数。</p>
 <p><strong>GET</strong></p>
-<p>以查询字符串出现在URL中，URL只支持ASCII码，所以如果存在中文等字符需要编码。</p>
+<p>以查询字符串出现在URL中，URL只支持ASCII码，所以如果存在中文等字符需要编码；限制长度</p>
 <p><strong>POST</strong></p>
 <p>参数存储在实体主体中（不代表安全性更高，抓包软件也可以查看）；POST参数支持标准字符集。</p>
 <h3 id="安全性"><a class="markdownIt-Anchor" href="#安全性"></a> 安全性</h3>
@@ -923,6 +992,17 @@
 <li><strong>浏览器渲染解析页面</strong> ：解析渲染，与到对js、css等引用重复以上步骤请求资源，最后呈现出一个完整的界面</li>
 <li><strong>连接结束</strong></li>
 </ol>
+<h2 id="dns解析"><a class="markdownIt-Anchor" href="#dns解析"></a> DNS解析</h2>
+<ol>
+<li>客户端输入域名</li>
+<li>在本地DNS服务器查询对应IP地址（递归），查到返回</li>
+<li>查不到则本地DNS服务器以DNS客户身份请求<strong>根</strong>域名服务器（迭代）</li>
+<li><strong>根</strong>域名服务器将<strong>顶级</strong>DNS服务器域名IP地址告知<strong>本地</strong>DNS服务器</li>
+<li><strong>本地</strong>DNS服务器向<strong>顶级</strong>DNS服务器查询</li>
+<li><strong>顶级DNS服务器要么返回所查询IP地址，要么告知</strong>本地<strong>DNS服务器下一步向哪个</strong>权威**DNS服务器查询</li>
+</ol>
+<img src="/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/ComputerNetwork/image-20221107024836215.png" class="" title="图源图解网络">
+<p align = 'center', style="color:grey">图源：《图解网络》</p>
 <h2 id="osi参考模型-vs-tcpip参考模型"><a class="markdownIt-Anchor" href="#osi参考模型-vs-tcpip参考模型"></a> OSI参考模型 VS TCP/IP参考模型</h2>
 <img src="/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/ComputerNetwork/image-20221101174903433.png" class="" title="image-20221101174903433">
 <h2 id="osi-tcpip-参考模型每一层作用及协议"><a class="markdownIt-Anchor" href="#osi-tcpip-参考模型每一层作用及协议"></a> OSI &amp; TCP/IP 参考模型每一层作用及协议</h2>
@@ -1035,6 +1115,10 @@
 <li id="fn3" class="footnote-item"><p>Socket，就是对网络中不同主机上的应用进程之间进行双向通信的端点的抽象。一个套接字就是网络上进程通信的一端，提供了应用层进程利用网络协议交换数据的机制。从所处的地位来讲，套接字上联应用进程，下联网络协议栈，是应用程序通过网络协议进行通信的接口，是应用程序与网络协议栈进行交互的接口。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="fn4" class="footnote-item"><p>自动重传请求（Automatic Repeat-reQuest，ARQ）是OSI模型中数据链路层的错误纠正协议之一。它包括停止等待ARQ协议和连续ARQ协议，错误侦测（Error Detection）、正面确认（Positive Acknowledgment）、逾时重传（Retransmission after Timeout）与负面确认继以重传（Negative Acknowledgment and Retransmission）等机制。 <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p><em>RTT</em>(Round-Trip Time) <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p>fast retransmit and recovery, FRR <a href="#fnref6" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -1603,8 +1687,8 @@ linkedList.get(1);            //返回3</p>
       </categories>
       <tags>
         <tag>python</tag>
-        <tag>笔记</tag>
         <tag>算法</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
