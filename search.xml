@@ -325,6 +325,72 @@
 <ul>
 <li>频繁发送、浏览会崩溃吗</li>
 </ul>
+<h2 id="如何测试淘宝购物车"><a class="markdownIt-Anchor" href="#如何测试淘宝购物车"></a> 如何测试淘宝购物车</h2>
+<ol>
+<li>
+<p>界面测试</p>
+<ul>
+<li>打开淘宝购物车页面后，页面的布局是否合理，是否完整。</li>
+<li>不同卖家的商品在不同的table区域显示，区分明显。</li>
+<li>页面的功能按钮可以正常显示。</li>
+<li>商品的最下方显示失效宝贝。</li>
+<li>页面的最低端显示“你可能喜欢”</li>
+<li>向下滑动页面，在购物车顶端展示“购物车”。</li>
+<li>购物车中如果存在有商品降价、库存不足、限购件数等，在商品详情的下面，会有对应的字体展示。</li>
+</ul>
+</li>
+<li>
+<p>基本功能</p>
+<ul>
+<li>购物车页面的所有连接是否正常。</li>
+<li>从商品信息页面添加的商品能显示在购物车中。</li>
+<li>若未登录，点击购物车中的商品直接进行结算，则提示用户输入用户名和密码，或者提示用户进行注册。</li>
+<li>若没有选择任何商品，点击结算，则提示用户“请添加要结算的商品”。</li>
+<li>勾选商品后，已选商品的总价（和优惠满减活动）会显示。</li>
+<li>勾选商品，点击结算按钮后，进去确认订单信息页面。</li>
+<li>购物车页面中，可以对添加商品信息做信息的修改，并自动保存成功。</li>
+<li>可以在购物车中重新修改商品规格。</li>
+<li>购物车能添加的商品种类是有数量上限的。</li>
+<li>结算的时候商品可以全选，选择底部的全选按钮。</li>
+<li>可以在购物车页面对宝贝进行管理。</li>
+</ul>
+</li>
+<li>
+<p>性能测试</p>
+<ul>
+<li>打开购物车时间是否在已定的用户可以棘手的时间范围内。</li>
+<li>编辑购物车：删除、添加商品需要的时间。</li>
+<li>在购物车页面选择需要购买的商品进行结算的时候，结算金额可不可以实时显示。</li>
+<li>清空失效商品需要的时间。</li>
+</ul>
+</li>
+<li>
+<p>兼容性测试</p>
+<ul>
+<li>iOS：不同型号，不同的iOS系统。</li>
+<li>安卓：不同品牌，不同型号，不同的安卓系统。</li>
+</ul>
+</li>
+<li>
+<p>网络环境</p>
+<ul>
+<li>4G、5G、WiFi网络环境下应用的各功能可正常运行。</li>
+<li>网络异常时，数据交换是否会有提醒。</li>
+<li>中途断网再很快连网，数据是否可以自动恢复，正常加载。</li>
+<li>只允许内网访问的APP，在连接到外网时是否会有提醒。</li>
+</ul>
+</li>
+<li>
+<p>异常测试</p>
+<ul>
+<li>没有内存时，APP是否能够正常相应。</li>
+<li>横竖屏切换展示。</li>
+<li>APP运行时网络中断。</li>
+<li>反复操作某一个功能，不断点击和刷新，是否出现闪退。</li>
+<li>APP运行时接入电话、短信、社交软件的信息提示时，是否能够正常运行。</li>
+</ul>
+</li>
+</ol>
 <h2 id="黑盒测试-vs-白盒测试"><a class="markdownIt-Anchor" href="#黑盒测试-vs-白盒测试"></a> 黑盒测试 VS 白盒测试</h2>
 <h3 id="黑盒测试"><a class="markdownIt-Anchor" href="#黑盒测试"></a> 黑盒测试</h3>
 <p>功能测试，代码实现不可见</p>
@@ -367,7 +433,7 @@
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>Linux的一些基础重要知识点。</p>
 <span id="more"></span>
-<h3 id="查看端口号命令"><a class="markdownIt-Anchor" href="#查看端口号命令"></a> 查看端口号命令</h3>
+<h2 id="查看端口号命令"><a class="markdownIt-Anchor" href="#查看端口号命令"></a> 查看端口号命令</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lsof -i:端口号</span><br></pre></td></tr></table></figure>
 <h2 id="删除文件"><a class="markdownIt-Anchor" href="#删除文件"></a> 删除文件</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rvf</span><br></pre></td></tr></table></figure>
@@ -904,10 +970,10 @@
 <li><strong>TRACE</strong>：追踪路径。服务器会将通信路径返回给客户端。容易收到XST攻击（Cross-Site Tracing，跨站追踪）</li>
 </ul>
 <h2 id="http状态码"><a class="markdownIt-Anchor" href="#http状态码"></a> HTTP状态码</h2>
-<p>**1XX： **表示目前是协议的中间状态，还需要后续请求</p>
+<p>**1XX：**表示目前是协议的中间状态，还需要后续请求</p>
 <p><strong>2XX：</strong> 表示请求成功</p>
-<p>**3XX： **表示重定向状态，需要重新请求</p>
-<p>**4XX： **表示请求报文错误（客户端错误）</p>
+<p>**3XX：**表示重定向状态，需要重新请求</p>
+<p>**4XX：**表示请求报文错误（客户端错误）</p>
 <p><strong>5XX：</strong> 服务器端错误</p>
 <ul>
 <li>100 客户端应继续发送请求</li>
@@ -970,7 +1036,7 @@
 </tr>
 <tr>
 <td>安全性</td>
-<td>明文传输❌差</td>
+<td>差（明文传输）❌</td>
 <td>好</td>
 </tr>
 <tr>
@@ -1036,9 +1102,9 @@
 <ul>
 <li><strong>A类：</strong> 1～126，网络号占8位，0开头，主机号占24位</li>
 <li><strong>B类：</strong> 128～191，网络号占16位，10开头，主机号占16位</li>
-<li>**C类： ** 192～223，网络号占24位，110开头，主机号占8位</li>
-<li>**D类： ** 224～239，1110开头，保留位多播地址</li>
-<li><strong>E类：</strong> 240～255，1111开头，保留位今后使用</li>
+<li>**C类： **192～223，网络号占24位，110开头，主机号占8位</li>
+<li>**D类： **224～239，1110开头，保留位多播地址</li>
+<li>**E类：**240～255，1111开头，保留位今后使用</li>
 </ul>
 <p>（<strong>127</strong>开头的IP地址是保留回环地址，不可能出现在网络上的。127开头的IP主要用于测试 如:127.0.0.1 本机地址，主要用于测试。）</p>
 <img src="/2022/11/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/ComputerNetwork/image-20221101150825552.png" class="" title="image-20221101150825552">
@@ -1246,6 +1312,56 @@
 <li>进程间不会互相影响，而一个线程挂了可能导致整个进程挂</li>
 <li>创建进程或撤销进程，系统都要为之分配或回收资源，操作系统开销远大于创建或撤销现成的开销</li>
 </ul>
+<h2 id="并发-vs-并行"><a class="markdownIt-Anchor" href="#并发-vs-并行"></a> 并发 VS 并行</h2>
+<p><strong>并发</strong>：强调一个CPU一定时间可以处理多个事情</p>
+<p><strong>并行</strong>：强调多个CPU同一时刻处理不同事情，真正意义上的同时处理</p>
+<h2 id="同步-vs-异步-vs-阻塞-vs-非阻塞"><a class="markdownIt-Anchor" href="#同步-vs-异步-vs-阻塞-vs-非阻塞"></a> 同步 VS 异步 VS 阻塞 VS 非阻塞</h2>
+<p><strong>同步</strong>：调用者<strong>一直等待</strong>返回结果，方法执行完成，才能执行后续方法</p>
+<p><strong>异步</strong>：方法开始后就会返回，调用者<strong>无需等待</strong>其中方法执行完毕，就可以执行后续方法</p>
+<p>主要是针对IO操作</p>
+<hr />
+<p><strong>阻塞</strong>：线程持续等待资源中数据准备完成，直到返回响应结果</p>
+<p><strong>非阻塞</strong>：线程直接返回结果，不会持续等待资源准备数据结束后才响应结果</p>
+<p>主要是针对线程，可以发生在IO期间也可能发生在IO之前</p>
+<h2 id="调度"><a class="markdownIt-Anchor" href="#调度"></a> 调度</h2>
+<h3 id="先来先服务-fifs"><a class="markdownIt-Anchor" href="#先来先服务-fifs"></a> 先来先服务 FIFS</h3>
+<p>先请求的进程先得到服务，即根据ready队列的顺序，排在前面的进程先得到服务</p>
+<ul>
+<li>**优点：**实现简单、易理解；公平</li>
+<li>**缺点：**平均等待时间往往很长</li>
+</ul>
+<h3 id="最短作业优先-sjf"><a class="markdownIt-Anchor" href="#最短作业优先-sjf"></a> 最短作业优先 SJF</h3>
+<p>优先服务时间最短的作业。</p>
+<p>实际上难以实现，因为无法知道下次CPU执行的长度。但可以用公式<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \uptau at position 1: \̲u̲p̲t̲a̲u̲_{n+1}=\alpha t…'>\uptau_{n+1}=\alpha t_n+(1-\alpha)\uptau_n</span>来对下一次CPU执行时长进行预测，其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>t</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">t_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>表示最近一次的信息，<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \uptau at position 1: \̲u̲p̲t̲a̲u̲_n'>\uptau_n</span>存储了过去的信息。</p>
+<ul>
+<li>**优点：**平均等待时间短</li>
+<li>**缺点：**公平性不足，容易导致饿死现象的产生</li>
+</ul>
+<h3 id="优先级调度"><a class="markdownIt-Anchor" href="#优先级调度"></a> 优先级调度</h3>
+<p>给每个进程分配优先级，高优先级的进程首先获得CPU时间。</p>
+<ul>
+<li><strong>优点：</strong></li>
+<li>**缺点：**容易导致饿死的现象，即优先度较低的进程永远也无法得到执行。</li>
+</ul>
+<h3 id="轮转调度-rr调度使用最广"><a class="markdownIt-Anchor" href="#轮转调度-rr调度使用最广"></a> 轮转调度 RR调度（<strong>使用最广</strong>）</h3>
+<p>抢占式调度。轮流按就绪队列顺序为每一个进程分配时间片，当一个正在执行的进程的时间片用完了，将其放回就绪队列中，换上另一个进程分配时间片。</p>
+<ul>
+<li>**优点：**保证了公平，没一个进程在一个时间段上都能得到执行</li>
+<li>**缺点：**平均等待时间较长</li>
+</ul>
+<p>时间片大小的选取决定了RR性能高低。如果时间片大，则类似于FIFS，如果小，则花费大量时间用于上下文切换，效率很低。</p>
+<p>一般而言，80%的进程的CPU执行时间小于时间片。</p>
+<h3 id="多级队列调度"><a class="markdownIt-Anchor" href="#多级队列调度"></a> 多级队列调度</h3>
+<p>将进程分成不同的队列，每一个队列内有各自的算法，每一个队列间有不同的优先级。</p>
+<p>一般将进程氛围前台进程（优先级高）和后台进程两个队列。</p>
+<p>队列间的调度算法两种：</p>
+<pre><code>- 固定优先级抢占式调度：当前台进程队列为空时，才调度后台进程
+- 队列间划分时间片：每个队列有一定比例的CPU时间
+</code></pre>
+<h3 id="多级队列反馈调度"><a class="markdownIt-Anchor" href="#多级队列反馈调度"></a> 多级队列反馈调度</h3>
+<p>在多级队列调度的基础上，允许进程在队列间进行迁移。</p>
+<p>如果进程使用较多CPU时间，则迁移到更低的优先级队列，即不会让某一个进程一直长时间地执行</p>
+<p>如果进程在较低优先级队列中等待时间较长，那么会把它放到更高优先级队列中，防止饿死现象</p>
 <h2 id="死锁"><a class="markdownIt-Anchor" href="#死锁"></a> 死锁</h2>
 <h3 id="概念"><a class="markdownIt-Anchor" href="#概念"></a> 概念</h3>
 <p>死锁是指多个进程在运行过程中因 <strong>资源争夺</strong> 而造成的一种僵局。</p>
@@ -1311,8 +1427,8 @@
 <li><strong>最不常用算法</strong>：淘汰访问次数最少的页</li>
 </ul>
 <h2 id="中断-vs-异常"><a class="markdownIt-Anchor" href="#中断-vs-异常"></a> 中断 VS 异常</h2>
-<p><strong>中断</strong>：CPU执行指令以外的事件引起，如I/O完成中断，表示设备I/O处理已经完成，处理其能够发送下一个I/O请求，还有时钟中断、控制台中断、次盘中断、打印机中断</p>
-<p><strong>异常</strong>：CPU执行指令内部出现的，如非法操作码、地址越界、算数溢出</p>
+<p><strong>中断</strong>：CPU执行指令<strong>以外</strong>的事件引起，如I/O完成中断，表示设备I/O处理已经完成，处理其能够发送下一个I/O请求，还有时钟中断、控制台中断、次盘中断、打印机中断</p>
+<p><strong>异常</strong>：CPU执行指令<strong>内部</strong>出现的，如非法操作码、地址越界、算数溢出</p>
 <h2 id="内核态-vs-用户态"><a class="markdownIt-Anchor" href="#内核态-vs-用户态"></a> 内核态 VS 用户态</h2>
 <p><strong>内核态</strong>：类似于Linux中sudo更高权限。处于内核态的CPU可以访问任意数据，包括外围设备，比如网卡，硬盘等，也可以从一个程序切换到另一个程序，并且占用CPU不会出现抢占情况，一般是处于特权级0的状态。</p>
 <p><strong>用户态</strong>：只能受限制访问内存，且不能访问外围设备，也不允许独占，也就是说，CPU会被其他程序获取。</p>
@@ -1786,8 +1902,8 @@ linkedList.get(1);            //返回3</p>
         <category>面试</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
         <tag>算法</tag>
       </tags>
   </entry>
@@ -2833,8 +2949,8 @@ linkedList.get(1);            //返回3</p>
       </categories>
       <tags>
         <tag>技术</tag>
-        <tag>医学影像</tag>
         <tag>图像分割</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -3122,8 +3238,8 @@ linkedList.get(1);            //返回3</p>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>技术</tag>
         <tag>python</tag>
+        <tag>技术</tag>
         <tag>问题</tag>
         <tag>qt</tag>
       </tags>
@@ -3434,9 +3550,9 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
         <category>技术</category>
       </categories>
       <tags>
-        <tag>医学影像</tag>
         <tag>书籍</tag>
         <tag>图像分割</tag>
+        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
@@ -4745,8 +4861,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>书籍</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -5388,8 +5504,8 @@ mixup是一种运用在计算机视觉中的对图像进行混类增强的算法
       </categories>
       <tags>
         <tag>学习</tag>
-        <tag>python</tag>
         <tag>笔记</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -6104,8 +6220,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>VTK</category>
       </categories>
       <tags>
-        <tag>VTK</tag>
         <tag>医学影像</tag>
+        <tag>VTK</tag>
       </tags>
   </entry>
   <entry>
@@ -6161,8 +6277,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
       </tags>
   </entry>
   <entry>
@@ -6257,8 +6373,8 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>安装</category>
       </categories>
       <tags>
-        <tag>Rodin</tag>
         <tag>安装</tag>
+        <tag>Rodin</tag>
         <tag>JDK</tag>
         <tag>Event-B</tag>
       </tags>
@@ -6366,11 +6482,11 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></sp
         <category>ITK</category>
       </categories>
       <tags>
+        <tag>技术</tag>
+        <tag>医学影像</tag>
         <tag>MPR</tag>
         <tag>VTK</tag>
         <tag>ITK</tag>
-        <tag>技术</tag>
-        <tag>医学影像</tag>
       </tags>
   </entry>
   <entry>
